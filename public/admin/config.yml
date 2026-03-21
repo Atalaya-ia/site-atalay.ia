@@ -2,7 +2,7 @@ backend:
   name: github
   repo: Atalaya-ia/site-atalay.ia
   branch: main
-  base_url: https://api.netlify.com
+  base_url: https://decap-oauth-proxy-725649112543.southamerica-east1.run.app
   auth_endpoint: auth
 
 media_folder: "public/uploads"
