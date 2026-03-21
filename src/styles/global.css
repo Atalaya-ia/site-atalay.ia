@@ -331,22 +331,21 @@ nav.scrolled {
   color: var(--orange);
 }
 
-/* Word cycle */
+/* Word cycle — no layout shift */
 .hero-cycle {
   display: inline-block;
   color: var(--orange);
   font-style: italic;
-  transition: opacity .4s, transform .4s;
+  transition: opacity .4s;
+  vertical-align: baseline;
 }
 
 .hero-cycle.out {
   opacity: 0;
-  transform: translateY(12px);
 }
 
 .hero-cycle.in {
   opacity: 1;
-  transform: translateY(0);
 }
 
 .hero-sub {
