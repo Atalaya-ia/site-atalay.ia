@@ -6,7 +6,10 @@
       <div class="nav-mark">A</div>
       <span class="nav-wm">Atalaya<span style="font-style:italic;color:var(--orange);opacity:0.8">.ia</span></span>
     </a>
-    <div class="nav-links">
+    <button class="nav-hamburger" id="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="nav-links">
       <a href="#optimize">Optimize</a>
       <a href="#trends">Trends</a>
       <a href="#voice">Voz</a>
@@ -15,3 +18,21 @@
     </div>
   </div>
 </nav>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const links = document.getElementById('nav-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+      toggle.classList.toggle('open');
+    });
+    // Close menu on link click
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        toggle.classList.remove('open');
+      });
+    });
+  }
+</script>
