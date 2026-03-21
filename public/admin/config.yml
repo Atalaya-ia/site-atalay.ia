@@ -1,0 +1,121 @@
+backend:
+  name: github
+  repo: Atalaya-ia/site-atalay.ia
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "landing"
+    label: "Landing Page"
+    files:
+      - name: "content"
+        label: "Conteúdo da Landing"
+        file: "src/content/landing.yaml"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Palavras rotativas", name: "words", widget: "list", field: { label: "Palavra", name: "word", widget: "string" } }
+              - { label: "Subtítulo", name: "subtitle", widget: "string" }
+              - { label: "Destaque do subtítulo", name: "subtitle_highlight", widget: "string" }
+              - { label: "Texto do botão", name: "cta_text", widget: "string" }
+              - { label: "Tagline", name: "tagline", widget: "string" }
+          - label: "Social Proof"
+            name: "proof"
+            widget: "object"
+            fields:
+              - { label: "Frases", name: "items", widget: "list", field: { label: "Frase", name: "item", widget: "string" } }
+          - label: "Features"
+            name: "features"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Número", name: "number", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Palavra em destaque", name: "title_emphasis", widget: "string" }
+              - { label: "Descrição", name: "description", widget: "list", field: { label: "Parágrafo", name: "p", widget: "text" } }
+              - label: "Stats"
+                name: "stats"
+                widget: "list"
+                fields:
+                  - { label: "Valor", name: "value", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Título", name: "title", widget: "string" }
+                  - { label: "Descrição", name: "description", widget: "text" }
+                  - { label: "Ícone", name: "icon", widget: "select", options: ["edit","pencil","code","image","clock","trending","user","mic","file","check"] }
+              - label: "Quote"
+                name: "quote"
+                widget: "object"
+                fields:
+                  - { label: "Texto", name: "text", widget: "string" }
+                  - { label: "Autor", name: "author", widget: "string" }
+              - { label: "Inverter layout", name: "flip", widget: "boolean", default: false }
+          - label: "Pipeline"
+            name: "pipeline"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Subtítulo", name: "subtitle", widget: "text" }
+              - label: "Steps"
+                name: "steps"
+                widget: "list"
+                fields:
+                  - { label: "Número", name: "number", widget: "string" }
+                  - { label: "Título", name: "title", widget: "string" }
+                  - { label: "Descrição", name: "description", widget: "text" }
+          - label: "Stats"
+            name: "stats_section"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Subtítulo", name: "subtitle", widget: "text" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Valor", name: "value", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Detalhe", name: "detail", widget: "string" }
+          - label: "CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Título (HTML)", name: "title", widget: "string" }
+              - { label: "Subtítulo", name: "subtitle", widget: "text" }
+              - { label: "Texto do botão", name: "button_text", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "href", widget: "string" }
+              - { label: "Copyright", name: "copyright", widget: "string" }
+          - label: "Nav"
+            name: "nav"
+            widget: "object"
+            fields:
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "href", widget: "string" }
+              - { label: "Texto CTA", name: "cta_text", widget: "string" }
+              - { label: "URL CTA", name: "cta_href", widget: "string" }
