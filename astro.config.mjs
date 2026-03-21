@@ -4,7 +4,8 @@ import sitemap from '@astrojs/sitemap';
 import yaml from '@rollup/plugin-yaml';
 
 export default defineConfig({
-  site: 'https://atalayia.com.br',
+  site: 'https://atalaya-ia.github.io',
+  base: '/site-atalay.ia',
   integrations: [sitemap()],
   build: { assets: '_assets' },
   vite: { plugins: [yaml()] },
