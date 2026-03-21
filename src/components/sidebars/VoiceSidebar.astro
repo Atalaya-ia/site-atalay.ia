@@ -1,0 +1,111 @@
+<!-- Voice — Perfil sidebar -->
+<div class="sb">
+  <div class="sb-hd">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--p-orange)" stroke-width="2" stroke-linecap="round">
+      <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+      <circle cx="12" cy="7" r="4"/>
+    </svg>
+    Perfil — Maria Costa
+    <span style="margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--p-text-m)">342 artigos</span>
+  </div>
+  <div class="sb-bd">
+    <!-- Wizard steps -->
+    <div class="wiz-steps">
+      <div class="wiz-step done"><div class="wiz-dot">&#x2713;</div>Preferências</div>
+      <div class="wiz-line done"></div>
+      <div class="wiz-step done"><div class="wiz-dot">&#x2713;</div>Análise</div>
+      <div class="wiz-line done"></div>
+      <div class="wiz-step active"><div class="wiz-dot">3</div>Validação</div>
+      <div class="wiz-line"></div>
+      <div class="wiz-step"><div class="wiz-dot">4</div>Ativar</div>
+    </div>
+
+    <!-- Voice profile card -->
+    <div class="vp-card">
+      <div class="vp-hd">
+        <div class="vp-av" style="background:var(--p-orange);color:white">MC</div>
+        <div>
+          <div class="vp-name">Maria Costa</div>
+          <div class="vp-sub">Política e Economia</div>
+        </div>
+      </div>
+      <div class="vp-row">
+        <span class="vp-rl">Tom</span>
+        <span class="vp-rv">Analítico e direto</span>
+      </div>
+      <div class="vp-row">
+        <span class="vp-rl">Citações</span>
+        <span class="vp-rv">Com contexto</span>
+      </div>
+      <div class="vp-row">
+        <span class="vp-rl">Manual</span>
+        <div class="vp-therm" onclick="thermClick(this,event)">
+          <div class="vp-th on">1</div>
+          <div class="vp-th on">2</div>
+          <div class="vp-th on">3</div>
+          <div class="vp-th on">4</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Writing habits -->
+    <div style="font-size:8px;font-weight:600;color:var(--p-text-m);text-transform:uppercase;letter-spacing:.5px;padding:8px 4px 3px">Vícios de escrita</div>
+    <div class="vp-card">
+      <div class="vp-row">
+        <span class="vp-rl">Adjetivos em excesso</span>
+        <div class="vp-therm" onclick="thermClick(this,event)">
+          <div class="vp-th">1</div>
+          <div class="vp-th">2</div>
+          <div class="vp-th on">3</div>
+          <div class="vp-th">4</div>
+        </div>
+      </div>
+      <div class="vp-row">
+        <span class="vp-rl">Gerúndio no lide</span>
+        <div class="vp-therm" onclick="thermClick(this,event)">
+          <div class="vp-th">1</div>
+          <div class="vp-th">2</div>
+          <div class="vp-th">3</div>
+          <div class="vp-th on">4</div>
+        </div>
+      </div>
+      <div class="vp-row">
+        <span class="vp-rl">"O mesmo"</span>
+        <div class="vp-therm" onclick="thermClick(this,event)">
+          <div class="vp-th">1</div>
+          <div class="vp-th">2</div>
+          <div class="vp-th">3</div>
+          <div class="vp-th on">4</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Validation sample -->
+    <div class="voice-sample">
+      <div class="voice-sample-q">Reconhece esse estilo?</div>
+      <div class="voice-sample-text">"O relator da reforma apresentou o texto final na sessão de terça-feira. A proposta altera a base de cálculo do ITCMD e afeta contribuintes com patrimônio acima de R$ 2 milhões."</div>
+      <div class="voice-sample-actions">
+        <button class="voice-sample-btn voice-sample-yes" onclick="if(typeof showToast==='function')showToast('Perfil validado')">Sim, é meu estilo</button>
+        <button class="voice-sample-btn voice-sample-no" onclick="if(typeof showToast==='function')showToast('Será refinado')">Ajustar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+function thermClick(therm, event) {
+  event.stopPropagation();
+  const bars = therm.querySelectorAll('.vp-th');
+  const rect = therm.getBoundingClientRect();
+  const x = event.clientX - rect.left;
+  const barWidth = rect.width / bars.length;
+  const clickedIndex = Math.floor(x / barWidth);
+  bars.forEach((bar, i) => {
+    if (i <= clickedIndex) {
+      bar.classList.add('on');
+    } else {
+      bar.classList.remove('on');
+    }
+  });
+}
+</script>

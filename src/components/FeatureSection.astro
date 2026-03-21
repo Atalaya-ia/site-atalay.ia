@@ -1,0 +1,74 @@
+---
+import FeatureIcon from './FeatureIcon.astro';
+
+interface FeatureItem {
+  title: string;
+  description: string;
+  icon: string;
+}
+
+interface Props {
+  feature: {
+    id: string;
+    number: string;
+    label: string;
+    title: string;
+    title_emphasis: string;
+    description: string[];
+    stats: { value: string; label: string }[];
+    items: FeatureItem[];
+    quote: { text: string; author: string };
+    flip: boolean;
+  };
+  alt?: boolean;
+}
+const { feature, alt = false } = Astro.props;
+
+// Build title HTML with emphasis
+const titleHtml = feature.title.replace(
+  feature.title_emphasis,
+  `<em>${feature.title_emphasis}</em>`
+);
+---
+<section class={`feat${alt ? ' feat-alt' : ''}`} id={feature.id}>
+  <div class="wrap">
+    <div class={`feat-row${feature.flip ? ' flip' : ''} reveal`}>
+      <div class="feat-text">
+        <div class="feat-num"><span>{feature.number}</span> {feature.label}</div>
+        <h2 set:html={titleHtml} />
+        {feature.description.map(p => <p>{p}</p>)}
+
+        <div class="feat-stats">
+          {feature.stats.map(stat => (
+            <div class="feat-stat">
+              <div class="feat-stat-v">{stat.value}</div>
+              <div class="feat-stat-l">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
+        <div class="feat-items">
+          {feature.items.map(item => (
+            <div class="feat-item">
+              <div class="feat-item-icon">
+                <FeatureIcon name={item.icon} />
+              </div>
+              <div>
+                <h4>{item.title}</h4>
+                <p>{item.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="feat-quote">
+          <p>{feature.quote.text}</p>
+          <cite>{feature.quote.author}</cite>
+        </div>
+      </div>
+      <div class="feat-panel">
+        <slot />
+      </div>
+    </div>
+  </div>
+</section>
