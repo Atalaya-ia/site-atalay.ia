@@ -84,50 +84,8 @@ if (highlightIndex !== -1) {
 
   <!-- Hero content -->
   <div class="hero-inner">
-    <!-- Lighthouse SVG (from onboarding) -->
-    <svg class="hero-img" viewBox="0 0 90 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Farol Atalaya" style="max-width:200px">
-      <!-- Base trapezoidal -->
-      <path d="M19 148 C19 148 20 134 21 126 L69 126 C70 134 71 148 71 148 Z" fill="#D97757"/>
-      <ellipse cx="45" cy="148" rx="26" ry="3.2" fill="#D97757"/>
-      <!-- Stripe 1 -->
-      <path d="M21 126 L23 104 L67 104 L69 126 Z" fill="#FFF8F0"/>
-      <ellipse cx="45" cy="126" rx="24" ry="2.8" fill="#FFF8F0"/>
-      <!-- Stripe 2 -->
-      <path d="M23 104 L25.5 82 L64.5 82 L67 104 Z" fill="#D97757"/>
-      <ellipse cx="45" cy="104" rx="22" ry="2.5" fill="#D97757"/>
-      <!-- Stripe 3 -->
-      <path d="M25.5 82 L27.5 62 L62.5 62 L64.5 82 Z" fill="#FFF8F0"/>
-      <ellipse cx="45" cy="82" rx="19.5" ry="2.3" fill="#FFF8F0"/>
-      <!-- Stripe 4 -->
-      <path d="M27.5 62 L29 48 L61 48 L62.5 62 Z" fill="#D97757"/>
-      <ellipse cx="45" cy="62" rx="17.5" ry="2" fill="#D97757"/>
-      <!-- Gallery -->
-      <ellipse cx="45" cy="47" rx="21" ry="2.8" fill="#4a5568"/>
-      <ellipse cx="45" cy="40.5" rx="19" ry="1.8" fill="none" stroke="#4a5568" stroke-width="0.8"/>
-      <!-- Lantern room -->
-      <path d="M33 40 L34 26 C34 26 45 24.5 56 26 L57 40 Z" fill="#4a5568"/>
-      <path d="M35.5 38 L36 27 L41 26.5 L41 38 Z" fill="#a8d4e6" opacity="0.2"/>
-      <path d="M43 38 L43 26.2 L49 26.2 L49 38 Z" fill="#a8d4e6" opacity="0.2"/>
-      <path d="M51 38 L51 27 L55.5 27.5 L55 38 Z" fill="#a8d4e6" opacity="0.2"/>
-      <path d="M35 39 L35.5 27 C35.5 27 45 25 55 27.5 L55 39 Z" fill="#FFD700" opacity="0.05">
-        <animate attributeName="opacity" values=".05;.15;.05" dur="4s" repeatCount="indefinite"/>
-      </path>
-      <!-- Dome -->
-      <path d="M34 26 Q35 19 39 15 Q45 11 51 15 Q55 19 56 26 Z" fill="#4a5568"/>
-      <ellipse cx="45" cy="13" rx="5" ry="3" fill="#4a5568"/>
-      <!-- Cap ball -->
-      <circle cx="45" cy="10.5" r="2.5" fill="#4a5568"/>
-      <!-- Beacon with glow animation -->
-      <circle cx="45" cy="18" r="2.8" fill="#FFD700"/>
-      <circle cx="45" cy="18" r="6" fill="#FFC857" opacity="0.15">
-        <animate attributeName="opacity" values=".15;.35;.15" dur="4s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="45" cy="18" r="11" fill="#FFC857" opacity="0.04">
-        <animate attributeName="opacity" values=".04;.12;.04" dur="4s" repeatCount="indefinite"/>
-      </circle>
-      <!-- Shadow -->
-      <ellipse cx="45" cy="151" rx="27" ry="1.8" fill="#8B7355" opacity="0.08"/>
-    </svg>
+    <!-- Hero art (onboarding illustration) -->
+    <img src="/hero-art.jpeg" alt="Jornalista iluminando o caminho com uma lanterna" class="hero-img" />
 
     <h1>
       {titleParts.map((part, i) => (
