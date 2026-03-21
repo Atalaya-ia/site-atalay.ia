@@ -46,6 +46,8 @@
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
@@ -312,7 +314,6 @@ nav.scrolled {
   margin: 0 auto 28px;
   pointer-events: none;
   animation: fadeUp .8s both;
-  mix-blend-mode: lighten;
 }
 
 .hero h1 {
@@ -331,13 +332,13 @@ nav.scrolled {
   color: var(--orange);
 }
 
-/* Word cycle — no layout shift */
+/* Word cycle — no layout shift, no line break */
 .hero-cycle {
-  display: inline-block;
+  display: inline;
   color: var(--orange);
   font-style: italic;
   transition: opacity .4s;
-  vertical-align: baseline;
+  white-space: nowrap;
 }
 
 .hero-cycle.out {
@@ -364,6 +365,7 @@ nav.scrolled {
   padding: 2px 6px;
   border-radius: 4px;
   font-style: italic;
+  white-space: nowrap;
 }
 
 /* Email input */
