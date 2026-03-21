@@ -1,0 +1,180 @@
+---
+interface Props {
+  hero: {
+    title: string;
+    words: string[];
+    subtitle: string;
+    subtitle_highlight: string;
+    cta_text: string;
+    tagline: string;
+  }
+}
+const { hero } = Astro.props;
+
+// Split title on \n to support <br> in the template
+const titleParts = hero.title.split('\n');
+
+// Build subtitle with highlight: find subtitle_highlight in subtitle and wrap with <mark>
+const highlightIndex = hero.subtitle.indexOf(hero.subtitle_highlight);
+let subtitleBefore = hero.subtitle;
+let subtitleHighlight = '';
+let subtitleAfter = '';
+if (highlightIndex !== -1) {
+  subtitleBefore = hero.subtitle.slice(0, highlightIndex);
+  subtitleHighlight = hero.subtitle_highlight;
+  subtitleAfter = hero.subtitle.slice(highlightIndex + hero.subtitle_highlight.length);
+}
+---
+
+<section class="hero">
+  <!-- SVG grid pattern background -->
+  <div class="hero-grid">
+    <svg viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="grid" width="70" height="70" patternUnits="userSpaceOnUse">
+          <path d="M 70 0 L 0 0 0 70" fill="none" stroke="rgba(230,126,74,.02)" stroke-width=".5"/>
+        </pattern>
+      </defs>
+      <rect width="1400" height="900" fill="url(#grid)"/>
+    </svg>
+  </div>
+
+  <!-- Geometric laser lines -->
+  <div class="hero-glines">
+    <svg viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:1400px;height:900px">
+      <!-- Central diamond -->
+      <path d="M700 200 L900 450 L700 700 L500 450Z" stroke="rgba(230,126,74,.1)" stroke-width=".5" fill="none"/>
+      <path d="M700 260 L860 450 L700 640 L540 450Z" stroke="rgba(230,126,74,.07)" stroke-width=".5" fill="none"/>
+      <path d="M700 320 L820 450 L700 580 L580 450Z" stroke="rgba(230,126,74,.1)" stroke-width=".5" fill="none"/>
+      <!-- Radiating lines from center -->
+      <line x1="700" y1="450" x2="200" y2="100" stroke="rgba(230,126,74,.07)" stroke-width=".5"/>
+      <line x1="700" y1="450" x2="1200" y2="100" stroke="rgba(230,126,74,.07)" stroke-width=".5"/>
+      <line x1="700" y1="450" x2="100" y2="450" stroke="rgba(230,126,74,.04)" stroke-width=".5"/>
+      <line x1="700" y1="450" x2="1300" y2="450" stroke="rgba(230,126,74,.04)" stroke-width=".5"/>
+      <line x1="700" y1="450" x2="250" y2="800" stroke="rgba(230,126,74,.06)" stroke-width=".5"/>
+      <line x1="700" y1="450" x2="1150" y2="800" stroke="rgba(230,126,74,.06)" stroke-width=".5"/>
+      <line x1="700" y1="450" x2="700" y2="0" stroke="rgba(230,126,74,.06)" stroke-width=".5"/>
+      <line x1="700" y1="450" x2="700" y2="900" stroke="rgba(230,126,74,.05)" stroke-width=".5"/>
+      <!-- Node dots -->
+      <circle cx="700" cy="450" r="2" fill="rgba(230,126,74,.15)"><animate attributeName="opacity" values=".15;.3;.15" dur="4s" repeatCount="indefinite"/></circle>
+      <circle cx="700" cy="200" r="1.5" fill="rgba(230,126,74,.1)"/>
+      <circle cx="900" cy="450" r="1.5" fill="rgba(230,126,74,.08)"/>
+      <circle cx="500" cy="450" r="1.5" fill="rgba(230,126,74,.08)"/>
+      <circle cx="700" cy="700" r="1.5" fill="rgba(230,126,74,.06)"/>
+      <!-- Outer cross-hairs -->
+      <line x1="350" y1="200" x2="380" y2="200" stroke="rgba(230,126,74,.12)" stroke-width=".5"/>
+      <line x1="365" y1="185" x2="365" y2="215" stroke="rgba(230,126,74,.12)" stroke-width=".5"/>
+      <line x1="1020" y1="200" x2="1050" y2="200" stroke="rgba(230,126,74,.12)" stroke-width=".5"/>
+      <line x1="1035" y1="185" x2="1035" y2="215" stroke="rgba(230,126,74,.12)" stroke-width=".5"/>
+      <line x1="350" y1="700" x2="380" y2="700" stroke="rgba(230,126,74,.06)" stroke-width=".5"/>
+      <line x1="365" y1="685" x2="365" y2="715" stroke="rgba(230,126,74,.06)" stroke-width=".5"/>
+      <line x1="1020" y1="700" x2="1050" y2="700" stroke="rgba(230,126,74,.06)" stroke-width=".5"/>
+      <line x1="1035" y1="685" x2="1035" y2="715" stroke="rgba(230,126,74,.06)" stroke-width=".5"/>
+      <!-- Scanning line animation -->
+      <line x1="0" y1="0" x2="1400" y2="0" stroke="rgba(230,126,74,.06)" stroke-width=".5">
+        <animate attributeName="y1" values="0;900;0" dur="20s" repeatCount="indefinite"/>
+        <animate attributeName="y2" values="0;900;0" dur="20s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;.8;0" dur="20s" repeatCount="indefinite"/>
+      </line>
+    </svg>
+  </div>
+
+  <!-- Gradient fade at bottom -->
+  <div class="hero-fade"></div>
+
+  <!-- Hero content -->
+  <div class="hero-inner">
+    <!-- Lighthouse hero image (inline SVG) -->
+    <svg class="hero-img" viewBox="0 0 90 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Farol Atalaya">
+      <!-- Base trapezoidal -->
+      <path d="M19 148 C19 148 20 134 21 126 L69 126 C70 134 71 148 71 148 Z" fill="#D97757"/>
+      <ellipse cx="45" cy="148" rx="26" ry="3.2" fill="#D97757"/>
+      <!-- Stripe 1 - light -->
+      <path d="M21 126 L23 104 L67 104 L69 126 Z" fill="#FFF8F0"/>
+      <ellipse cx="45" cy="126" rx="24" ry="2.8" fill="#FFF8F0"/>
+      <!-- Stripe 2 - body -->
+      <path d="M23 104 L25.5 82 L64.5 82 L67 104 Z" fill="#D97757"/>
+      <ellipse cx="45" cy="104" rx="22" ry="2.5" fill="#D97757"/>
+      <!-- Stripe 3 - light -->
+      <path d="M25.5 82 L27.5 62 L62.5 62 L64.5 82 Z" fill="#FFF8F0"/>
+      <ellipse cx="45" cy="82" rx="19.5" ry="2.3" fill="#FFF8F0"/>
+      <!-- Stripe 4 - body -->
+      <path d="M27.5 62 L29 48 L61 48 L62.5 62 Z" fill="#D97757"/>
+      <ellipse cx="45" cy="62" rx="17.5" ry="2" fill="#D97757"/>
+      <!-- Gallery -->
+      <ellipse cx="45" cy="47" rx="21" ry="2.8" fill="#4a5568"/>
+      <ellipse cx="45" cy="40.5" rx="19" ry="1.8" fill="none" stroke="#4a5568" stroke-width="0.8"/>
+      <!-- Lantern room -->
+      <path d="M33 40 L34 26 C34 26 45 24.5 56 26 L57 40 Z" fill="#4a5568"/>
+      <path d="M35.5 38 L36 27 L41 26.5 L41 38 Z" fill="#a8d4e6" opacity="0.2"/>
+      <path d="M43 38 L43 26.2 L49 26.2 L49 38 Z" fill="#a8d4e6" opacity="0.2"/>
+      <path d="M51 38 L51 27 L55.5 27.5 L55 38 Z" fill="#a8d4e6" opacity="0.2"/>
+      <path d="M35 39 L35.5 27 C35.5 27 45 25 55 27.5 L55 39 Z" fill="#FFD700" opacity="0.05">
+        <animate attributeName="opacity" values=".05;.15;.05" dur="4s" repeatCount="indefinite"/>
+      </path>
+      <!-- Rounded dome -->
+      <path d="M34 26 Q35 19 39 15 Q45 11 51 15 Q55 19 56 26 Z" fill="#4a5568"/>
+      <ellipse cx="45" cy="13" rx="5" ry="3" fill="#4a5568"/>
+      <!-- Soft cap ball -->
+      <circle cx="45" cy="10.5" r="2.5" fill="#4a5568"/>
+      <!-- Beacon -->
+      <circle cx="45" cy="18" r="2.8" fill="#FFD700"/>
+      <circle cx="45" cy="18" r="6" fill="#FFC857" opacity="0.15">
+        <animate attributeName="opacity" values=".15;.35;.15" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="45" cy="18" r="11" fill="#FFC857" opacity="0.04">
+        <animate attributeName="opacity" values=".04;.12;.04" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <!-- Shadow -->
+      <ellipse cx="45" cy="151" rx="27" ry="1.8" fill="#8B7355" opacity="0.08"/>
+    </svg>
+
+    <h1>
+      {titleParts.map((part, i) => (
+        <>
+          {i > 0 && <br />}
+          <Fragment set:html={part} />
+        </>
+      ))}
+      <span class="hero-cycle" id="hero-word">{hero.words[0]}</span>
+    </h1>
+
+    <p class="hero-sub">
+      {subtitleHighlight ? (
+        <>
+          {subtitleBefore}<mark>{subtitleHighlight}</mark>{subtitleAfter}
+        </>
+      ) : (
+        hero.subtitle
+      )}
+    </p>
+
+    <div class="hero-form">
+      <input type="email" placeholder="voce@seuportal.com.br" />
+      <button type="button">
+        {hero.cta_text}
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+
+    <div class="hero-tagline">{hero.tagline}</div>
+  </div>
+</section>
+
+<script define:vars={{ words: hero.words }}>
+  const el = document.getElementById('hero-word');
+  if (el) {
+    let i = 0;
+    el.classList.add('in');
+    setInterval(() => {
+      el.classList.add('out');
+      el.classList.remove('in');
+      setTimeout(() => {
+        i = (i + 1) % words.length;
+        el.textContent = words[i];
+        el.classList.remove('out');
+        el.classList.add('in');
+      }, 400);
+    }, 2200);
+  }
+</script>
