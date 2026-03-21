@@ -1,10 +1,41 @@
 const http = require('http');
 const https = require('https');
+const crypto = require('crypto');
 const url = require('url');
 
 const CLIENT_ID = process.env.OAUTH_CLIENT_ID;
 const CLIENT_SECRET = process.env.OAUTH_CLIENT_SECRET;
+const ALLOWED_ORIGIN = process.env.ALLOWED_ORIGIN || 'https://atalayia.com.br';
 const PORT = process.env.PORT || 8080;
+
+// In-memory stores (fine for single-instance, low-traffic proxy)
+const pendingStates = new Map();
+const rateLimiter = new Map();
+const RATE_LIMIT = 10;
+const RATE_WINDOW = 60000;
+
+function isRateLimited(ip) {
+  const now = Date.now();
+  const record = rateLimiter.get(ip) || { count: 0, resetAt: now + RATE_WINDOW };
+  if (now > record.resetAt) {
+    record.count = 0;
+    record.resetAt = now + RATE_WINDOW;
+  }
+  record.count++;
+  rateLimiter.set(ip, record);
+  return record.count > RATE_LIMIT;
+}
+
+// Cleanup stale states every 5 minutes
+setInterval(() => {
+  const now = Date.now();
+  for (const [state, ts] of pendingStates) {
+    if (now - ts > 600000) pendingStates.delete(state);
+  }
+  for (const [ip, record] of rateLimiter) {
+    if (now > record.resetAt) rateLimiter.delete(ip);
+  }
+}, 300000);
 
 function makeRequest(options, postData) {
   return new Promise((resolve, reject) => {
@@ -21,9 +52,10 @@ function makeRequest(options, postData) {
 
 const server = http.createServer(async (req, res) => {
   const parsed = url.parse(req.url, true);
+  const clientIp = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
 
-  // CORS headers
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  // CORS — restrict to our domain only
+  res.setHeader('Access-Control-Allow-Origin', ALLOWED_ORIGIN);
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
@@ -33,8 +65,17 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
+  // Rate limiting
+  if (isRateLimited(clientIp)) {
+    res.writeHead(429);
+    res.end('Too many requests');
+    return;
+  }
+
   if (parsed.pathname === '/auth') {
-    const authUrl = `https://github.com/login/oauth/authorize?client_id=${CLIENT_ID}&scope=repo,user`;
+    const state = crypto.randomBytes(16).toString('hex');
+    pendingStates.set(state, Date.now());
+    const authUrl = `https://github.com/login/oauth/authorize?client_id=${CLIENT_ID}&scope=repo&state=${state}`;
     res.writeHead(302, { Location: authUrl });
     res.end();
     return;
@@ -42,9 +83,20 @@ const server = http.createServer(async (req, res) => {
 
   if (parsed.pathname === '/callback') {
     const code = parsed.query.code;
-    if (!code) {
+    const state = parsed.query.state;
+
+    // Validate state (CSRF protection)
+    if (!state || !pendingStates.has(state)) {
+      res.writeHead(403);
+      res.end('Invalid state parameter');
+      return;
+    }
+    pendingStates.delete(state);
+
+    // Validate code format
+    if (!code || typeof code !== 'string' || !/^[a-f0-9]{20}$/.test(code)) {
       res.writeHead(400);
-      res.end('Missing code parameter');
+      res.end('Invalid code parameter');
       return;
     }
 
@@ -71,13 +123,15 @@ const server = http.createServer(async (req, res) => {
         ? `authorization:github:success:{"token":"${body.access_token}","provider":"github"}`
         : `authorization:github:error:${JSON.stringify(body)}`;
 
+      // Use JSON.stringify to safely escape the content for JS embedding (prevents XSS)
+      const safeContent = JSON.stringify(content);
+
       res.writeHead(200, { 'Content-Type': 'text/html' });
       res.end(`<!DOCTYPE html><html><body><script>
         (function() {
           function recieveMessage(e) {
-            console.log("recieveMessage %o", e);
             window.opener.postMessage(
-              '${content}',
+              ${safeContent},
               e.origin
             );
             window.removeEventListener("message", recieveMessage, false);
@@ -91,12 +145,6 @@ const server = http.createServer(async (req, res) => {
       res.writeHead(500);
       res.end('Authentication failed');
     }
-    return;
-  }
-
-  if (parsed.pathname === '/success') {
-    res.writeHead(200, { 'Content-Type': 'text/html' });
-    res.end('<html><body>Authentication successful. You can close this window.</body></html>');
     return;
   }
 
