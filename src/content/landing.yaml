@@ -1,0 +1,186 @@
+hero:
+  title: "Sua história merece ser"
+  words:
+    - "encontrada."
+    - "lida."
+    - "vista."
+    - "ouvida."
+    - "contada."
+    - "compartilhada."
+    - "descoberta."
+    - "alcançada."
+  subtitle: "Entre você e o leitor existe a escuridão dos algoritmos."
+  subtitle_highlight: "A Atalaya ilumina o caminho."
+  cta_text: "Solicitar acesso"
+  tagline: "Para redações que levam o jornalismo a sério"
+
+proof:
+  items:
+    - "\"A IA que entende jornalismo, não texto genérico\" — Editor-chefe"
+    - "\"47 minutos antes da concorrência\" — Coord. Digital"
+    - "\"Mudou como pensamos título\" — Redação parceira"
+    - "\"Dados reais, não achismo\" — Coordenadora Digital"
+    - "\"85% menos retrabalho\" — Editor de SEO"
+    - "\"O copiloto entende o manual de redação\" — Repórter"
+
+features:
+  - id: "optimize"
+    number: "1.0"
+    label: "Optimize"
+    title: "Quatro modos de análise em um painel único"
+    title_emphasis: "painel único"
+    description:
+      - "Cole uma URL de qualquer portal e receba a matéria reescrita com 7 campos prontos para o CMS. Ou passe o texto por correção, revisão HTML e avaliação de imagem."
+      - "Cada sugestão pode ser aceita, rejeitada ou editada individualmente. Nada é publicado sem revisão humana."
+    stats:
+      - value: "85%"
+        label: "menos tempo de edição"
+      - value: "7"
+        label: "campos prontos por matéria"
+      - value: "100%"
+        label: "revisão humana garantida"
+    items:
+      - title: "Reescrita completa"
+        description: "Título editorial, título SEO, descrição, meta descrição, corpo com marcações, tags selecionáveis e sugestão de imagem — tudo na voz do jornalista que vai assinar"
+        icon: "edit"
+      - title: "Correção gramatical"
+        description: "Gramática e regras do Manual de Redação com marcações inline clicáveis. Cada correção tem explicação e referência ao capítulo do manual"
+        icon: "pencil"
+      - title: "Revisão HTML"
+        description: "Schema Article, canonical URL, Open Graph, alt em imagens, hierarquia de headings — checklist técnico completo para Search e Discover"
+        icon: "code"
+      - title: "Avaliação de imagem"
+        description: "Classificadores binários: rosto humano, consistência com título, enquadramento profissional, banco de imagem. Recomendação editorial com dados de CTR"
+        icon: "image"
+    quote:
+      text: "\"Mudou como pensamos título antes de publicar\""
+      author: "Editor-chefe, redação parceira"
+    flip: false
+
+  - id: "trends"
+    number: "2.0"
+    label: "Trends"
+    title: "Oportunidades no Discover e na busca, antes da concorrência"
+    title_emphasis: "Discover"
+    description:
+      - "A aba Trends monitora em tempo real o que está crescendo no Google. Cada tendência vem com insight editorial e recomendação de abordagem específica para a sua redação."
+      - "Duas zonas separadas: Radar Discover rastreia distribuição dos concorrentes, Tendências de Pesquisa detecta temas em alta por volume."
+    stats:
+      - value: "47min"
+        label: "antes da concorrência"
+      - value: "3.2x"
+        label: "mais tráfego Discover"
+      - value: "24/7"
+        label: "monitoramento ativo"
+    items:
+      - title: "Radar Discover"
+        description: "Monitora o que os concorrentes estão publicando e ganhando distribuição no feed do Google Discover em tempo real"
+        icon: "clock"
+      - title: "Tendências de Pesquisa"
+        description: "Temas em alta no Google Trends com volume de buscas, velocidade de crescimento e potencial por editoria do seu jornal"
+        icon: "trending"
+      - title: "Insight editorial + Agente"
+        description: "Cada card inclui recomendação editorial contextual. Um clique gera a matéria com o agente da editoria certa, na voz certa"
+        icon: "user"
+    quote:
+      text: "\"Dados reais, não achismo. Agora sabemos onde investir a pauta\""
+      author: "Coordenadora de Digital, redação parceira"
+    flip: true
+
+  - id: "voice"
+    number: "3.0"
+    label: "Voz editorial"
+    title: "Cada jornalista tem um agente que escreve como ele"
+    title_emphasis: "agente"
+    description:
+      - "Um wizard guiado captura o perfil de voz de cada jornalista em três camadas: preferências declaradas, análise real de artigos publicados, e padrões estruturais por editoria."
+      - "Quando a IA reescreve ou sugere, usa a voz de quem vai assinar a matéria. Não é texto genérico — é o estilo do jornalista."
+    stats:
+      - value: "92%"
+        label: "aderência à voz original"
+      - value: "500+"
+        label: "artigos por perfil"
+      - value: "<3s"
+        label: "para gerar na voz certa"
+    items:
+      - title: "Preferências declaradas"
+        description: "Tom, uso de citações, aderência ao manual de redação, público-alvo e extensão por editoria — capturado via wizard guiado"
+        icon: "mic"
+      - title: "Análise de artigos reais"
+        description: "A IA lê centenas de publicações anteriores e extrai padrões reais de vocabulário, estrutura de abertura e fechamento, e vícios de escrita"
+        icon: "file"
+      - title: "Validação pelo jornalista"
+        description: "\"Reconhece esse estilo?\" — a IA gera um sample e o jornalista confirma ou ajusta antes de ativar o perfil de voz"
+        icon: "check"
+    quote:
+      text: "\"A IA que entende jornalismo. Não é texto de robô\""
+      author: "Repórter Senior, redação parceira"
+    flip: false
+
+pipeline:
+  label: "Data before AI"
+  title: "Dados primeiro. IA depois."
+  subtitle: "O Atalaya coleta dados reais do seu domínio e só então aciona a IA — com contexto, não adivinhação."
+  steps:
+    - number: "01"
+      title: "Coleta de dados"
+      description: "16 meses de dados de performance por editoria. Busca orgânica e Discover separados."
+    - number: "02"
+      title: "Mapeamento editorial"
+      description: "Títulos, autores, tags e imagens de cada URL. A realidade editorial do domínio."
+    - number: "03"
+      title: "Calibração"
+      description: "Correlação estatística entre cada componente e performance real. Pesos por editoria."
+    - number: "04"
+      title: "IA com contexto"
+      description: "A IA só opera com contexto completo: manual de redação, perfil de voz e dados de performance."
+
+stats_section:
+  label: "Resultados"
+  title: "Números do mundo real"
+  subtitle: "Sem métricas inventadas. Cada número vem do pipeline rodando em produção."
+  items:
+    - value: "187K"
+      label: "artigos analisados"
+      detail: "em produção real"
+    - value: "34%"
+      label: "mais cliques no Discover"
+      detail: "com imagem otimizada"
+    - value: "85%"
+      label: "menos retrabalho"
+      detail: "na rotina editorial"
+    - value: "47min"
+      label: "de vantagem"
+      detail: "sobre a concorrência"
+
+cta:
+  label: "Pronto para começar?"
+  title: "Sua redação merece inteligência editorial"
+  subtitle: "Agende uma demonstração e veja como o Atalaya.IA aprende com o seu conteúdo."
+  button_text: "Solicitar demonstração"
+  email: "bruno.olopes@outlook.com"
+
+footer:
+  links:
+    - label: "Optimize"
+      href: "#optimize"
+    - label: "Trends"
+      href: "#trends"
+    - label: "Voz"
+      href: "#voice"
+    - label: "Pipeline"
+      href: "#pipeline"
+  copyright: "© 2026 ATALAYIA LTDA"
+
+nav:
+  links:
+    - label: "Optimize"
+      href: "#optimize"
+    - label: "Trends"
+      href: "#trends"
+    - label: "Voz"
+      href: "#voice"
+    - label: "Pipeline"
+      href: "#pipeline"
+  cta_text: "Solicitar Demo"
+  cta_href: "#contact"
