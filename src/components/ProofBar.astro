@@ -1,0 +1,17 @@
+---
+interface Props {
+  items: string[];
+}
+const { items } = Astro.props;
+---
+<section class="proof">
+  <div class="proof-track">
+    {items.map(item => (
+      <div class="proof-q">{item}</div>
+    ))}
+    {/* Duplicate for seamless loop */}
+    {items.map(item => (
+      <div class="proof-q">{item}</div>
+    ))}
+  </div>
+</section>
