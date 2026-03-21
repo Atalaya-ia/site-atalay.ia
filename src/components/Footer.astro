@@ -1,0 +1,25 @@
+---
+interface Props {
+  footer: {
+    links: { label: string; href: string }[];
+    copyright: string;
+  }
+}
+const { footer } = Astro.props;
+---
+<footer>
+  <div class="wrap">
+    <div class="fi">
+      <div class="fb">
+        <div class="fmi">A</div>
+        <span class="fmt">Atalaya<span style="font-style:italic;color:var(--orange);opacity:0.8">.ia</span></span>
+      </div>
+      <div class="fl">
+        {footer.links.map(link => (
+          <a href={link.href}>{link.label}</a>
+        ))}
+      </div>
+      <div class="fc-copy">{footer.copyright}</div>
+    </div>
+  </div>
+</footer>

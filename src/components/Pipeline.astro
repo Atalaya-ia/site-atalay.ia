@@ -1,0 +1,29 @@
+---
+interface Props {
+  pipeline: {
+    label: string;
+    title: string;
+    subtitle: string;
+    steps: { number: string; title: string; description: string }[];
+  }
+}
+const { pipeline } = Astro.props;
+---
+<section class="pipeline feat-alt" id="pipeline">
+  <div class="wrap">
+    <div class="sec-hd reveal">
+      <div class="sec-label">{pipeline.label}</div>
+      <h2 class="sec-title">{pipeline.title}</h2>
+      <p class="sec-sub">{pipeline.subtitle}</p>
+    </div>
+    <div class="pipe-grid reveal">
+      {pipeline.steps.map(step => (
+        <div class="pipe">
+          <div class="pipe-num">{step.number}</div>
+          <h4>{step.title}</h4>
+          <p>{step.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
