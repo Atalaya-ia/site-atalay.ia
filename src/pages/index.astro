@@ -1,12 +1,42 @@
 ---
 import Base from '../layouts/Base.astro';
 import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import ProofBar from '../components/ProofBar.astro';
+import FeatureSection from '../components/FeatureSection.astro';
+import OptimizeSidebar from '../components/sidebars/OptimizeSidebar.astro';
+import TrendsSidebar from '../components/sidebars/TrendsSidebar.astro';
+import VoiceSidebar from '../components/sidebars/VoiceSidebar.astro';
+import Pipeline from '../components/Pipeline.astro';
+import Stats from '../components/Stats.astro';
+import CtaSection from '../components/CtaSection.astro';
+import Footer from '../components/Footer.astro';
+import content from '../content/landing.yaml';
 ---
 <Base
   title="Atalaya.IA — Inteligência Editorial para Redações"
   description="Copiloto editorial com IA para redações. Otimize títulos, detecte tendências e mantenha a voz de cada jornalista."
 >
-  <main>
-    <p style="color: white; padding: 100px; text-align: center;">Landing page em construção</p>
-  </main>
+  <Nav />
+  <Hero hero={content.hero} />
+  <ProofBar items={content.proof.items} />
+
+  <FeatureSection feature={content.features[0]}>
+    <OptimizeSidebar />
+  </FeatureSection>
+
+  <Pipeline pipeline={content.pipeline} />
+  <Stats stats={content.stats_section} />
+
+  <FeatureSection feature={content.features[1]} alt={true}>
+    <TrendsSidebar />
+  </FeatureSection>
+
+  <FeatureSection feature={content.features[2]}>
+    <VoiceSidebar />
+  </FeatureSection>
+
+  <CtaSection cta={content.cta} />
+  <Footer footer={content.footer} />
 </Base>
