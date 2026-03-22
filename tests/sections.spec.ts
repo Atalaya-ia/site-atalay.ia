@@ -30,7 +30,7 @@ test.describe('All sections render', () => {
     test('h1 text is present', async ({ page }) => {
       const h1 = page.locator('section.hero h1');
       await expect(h1).toBeVisible();
-      await expect(h1).toContainText('inteligencia editorial');
+      await expect(h1).toContainText('inteligência editorial');
     });
 
     test('subtitle is present', async ({ page }) => {
