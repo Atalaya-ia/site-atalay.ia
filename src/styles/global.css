@@ -584,38 +584,20 @@ footer { border-top: 1px solid var(--border); padding: 80px 0 40px }
   .nav-links { display: none !important }
   .nav-divider { display: none }
 
-  /* Hero text */
-  .hero { padding: 88px 0 0 }
-  .hero-text { padding: 0 20px }
-  .hero-badge { font-size: 12px; padding: 4px 10px; margin-bottom: 20px }
-  .hero h1 { font-size: 28px; line-height: 1.15; margin-bottom: 14px; letter-spacing: -.02em }
+  /* Hero text — centered on mobile like Linear */
+  .hero { padding: 100px 0 0; text-align: center }
+  .hero-text { padding: 0 24px; display: flex; flex-direction: column; align-items: center }
+  .hero-badge { font-size: 12px; padding: 4px 12px; margin-bottom: 24px }
+  .hero h1 { font-size: 32px; line-height: 1.12; margin-bottom: 16px; letter-spacing: -.02em; max-width: 100% }
   .hero h1 mark { text-underline-offset: 3px; text-decoration-thickness: 1.5px }
-  .hero-sub { font-size: 14px; margin-bottom: 20px; line-height: 1.5 }
-  .hero-actions { flex-direction: column; align-items: stretch; gap: 10px }
-  .btn-p, .btn-s { justify-content: center; padding: 13px 20px; font-size: 14px }
+  .hero-sub { font-size: 15px; margin-bottom: 28px; line-height: 1.55; max-width: 340px }
+  .hero-actions { flex-direction: column; align-items: stretch; gap: 10px; width: 100%; max-width: 300px }
+  .btn-p, .btn-s { justify-content: center; padding: 14px 20px; font-size: 15px }
 
-  /* Hero product frame — key fix */
-  .hero-product { margin: 28px -20px 0; max-width: none }
-  .hero-frame { border-radius: 12px 12px 0 0; height: auto; min-height: 420px; max-height: 520px; border-left: none; border-right: none }
-  .hero-topbar { padding: 8px 12px }
-  .hero-topbar-dot { width: 7px; height: 7px }
-  .hero-topbar-url { display: none }
-
-  /* Hero sidebar on mobile — full width */
-  .hero-sb-hd { padding: 10px 12px; gap: 8px }
-  .hero-sb-mark { width: 24px; height: 24px; font-size: 11px }
-  .hero-sb-name { font-size: 12px }
-  .hero-sb-status { font-size: 8px }
-
-  .hero-tabs { margin: 6px 8px 0; padding: 3px }
-  .hero-tab { font-size: 10px; padding: 6px 0; gap: 3px }
-  .hero-tab svg { width: 10px; height: 10px }
-  .hero-tab-sep { height: 12px }
-
-  .hero-panel { padding: 6px 8px 8px }
-
-  /* Hero fade */
-  .hero-fade { height: 80px }
+  /* Hero product: hide entirely on mobile (Linear approach) */
+  .hero-product { display: none }
+  .hero-fade { height: 60px }
+  .hero { padding-bottom: 40px }
 
   /* Proof */
   .proof { padding: 32px 0 60px }
@@ -746,12 +728,10 @@ footer { border-top: 1px solid var(--border); padding: 80px 0 40px }
    ═══════════════════════════════════════════════════════════ */
 @media (max-width: 400px) {
   .wrap { padding: 0 14px }
-  .hero-text { padding: 0 14px }
-  .hero h1 { font-size: 24px }
+  .hero-text { padding: 0 16px }
+  .hero h1 { font-size: 26px }
   .hero-badge { font-size: 11px }
-  .hero-sub { font-size: 13px }
-  .hero-product { margin: 24px -14px 0 }
-  .hero-frame { min-height: 380px; max-height: 460px }
+  .hero-sub { font-size: 14px; max-width: 280px }
 
   .proof-card { width: 250px; padding: 14px }
   .proof-card blockquote { font-size: 13px }
