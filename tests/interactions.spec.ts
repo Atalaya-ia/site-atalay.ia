@@ -53,7 +53,7 @@ test.describe('Interactive elements', () => {
     await expect(mobileMenu).toHaveClass(/open/);
 
     // Click a nav link
-    await mobileMenu.locator('a[href="#optimize"]').click();
+    await mobileMenu.locator('a[href="/#optimize"]').click();
     await expect(mobileMenu).not.toHaveClass(/open/);
     await expect(hamburger).not.toHaveClass(/active/);
   });
@@ -63,7 +63,7 @@ test.describe('Interactive elements', () => {
     await page.locator('footer').scrollIntoViewIfNeeded();
 
     // Click a visible anchor link in the footer
-    const footerLink = page.locator('footer a[href="#optimize"]').first();
+    const footerLink = page.locator('footer a[href="/#optimize"]').first();
     await expect(footerLink).toBeVisible();
     await footerLink.click();
     await page.waitForTimeout(1000);
