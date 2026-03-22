@@ -35,7 +35,17 @@ const sections = [
 
       <div class="legal-layout">
 
-        <!-- Content (main column) -->
+        <!-- Sidebar TOC -->
+        <aside class="legal-toc">
+          <div class="legal-toc-title">Nesta página</div>
+          <nav>
+            {sections.map(s => (
+              <a href={`#${s.id}`} class="legal-toc-link">{s.title}</a>
+            ))}
+          </nav>
+        </aside>
+
+        <!-- Content -->
         <div class="legal-content">
 
           <p>A ATALAYIA LTDA ("atalay.ia", "nós", "nosso") opera a plataforma atalay.ia, uma ferramenta de inteligência editorial para redações. Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos suas informações pessoais.</p>
@@ -154,17 +164,6 @@ const sections = [
           <p>Respondemos a todas as solicitações em até 15 dias úteis, conforme previsto na LGPD.</p>
 
         </div>
-
-        <!-- Sidebar TOC (right) -->
-        <aside class="legal-toc">
-          <div class="legal-toc-title">Nesta página</div>
-          <nav>
-            {sections.map(s => (
-              <a href={`#${s.id}`} class="legal-toc-link">{s.title}</a>
-            ))}
-          </nav>
-        </aside>
-
       </div>
     </div>
   </section>
@@ -212,10 +211,10 @@ const sections = [
     color: var(--text-m);
   }
 
-  /* Layout: content (left) + TOC sidebar (right) */
+  /* Layout: TOC sidebar + content */
   .legal-layout {
     display: grid;
-    grid-template-columns: 1fr 200px;
+    grid-template-columns: 220px 1fr;
     gap: 60px;
     align-items: start;
   }
