@@ -1,0 +1,355 @@
+---
+import Base from '../layouts/Base.astro';
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+<Base
+  title="Contato — Atalaya.IA"
+  description="Entre em contato com a equipe Atalaya.IA. Solicite uma demonstração e descubra como a inteligência editorial pode transformar sua redação."
+>
+  <Nav />
+
+  <section class="contact-page">
+    <div class="contact-wrap">
+      <div class="contact-grid">
+
+        <!-- Left: text -->
+        <div class="contact-info">
+          <div class="contact-label">Contato</div>
+          <h1 class="contact-title">Solicitar uma<br>demonstração</h1>
+          <p class="contact-desc">Saiba como o Atalaya.IA pode ajudar sua redação a produzir conteúdo com mais velocidade, qualidade e contexto editorial.</p>
+
+          <div class="contact-features">
+            <div class="contact-feat">
+              <div class="contact-feat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              </div>
+              <div>
+                <h4>Demo personalizada</h4>
+                <p>Demonstração ao vivo com dados reais da sua redação e editoria.</p>
+              </div>
+            </div>
+            <div class="contact-feat">
+              <div class="contact-feat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <div>
+                <h4>Onboarding dedicado</h4>
+                <p>Configuração do pipeline de dados e perfis de voz de cada jornalista.</p>
+              </div>
+            </div>
+            <div class="contact-feat">
+              <div class="contact-feat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              </div>
+              <div>
+                <h4>Integração com seu CMS</h4>
+                <p>Conectamos com AEM, WordPress ou qualquer sistema editorial.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: form -->
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" placeholder="Seu nome" required />
+              </div>
+              <div class="form-group">
+                <label for="role">Cargo</label>
+                <input type="text" id="role" name="role" placeholder="Ex: Editor-chefe" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email profissional</label>
+              <input type="email" id="email" name="email" placeholder="voce@seuportal.com.br" required />
+            </div>
+
+            <div class="form-group">
+              <label for="company">Veículo / Empresa</label>
+              <input type="text" id="company" name="company" placeholder="Nome do jornal ou portal" required />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="team-size">Tamanho da redação</label>
+                <select id="team-size" name="team-size">
+                  <option value="" disabled selected>Selecione</option>
+                  <option value="1-10">1–10 jornalistas</option>
+                  <option value="11-30">11–30 jornalistas</option>
+                  <option value="31-100">31–100 jornalistas</option>
+                  <option value="100+">100+ jornalistas</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="cms">CMS atual</label>
+                <select id="cms" name="cms">
+                  <option value="" disabled selected>Selecione</option>
+                  <option value="aem">Adobe AEM</option>
+                  <option value="wordpress">WordPress</option>
+                  <option value="drupal">Drupal</option>
+                  <option value="custom">Próprio / Custom</option>
+                  <option value="other">Outro</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Como podemos ajudar?</label>
+              <textarea id="message" name="message" rows="4" placeholder="Conte um pouco sobre o que sua redação precisa..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-p contact-submit">
+              Solicitar demonstração
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+
+            <p class="form-note">Respondemos em até 24 horas úteis.</p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Base>
+
+<script>
+  const form = document.getElementById('contactForm');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formData = new FormData(form as HTMLFormElement);
+      const name = formData.get('name');
+      const email = formData.get('email');
+      const company = formData.get('company');
+      const role = formData.get('role');
+      const teamSize = formData.get('team-size');
+      const cms = formData.get('cms');
+      const message = formData.get('message');
+
+      const subject = encodeURIComponent(`Demo Atalaya.IA — ${company}`);
+      const body = encodeURIComponent(
+        `Nome: ${name}\nCargo: ${role}\nEmail: ${email}\nVeículo: ${company}\nRedação: ${teamSize}\nCMS: ${cms}\n\nMensagem:\n${message}`
+      );
+      window.location.href = `mailto:contato@atalayia.com?subject=${subject}&body=${body}`;
+
+      if (typeof (window as any).showToast === 'function') {
+        (window as any).showToast('Abrindo seu email...');
+      }
+    });
+  }
+</script>
+
+<style>
+  .contact-page {
+    padding: 140px 0 100px;
+    position: relative;
+  }
+  .contact-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(192,106,66,.04) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .contact-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  /* Left info */
+  .contact-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 16px;
+  }
+
+  .contact-title {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -.03em;
+    margin-bottom: 20px;
+  }
+
+  .contact-desc {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--text-s);
+    margin-bottom: 40px;
+  }
+
+  .contact-features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-feat {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .contact-feat-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--orange-dim);
+    border: 1px solid rgba(192,106,66,.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--orange);
+  }
+
+  .contact-feat-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .contact-feat h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .contact-feat p {
+    font-size: 14px;
+    color: var(--text-s);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* Right form */
+  .contact-form-wrap {
+    background: var(--bg-card);
+    border: 1px solid var(--border-l);
+    border-radius: 16px;
+    padding: 36px;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-s);
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 12px 14px;
+    background: rgba(255,255,255,.03);
+    border: 1px solid var(--border-l);
+    border-radius: 8px;
+    color: var(--text);
+    font-size: 15px;
+    font-family: 'DM Sans', sans-serif;
+    transition: border-color .2s;
+    outline: none;
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: var(--text-m);
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: rgba(192,106,66,.4);
+  }
+
+  .form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%235c5c66' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 36px;
+  }
+
+  .form-group select option {
+    background: var(--bg-card);
+    color: var(--text);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .contact-submit {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 28px;
+    font-size: 16px;
+    margin-top: 4px;
+  }
+
+  .form-note {
+    font-size: 13px;
+    color: var(--text-m);
+    text-align: center;
+    margin: 0;
+  }
+
+  /* Mobile */
+  @media (max-width: 767px) {
+    .contact-page { padding: 100px 0 60px }
+    .contact-wrap { padding: 0 20px }
+    .contact-grid { grid-template-columns: 1fr; gap: 40px }
+    .contact-title { font-size: 32px }
+    .contact-desc { font-size: 15px; margin-bottom: 28px }
+    .contact-form-wrap { padding: 24px }
+    .form-row { grid-template-columns: 1fr }
+  }
+
+  @media (max-width: 400px) {
+    .contact-form-wrap { padding: 20px }
+    .contact-title { font-size: 28px }
+  }
+</style>
