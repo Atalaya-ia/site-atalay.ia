@@ -46,8 +46,8 @@ test.describe('Smoke tests', () => {
     await expect(page).toHaveTitle(/Sveltia CMS|Admin/);
   });
 
-  test('favicon.svg exists', async ({ request }) => {
-    const response = await request.get('/favicon.svg');
+  test('favicon.ico exists', async ({ request }) => {
+    const response = await request.get('/favicon.ico');
     expect(response.status()).toBe(200);
   });
 
