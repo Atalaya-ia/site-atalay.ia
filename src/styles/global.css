@@ -351,11 +351,11 @@ nav.scrolled { background: rgba(11,12,14,.92); backdrop-filter: blur(20px) }
 .values-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; max-width: 1320px; margin: 0 auto }
 @media(max-width:768px) { .values-grid { grid-template-columns: 1fr } }
 .val { background: var(--bg); padding: 0; display: flex; flex-direction: column; min-height: 560px; border: 1px solid var(--border); border-radius: 16px; overflow: hidden }
-.val:hover .val-svg { opacity: .75 }
+.val:hover .val-svg { opacity: 1 }
 .val:hover { border-color: var(--border-h) }
 .val-fig { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; color: var(--text-m); letter-spacing: .5px; padding: 32px 32px 0 }
 .val-fig span { color: var(--orange) }
-.val-svg { width: 100%; flex: 1; display: flex; align-items: center; justify-content: center; opacity: .5; transition: opacity .5s }
+.val-svg { width: 100%; flex: 1; display: flex; align-items: center; justify-content: center; opacity: .85; transition: opacity .5s }
 .val-svg svg { width: 300px; height: 300px }
 .val-text { padding: 0 32px 40px }
 .val h3 { font-size: 19px; font-weight: 600; margin-bottom: 8px; color: var(--text) }
