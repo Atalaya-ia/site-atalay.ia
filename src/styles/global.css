@@ -123,7 +123,7 @@ nav.scrolled { background: rgba(11,12,14,.92); backdrop-filter: blur(20px) }
 
 /* App layout inside frame */
 .hero-app { display: grid; grid-template-columns: 1fr 360px; flex: 1; min-height: 0 }
-@media(max-width:860px) { .hero-frame { height: 560px } .hero-app { grid-template-columns: 1fr } .hero-cms-col { display: none } }
+/* tablet/mobile handled in responsive section below */
 
 /* CMS Column (left — simulated editor) */
 .hero-cms-col { background: #08090a; padding: 24px 28px; border-right: 1px solid rgba(255,255,255,.04); display: flex; flex-direction: column; gap: 0; overflow: hidden }
@@ -528,81 +528,210 @@ footer { border-top: 1px solid var(--border); padding: 80px 0 40px }
 .nav-mobile .nav-cta { display: inline-flex; align-items: center; justify-content: center; margin-top: 16px; padding: 14px 28px; text-align: center; border-bottom: none }
 
 /* ═══════════════════════════════════════════════════════════
-   MOBILE RESPONSIVE (< 768px)
+   TABLET (< 860px) — Hero product frame
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 860px) {
+  /* Hero product: show only sidebar, hide CMS editor */
+  .hero-frame { height: auto; min-height: 500px; max-height: 600px }
+  .hero-app { grid-template-columns: 1fr }
+  .hero-cms-col { display: none }
+  .hero-sb { min-height: 480px }
+
+  /* Hero sidebar tabs and panels need proper sizing */
+  .hero-tabs { margin: 8px 10px 0 }
+  .hero-tab { font-size: 11px; padding: 7px 0 }
+  .hero-panel { padding: 8px 10px 10px }
+
+  /* Hero sidebar internal components */
+  .h-tc { padding: 8px 10px }
+  .h-tc-title { font-size: 11px }
+  .h-tc-insight { font-size: 8px }
+  .h-fc-hd { padding: 5px 8px }
+  .h-fc-label { font-size: 10px }
+  .h-fc-old, .h-fc-new { font-size: 11px; margin: 2px 6px 4px }
+  .h-fc-chr { font-size: 10px; padding: 0 8px 4px }
+
+  /* Trust card */
+  .hs-trust { padding: 6px 10px }
+  .hs-trust-title { font-size: 12px }
+  .hs-trust-sub { font-size: 10px }
+
+  /* Body card */
+  .hs-body-scroll { max-height: 180px }
+  .hs-body-scroll p { font-size: 11px }
+
+  /* Insert suggestions */
+  .hs-insert { padding: 4px 6px }
+  .hs-insert-type { font-size: 9px }
+  .hs-insert-desc { font-size: 10px }
+
+  /* Tags */
+  .hs-tag { font-size: 10px; padding: 3px 7px }
+
+  /* Footer buttons */
+  .h-sb-footer { padding: 6px 10px }
+  .h-btn { font-size: 11px; padding: 6px 10px }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   MOBILE (< 768px)
    ═══════════════════════════════════════════════════════════ */
 @media (max-width: 767px) {
   /* Wrap */
   .wrap { padding: 0 20px }
 
-  /* Hero */
+  /* Nav */
+  .nav-links { display: none !important }
+  .nav-divider { display: none }
+
+  /* Hero text */
   .hero { padding: 88px 0 0 }
   .hero-text { padding: 0 20px }
-  .hero-badge { font-size: 13px; padding: 5px 12px; margin-bottom: 24px }
-  .hero h1 { font-size: 32px; line-height: 1.12; margin-bottom: 16px }
-  .hero-sub { font-size: 15px; margin-bottom: 24px }
+  .hero-badge { font-size: 12px; padding: 4px 10px; margin-bottom: 20px }
+  .hero h1 { font-size: 28px; line-height: 1.15; margin-bottom: 14px; letter-spacing: -.02em }
+  .hero h1 mark { text-underline-offset: 3px; text-decoration-thickness: 1.5px }
+  .hero-sub { font-size: 14px; margin-bottom: 20px; line-height: 1.5 }
   .hero-actions { flex-direction: column; align-items: stretch; gap: 10px }
-  .btn-p, .btn-s { justify-content: center; padding: 14px 20px; font-size: 15px }
+  .btn-p, .btn-s { justify-content: center; padding: 13px 20px; font-size: 14px }
 
-  /* Hero product frame */
-  .hero-product { margin-top: 36px }
-  .hero-frame { height: 480px; border-radius: 12px 12px 0 0 }
+  /* Hero product frame — key fix */
+  .hero-product { margin: 28px -20px 0; max-width: none }
+  .hero-frame { border-radius: 12px 12px 0 0; height: auto; min-height: 420px; max-height: 520px; border-left: none; border-right: none }
+  .hero-topbar { padding: 8px 12px }
+  .hero-topbar-dot { width: 7px; height: 7px }
   .hero-topbar-url { display: none }
 
+  /* Hero sidebar on mobile — full width */
+  .hero-sb-hd { padding: 10px 12px; gap: 8px }
+  .hero-sb-mark { width: 24px; height: 24px; font-size: 11px }
+  .hero-sb-name { font-size: 12px }
+  .hero-sb-status { font-size: 8px }
+
+  .hero-tabs { margin: 6px 8px 0; padding: 3px }
+  .hero-tab { font-size: 10px; padding: 6px 0; gap: 3px }
+  .hero-tab svg { width: 10px; height: 10px }
+  .hero-tab-sep { height: 12px }
+
+  .hero-panel { padding: 6px 8px 8px }
+
+  /* Hero fade */
+  .hero-fade { height: 80px }
+
   /* Proof */
-  .proof { padding: 40px 0 80px }
-  .proof-card { width: 300px; padding: 20px }
-  .proof-card blockquote { font-size: 15px }
-  .proof-card cite { font-size: 12px }
+  .proof { padding: 32px 0 60px }
+  .proof-card { width: 280px; padding: 18px }
+  .proof-card blockquote { font-size: 14px; margin-bottom: 14px }
+  .proof-card cite { font-size: 11px; gap: 8px }
+  .proof-card-avatar { width: 28px; height: 28px; font-size: 11px }
+  .proof-card-stars { font-size: 12px; margin-bottom: 10px }
 
   /* Values */
-  .values { padding: 80px 0 60px }
-  .values-statement { font-size: 24px; margin-bottom: 48px; padding: 0 20px }
-  .values-grid { gap: 16px }
-  .val { min-height: 400px }
-  .val-svg svg { width: 200px; height: 200px }
-  .val-text { padding: 0 20px 28px }
-  .val-fig { padding: 20px 20px 0 }
+  .values { padding: 60px 0 40px }
+  .values-statement { font-size: 22px; line-height: 1.3; margin-bottom: 40px; padding: 0 20px }
+  .values-grid { gap: 14px; padding: 0 20px }
+  .val { min-height: 340px; border-radius: 12px }
+  .val-svg svg { width: 180px; height: 180px }
+  .val-text { padding: 0 20px 24px }
+  .val-fig { padding: 16px 20px 0 }
+  .val h3 { font-size: 16px }
+  .val p { font-size: 14px }
 
   /* Feature sections */
-  .feat { padding: 60px 0 }
-  .feat-header { margin-bottom: 40px }
-  .feat-header h2 { font-size: 28px }
-  .feat-header p { font-size: 15px }
-  .feat-header-link { margin-top: 16px }
+  .feat { padding: 48px 0 }
+  .feat-header { margin-bottom: 32px; gap: 16px }
+  .feat-header h2 { font-size: 24px }
+  .feat-header p { font-size: 14px }
+  .feat-header-link { margin-top: 12px; font-size: 12px }
   .feat-content { position: static }
-  .feat-stats { grid-template-columns: 1fr; gap: 0 }
-  .feat-stat { border-right: none; border-bottom: 1px solid var(--border); padding: 14px }
-  .feat-stat:last-child { border-bottom: none }
-  .feat-stat-v { font-size: 28px }
-  .feat-item h4 { font-size: 14px }
-  .feat-item p { font-size: 13px }
-  .feat-subs { margin-top: 24px }
+  .feat-row { gap: 24px }
 
-  /* Sidebar panels */
+  /* Feature stats — horizontal scroll on mobile instead of stack */
+  .feat-stats { grid-template-columns: repeat(3, 1fr) }
+  .feat-stat { padding: 12px 8px }
+  .feat-stat-v { font-size: 22px }
+  .feat-stat-l { font-size: 10px }
+
+  /* Feature items */
+  .feat-items { gap: 14px; margin: 20px 0 }
+  .feat-item { gap: 10px }
+  .feat-item-icon { width: 34px; height: 34px; border-radius: 8px }
+  .feat-item-icon svg { width: 15px; height: 15px }
+  .feat-item h4 { font-size: 13px }
+  .feat-item p { font-size: 12px }
+
+  /* Feature subs */
+  .feat-subs { margin-top: 20px }
+  .feat-sub { font-size: 13px; padding: 10px 0 }
+  .feat-sub-num { font-size: 11px }
+
+  /* Feature quote */
+  .feat-quote { padding: 12px 14px; margin-top: 20px }
+  .feat-quote p { font-size: 14px }
+
+  /* Sidebar panels in features */
   .sb { border-radius: 10px }
-  .sb-hd { font-size: 12px; padding: 10px 12px }
+  .sb-hd { font-size: 11px; padding: 8px 10px }
+  .sb-bd { padding: 6px 8px }
+  .sb-footer { padding: 6px 8px }
+  .sf { font-size: 11px; padding: 6px 10px }
+
+  /* Feature field cards */
+  .fc-hd { padding: 5px 8px }
+  .fc-label { font-size: 10px }
+  .fc-status { font-size: 10px }
+  .fc-old, .fc-new { font-size: 12px; padding: 5px 10px 5px 8px; margin: 2px 6px 5px }
+  .fc-result { font-size: 12px; padding: 5px 10px 5px 8px; margin: 0 6px 5px }
+  .fc-chars { font-size: 10px; padding: 0 8px 4px }
+
+  /* Trend cards in features */
+  .tc { padding: 8px 10px }
+  .tc-thumb { width: 30px; height: 30px }
+  .tc-thumb svg { width: 14px; height: 14px }
+  .tc-title { font-size: 13px }
+  .tc-meta { font-size: 10px }
+  .tc-insight { font-size: 11px; padding: 6px 8px }
+  .tc-zone { font-size: 9px }
+  .tc-cta-btn { font-size: 11px; padding: 8px }
+
+  /* Voice cards in features */
+  .vp-hd { padding: 6px 10px }
+  .vp-av { width: 24px; height: 24px; font-size: 9px }
+  .vp-name { font-size: 13px }
+  .vp-sub { font-size: 10px }
+  .vp-row { padding: 6px 10px; font-size: 12px }
+  .vp-th { width: 16px; height: 16px; font-size: 8px; border-radius: 3px }
+  .wiz-steps { padding: 6px 0; margin-bottom: 8px }
+  .wiz-step { font-size: 9px }
+  .wiz-dot { width: 14px; height: 14px; font-size: 6px }
+  .wiz-line { width: 12px }
+  .voice-sample { padding: 10px }
+  .voice-sample-q { font-size: 12px }
+  .voice-sample-text { font-size: 12px }
+  .voice-sample-btn { font-size: 11px; padding: 6px 10px }
 
   /* Section headers */
-  .sec-title { font-size: 28px }
-  .sec-sub { font-size: 15px }
+  .sec-title { font-size: 24px }
+  .sec-sub { font-size: 14px }
+  .sec-label { font-size: 10px; letter-spacing: 1px }
 
   /* Pipeline */
-  .pipe { padding: 28px 20px }
-  .pipe h4 { font-size: 15px }
+  .pipe-grid { margin-top: 32px }
+  .pipe { padding: 24px 18px }
+  .pipe-num { font-size: 28px }
+  .pipe h4 { font-size: 14px; margin-bottom: 6px }
   .pipe p { font-size: 13px }
 
-  /* Stats grid */
-  .stat-grid { grid-template-columns: repeat(2, 1fr) }
-  .stat { padding: 28px 16px }
-
   /* CTA */
-  .cta { padding: 80px 0 }
-  .cta h2 { font-size: 28px }
-  .cta-actions { flex-direction: column; align-items: center; gap: 10px }
-  .cta-actions .btn-p, .cta-actions .btn-s { width: 100%; max-width: 320px; justify-content: center }
+  .cta { padding: 60px 0 }
+  .cta h2 { font-size: 24px; margin-bottom: 28px }
+  .cta-actions { flex-direction: column; align-items: stretch; gap: 10px }
+  .cta-actions .btn-p, .cta-actions .btn-s { justify-content: center }
 
   /* Footer */
   .footer-top { gap: 24px }
+  .footer-tagline { font-size: 12px }
+  .footer-col-title { font-size: 10px; margin-bottom: 10px }
+  .footer-col a { font-size: 12px }
   .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px }
 
   /* Section border */
@@ -610,23 +739,35 @@ footer { border-top: 1px solid var(--border); padding: 80px 0 40px }
 
   /* Toast */
   .toast { bottom: 16px; right: 16px; left: 16px }
-
-  /* Nav divider */
-  .nav-divider { display: none }
 }
 
 /* ═══════════════════════════════════════════════════════════
    SMALL MOBILE (< 400px)
    ═══════════════════════════════════════════════════════════ */
 @media (max-width: 400px) {
-  .wrap { padding: 0 16px }
-  .hero-text { padding: 0 16px }
-  .hero h1 { font-size: 28px }
-  .hero-frame { height: 400px }
-  .proof-card { width: 260px; padding: 16px }
-  .values-statement { font-size: 22px }
-  .val { min-height: 360px }
+  .wrap { padding: 0 14px }
+  .hero-text { padding: 0 14px }
+  .hero h1 { font-size: 24px }
+  .hero-badge { font-size: 11px }
+  .hero-sub { font-size: 13px }
+  .hero-product { margin: 24px -14px 0 }
+  .hero-frame { min-height: 380px; max-height: 460px }
+
+  .proof-card { width: 250px; padding: 14px }
+  .proof-card blockquote { font-size: 13px }
+
+  .values-statement { font-size: 20px; padding: 0 14px }
+  .values-grid { padding: 0 14px }
+  .val { min-height: 300px }
+  .val-svg svg { width: 150px; height: 150px }
+
+  .feat-header h2 { font-size: 22px }
+  .feat-stats { grid-template-columns: 1fr }
+  .feat-stat { border-right: none; border-bottom: 1px solid var(--border) }
+  .feat-stat:last-child { border-bottom: none }
+
   .pipe-grid { grid-template-columns: 1fr }
   .stat-grid { grid-template-columns: 1fr }
   .footer-top { grid-template-columns: 1fr }
+  .cta h2 { font-size: 22px }
 }
