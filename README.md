@@ -1,6 +1,6 @@
 # atalay.ia -- Landing Page
 
-Marketing site for [Atalaya.IA](https://atalayia.com.br) -- editorial intelligence for newsrooms.
+Marketing site for [atalay.ia](https://atalayia.com.br) — editorial intelligence for newsrooms.
 
 ## Stack
 

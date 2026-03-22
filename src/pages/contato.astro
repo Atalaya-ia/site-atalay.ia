@@ -5,8 +5,8 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 ---
 <Base
-  title="Contato — Atalaya.IA"
-  description="Entre em contato com a equipe Atalaya.IA. Solicite uma demonstração e descubra como a inteligência editorial pode transformar sua redação."
+  title="Contato — atalay.ia"
+  description="Entre em contato com a equipe atalay.ia. Solicite uma demonstração e descubra como a inteligência editorial pode transformar sua redação."
 >
   <Nav />
 
@@ -18,7 +18,7 @@ import Footer from '../components/Footer.astro';
         <div class="contact-info">
           <div class="contact-label">Contato</div>
           <h1 class="contact-title">Solicitar uma<br>demonstração</h1>
-          <p class="contact-desc">Saiba como o Atalaya.IA pode ajudar sua redação a produzir conteúdo com mais velocidade, qualidade e contexto editorial.</p>
+          <p class="contact-desc">Saiba como o atalay.ia pode ajudar sua redação a produzir conteúdo com mais velocidade, qualidade e contexto editorial.</p>
 
           <div class="contact-features">
             <div class="contact-feat">
@@ -134,7 +134,7 @@ import Footer from '../components/Footer.astro';
       const cms = formData.get('cms');
       const message = formData.get('message');
 
-      const subject = encodeURIComponent(`Demo Atalaya.IA — ${company}`);
+      const subject = encodeURIComponent(`Demo atalay.ia — ${company}`);
       const body = encodeURIComponent(
         `Nome: ${name}\nCargo: ${role}\nEmail: ${email}\nVeículo: ${company}\nRedação: ${teamSize}\nCMS: ${cms}\n\nMensagem:\n${message}`
       );
@@ -151,6 +151,7 @@ import Footer from '../components/Footer.astro';
   .contact-page {
     padding: 140px 0 100px;
     position: relative;
+    overflow-x: hidden;
   }
   .contact-page::before {
     content: '';

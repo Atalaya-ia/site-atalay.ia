@@ -7,7 +7,7 @@ test.describe('SEO checks', () => {
 
   test('page has correct title tag', async ({ page }) => {
     const title = await page.title();
-    expect(title).toContain('Atalaya.IA');
+    expect(title).toContain('atalay.ia');
   });
 
   test('meta description exists and is not empty', async ({ page }) => {
