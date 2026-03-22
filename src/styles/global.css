@@ -526,3 +526,107 @@ footer { border-top: 1px solid var(--border); padding: 80px 0 40px }
 .nav-mobile a { color: var(--text-s); text-decoration: none; font-size: 18px; font-weight: 500; padding: 12px 0; border-bottom: 1px solid var(--border); transition: color .2s }
 .nav-mobile a:hover { color: var(--text) }
 .nav-mobile .nav-cta { display: inline-flex; align-items: center; justify-content: center; margin-top: 16px; padding: 14px 28px; text-align: center; border-bottom: none }
+
+/* ═══════════════════════════════════════════════════════════
+   MOBILE RESPONSIVE (< 768px)
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 767px) {
+  /* Wrap */
+  .wrap { padding: 0 20px }
+
+  /* Hero */
+  .hero { padding: 88px 0 0 }
+  .hero-text { padding: 0 20px }
+  .hero-badge { font-size: 13px; padding: 5px 12px; margin-bottom: 24px }
+  .hero h1 { font-size: 32px; line-height: 1.12; margin-bottom: 16px }
+  .hero-sub { font-size: 15px; margin-bottom: 24px }
+  .hero-actions { flex-direction: column; align-items: stretch; gap: 10px }
+  .btn-p, .btn-s { justify-content: center; padding: 14px 20px; font-size: 15px }
+
+  /* Hero product frame */
+  .hero-product { margin-top: 36px }
+  .hero-frame { height: 480px; border-radius: 12px 12px 0 0 }
+  .hero-topbar-url { display: none }
+
+  /* Proof */
+  .proof { padding: 40px 0 80px }
+  .proof-card { width: 300px; padding: 20px }
+  .proof-card blockquote { font-size: 15px }
+  .proof-card cite { font-size: 12px }
+
+  /* Values */
+  .values { padding: 80px 0 60px }
+  .values-statement { font-size: 24px; margin-bottom: 48px; padding: 0 20px }
+  .values-grid { gap: 16px }
+  .val { min-height: 400px }
+  .val-svg svg { width: 200px; height: 200px }
+  .val-text { padding: 0 20px 28px }
+  .val-fig { padding: 20px 20px 0 }
+
+  /* Feature sections */
+  .feat { padding: 60px 0 }
+  .feat-header { margin-bottom: 40px }
+  .feat-header h2 { font-size: 28px }
+  .feat-header p { font-size: 15px }
+  .feat-header-link { margin-top: 16px }
+  .feat-content { position: static }
+  .feat-stats { grid-template-columns: 1fr; gap: 0 }
+  .feat-stat { border-right: none; border-bottom: 1px solid var(--border); padding: 14px }
+  .feat-stat:last-child { border-bottom: none }
+  .feat-stat-v { font-size: 28px }
+  .feat-item h4 { font-size: 14px }
+  .feat-item p { font-size: 13px }
+  .feat-subs { margin-top: 24px }
+
+  /* Sidebar panels */
+  .sb { border-radius: 10px }
+  .sb-hd { font-size: 12px; padding: 10px 12px }
+
+  /* Section headers */
+  .sec-title { font-size: 28px }
+  .sec-sub { font-size: 15px }
+
+  /* Pipeline */
+  .pipe { padding: 28px 20px }
+  .pipe h4 { font-size: 15px }
+  .pipe p { font-size: 13px }
+
+  /* Stats grid */
+  .stat-grid { grid-template-columns: repeat(2, 1fr) }
+  .stat { padding: 28px 16px }
+
+  /* CTA */
+  .cta { padding: 80px 0 }
+  .cta h2 { font-size: 28px }
+  .cta-actions { flex-direction: column; align-items: center; gap: 10px }
+  .cta-actions .btn-p, .cta-actions .btn-s { width: 100%; max-width: 320px; justify-content: center }
+
+  /* Footer */
+  .footer-top { gap: 24px }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px }
+
+  /* Section border */
+  .section-border::before { left: 20px; right: 20px }
+
+  /* Toast */
+  .toast { bottom: 16px; right: 16px; left: 16px }
+
+  /* Nav divider */
+  .nav-divider { display: none }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SMALL MOBILE (< 400px)
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 400px) {
+  .wrap { padding: 0 16px }
+  .hero-text { padding: 0 16px }
+  .hero h1 { font-size: 28px }
+  .hero-frame { height: 400px }
+  .proof-card { width: 260px; padding: 16px }
+  .values-statement { font-size: 22px }
+  .val { min-height: 360px }
+  .pipe-grid { grid-template-columns: 1fr }
+  .stat-grid { grid-template-columns: 1fr }
+  .footer-top { grid-template-columns: 1fr }
+}
