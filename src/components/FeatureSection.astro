@@ -1,57 +1,43 @@
 ---
-import FeatureIcon from './FeatureIcon.astro';
-
-interface FeatureItem {
+interface Props {
+  id: string;
   title: string;
   description: string;
-  icon: string;
+  linkLabel: string;
+  linkHref: string;
+  stats: { value: string; label: string }[];
+  items: { title: string; description: string; iconSvg: string }[];
+  subs: { num: string; label: string }[];
+  flip?: boolean;
 }
-
-interface Props {
-  feature: {
-    id: string;
-    number: string;
-    label: string;
-    title: string;
-    title_emphasis: string;
-    description: string[];
-    stats: { value: string; label: string }[];
-    items: FeatureItem[];
-    quote: { text: string; author: string };
-    flip: boolean;
-  };
-  alt?: boolean;
-}
-const { feature, alt = false } = Astro.props;
-
-// Build title HTML with emphasis
-const titleHtml = feature.title.replace(
-  feature.title_emphasis,
-  `<em>${feature.title_emphasis}</em>`
-);
+const { id, title, description, linkLabel, linkHref, stats, items, subs, flip = false } = Astro.props;
 ---
-<section class={`feat${alt ? ' feat-alt' : ''}`} id={feature.id}>
+<section class="feat section-border" id={id}>
   <div class="wrap">
-    <div class={`feat-row${feature.flip ? ' flip' : ''} reveal`}>
-      <div class="feat-text">
-        <div class="feat-num"><span>{feature.number}</span> {feature.label}</div>
-        <h2 set:html={titleHtml} />
-        {feature.description.map(p => <p>{p}</p>)}
-
+    <div class="feat-header reveal">
+      <div class="feat-header-left">
+        <h2 set:html={title} />
+      </div>
+      <div class="feat-header-right">
+        <p>{description}</p>
+        <a href={linkHref} class="feat-header-link"><span>{linkLabel.split(' ')[0]}</span> {linkLabel.split(' ').slice(1).join(' ')} &rarr;</a>
+      </div>
+    </div>
+    <div class={`feat-row${flip ? ' flip' : ''} reveal`}>
+      <div class="feat-content">
         <div class="feat-stats">
-          {feature.stats.map(stat => (
+          {stats.map(stat => (
             <div class="feat-stat">
               <div class="feat-stat-v">{stat.value}</div>
               <div class="feat-stat-l">{stat.label}</div>
             </div>
           ))}
         </div>
-
         <div class="feat-items">
-          {feature.items.map(item => (
+          {items.map(item => (
             <div class="feat-item">
               <div class="feat-item-icon">
-                <FeatureIcon name={item.icon} />
+                <Fragment set:html={item.iconSvg} />
               </div>
               <div>
                 <h4>{item.title}</h4>
@@ -60,10 +46,12 @@ const titleHtml = feature.title.replace(
             </div>
           ))}
         </div>
-
-        <div class="feat-quote">
-          <p>{feature.quote.text}</p>
-          <cite>{feature.quote.author}</cite>
+        <div class="feat-subs">
+          {subs.map(sub => (
+            <div class="feat-sub">
+              <span class="feat-sub-num">{sub.num}</span>{sub.label}<span class="feat-sub-plus">+</span>
+            </div>
+          ))}
         </div>
       </div>
       <div class="feat-panel">

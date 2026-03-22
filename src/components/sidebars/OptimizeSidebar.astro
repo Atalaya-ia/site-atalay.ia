@@ -1,151 +1,29 @@
-<!-- Optimize — Reescrita sidebar -->
-<div class="sb">
-  <div class="sb-hd">
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--p-orange)" stroke-width="2" stroke-linecap="round">
-      <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-      <path d="M2 17l10 5 10-5"/>
-      <path d="M2 12l10 5 10-5"/>
-    </svg>
-    Optimize — Reescrita
-    <span style="margin-left:auto;font-size:9px;display:flex;align-items:center;gap:4px">
-      <span style="width:4px;height:4px;border-radius:50%;background:var(--p-green)"></span>
-      Conectado
-    </span>
-  </div>
-  <div class="sb-bd">
-    <!-- Trust card -->
-    <div class="trust-card">
-      <div class="trust-ring">
-        <svg viewBox="0 0 38 38">
-          <circle class="ring-bg" cx="19" cy="19" r="17"/>
-          <circle class="ring-fg" cx="19" cy="19" r="17" style="--ring-offset:28"/>
-        </svg>
-        <span class="trust-gem">&#x1F48E;</span>
-      </div>
-      <div>
-        <div style="font-size:11px;font-weight:600;color:var(--p-text)">Análise completa</div>
-        <div style="font-size:9px;color:var(--p-text-m)">5 de 7 campos revisados</div>
-      </div>
-    </div>
-
-    <!-- Sugestão de imagem -->
-    <div class="fc" onclick="toggleFC(this)">
-      <div class="fc-hd">
-        <span class="fc-label">Sugestão de imagem</span>
-        <span class="fc-status">Pendente</span>
-      </div>
-      <div style="margin:0 8px 8px;border-radius:6px;overflow:hidden;border:1px solid var(--p-border)">
-        <img src="https://images.unsplash.com/photo-1575320181282-9afab399332c?w=400&h=220&fit=crop&crop=faces" alt="Plenário com deputados" style="width:100%;height:120px;object-fit:cover;display:block;opacity:.85"/>
-        <div style="padding:8px 10px;background:var(--p-card);font-size:10px;line-height:1.5;color:var(--p-text-s)">
-          Close-up de plenário com rosto em destaque — enquadramento próximo eleva CTR em <span style="color:var(--p-green);font-weight:600">+34%</span> nesta editoria
-        </div>
-      </div>
-    </div>
-
-    <!-- Field cards -->
-    <div class="fc" onclick="toggleFC(this)">
-      <div class="fc-hd">
-        <span class="fc-label">Título Editorial</span>
-        <span class="fc-status">Pendente</span>
-      </div>
-      <div class="fc-old">Reforma tributária pode mudar impostos</div>
-      <div class="fc-new">Reforma tributária pode elevar impostos sobre heranças em MG</div>
-      <div class="fc-chars">58 chars</div>
-    </div>
-
-    <div class="fc accepted">
-      <div class="fc-hd">
-        <span class="fc-label">Título SEO</span>
-        <span class="fc-status ok">Aceito</span>
-      </div>
-      <div class="fc-result">Reforma tributária 2026: como a mudança afeta o ITCMD em MG</div>
-      <div class="fc-chars">60 chars</div>
-    </div>
-
-    <div class="fc" onclick="toggleFC(this)">
-      <div class="fc-hd">
-        <span class="fc-label">Descrição (bigode)</span>
-        <span class="fc-status">Pendente</span>
-      </div>
-      <div class="fc-new">Proposta altera base de cálculo do ITCMD e pode afetar patrimônios acima de R$ 2 milhões em MG</div>
-      <div class="fc-chars">94 chars</div>
-    </div>
-
-    <div class="fc" onclick="toggleFC(this)">
-      <div class="fc-hd">
-        <span class="fc-label">Meta Descrição</span>
-        <span class="fc-status">Pendente</span>
-      </div>
-      <div class="fc-new">Entenda as mudanças na reforma tributária que alteram a alíquota do ITCMD em MG a partir de 2026.</div>
-      <div class="fc-chars">96 chars</div>
-    </div>
-
-    <!-- Corpo com conteúdo visível -->
-    <div class="fc" onclick="toggleFC(this)">
-      <div class="fc-hd">
-        <span class="fc-label">Corpo do texto</span>
-        <span class="fc-badge" style="background:var(--p-orange-dim);color:var(--p-orange)">3 alterações</span>
-      </div>
-      <div class="fc-new" style="font-size:10px;line-height:1.7">
-        O governador de Minas Gerais afirmou nesta terça-feira que <span style="background:var(--p-orange-dim);border-radius:2px;padding:0 2px">a alíquota do ITCMD pode ser elevada</span> como parte da reforma tributária. A proposta prevê mudanças na base de cálculo que afetam diretamente <span style="background:var(--p-orange-dim);border-radius:2px;padding:0 2px">contribuintes com patrimônio acima de R$ 2 milhões</span>.<br><br>O relator do projeto apresentou o texto final na sessão da Assembleia. Especialistas ouvidos pela reportagem avaliam que <span style="background:var(--p-orange-dim);border-radius:2px;padding:0 2px">o impacto fiscal pode chegar a R$ 800 milhões anuais</span>.
-      </div>
-    </div>
-
-    <!-- Tags -->
-    <div class="fc" onclick="toggleFC(this)">
-      <div class="fc-hd">
-        <span class="fc-label">Tags</span>
-        <span class="fc-status">Pendente</span>
-      </div>
-      <div class="fc-new">
-        <span style="display:inline-block;padding:2px 6px;border-radius:3px;background:var(--p-green-dim);border:1px solid var(--p-green-b);font-size:9px;color:var(--p-green);margin:1px">reforma tributária</span>
-        <span style="display:inline-block;padding:2px 6px;border-radius:3px;background:var(--p-green-dim);border:1px solid var(--p-green-b);font-size:9px;color:var(--p-green);margin:1px">ITCMD</span>
-        <span style="display:inline-block;padding:2px 6px;border-radius:3px;background:var(--p-green-dim);border:1px solid var(--p-green-b);font-size:9px;color:var(--p-green);margin:1px">Minas Gerais</span>
-        <span style="display:inline-block;padding:2px 6px;border-radius:3px;background:rgba(255,255,255,.03);border:1px solid var(--p-border);font-size:9px;color:var(--p-text-m);margin:1px">economia</span>
-      </div>
-    </div>
-  </div>
-  <div class="sb-footer">
-    <button class="sf" onclick="acceptAll()">Aceitar tudo</button>
-    <button class="sf sf-main" onclick="copyAll(this)">Copiar matéria</button>
-  </div>
-</div>
+<!-- Optimize — Reescrita sidebar (v10) -->
+<div class="sb"><div class="sb-hd"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--p-orange)" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>Optimize — Reescrita</div><div class="sb-bd">
+  <div class="fc" onclick="toggleFC(this)"><div class="fc-hd"><span class="fc-label">Titulo Editorial</span><span class="fc-status">Pendente</span></div><div class="fc-old">Reforma tributaria pode mudar impostos</div><div class="fc-new">Reforma tributaria pode elevar impostos sobre herancas em MG</div><div class="fc-chars">58 chars</div></div>
+  <div class="fc accepted"><div class="fc-hd"><span class="fc-label">Titulo SEO</span><span class="fc-status ok">Aceito</span></div><div class="fc-result">Reforma tributaria 2026: como a mudanca afeta o ITCMD em MG</div><div class="fc-chars">60 chars</div></div>
+  <div class="fc" onclick="toggleFC(this)"><div class="fc-hd"><span class="fc-label">Meta Descricao</span><span class="fc-status">Pendente</span></div><div class="fc-new">Entenda as mudancas na reforma tributaria que alteram a aliquota do ITCMD em MG a partir de 2026.</div><div class="fc-chars">96 chars</div></div>
+  <div class="fc" onclick="toggleFC(this)"><div class="fc-hd"><span class="fc-label">Corpo</span><span class="fc-badge" style="background:var(--p-orange-dim);color:var(--p-orange)">3 alteracoes</span></div><div class="fc-new" style="font-size:9px;line-height:1.65">O governador afirmou que <span style="background:var(--p-orange-dim);border-radius:2px;padding:0 2px">a aliquota do ITCMD pode ser elevada</span> como parte da reforma.</div></div>
+  <div class="fc" onclick="toggleFC(this)"><div class="fc-hd"><span class="fc-label">Tags</span><span class="fc-status">Pendente</span></div><div class="fc-new"><span style="display:inline-block;padding:1px 5px;border-radius:3px;background:var(--p-green-dim);border:1px solid var(--p-green-b);font-size:8px;color:var(--p-green);margin:1px">reforma tributaria</span> <span style="display:inline-block;padding:1px 5px;border-radius:3px;background:var(--p-green-dim);border:1px solid var(--p-green-b);font-size:8px;color:var(--p-green);margin:1px">ITCMD</span> <span style="display:inline-block;padding:1px 5px;border-radius:3px;background:var(--p-green-dim);border:1px solid var(--p-green-b);font-size:8px;color:var(--p-green);margin:1px">Minas Gerais</span></div></div>
+</div><div class="sb-footer"><button class="sf" onclick="acceptAll()">Aceitar tudo</button><button class="sf sf-main" onclick="copyAll(this)">Copiar materia</button></div></div>
 
 <script is:inline>
 function toggleFC(el) {
-  el.classList.toggle('accepted');
-  const status = el.querySelector('.fc-status');
-  if (status) {
-    if (el.classList.contains('accepted')) {
-      status.textContent = 'Aceito';
-      status.classList.add('ok');
-    } else {
-      status.textContent = 'Pendente';
-      status.classList.remove('ok');
-    }
-  }
+  if (el.classList.contains('accepted')) return;
+  el.classList.add('accepted');
+  const s = el.querySelector('.fc-status');
+  if (s) { s.textContent = 'Aceito'; s.classList.add('ok'); }
 }
-
 function acceptAll() {
-  document.querySelectorAll('#optimize .fc:not(.accepted)').forEach(fc => {
+  document.querySelectorAll('.fc:not(.accepted)').forEach(fc => {
     fc.classList.add('accepted');
-    const status = fc.querySelector('.fc-status');
-    if (status) {
-      status.textContent = 'Aceito';
-      status.classList.add('ok');
-    }
+    const s = fc.querySelector('.fc-status');
+    if (s) { s.textContent = 'Aceito'; s.classList.add('ok'); }
   });
-  if (typeof showToast === 'function') showToast('Todos os campos aceitos');
 }
-
 function copyAll(btn) {
-  const original = btn.textContent;
-  btn.textContent = 'Copiado!';
-  btn.style.background = 'var(--p-green)';
-  setTimeout(() => {
-    btn.textContent = original;
-    btn.style.background = '';
-  }, 1500);
-  if (typeof showToast === 'function') showToast('Matéria copiada para o clipboard');
+  btn.textContent = 'Copiado';
+  btn.classList.add('copied');
+  setTimeout(() => { btn.textContent = 'Copiar materia'; btn.classList.remove('copied'); }, 2500);
 }
 </script>

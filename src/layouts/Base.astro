@@ -44,6 +44,15 @@ const { title, description } = Astro.props;
         nav.classList.toggle('scrolled', window.scrollY > 40)
       );
     }
+
+    // Nav dropdown close on outside click
+    document.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement;
+      if (!target.closest('.nav-dd')) {
+        // dropdown closes via CSS :hover, no JS needed
+      }
+    });
+
     // Reveal on scroll
     const obs = new IntersectionObserver(
       (entries) => {
@@ -54,24 +63,30 @@ const { title, description } = Astro.props;
           }
         });
       },
-      { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.06, rootMargin: '0px 0px -40px 0px' }
     );
     document.querySelectorAll('.reveal').forEach((el) => obs.observe(el));
+
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach((a) => {
       a.addEventListener('click', (e) => {
         e.preventDefault();
-        const target = document.querySelector(a.getAttribute('href')!);
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const href = a.getAttribute('href');
+        if (href) {
+          const target = document.querySelector(href);
+          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       });
     });
+
     // Toast function
     function showToast(msg: string) {
       const t = document.getElementById('toast');
       if (!t) return;
       t.textContent = msg;
       t.classList.add('show');
-      setTimeout(() => t.classList.remove('show'), 2500);
+      clearTimeout((t as any)._timer);
+      (t as any)._timer = setTimeout(() => t.classList.remove('show'), 2500);
     }
     (window as any).showToast = showToast;
   </script>

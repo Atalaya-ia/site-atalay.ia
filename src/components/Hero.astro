@@ -1,138 +1,359 @@
----
-interface Props {
-  hero: {
-    title: string;
-    words: string[];
-    subtitle: string;
-    subtitle_highlight: string;
-    cta_text: string;
-    tagline: string;
-  }
-}
-const { hero } = Astro.props;
-
-// Split title on \n to support <br> in the template
-const titleParts = hero.title.split('\n');
-
-// Build subtitle with highlight: find subtitle_highlight in subtitle and wrap with <mark>
-const highlightIndex = hero.subtitle.indexOf(hero.subtitle_highlight);
-let subtitleBefore = hero.subtitle;
-let subtitleHighlight = '';
-let subtitleAfter = '';
-if (highlightIndex !== -1) {
-  subtitleBefore = hero.subtitle.slice(0, highlightIndex);
-  subtitleHighlight = hero.subtitle_highlight;
-  subtitleAfter = hero.subtitle.slice(highlightIndex + hero.subtitle_highlight.length);
-}
----
-
+<!-- ═══════════════════════════════════════════
+     HERO — headline + product UI (like Linear)
+     ═══════════════════════════════════════════ -->
 <section class="hero">
-  <!-- SVG grid pattern background -->
-  <div class="hero-grid">
-    <svg viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <pattern id="grid" width="70" height="70" patternUnits="userSpaceOnUse">
-          <path d="M 70 0 L 0 0 0 70" fill="none" stroke="rgba(230,126,74,.02)" stroke-width=".5"/>
-        </pattern>
-      </defs>
-      <rect width="1400" height="900" fill="url(#grid)"/>
-    </svg>
+  <div class="hero-text">
+  <div class="hero-badge"><span>Novo</span> Avaliacao de imagens</div>
+  <h1>A inteligencia editorial em que jornalistas podem <mark>confiar</mark></h1>
+  <p class="hero-sub">Criada para quem produz conteudo com qualidade, contexto e velocidade na era da IA.</p>
   </div>
 
-  <!-- Geometric laser lines -->
-  <div class="hero-glines">
-    <svg viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:1400px;height:900px">
-      <!-- Central diamond -->
-      <path d="M700 200 L900 450 L700 700 L500 450Z" stroke="rgba(230,126,74,.1)" stroke-width=".5" fill="none"/>
-      <path d="M700 260 L860 450 L700 640 L540 450Z" stroke="rgba(230,126,74,.07)" stroke-width=".5" fill="none"/>
-      <path d="M700 320 L820 450 L700 580 L580 450Z" stroke="rgba(230,126,74,.1)" stroke-width=".5" fill="none"/>
-      <!-- Radiating lines from center -->
-      <line x1="700" y1="450" x2="200" y2="100" stroke="rgba(230,126,74,.07)" stroke-width=".5"/>
-      <line x1="700" y1="450" x2="1200" y2="100" stroke="rgba(230,126,74,.07)" stroke-width=".5"/>
-      <line x1="700" y1="450" x2="100" y2="450" stroke="rgba(230,126,74,.04)" stroke-width=".5"/>
-      <line x1="700" y1="450" x2="1300" y2="450" stroke="rgba(230,126,74,.04)" stroke-width=".5"/>
-      <line x1="700" y1="450" x2="250" y2="800" stroke="rgba(230,126,74,.06)" stroke-width=".5"/>
-      <line x1="700" y1="450" x2="1150" y2="800" stroke="rgba(230,126,74,.06)" stroke-width=".5"/>
-      <line x1="700" y1="450" x2="700" y2="0" stroke="rgba(230,126,74,.06)" stroke-width=".5"/>
-      <line x1="700" y1="450" x2="700" y2="900" stroke="rgba(230,126,74,.05)" stroke-width=".5"/>
-      <!-- Node dots -->
-      <circle cx="700" cy="450" r="2" fill="rgba(230,126,74,.15)"><animate attributeName="opacity" values=".15;.3;.15" dur="4s" repeatCount="indefinite"/></circle>
-      <circle cx="700" cy="200" r="1.5" fill="rgba(230,126,74,.1)"/>
-      <circle cx="900" cy="450" r="1.5" fill="rgba(230,126,74,.08)"/>
-      <circle cx="500" cy="450" r="1.5" fill="rgba(230,126,74,.08)"/>
-      <circle cx="700" cy="700" r="1.5" fill="rgba(230,126,74,.06)"/>
-      <!-- Outer cross-hairs -->
-      <line x1="350" y1="200" x2="380" y2="200" stroke="rgba(230,126,74,.12)" stroke-width=".5"/>
-      <line x1="365" y1="185" x2="365" y2="215" stroke="rgba(230,126,74,.12)" stroke-width=".5"/>
-      <line x1="1020" y1="200" x2="1050" y2="200" stroke="rgba(230,126,74,.12)" stroke-width=".5"/>
-      <line x1="1035" y1="185" x2="1035" y2="215" stroke="rgba(230,126,74,.12)" stroke-width=".5"/>
-      <line x1="350" y1="700" x2="380" y2="700" stroke="rgba(230,126,74,.06)" stroke-width=".5"/>
-      <line x1="365" y1="685" x2="365" y2="715" stroke="rgba(230,126,74,.06)" stroke-width=".5"/>
-      <line x1="1020" y1="700" x2="1050" y2="700" stroke="rgba(230,126,74,.06)" stroke-width=".5"/>
-      <line x1="1035" y1="685" x2="1035" y2="715" stroke="rgba(230,126,74,.06)" stroke-width=".5"/>
-      <!-- Scanning line animation -->
-      <line x1="0" y1="0" x2="1400" y2="0" stroke="rgba(230,126,74,.06)" stroke-width=".5">
-        <animate attributeName="y1" values="0;900;0" dur="20s" repeatCount="indefinite"/>
-        <animate attributeName="y2" values="0;900;0" dur="20s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;.8;0" dur="20s" repeatCount="indefinite"/>
-      </line>
-    </svg>
-  </div>
+  <!-- THE PRODUCT (like Linear shows their app) -->
+  <div class="hero-product">
+    <div class="hero-frame">
+      <!-- Browser chrome -->
+      <div class="hero-topbar">
+        <div class="hero-topbar-dot"></div><div class="hero-topbar-dot"></div><div class="hero-topbar-dot"></div>
+        <div class="hero-topbar-url">cms.seuportal.com.br/editor/materia/ciclone-sul-vendaval-sexta</div>
+      </div>
+      <!-- App: CMS editor + Atalaya sidebar -->
+      <div class="hero-app">
+        <!-- LEFT: Simulated CMS editor -->
+        <div class="hero-cms-col">
+          <div class="cms-toolbar">
+            <div class="cms-tb-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
+            <div class="cms-tb-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            <div class="cms-tb-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div>
+            <div class="cms-tb-sep"></div>
+            <div class="cms-tb-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg></div>
+            <div class="cms-tb-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div>
+          </div>
+          <div class="cms-headline">Ciclone no Sul: <span class="cms-hl">vendaval pode derrubar arvores</span> e causar estragos a partir desta sexta</div>
+          <div class="cms-byline">Redacao <span class="cms-byline-dot"></span> Tempo <span class="cms-byline-dot"></span> Portal parceiro &rarr; Seu jornal</div>
 
-  <!-- Gradient fade at bottom -->
-  <div class="hero-fade"></div>
+          <p class="cms-text">Um ciclone extratropical em formacao no Oceano Atlantico deve atingir o Sul do Brasil a partir desta sexta-feira (7), com ventos que podem ultrapassar 100 km/h em areas costeiras do Rio Grande do Sul e de Santa Catarina.</p>
 
-  <!-- Hero content -->
-  <div class="hero-inner">
-    <!-- Hero art (onboarding illustration) -->
-    <img src="/hero-art.jpeg" alt="Jornalista iluminando o caminho com uma lanterna" class="hero-img" />
+          <p class="cms-text">De acordo com o <a href="#">Instituto Nacional de Meteorologia (Inmet)</a>, o sistema de baixa pressao deve se intensificar rapidamente nas proximas horas, configurando o fenomeno conhecido como <a href="#">ciclogenese explosiva</a>, ou "bomba meteorologica".</p>
 
-    <h1>
-      {titleParts.map((part, i) => (
-        <>
-          {i > 0 && <br />}
-          <Fragment set:html={part} />
-        </>
-      ))}
-      <span class="hero-cycle" id="hero-word">{hero.words[0]}</span>
-    </h1>
+          <h2 class="cms-h2">Regioes mais afetadas e previsao de danos</h2>
 
-    <p class="hero-sub">
-      {subtitleHighlight ? (
-        <>
-          {subtitleBefore}<mark>{subtitleHighlight}</mark>{subtitleAfter}
-        </>
-      ) : (
-        hero.subtitle
-      )}
-    </p>
+          <p class="cms-text">As areas mais vulneraveis incluem o litoral gaucho, a Serra Gaucha e o litoral catarinense. A <a href="#">Defesa Civil do Rio Grande do Sul</a> emitiu alerta de grau elevado para destelhamentos, queda de arvores e interrupcao no fornecimento de energia eletrica.</p>
 
-    <div class="hero-form">
-      <input type="email" placeholder="voce@seuportal.com.br" />
-      <button type="button">
-        {hero.cta_text}
-        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </button>
+          <table class="cms-table">
+            <thead><tr><th>Municipio</th><th>Precipitacao</th><th>Risco</th></tr></thead>
+            <tbody>
+              <tr><td>Pelotas</td><td>80 mm</td><td>Muito alto</td></tr>
+              <tr><td>Rio Grande</td><td>65 mm</td><td>Alto</td></tr>
+              <tr><td>Torres</td><td>55 mm</td><td>Alto</td></tr>
+              <tr><td>Caxias do Sul</td><td>40 mm</td><td>Moderado</td></tr>
+            </tbody>
+          </table>
+          <div class="cms-source">Fonte: Inmet — Boletim de 06/03/2026</div>
+
+          <p class="cms-text">A precipitacao acumulada pode chegar a 80 mm em 24 horas nas regioes serranas, aumentando o risco de deslizamentos em encostas e alagamentos em areas urbanas. O <a href="#">Centro Nacional de Monitoramento (Cemaden)</a> elevou o nivel de alerta para seis municipios da Zona da Mata.</p>
+
+          <div class="cms-blockquote">
+            <p>"Estamos mobilizando equipes em todos os municipios da regiao. A recomendacao e que a populacao evite areas de encosta e rios ate segunda-feira."</p>
+            <cite>— Cel. Ricardo Faria, Coordenador da Defesa Civil do RS</cite>
+          </div>
+
+          <h2 class="cms-h2">Orientacoes para a populacao</h2>
+
+          <p class="cms-text">Especialistas recomendam evitar areas abertas durante o pico do evento, previsto para a madrugada de sabado (8). Objetos soltos em quintais e varandas devem ser recolhidos, e veiculos nao devem ser estacionados sob arvores de grande porte.</p>
+
+          <!-- Embed social -->
+          <div class="cms-embed">
+            <div class="cms-embed-bar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Embed — Post da Defesa Civil</div>
+            <div class="cms-embed-body">ALERTA MAXIMO para o litoral gaucho. Ventos de ate 100 km/h previstos para sexta e sabado. Evitem areas de risco.<br><span style="color:rgba(255,255,255,.12);font-size:9px">@defesacivil_rs &middot; 06/03/2026 &middot; 14:32</span></div>
+          </div>
+
+          <p class="cms-text">A <a href="#">Aneel</a> informou que distribuidoras de energia foram notificadas e mobilizaram equipes de contingencia em toda a regiao Sul. O <a href="#">Corpo de Bombeiros do RS</a> reforcou o efetivo em 12 municipios costeiros.</p>
+
+          <p class="cms-text">O ciclone deve perder intensidade a partir de domingo (9), mas as chuvas podem persistir ate segunda-feira (10) em areas isoladas da Serra Gaucha, segundo modelagem do <a href="#">Centro de Previsao do Tempo e Estudos Climaticos (CPTEC/Inpe)</a>.</p>
+
+          <div class="cms-meta-row">
+            <div class="cms-meta-tag">Tempo</div>
+            <div class="cms-meta-tag">Ciclone</div>
+            <div class="cms-meta-tag">Sul do Brasil</div>
+            <div class="cms-meta-tag">Defesa Civil</div>
+            <div class="cms-meta-tag">vendaval</div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Atalaya.IA sidebar (production-faithful) -->
+        <div class="hero-sb">
+          <!-- Production header: Lighthouse + Logo + Actions -->
+          <div class="hero-sb-hd">
+            <svg width="18" height="26" viewBox="0 0 90 160" fill="none" style="flex-shrink:0">
+              <path d="M19 148 C19 148 20 134 21 126 L69 126 C70 134 71 148 71 148 Z" fill="#D97757"/>
+              <path d="M21 126 L23 104 L67 104 L69 126 Z" fill="#FFF8F0"/>
+              <path d="M23 104 L25.5 82 L64.5 82 L67 104 Z" fill="#D97757"/>
+              <path d="M25.5 82 L27.5 62 L62.5 62 L64.5 82 Z" fill="#FFF8F0"/>
+              <path d="M27.5 62 L29 48 L61 48 L62.5 62 Z" fill="#D97757"/>
+              <path d="M33 40 L34 26 C34 26 45 24.5 56 26 L57 40 Z" fill="#4a5568"/>
+              <path d="M35.5 38 L36 27 L41 26.5 L41 38 Z" fill="#a8d4e6" opacity="0.2"/>
+              <path d="M43 38 L43 26.2 L49 26.2 L49 38 Z" fill="#a8d4e6" opacity="0.2"/>
+              <path d="M34 26 Q35 19 39 15 Q45 11 51 15 Q55 19 56 26 Z" fill="#4a5568"/>
+              <circle cx="45" cy="10.5" r="2.5" fill="#4a5568"/>
+              <circle cx="45" cy="18" r="2.8" fill="#FFD700" style="animation:beacon-on 6s ease-in-out infinite"/>
+              <circle cx="45" cy="18" r="6" fill="#FFC857" opacity="0.15" style="animation:beacon-glow 6s ease-in-out infinite"/>
+            </svg>
+            <span style="font-family:'Instrument Serif',serif;font-size:16px;color:var(--p-text);letter-spacing:-.3px">Atalay<span style="color:var(--p-orange);font-size:11px;font-style:italic;opacity:.8">.<span style="letter-spacing:.5px">ia</span></span></span>
+            <div style="margin-left:auto;display:flex;align-items:center;gap:2px">
+              <div style="position:relative;padding:4px;cursor:pointer;border-radius:6px">
+                <svg width="14" height="14" fill="none" stroke="var(--p-text-m)" stroke-width="1.7" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+                <span style="position:absolute;top:0;right:0;min-width:13px;height:13px;padding:0 3px;background:var(--p-orange);color:white;font-size:7px;font-weight:700;border-radius:50%;display:flex;align-items:center;justify-content:center">12</span>
+              </div>
+              <div style="padding:4px;cursor:pointer;border-radius:6px">
+                <svg width="14" height="14" fill="none" stroke="var(--p-text-m)" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+              </div>
+            </div>
+          </div>
+          <!-- Tabs -->
+          <div class="hero-tabs">
+            <div class="hero-tab" data-tab="trends"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>Trends</div>
+            <div class="hero-tab-sep"></div>
+            <div class="hero-tab active" data-tab="optimize"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Optimize</div>
+          </div>
+
+          <!-- PANEL: Trends -->
+          <div class="hero-panel" id="hero-trends">
+
+            <!-- Radar Summary -->
+            <div class="h-radar">
+              <div class="h-radar-ring">
+                <svg viewBox="0 0 38 38"><circle cx="19" cy="19" r="14" fill="none" stroke="rgba(255,255,255,.05)" stroke-width="3"/><circle cx="19" cy="19" r="14" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-dasharray="58 88"/></svg>
+                <div class="h-radar-dot"><div></div></div>
+              </div>
+              <div>
+                <div style="display:flex;align-items:baseline;gap:3px"><span style="font-size:18px;font-weight:700;color:var(--p-text);line-height:1">12</span><span style="font-size:8px;color:var(--p-text-m)">oportunidades</span></div>
+                <div style="display:flex;align-items:center;gap:3px;margin-top:2px"><span style="font-size:8px;font-weight:600;color:#22c55e">Nivel Alto</span><span style="display:flex;gap:2px"><span style="width:3px;height:3px;border-radius:50%;background:#ef4444"></span><span style="width:3px;height:3px;border-radius:50%;background:#f97316"></span><span style="width:3px;height:3px;border-radius:50%;background:#22c55e"></span></span></div>
+              </div>
+              <span style="margin-left:auto;font-size:7px;color:var(--p-text-m);display:flex;align-items:center;gap:3px"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/></svg>21 mar &middot; 20:15</span>
+            </div>
+
+            <!-- ZONA A: Radar Discover -->
+            <div class="h-zone-hd"><svg viewBox="0 0 24 24" fill="none" stroke="var(--p-orange)" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg><span>Radar Discover</span></div>
+            <div style="display:flex;flex-direction:column;gap:5px">
+              <div class="h-tc h-tc-crit"><div style="padding:8px 10px"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px"><span class="h-tc-badge h-tc-badge-comp">G1</span><span style="font-size:9px;font-weight:700;color:#f87171">ha 45 min</span></div><p style="margin:0;font-size:10px;font-weight:500;color:#ccc;line-height:1.35">Chuvas causam enchente em 3 bairros; veja regioes atingidas</p><div style="display:flex;align-items:center;gap:6px;margin-top:6px"><div style="flex:1;height:3px;background:rgba(255,255,255,.04);border-radius:2px;overflow:hidden"><div style="width:88%;height:100%;background:var(--p-green);border-radius:2px"></div></div><span style="font-size:7px;font-weight:600;color:var(--p-green);white-space:nowrap">88% autoridade</span></div></div></div>
+              <div class="h-tc"><div style="padding:8px 10px"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px"><span class="h-tc-badge h-tc-badge-comp">Metropoles</span><span style="font-size:9px;font-weight:700;color:#fb923c">ha 1h40</span></div><p style="margin:0;font-size:10px;font-weight:500;color:#ccc;line-height:1.35">Greve do metro: saiba quais estacoes estao fechadas nesta segunda</p><div style="display:flex;align-items:center;gap:6px;margin-top:6px"><div style="flex:1;height:3px;background:rgba(255,255,255,.04);border-radius:2px;overflow:hidden"><div style="width:72%;height:100%;background:var(--p-green);border-radius:2px"></div></div><span style="font-size:7px;font-weight:600;color:var(--p-green);white-space:nowrap">72% autoridade</span></div></div></div>
+              <div class="h-tc"><div style="padding:8px 10px"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px"><span class="h-tc-badge h-tc-badge-comp">UOL Esporte</span><span style="font-size:9px;font-weight:700;color:#fb923c">ha 4h50</span></div><p style="margin:0;font-size:10px;font-weight:500;color:#ccc;line-height:1.35">Clube demite tecnico apos sequencia de derrotas no estadual</p><div style="display:flex;align-items:center;gap:6px;margin-top:6px"><div style="flex:1;height:3px;background:rgba(255,255,255,.04);border-radius:2px;overflow:hidden"><div style="width:95%;height:100%;background:var(--p-green);border-radius:2px"></div></div><span style="font-size:7px;font-weight:600;color:var(--p-green);white-space:nowrap">95% autoridade</span></div></div></div>
+            </div>
+
+            <div style="height:1px;background:rgba(255,255,255,.05);margin:10px 0"></div>
+
+            <!-- ZONA B: Tendencias de Pesquisa -->
+            <div class="h-zone-hd"><svg viewBox="0 0 24 24" fill="none" stroke="var(--p-orange)" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg><span>Tendencias de Pesquisa</span></div>
+            <div style="display:flex;flex-direction:column;gap:5px">
+              <div class="h-tc"><div style="padding:8px 10px"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px"><div style="display:flex;align-items:center;gap:4px"><span class="h-tc-badge h-tc-badge-comp">Google Pesquisa</span><span class="h-tc-badge h-tc-badge-growth"><span>&uarr;</span>180%</span></div><span style="font-size:8px;color:var(--p-text-m)">25 min</span></div><p style="margin:0;font-size:11px;font-weight:600;color:#ddd;line-height:1.3;margin-bottom:2px">Cruzeiro contratacao lateral</p><span style="font-size:8px;color:var(--p-text-s)">100K+ buscas &middot; 3 materias</span><div style="display:flex;align-items:center;gap:6px;margin-top:5px"><div style="flex:1;height:3px;background:rgba(255,255,255,.04);border-radius:2px;overflow:hidden"><div style="width:92%;height:100%;background:var(--p-green);border-radius:2px"></div></div><span style="font-size:6px;font-weight:600;color:var(--p-green);white-space:nowrap;text-transform:uppercase;letter-spacing:.3px">Territorio seu</span></div></div></div>
+              <div class="h-tc"><div style="padding:8px 10px"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px"><div style="display:flex;align-items:center;gap:4px"><span class="h-tc-badge h-tc-badge-comp">Google Pesquisa</span><span class="h-tc-badge h-tc-badge-growth"><span>&uarr;</span>95%</span></div><span style="font-size:8px;color:var(--p-text-m)">2h</span></div><p style="margin:0;font-size:11px;font-weight:600;color:#ddd;line-height:1.3;margin-bottom:2px">IPTU 2026 pagamento</p><span style="font-size:8px;color:var(--p-text-s)">150K+ buscas &middot; 3 materias</span><div style="display:flex;align-items:center;gap:6px;margin-top:5px"><div style="flex:1;height:3px;background:rgba(255,255,255,.04);border-radius:2px;overflow:hidden"><div style="width:65%;height:100%;background:var(--p-green);border-radius:2px"></div></div><span style="font-size:7px;font-weight:600;color:var(--p-text-s);white-space:nowrap">65%</span></div></div></div>
+              <div class="h-tc"><div style="padding:8px 10px"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px"><div style="display:flex;align-items:center;gap:4px"><span class="h-tc-badge h-tc-badge-comp">Google Pesquisa</span><span class="h-tc-badge h-tc-badge-growth"><span>&uarr;</span>130%</span><span style="font-size:5px;font-weight:700;padding:1px 4px;border-radius:2px;background:rgba(251,191,36,.08);color:#fbbf24;text-transform:uppercase;letter-spacing:.3px">YMYL</span></div><span style="font-size:8px;color:var(--p-text-m)">4h</span></div><p style="margin:0;font-size:11px;font-weight:600;color:#ddd;line-height:1.3;margin-bottom:2px">Concurso publico MG 2026</p><span style="font-size:8px;color:var(--p-text-s)">120K+ buscas &middot; 3 materias</span><div style="display:flex;align-items:center;gap:6px;margin-top:5px"><div style="flex:1;height:3px;background:rgba(255,255,255,.04);border-radius:2px;overflow:hidden"><div style="width:55%;height:100%;background:#fbbf24;border-radius:2px"></div></div><span style="font-size:7px;font-weight:600;color:#fbbf24;white-space:nowrap">55% fronteira</span></div></div></div>
+              <div class="h-tc"><div style="padding:8px 10px"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px"><div style="display:flex;align-items:center;gap:4px"><span class="h-tc-badge h-tc-badge-comp">Google Pesquisa</span><span class="h-tc-badge h-tc-badge-growth"><span>&uarr;</span>75%</span></div><span style="font-size:8px;color:var(--p-text-m)">5h30</span></div><p style="margin:0;font-size:11px;font-weight:600;color:#ddd;line-height:1.3;margin-bottom:2px">Preco gasolina Minas Gerais</p><span style="font-size:8px;color:var(--p-text-s)">90K+ buscas &middot; 3 materias</span><div style="display:flex;align-items:center;gap:6px;margin-top:5px"><div style="flex:1;height:3px;background:rgba(255,255,255,.04);border-radius:2px;overflow:hidden"><div style="width:18%;height:100%;background:#f87171;border-radius:2px"></div></div><span style="font-size:6px;font-weight:600;color:#f87171;white-space:nowrap;text-transform:uppercase;letter-spacing:.3px">Fora do raio</span></div></div></div>
+            </div>
+
+            <div style="height:1px;background:rgba(255,255,255,.05);margin:10px 0"></div>
+
+            <!-- ZONA C: Otimizar Publicadas -->
+            <div class="h-zone-hd"><svg viewBox="0 0 24 24" fill="none" stroke="var(--p-orange)" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg><span>Otimizar Publicadas</span></div>
+            <div style="display:flex;flex-direction:column;gap:5px">
+              <div class="h-tc"><div style="padding:8px 10px"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px"><span class="h-tc-badge h-tc-badge-comp">Google Discover</span><span style="font-size:8px;color:var(--p-text-m)">40 min</span></div><p style="margin:0;font-size:10px;font-weight:500;color:#ccc;line-height:1.35">Presidente discute reforma tributaria com lideres do Congresso</p><span style="font-size:8px;color:var(--p-text-s)">8.500 imp. &middot; CTR <span style="color:#f87171">1.8%</span> <span style="color:var(--p-text-m)">(media 4.2%)</span></span></div></div>
+              <div class="h-tc"><div style="padding:8px 10px"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px"><span class="h-tc-badge h-tc-badge-comp">Google Discover</span><span style="font-size:8px;color:var(--p-text-m)">3h20</span></div><p style="margin:0;font-size:10px;font-weight:500;color:#ccc;line-height:1.35">Previsao do tempo: confira como fica o clima esta semana</p><span style="font-size:8px;color:var(--p-text-s)">22.000 imp. &middot; CTR <span style="color:#f87171">1.5%</span> <span style="color:var(--p-text-m)">(media 4.8%)</span></span></div></div>
+              <div class="h-tc"><div style="padding:8px 10px"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px"><span class="h-tc-badge h-tc-badge-comp">Google Pesquisa</span><span style="font-size:8px;color:var(--p-text-m)">5h20</span></div><p style="margin:0;font-size:10px;font-weight:500;color:#ccc;line-height:1.35">Resultado Mega Sena concurso 2845: confira os numeros</p><span style="font-size:8px;color:var(--p-text-s)">35.000 imp. &middot; CTR <span style="color:#f87171">2.3%</span> <span style="color:var(--p-text-m)">(media 6.1%)</span></span></div></div>
+            </div>
+
+          </div>
+
+          <!-- PANEL: Optimize (active) — production-faithful -->
+          <div class="hero-panel active" id="hero-optimize">
+            <!-- TrustCard (clickable, expandable) -->
+            <div class="hs-trust-wrap" id="hsTrust">
+              <div class="hs-trust">
+                <div class="hs-ring"><svg class="ring-svg" viewBox="0 0 38 38"><circle class="hs-ring-bg" cx="19" cy="19" r="12"/><circle class="hs-ring-fill" cx="19" cy="19" r="12"/></svg><div class="hs-ring-center"><svg class="hs-rock" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 18l-1-4 3-5 2-3h6l2 3 3 5-1 4H5z"/><path d="M7 9l3 2 4-2"/><path d="M10 11l-1 7"/><path d="M14 9l1 9"/></svg></div></div>
+                <div class="hs-trust-info"><div class="hs-trust-title">4 de 7 revisados</div><div class="hs-trust-sub">Portal parceiro &rarr; Seu jornal &middot; Tempo</div></div>
+                <svg class="hs-trust-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+              <div class="hs-trust-detail">
+                <div class="hs-td-row"><span class="hs-td-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>Imagem</span><span class="hs-td-val hs-td-pending">Pendente</span></div>
+                <div class="hs-td-row"><span class="hs-td-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>Titulo Editorial</span><span class="hs-td-val hs-td-ok">Otimizado</span></div>
+                <div class="hs-td-row"><span class="hs-td-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>Titulo SEO</span><span class="hs-td-val hs-td-pending">Pendente</span></div>
+                <div class="hs-td-row"><span class="hs-td-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="17" y1="10" x2="3" y2="10"/><line x1="21" y1="6" x2="3" y2="6"/><line x1="21" y1="14" x2="3" y2="14"/><line x1="17" y1="18" x2="3" y2="18"/></svg>Bigode</span><span class="hs-td-val hs-td-ok">Otimizado</span></div>
+                <div class="hs-td-row"><span class="hs-td-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>Meta</span><span class="hs-td-val hs-td-pending">Pendente</span></div>
+                <div class="hs-td-row"><span class="hs-td-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>Corpo</span><span class="hs-td-val hs-td-ok">2 de 5 otim.</span></div>
+                <div class="hs-td-row"><span class="hs-td-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>Tags</span><span class="hs-td-val hs-td-pending">Pendente</span></div>
+              </div>
+            </div>
+
+            <!-- Image -->
+            <div class="hs-sec">Imagem</div>
+            <div class="hs-img">
+              <div class="hs-img-preview"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Sugestao de imagem</span><span class="hs-img-badge">IA</span></div>
+              <div class="hs-img-reason"><strong>Imagem stock detectada.</strong> Fotos reais tem CTR 23% maior no Discover.</div>
+              <div class="hs-img-actions"><button class="hs-da hs-da-yes">Aceitar</button><button class="hs-da hs-da-no">Manter</button></div>
+            </div>
+
+            <!-- Titulos -->
+            <div class="hs-sec">Titulos</div>
+            <div class="h-fc ok"><div class="h-fc-hd"><span class="h-fc-label">Titulo Editorial</span><span class="h-fc-st done">&#10003;</span></div><div class="h-fc-new">Ciclone no Sul: vendaval pode derrubar arvores e causar estragos a partir desta sexta</div><div class="h-fc-chr">82 / 120</div></div>
+            <div class="h-fc" id="hfcSeoTitle"><div class="h-fc-hd"><span class="h-fc-label">Titulo SEO</span><span class="h-fc-st">Pendente</span></div><div class="h-fc-old">Ciclone deve provocar ventos fortes no Sul</div><div class="h-fc-new">Ciclone extratropical avanca pelo Sul com ventos de 100 km/h nesta sexta</div><div class="h-fc-chr">78 / 75</div></div>
+
+            <!-- Descricoes -->
+            <div class="hs-sec">Descricoes</div>
+            <div class="h-fc ok"><div class="h-fc-hd"><span class="h-fc-label">Bigode</span><span class="h-fc-st done">&#10003;</span></div><div class="h-fc-new">Chuvas intensas causaram deslizamentos em seis municipios; Bombeiros confirmam 68 mortes</div><div class="h-fc-chr">128 / 120</div></div>
+            <div class="h-fc" id="hfcMeta"><div class="h-fc-hd"><span class="h-fc-label">Meta Description</span><span class="h-fc-st">Pendente</span></div><div class="h-fc-old" style="font-style:italic">Meta description ausente</div><div class="h-fc-new">Ciclone extratropical deve atingir o Sul com ventos de 100 km/h. Defesa Civil alerta para destelhamentos.</div><div class="h-fc-chr">148 / 155</div></div>
+
+            <!-- Corpo -->
+            <div class="hs-sec">Corpo</div>
+            <div class="hs-body">
+              <div class="hs-body-hd"><div class="hs-body-label">Texto original</div><span class="hs-body-count">5 alt. &middot; 6 inserts</span></div>
+              <div class="hs-body-scroll">
+
+                <p>Um ciclone extratropical em formacao no Oceano Atlantico deve atingir o Sul do Brasil a partir desta sexta-feira (7), com ventos que podem ultrapassar 100 km/h em areas costeiras do Rio Grande do Sul e de Santa Catarina.</p>
+
+                <p class="hs-bp-changed">De acordo com informacoes, o sistema de baixa pressao deve se intensificar rapidamente nas proximas horas, configurando o fenomeno conhecido como ciclogenese explosiva, ou "bomba meteorologica".</p>
+
+                <div class="hs-insert hs-insert-link"><div class="hs-insert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div><div><div class="hs-insert-type">Link interno</div><div class="hs-insert-desc">Linkar "ciclogenese explosiva" ao artigo de 2024</div></div></div>
+
+                <div class="hs-insert hs-insert-img"><div class="hs-insert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div><div><div class="hs-insert-type">Imagem</div><div class="hs-insert-desc">Foto aerea da formacao ciclonica — credito Defesa Civil RS</div></div></div>
+
+                <p class="hs-bp-new">Regioes mais afetadas e previsao de danos</p>
+
+                <p class="hs-bp-changed">As areas mais vulneraveis incluem o litoral gaucho, a Serra Gaucha e o litoral catarinense. A Defesa Civil emitiu alerta de grau elevado para estragos causados pelo vento.</p>
+
+                <div class="hs-insert hs-insert-extlink"><div class="hs-insert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div><div><div class="hs-insert-type">Link externo</div><div class="hs-insert-desc">Defesa Civil RS — fonte oficial citada</div></div></div>
+
+                <div class="hs-insert hs-insert-chart"><div class="hs-insert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><div><div class="hs-insert-type">Tabela</div><div class="hs-insert-desc">Precipitacao por municipio — dados Inmet</div></div></div>
+
+                <p>A precipitacao acumulada pode chegar a 80 mm em 24 horas nas regioes serranas, aumentando o risco de deslizamentos em encostas e alagamentos em areas urbanas. O Centro Nacional de Monitoramento (Cemaden) elevou o nivel de alerta para seis municipios.</p>
+
+                <div class="hs-insert hs-insert-extlink"><div class="hs-insert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div><div><div class="hs-insert-type">Link externo</div><div class="hs-insert-desc">Cemaden — fonte oficial E-E-A-T</div></div></div>
+
+                <div class="hs-insert hs-insert-quote"><div class="hs-insert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div><div><div class="hs-insert-type">Citacao</div><div class="hs-insert-desc">Cel. Ricardo Faria, Defesa Civil — declaracao oficial</div></div></div>
+
+                <p class="hs-bp-new">Orientacoes para a populacao</p>
+
+                <p class="hs-bp-changed">Recomenda-se cuidado.</p>
+
+                <div class="hs-insert hs-insert-embed"><div class="hs-insert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><div><div class="hs-insert-type">Embed</div><div class="hs-insert-desc">Post @defesacivil_rs — alerta maximo</div></div></div>
+
+                <p>A Aneel informou que distribuidoras de energia foram notificadas e mobilizaram equipes de contingencia em toda a regiao Sul. O Corpo de Bombeiros do RS reforcou o efetivo em 12 municipios costeiros.</p>
+
+                <div class="hs-insert hs-insert-link"><div class="hs-insert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div><div><div class="hs-insert-type">Link interno</div><div class="hs-insert-desc">Linkar "Aneel" a materia sobre contingencia energetica</div></div></div>
+
+                <p class="hs-bp-changed">O ciclone deve perder intensidade a partir de domingo (9), mas as chuvas podem persistir ate segunda-feira em areas isoladas da Serra Gaucha.</p>
+
+                <div class="hs-insert hs-insert-extlink"><div class="hs-insert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div><div><div class="hs-insert-type">Link externo</div><div class="hs-insert-desc">CPTEC/Inpe — modelagem climatica</div></div></div>
+
+              </div>
+            </div>
+
+            <!-- Tags -->
+            <div class="hs-sec">Tags</div>
+            <div class="hs-tags">
+              <div class="hs-tags-hd"><span class="h-fc-label">Tags sugeridas</span><span style="font-size:7px;color:var(--p-text-m)">GSC + conteudo</span></div>
+              <div class="hs-tags-grid">
+                <button class="hs-tag">ciclone extratropical</button>
+                <button class="hs-tag">Sul do Brasil</button>
+                <button class="hs-tag">vendaval</button>
+                <button class="hs-tag">Defesa Civil</button>
+                <button class="hs-tag">previsao do tempo</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="h-sb-footer"><button class="h-btn" id="heroAcceptAll">Aceitar tudo</button><button class="h-btn h-btn-main" id="heroCopyAll">Copiar materia</button><button class="h-btn" style="flex-shrink:0">Novo</button></div>
+          <div style="padding:4px 12px 6px;text-align:center;font-size:7px;color:var(--p-text-m)">Atalaya e uma IA e pode cometer erros. Verifique antes de publicar.</div>
+        </div>
+      </div>
     </div>
-
-    <div class="hero-tagline">{hero.tagline}</div>
   </div>
+  <div class="hero-fade"></div>
 </section>
 
-<script define:vars={{ words: hero.words }}>
-  const el = document.getElementById('hero-word');
-  if (el) {
-    let i = 0;
-    el.classList.add('in');
-    setInterval(() => {
-      el.classList.add('out');
-      el.classList.remove('in');
-      setTimeout(() => {
-        i = (i + 1) % words.length;
-        el.textContent = words[i];
-        el.classList.remove('out');
-        el.classList.add('in');
-      }, 400);
-    }, 2200);
+<script>
+  // Hero tabs
+  function heroTab(t: string) {
+    document.querySelectorAll('.hero-tab').forEach(b => {
+      const el = b as HTMLElement;
+      el.classList.toggle('active', el.dataset.tab === t);
+    });
+    document.querySelectorAll('.hero-panel').forEach(p => p.classList.toggle('active', p.id === 'hero-' + t));
   }
+  document.querySelectorAll('.hero-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const t = (tab as HTMLElement).dataset.tab;
+      if (t) heroTab(t);
+    });
+  });
+
+  // Hero field card accept
+  function hFC(el: HTMLElement) {
+    if (el.classList.contains('ok')) return;
+    el.classList.add('ok');
+    const s = el.querySelector('.h-fc-st') as HTMLElement | null;
+    if (s) { s.textContent = 'Aceito'; s.className = 'h-fc-st done'; }
+  }
+  document.querySelectorAll('.hero-panel .h-fc:not(.ok)').forEach(fc => {
+    fc.addEventListener('click', () => hFC(fc as HTMLElement));
+  });
+
+  // Trust card expand
+  const hsTrust = document.getElementById('hsTrust');
+  const hsTrustToggle = hsTrust?.querySelector('.hs-trust');
+  if (hsTrust && hsTrustToggle) {
+    hsTrustToggle.addEventListener('click', () => hsTrust.classList.toggle('open'));
+  }
+
+  // Hero accept all
+  const heroAcceptAll = document.getElementById('heroAcceptAll');
+  if (heroAcceptAll) {
+    heroAcceptAll.addEventListener('click', () => {
+      document.querySelectorAll('.hero-panel .h-fc:not(.ok)').forEach(f => {
+        (f as HTMLElement).classList.add('ok');
+        const s = f.querySelector('.h-fc-st') as HTMLElement | null;
+        if (s) { s.textContent = '\u2713'; s.className = 'h-fc-st done'; }
+      });
+      (window as any).showToast?.('Tudo aceito');
+    });
+  }
+
+  // Hero copy all
+  const heroCopyAll = document.getElementById('heroCopyAll');
+  if (heroCopyAll) {
+    heroCopyAll.addEventListener('click', () => {
+      (window as any).showToast?.('Materia copiada');
+    });
+  }
+
+  // Tag toggles
+  document.querySelectorAll('.hs-tag').forEach(tag => {
+    tag.addEventListener('click', () => {
+      const el = tag as HTMLElement;
+      el.style.opacity = el.style.opacity === '0.4' ? '1' : '0.4';
+    });
+  });
+
+  // Image actions
+  document.querySelectorAll('.hs-da-yes').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const img = btn.closest('.hs-img') as HTMLElement | null;
+      if (img) img.style.borderColor = 'var(--p-green-b)';
+      const actions = btn.parentElement;
+      if (actions) actions.innerHTML = '<span style="font-size:9px;color:var(--p-green)">&#10003; Aceita</span>';
+    });
+  });
+  document.querySelectorAll('.hs-da-no').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const actions = btn.parentElement;
+      if (actions) actions.innerHTML = '<span style="font-size:9px;color:var(--p-text-m)">&mdash; Original</span>';
+    });
+  });
+
+  // Zone header collapse
+  document.querySelectorAll('.h-zone-hd').forEach(hd => {
+    hd.addEventListener('click', () => {
+      hd.classList.toggle('collapsed');
+      const next = hd.nextElementSibling as HTMLElement | null;
+      if (next) next.style.display = hd.classList.contains('collapsed') ? 'none' : 'flex';
+    });
+  });
 </script>

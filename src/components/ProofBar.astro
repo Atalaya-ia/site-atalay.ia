@@ -1,17 +1,16 @@
----
-interface Props {
-  items: string[];
-}
-const { items } = Astro.props;
----
-<section class="proof">
-  <div class="proof-track">
-    {items.map(item => (
-      <div class="proof-q">{item}</div>
-    ))}
-    {/* Duplicate for seamless loop */}
-    {items.map(item => (
-      <div class="proof-q">{item}</div>
-    ))}
-  </div>
-</section>
+<!-- PROOF BAR -->
+<section class="proof"><div class="proof-track">
+  <div class="proof-card"><div class="proof-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"Antes eu levava 40 minutos ajustando titulo e meta. Agora o Atalaya faz a primeira sugestao melhor do que eu faria com pressa."</blockquote><cite><div class="proof-card-avatar">RC</div><div><strong>Editor-chefe</strong>Redacao digital &middot; 12 anos de experiencia</div></cite></div>
+  <div class="proof-card"><div class="proof-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"Pela primeira vez, a IA nao inventa — ela conhece nosso manual, nosso tom. Os reporteres aceitam as sugestoes porque reconhecem a propria voz."</blockquote><cite><div class="proof-card-avatar">ML</div><div><strong>Coordenadora de Digital</strong>Gestao editorial &middot; 8 anos</div></cite></div>
+  <div class="proof-card"><div class="proof-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"O radar de tendencias mudou nosso timing. Publicamos sobre temas antes dos concorrentes porque o dado ja estava la, filtrado pela nossa editoria."</blockquote><cite><div class="proof-card-avatar">AF</div><div><strong>Editor de Esportes</strong>Cobertura ao vivo &middot; 15 anos</div></cite></div>
+  <div class="proof-card"><div class="proof-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"Nao e mais IA generica. E a IA que sabe que minha editoria de politica tem regras diferentes da de entretenimento. Isso muda tudo."</blockquote><cite><div class="proof-card-avatar">PS</div><div><strong>Reporter Especial</strong>Politica e investigacao &middot; 10 anos</div></cite></div>
+  <div class="proof-card"><div class="proof-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"Os dados de performance por editoria abriram nossos olhos. Descobrimos que imagem era o fator decisivo em 5 das 13 editorias."</blockquote><cite><div class="proof-card-avatar">JV</div><div><strong>Gerente de Produto</strong>Transformacao digital &middot; 6 anos</div></cite></div>
+  <div class="proof-card"><div class="proof-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"A correcao e cirurgica — so pega erro real, nunca inventa problema. Meus reporteres confiam porque nunca saiu uma sugestao errada."</blockquote><cite><div class="proof-card-avatar">TB</div><div><strong>Editora de Cidades</strong>Jornalismo diario &middot; 9 anos</div></cite></div>
+  <!-- Duplicates for infinite scroll -->
+  <div class="proof-card"><div class="proof-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"Antes eu levava 40 minutos ajustando titulo e meta. Agora o Atalaya faz a primeira sugestao melhor do que eu faria com pressa."</blockquote><cite><div class="proof-card-avatar">RC</div><div><strong>Editor-chefe</strong>Redacao digital &middot; 12 anos de experiencia</div></cite></div>
+  <div class="proof-card"><div class="proof-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"Pela primeira vez, a IA nao inventa — ela conhece nosso manual, nosso tom. Os reporteres aceitam as sugestoes porque reconhecem a propria voz."</blockquote><cite><div class="proof-card-avatar">ML</div><div><strong>Coordenadora de Digital</strong>Gestao editorial &middot; 8 anos</div></cite></div>
+  <div class="proof-card"><div class="proof-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"O radar de tendencias mudou nosso timing. Publicamos sobre temas antes dos concorrentes porque o dado ja estava la, filtrado pela nossa editoria."</blockquote><cite><div class="proof-card-avatar">AF</div><div><strong>Editor de Esportes</strong>Cobertura ao vivo &middot; 15 anos</div></cite></div>
+  <div class="proof-card"><div class="proof-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"Nao e mais IA generica. E a IA que sabe que minha editoria de politica tem regras diferentes da de entretenimento. Isso muda tudo."</blockquote><cite><div class="proof-card-avatar">PS</div><div><strong>Reporter Especial</strong>Politica e investigacao &middot; 10 anos</div></cite></div>
+  <div class="proof-card"><div class="proof-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"Os dados de performance por editoria abriram nossos olhos. Descobrimos que imagem era o fator decisivo em 5 das 13 editorias."</blockquote><cite><div class="proof-card-avatar">JV</div><div><strong>Gerente de Produto</strong>Transformacao digital &middot; 6 anos</div></cite></div>
+  <div class="proof-card"><div class="proof-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"A correcao e cirurgica — so pega erro real, nunca inventa problema. Meus reporteres confiam porque nunca saiu uma sugestao errada."</blockquote><cite><div class="proof-card-avatar">TB</div><div><strong>Editora de Cidades</strong>Jornalismo diario &middot; 9 anos</div></cite></div>
+</div></section>

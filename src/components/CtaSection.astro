@@ -1,25 +1,10 @@
----
-interface Props {
-  cta: {
-    label: string;
-    title: string;
-    subtitle: string;
-    button_text: string;
-    email: string;
-  }
-}
-const { cta } = Astro.props;
----
+<!-- CTA -->
 <section class="cta" id="contact">
   <div class="wrap reveal">
-    <div class="sec-label">{cta.label}</div>
-    <h2 class="sec-title" set:html={cta.title} />
-    <p class="sec-sub" style="max-width:500px;margin:0 auto 36px">{cta.subtitle}</p>
-    <a href={`mailto:${cta.email}`} class="btn-p">
-      {cta.button_text}
-      <svg class="arrow" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-        <path d="M5 12h14M12 5l7 7-7 7"/>
-      </svg>
-    </a>
+    <h2>Construido para o futuro.<br>Disponivel hoje.</h2>
+    <div class="cta-actions">
+      <a href="mailto:contato@atalayia.com" class="btn-p">Solicitar demonstracao</a>
+      <a href="mailto:contato@atalayia.com" class="btn-s">Fale conosco</a>
+    </div>
   </div>
 </section>

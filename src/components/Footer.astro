@@ -1,25 +1,32 @@
----
-interface Props {
-  footer: {
-    links: { label: string; href: string }[];
-    copyright: string;
-  }
-}
-const { footer } = Astro.props;
----
+<!-- FOOTER -->
 <footer>
   <div class="wrap">
-    <div class="fi">
-      <div class="fb">
-        <div class="fmi">A</div>
-        <span class="fmt">Atalaya<span style="font-style:italic;color:var(--orange);opacity:0.8">.ia</span></span>
+    <div class="footer-top">
+      <div class="footer-brand-col">
+        <div class="footer-brand"><span class="footer-name">atalay<span class="footer-name-ia">.ia</span></span></div>
+        <p class="footer-tagline">Inteligencia editorial para redacoes. Construida com dados reais do seu dominio.</p>
+        <span class="footer-copy">&copy; 2026 ATALAYIA LTDA.<br>Todos os direitos reservados.</span>
       </div>
-      <div class="fl">
-        {footer.links.map(link => (
-          <a href={link.href}>{link.label}</a>
-        ))}
+      <div class="footer-col">
+        <div class="footer-col-title">Produto</div>
+        <a href="#optimize">Reescrita</a>
+        <a href="#optimize">Correcao</a>
+        <a href="#trends">Trends</a>
+        <a href="#voice">Voz Editorial</a>
+        <a href="#optimize">Analise de Imagem</a>
+        <a href="#pipeline">Pipeline</a>
       </div>
-      <div class="fc-copy">{footer.copyright}</div>
+      <div class="footer-col">
+        <div class="footer-col-title">Empresa</div>
+        <a href="#contact">Contato</a>
+        <a href="#">Blog</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Legal</div>
+        <a href="#">Privacidade</a>
+        <a href="#">Termos de Uso</a>
+        <a href="#">Seguranca</a>
+      </div>
     </div>
   </div>
 </footer>

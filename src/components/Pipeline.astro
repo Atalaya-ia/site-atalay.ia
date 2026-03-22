@@ -1,29 +1,12 @@
----
-interface Props {
-  pipeline: {
-    label: string;
-    title: string;
-    subtitle: string;
-    steps: { number: string; title: string; description: string }[];
-  }
-}
-const { pipeline } = Astro.props;
----
-<section class="pipeline feat-alt" id="pipeline">
+<!-- PIPELINE -->
+<section class="feat section-border" id="pipeline">
   <div class="wrap">
-    <div class="sec-hd reveal">
-      <div class="sec-label">{pipeline.label}</div>
-      <h2 class="sec-title">{pipeline.title}</h2>
-      <p class="sec-sub">{pipeline.subtitle}</p>
-    </div>
+    <div class="sec-hd reveal"><div class="sec-label">Data before AI</div><h2 class="sec-title">Dados primeiro. IA depois.</h2><p class="sec-sub">O Atalaya coleta dados reais do seu dominio e so entao aciona a IA — com contexto, nao adivinhacao.</p></div>
     <div class="pipe-grid reveal">
-      {pipeline.steps.map(step => (
-        <div class="pipe">
-          <div class="pipe-num">{step.number}</div>
-          <h4>{step.title}</h4>
-          <p>{step.description}</p>
-        </div>
-      ))}
+      <div class="pipe"><div class="pipe-num">01</div><h4>Aprende com o seu dominio</h4><p>Coleta o historico de performance das suas materias — o que foi lido, clicado, ignorado. Busca e Discover separados.</p></div>
+      <div class="pipe"><div class="pipe-num">02</div><h4>Mapeia a redacao</h4><p>Identifica quem escreve sobre o que, quais editorias performam melhor e onde estao as oportunidades.</p></div>
+      <div class="pipe"><div class="pipe-num">03</div><h4>Calibra por editoria</h4><p>Descobre o que funciona em cada editoria — o peso da imagem, do titulo, da estrutura — com base nos seus proprios dados.</p></div>
+      <div class="pipe"><div class="pipe-num">04</div><h4>IA com contexto</h4><p>So entao a IA entra — com o Manual de Redacao, o perfil de voz do jornalista e os dados de performance como guia.</p></div>
     </div>
   </div>
 </section>
