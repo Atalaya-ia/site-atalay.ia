@@ -593,15 +593,10 @@ footer { border-top: 1px solid var(--border); padding: 80px 0 40px }
   .hero-actions { flex-direction: column; align-items: stretch; gap: 12px; width: 100%; max-width: 320px }
   .btn-p, .btn-s { justify-content: center; padding: 16px 24px; font-size: 16px }
 
-  /* Hero product: show as scaled-down static preview */
-  .hero-product { margin: 40px -20px 0; pointer-events: none; max-width: none }
-  .hero-frame { border-radius: 12px 12px 0 0; height: 300px; border-left: none; border-right: none; overflow: hidden }
-  .hero-topbar { padding: 6px 10px }
-  .hero-topbar-dot { width: 6px; height: 6px }
-  .hero-topbar-url { display: none }
-  .hero-app { transform: scale(0.55); transform-origin: top left; width: 182%; height: 182% }
-  .hero-fade { height: 100px }
-  .hero { padding-bottom: 0 }
+  /* Hero product: hidden on mobile */
+  .hero-product { display: none }
+  .hero-fade { height: 0 }
+  .hero { padding-bottom: 48px }
 
   /* Proof */
   .proof { padding: 40px 0 80px }
@@ -695,8 +690,7 @@ footer { border-top: 1px solid var(--border); padding: 80px 0 40px }
   .hero-text { padding: 0 16px }
   .hero h1 { font-size: 30px }
   .hero-sub { font-size: 16px; max-width: 300px }
-  .hero-frame { height: 260px }
-  .hero-app { transform: scale(0.48); width: 208%; height: 208% }
+  .hero { padding-bottom: 40px }
 
   .proof-card { width: 270px }
 
