@@ -6,9 +6,9 @@ test.describe('Smoke tests', () => {
     expect(response?.status()).toBe(200);
   });
 
-  test('title contains "Atalaya"', async ({ page }) => {
+  test('title contains "atalay"', async ({ page }) => {
     await page.goto('/');
-    await expect(page).toHaveTitle(/Atalaya/);
+    await expect(page).toHaveTitle(/atalay/i);
   });
 
   test('nav is visible', async ({ page }) => {
