@@ -584,137 +584,101 @@ footer { border-top: 1px solid var(--border); padding: 80px 0 40px }
   .nav-links { display: none !important }
   .nav-divider { display: none }
 
-  /* Hero text — centered on mobile like Linear */
+  /* Hero — centered, clean */
   .hero { padding: 100px 0 0; text-align: center }
-  .hero-text { padding: 0 24px; display: flex; flex-direction: column; align-items: center }
-  .hero-badge { font-size: 12px; padding: 4px 12px; margin-bottom: 24px }
-  .hero h1 { font-size: 32px; line-height: 1.12; margin-bottom: 16px; letter-spacing: -.02em; max-width: 100% }
-  .hero h1 mark { text-underline-offset: 3px; text-decoration-thickness: 1.5px }
-  .hero-sub { font-size: 15px; margin-bottom: 28px; line-height: 1.55; max-width: 340px }
-  .hero-actions { flex-direction: column; align-items: stretch; gap: 10px; width: 100%; max-width: 300px }
-  .btn-p, .btn-s { justify-content: center; padding: 14px 20px; font-size: 15px }
+  .hero-text { padding: 0 20px; display: flex; flex-direction: column; align-items: center }
+  .hero-badge { font-size: 14px; padding: 6px 14px; margin-bottom: 28px }
+  .hero h1 { font-size: 36px; line-height: 1.1; margin-bottom: 20px; max-width: 100% }
+  .hero-sub { font-size: 17px; margin-bottom: 32px; line-height: 1.55; max-width: 380px }
+  .hero-actions { flex-direction: column; align-items: stretch; gap: 12px; width: 100%; max-width: 320px }
+  .btn-p, .btn-s { justify-content: center; padding: 16px 24px; font-size: 16px }
 
-  /* Hero product: hide entirely on mobile (Linear approach) */
-  .hero-product { display: none }
-  .hero-fade { height: 60px }
-  .hero { padding-bottom: 40px }
+  /* Hero product: show as scaled-down static preview */
+  .hero-product { margin: 40px -20px 0; pointer-events: none; max-width: none }
+  .hero-frame { border-radius: 12px 12px 0 0; height: 300px; border-left: none; border-right: none; overflow: hidden }
+  .hero-topbar { padding: 6px 10px }
+  .hero-topbar-dot { width: 6px; height: 6px }
+  .hero-topbar-url { display: none }
+  .hero-app { transform: scale(0.55); transform-origin: top left; width: 182%; height: 182% }
+  .hero-fade { height: 100px }
+  .hero { padding-bottom: 0 }
 
   /* Proof */
-  .proof { padding: 32px 0 60px }
-  .proof-card { width: 280px; padding: 18px }
-  .proof-card blockquote { font-size: 14px; margin-bottom: 14px }
-  .proof-card cite { font-size: 11px; gap: 8px }
-  .proof-card-avatar { width: 28px; height: 28px; font-size: 11px }
-  .proof-card-stars { font-size: 12px; margin-bottom: 10px }
+  .proof { padding: 40px 0 80px }
+  .proof-card { width: 300px; padding: 22px }
+  .proof-card blockquote { font-size: 16px; margin-bottom: 16px }
+  .proof-card cite { font-size: 13px; gap: 8px }
+  .proof-card-avatar { width: 30px; height: 30px; font-size: 12px }
+  .proof-card-stars { font-size: 13px; margin-bottom: 12px }
 
   /* Values */
-  .values { padding: 60px 0 40px }
-  .values-statement { font-size: 22px; line-height: 1.3; margin-bottom: 40px; padding: 0 20px }
-  .values-grid { gap: 14px; padding: 0 20px }
-  .val { min-height: 340px; border-radius: 12px }
-  .val-svg svg { width: 180px; height: 180px }
-  .val-text { padding: 0 20px 24px }
-  .val-fig { padding: 16px 20px 0 }
-  .val h3 { font-size: 16px }
-  .val p { font-size: 14px }
+  .values { padding: 80px 0 60px }
+  .values-statement { font-size: 26px; line-height: 1.25; margin-bottom: 48px; padding: 0 20px }
+  .values-grid { gap: 16px; padding: 0 20px }
+  .val { min-height: 380px; border-radius: 14px }
+  .val-svg svg { width: 200px; height: 200px }
+  .val-text { padding: 0 24px 28px }
+  .val-fig { padding: 20px 24px 0 }
+  .val h3 { font-size: 18px }
+  .val p { font-size: 15px; line-height: 1.55 }
 
   /* Feature sections */
-  .feat { padding: 48px 0 }
-  .feat-header { margin-bottom: 32px; gap: 16px }
-  .feat-header h2 { font-size: 24px }
-  .feat-header p { font-size: 14px }
-  .feat-header-link { margin-top: 12px; font-size: 12px }
+  .feat { padding: 60px 0 }
+  .feat-header { margin-bottom: 36px; gap: 16px }
+  .feat-header h2 { font-size: 28px }
+  .feat-header p { font-size: 16px; line-height: 1.6 }
+  .feat-header-link { margin-top: 16px; font-size: 13px }
   .feat-content { position: static }
-  .feat-row { gap: 24px }
+  .feat-row { gap: 28px }
 
-  /* Feature stats — horizontal scroll on mobile instead of stack */
+  /* Feature stats */
   .feat-stats { grid-template-columns: repeat(3, 1fr) }
-  .feat-stat { padding: 12px 8px }
-  .feat-stat-v { font-size: 22px }
-  .feat-stat-l { font-size: 10px }
+  .feat-stat { padding: 16px 10px }
+  .feat-stat-v { font-size: 24px }
+  .feat-stat-l { font-size: 12px }
 
   /* Feature items */
-  .feat-items { gap: 14px; margin: 20px 0 }
-  .feat-item { gap: 10px }
-  .feat-item-icon { width: 34px; height: 34px; border-radius: 8px }
-  .feat-item-icon svg { width: 15px; height: 15px }
-  .feat-item h4 { font-size: 13px }
-  .feat-item p { font-size: 12px }
+  .feat-items { gap: 16px; margin: 24px 0 }
+  .feat-item { gap: 12px }
+  .feat-item-icon { width: 38px; height: 38px; border-radius: 9px }
+  .feat-item-icon svg { width: 16px; height: 16px }
+  .feat-item h4 { font-size: 15px }
+  .feat-item p { font-size: 14px }
 
   /* Feature subs */
-  .feat-subs { margin-top: 20px }
-  .feat-sub { font-size: 13px; padding: 10px 0 }
-  .feat-sub-num { font-size: 11px }
+  .feat-subs { margin-top: 24px }
+  .feat-sub { font-size: 15px; padding: 12px 0 }
+  .feat-sub-num { font-size: 12px }
 
   /* Feature quote */
-  .feat-quote { padding: 12px 14px; margin-top: 20px }
-  .feat-quote p { font-size: 14px }
-
-  /* Sidebar panels in features */
-  .sb { border-radius: 10px }
-  .sb-hd { font-size: 11px; padding: 8px 10px }
-  .sb-bd { padding: 6px 8px }
-  .sb-footer { padding: 6px 8px }
-  .sf { font-size: 11px; padding: 6px 10px }
-
-  /* Feature field cards */
-  .fc-hd { padding: 5px 8px }
-  .fc-label { font-size: 10px }
-  .fc-status { font-size: 10px }
-  .fc-old, .fc-new { font-size: 12px; padding: 5px 10px 5px 8px; margin: 2px 6px 5px }
-  .fc-result { font-size: 12px; padding: 5px 10px 5px 8px; margin: 0 6px 5px }
-  .fc-chars { font-size: 10px; padding: 0 8px 4px }
-
-  /* Trend cards in features */
-  .tc { padding: 8px 10px }
-  .tc-thumb { width: 30px; height: 30px }
-  .tc-thumb svg { width: 14px; height: 14px }
-  .tc-title { font-size: 13px }
-  .tc-meta { font-size: 10px }
-  .tc-insight { font-size: 11px; padding: 6px 8px }
-  .tc-zone { font-size: 9px }
-  .tc-cta-btn { font-size: 11px; padding: 8px }
-
-  /* Voice cards in features */
-  .vp-hd { padding: 6px 10px }
-  .vp-av { width: 24px; height: 24px; font-size: 9px }
-  .vp-name { font-size: 13px }
-  .vp-sub { font-size: 10px }
-  .vp-row { padding: 6px 10px; font-size: 12px }
-  .vp-th { width: 16px; height: 16px; font-size: 8px; border-radius: 3px }
-  .wiz-steps { padding: 6px 0; margin-bottom: 8px }
-  .wiz-step { font-size: 9px }
-  .wiz-dot { width: 14px; height: 14px; font-size: 6px }
-  .wiz-line { width: 12px }
-  .voice-sample { padding: 10px }
-  .voice-sample-q { font-size: 12px }
-  .voice-sample-text { font-size: 12px }
-  .voice-sample-btn { font-size: 11px; padding: 6px 10px }
+  .feat-quote { padding: 14px 16px; margin-top: 24px }
+  .feat-quote p { font-size: 15px }
+  .feat-quote cite { font-size: 13px }
 
   /* Section headers */
-  .sec-title { font-size: 24px }
-  .sec-sub { font-size: 14px }
-  .sec-label { font-size: 10px; letter-spacing: 1px }
+  .sec-title { font-size: 28px }
+  .sec-sub { font-size: 16px }
+  .sec-label { font-size: 11px; letter-spacing: 1px }
 
   /* Pipeline */
-  .pipe-grid { margin-top: 32px }
-  .pipe { padding: 24px 18px }
-  .pipe-num { font-size: 28px }
-  .pipe h4 { font-size: 14px; margin-bottom: 6px }
-  .pipe p { font-size: 13px }
+  .pipe-grid { margin-top: 36px }
+  .pipe { padding: 28px 20px }
+  .pipe-num { font-size: 32px }
+  .pipe h4 { font-size: 16px; margin-bottom: 8px }
+  .pipe p { font-size: 14px }
 
   /* CTA */
-  .cta { padding: 60px 0 }
-  .cta h2 { font-size: 24px; margin-bottom: 28px }
-  .cta-actions { flex-direction: column; align-items: stretch; gap: 10px }
+  .cta { padding: 80px 0 }
+  .cta h2 { font-size: 28px; margin-bottom: 32px }
+  .cta-actions { flex-direction: column; align-items: stretch; gap: 12px }
   .cta-actions .btn-p, .cta-actions .btn-s { justify-content: center }
 
   /* Footer */
-  .footer-top { gap: 24px }
-  .footer-tagline { font-size: 12px }
-  .footer-col-title { font-size: 10px; margin-bottom: 10px }
-  .footer-col a { font-size: 12px }
-  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px }
+  .footer-top { gap: 28px }
+  .footer-tagline { font-size: 14px }
+  .footer-col-title { font-size: 11px; margin-bottom: 12px }
+  .footer-col a { font-size: 14px; padding: 5px 0 }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 10px }
 
   /* Section border */
   .section-border::before { left: 20px; right: 20px }
@@ -727,21 +691,19 @@ footer { border-top: 1px solid var(--border); padding: 80px 0 40px }
    SMALL MOBILE (< 400px)
    ═══════════════════════════════════════════════════════════ */
 @media (max-width: 400px) {
-  .wrap { padding: 0 14px }
+  .wrap { padding: 0 16px }
   .hero-text { padding: 0 16px }
-  .hero h1 { font-size: 26px }
-  .hero-badge { font-size: 11px }
-  .hero-sub { font-size: 14px; max-width: 280px }
+  .hero h1 { font-size: 30px }
+  .hero-sub { font-size: 16px; max-width: 300px }
+  .hero-frame { height: 260px }
+  .hero-app { transform: scale(0.48); width: 208%; height: 208% }
 
-  .proof-card { width: 250px; padding: 14px }
-  .proof-card blockquote { font-size: 13px }
+  .proof-card { width: 270px }
 
-  .values-statement { font-size: 20px; padding: 0 14px }
-  .values-grid { padding: 0 14px }
-  .val { min-height: 300px }
-  .val-svg svg { width: 150px; height: 150px }
+  .values-statement { font-size: 22px; padding: 0 16px }
+  .values-grid { padding: 0 16px }
 
-  .feat-header h2 { font-size: 22px }
+  .feat-header h2 { font-size: 24px }
   .feat-stats { grid-template-columns: 1fr }
   .feat-stat { border-right: none; border-bottom: 1px solid var(--border) }
   .feat-stat:last-child { border-bottom: none }
