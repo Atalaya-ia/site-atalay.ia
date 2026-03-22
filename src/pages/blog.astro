@@ -1,0 +1,388 @@
+---
+import Base from '../layouts/Base.astro';
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+// Blog posts data — will be editable via CMS later
+const posts = [
+  {
+    slug: 'lancamento-atalay-ia',
+    title: 'Apresentando o atalay.ia — inteligência editorial para redações',
+    description: 'Depois de meses de desenvolvimento com dados reais de redações, lançamos o atalay.ia: um copiloto editorial que entende o manual, a voz e os dados do seu domínio.',
+    date: '2026-03-22',
+    category: 'Produto',
+    featured: true,
+  },
+  {
+    slug: 'como-ia-contextual-muda-jornalismo',
+    title: 'Por que IA genérica não funciona para jornalismo — e o que funciona',
+    description: 'A maioria das ferramentas de IA trata jornalismo como qualquer outro texto. Explicamos por que isso falha e como IA contextual resolve o problema.',
+    date: '2026-03-20',
+    category: 'Práticas',
+  },
+  {
+    slug: 'pipeline-dados-editoriais',
+    title: 'Dados primeiro, IA depois: como construímos o pipeline editorial',
+    description: '16 meses de dados de performance, mapeamento por editoria e calibração estatística antes de qualquer modelo de linguagem entrar em ação.',
+    date: '2026-03-18',
+    category: 'Engenharia',
+  },
+  {
+    slug: 'voz-editorial-agentes',
+    title: 'Cada jornalista tem uma voz. A IA precisa aprender a respeitar isso.',
+    description: 'Como capturamos o perfil de escrita de cada jornalista em três camadas — preferências, análise e validação — para gerar sugestões que soam como ele.',
+    date: '2026-03-15',
+    category: 'Produto',
+  },
+  {
+    slug: 'discover-vs-busca',
+    title: 'Discover e Busca são jogos diferentes. Sua redação trata igual?',
+    description: 'Analisamos dados de milhares de artigos para mostrar como imagem, título e timing afetam Discover e Busca de formas opostas.',
+    date: '2026-03-12',
+    category: 'Práticas',
+  },
+  {
+    slug: 'manual-redacao-ia',
+    title: 'O Manual de Redação como guardrail de IA',
+    description: 'Como integramos o manual editorial no pipeline de correção — garantindo que a IA nunca sugira algo que viole as regras da sua redação.',
+    date: '2026-03-08',
+    category: 'Engenharia',
+  },
+];
+
+const categories = ['Todos', 'Produto', 'Práticas', 'Engenharia'];
+const featured = posts.find(p => p.featured);
+const regular = posts.filter(p => !p.featured);
+
+function formatDate(dateStr: string) {
+  const d = new Date(dateStr + 'T00:00:00');
+  return d.toLocaleDateString('pt-BR', { day: 'numeric', month: 'short', year: 'numeric' });
+}
+---
+<Base
+  title="Blog — atalay.ia"
+  description="Artigos sobre inteligência editorial, IA contextual, dados editoriais e práticas para redações de alto desempenho."
+>
+  <Nav />
+
+  <section class="blog-page">
+    <div class="blog-wrap">
+
+      <!-- Header -->
+      <div class="blog-header">
+        <h1 class="blog-title">Blog</h1>
+        <p class="blog-sub">Engenharia, produto e práticas editoriais.</p>
+        <div class="blog-filters">
+          {categories.map((cat, i) => (
+            <button class={`blog-filter ${i === 0 ? 'active' : ''}`} data-cat={cat}>{cat}</button>
+          ))}
+        </div>
+      </div>
+
+      <!-- Featured post -->
+      {featured && (
+        <a href={`/blog/${featured.slug}`} class="blog-featured" data-category={featured.category}>
+          <div class="blog-featured-img">
+            <div class="blog-featured-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+          </div>
+          <div class="blog-featured-content">
+            <div class="blog-featured-meta">
+              <span class="blog-cat">{featured.category}</span>
+              <span class="blog-date">{formatDate(featured.date)}</span>
+            </div>
+            <h2 class="blog-featured-title">{featured.title}</h2>
+            <p class="blog-featured-desc">{featured.description}</p>
+            <span class="blog-read-more">Ler artigo →</span>
+          </div>
+        </a>
+      )}
+
+      <!-- Posts grid -->
+      <div class="blog-grid">
+        {regular.map(post => (
+          <a href={`/blog/${post.slug}`} class="blog-card" data-category={post.category}>
+            <div class="blog-card-img">
+              <div class="blog-card-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>
+              </div>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-cat">{post.category}</span>
+                <span class="blog-date">{formatDate(post.date)}</span>
+              </div>
+              <h3 class="blog-card-title">{post.title}</h3>
+              <p class="blog-card-desc">{post.description}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <Footer />
+</Base>
+
+<script>
+  const filters = document.querySelectorAll('.blog-filter');
+  const cards = document.querySelectorAll('.blog-card, .blog-featured');
+
+  filters.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filters.forEach(f => f.classList.remove('active'));
+      btn.classList.add('active');
+      const cat = btn.getAttribute('data-cat');
+
+      cards.forEach(card => {
+        const el = card as HTMLElement;
+        if (cat === 'Todos' || el.dataset.category === cat) {
+          el.style.display = '';
+        } else {
+          el.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .blog-page {
+    padding: 140px 0 100px;
+    overflow-x: hidden;
+  }
+
+  .blog-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Header */
+  .blog-header {
+    margin-bottom: 56px;
+  }
+
+  .blog-title {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 400;
+    letter-spacing: -.03em;
+    margin-bottom: 8px;
+  }
+
+  .blog-sub {
+    font-size: 18px;
+    color: var(--text-s);
+    margin-bottom: 28px;
+  }
+
+  .blog-filters {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+
+  .blog-filter {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-m);
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    transition: all .2s;
+  }
+
+  .blog-filter:hover {
+    color: var(--text-s);
+    border-color: var(--border-h);
+    background: rgba(255,255,255,.03);
+  }
+
+  .blog-filter.active {
+    color: var(--text);
+    background: rgba(255,255,255,.06);
+    border-color: var(--border-h);
+  }
+
+  /* Featured post */
+  .blog-featured {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    align-items: start;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 56px;
+    padding-bottom: 56px;
+    border-bottom: 1px solid var(--border);
+    transition: opacity .2s;
+  }
+
+  .blog-featured:hover {
+    opacity: .85;
+  }
+
+  .blog-featured-img {
+    aspect-ratio: 16/10;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+  }
+
+  .blog-featured-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(192,106,66,.04), rgba(192,106,66,.01));
+  }
+
+  .blog-featured-placeholder svg {
+    width: 48px;
+    height: 48px;
+    color: rgba(192,106,66,.3);
+  }
+
+  .blog-featured-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .blog-cat {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: .8px;
+  }
+
+  .blog-date {
+    font-size: 13px;
+    color: var(--text-m);
+  }
+
+  .blog-featured-title {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -.02em;
+    margin-bottom: 14px;
+  }
+
+  .blog-featured-desc {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-s);
+    margin-bottom: 20px;
+  }
+
+  .blog-read-more {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--orange);
+    transition: opacity .2s;
+  }
+
+  /* Posts grid */
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .blog-card {
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--bg);
+    transition: border-color .2s, transform .2s;
+  }
+
+  .blog-card:hover {
+    border-color: var(--border-h);
+    transform: translateY(-2px);
+  }
+
+  .blog-card-img {
+    aspect-ratio: 16/10;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .blog-card-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(192,106,66,.03), rgba(192,106,66,.01));
+  }
+
+  .blog-card-placeholder svg {
+    width: 32px;
+    height: 32px;
+    color: rgba(192,106,66,.2);
+  }
+
+  .blog-card-body {
+    padding: 20px;
+  }
+
+  .blog-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .blog-card-title {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+
+  .blog-card-desc {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text-s);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Mobile */
+  @media (max-width: 767px) {
+    .blog-page { padding: 100px 0 60px }
+    .blog-wrap { padding: 0 20px }
+    .blog-header { margin-bottom: 36px }
+    .blog-title { font-size: 32px }
+    .blog-sub { font-size: 16px; margin-bottom: 20px }
+    .blog-featured { grid-template-columns: 1fr; gap: 20px; margin-bottom: 40px; padding-bottom: 40px }
+    .blog-featured-title { font-size: 24px }
+    .blog-featured-desc { font-size: 15px }
+    .blog-grid { grid-template-columns: 1fr; gap: 16px }
+    .blog-card-body { padding: 16px }
+    .blog-card-title { font-size: 16px }
+  }
+
+  @media (max-width: 1024px) and (min-width: 768px) {
+    .blog-grid { grid-template-columns: repeat(2, 1fr) }
+  }
+</style>
