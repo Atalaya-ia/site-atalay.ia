@@ -514,12 +514,15 @@ footer { border-top: 1px solid var(--border); padding: 80px 0 40px }
 .section-border::before { content: ''; position: absolute; top: 0; left: 46px; right: 46px; height: 1px; background: var(--border) }
 
 /* ── Mobile hamburger menu ── */
-.nav-hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; z-index: 110 }
+.nav-hamburger { display: flex; flex-direction: column; justify-content: center; width: 36px; height: 36px; cursor: pointer; padding: 0; background: none; border: none; z-index: 110; position: relative }
 @media(min-width:768px) { .nav-hamburger { display: none } }
-.nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--text-s); border-radius: 2px; transition: all .3s }
-.nav-hamburger.active span:nth-child(1) { transform: rotate(45deg) translateY(7px) }
+.nav-hamburger span { display: block; width: 20px; height: 2px; background: var(--text-s); border-radius: 2px; transition: all .3s; position: absolute; left: 8px }
+.nav-hamburger span:nth-child(1) { top: 10px }
+.nav-hamburger span:nth-child(2) { top: 17px }
+.nav-hamburger span:nth-child(3) { top: 24px }
+.nav-hamburger.active span:nth-child(1) { top: 17px; transform: rotate(45deg) }
 .nav-hamburger.active span:nth-child(2) { opacity: 0 }
-.nav-hamburger.active span:nth-child(3) { transform: rotate(-45deg) translateY(-7px) }
+.nav-hamburger.active span:nth-child(3) { top: 17px; transform: rotate(-45deg) }
 
 .nav-mobile { display: none; position: fixed; top: 64px; left: 0; right: 0; bottom: 0; background: rgba(11,12,14,.97); backdrop-filter: blur(20px); z-index: 99; padding: 24px; flex-direction: column; gap: 8px }
 .nav-mobile.open { display: flex }
