@@ -1,0 +1,366 @@
+---
+import Base from '../layouts/Base.astro';
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const lastUpdated = '22 de março de 2026';
+const sections = [
+  { id: 'escopo', title: 'O que esta Política cobre' },
+  { id: 'dados-coletados', title: 'Dados que coletamos' },
+  { id: 'como-usamos', title: 'Como usamos seus dados' },
+  { id: 'compartilhamento', title: 'Compartilhamento de dados' },
+  { id: 'armazenamento', title: 'Armazenamento e segurança' },
+  { id: 'cookies', title: 'Cookies e rastreamento' },
+  { id: 'seus-direitos', title: 'Seus direitos' },
+  { id: 'lgpd', title: 'LGPD — Lei Geral de Proteção de Dados' },
+  { id: 'menores', title: 'Menores de idade' },
+  { id: 'alteracoes', title: 'Alterações nesta Política' },
+  { id: 'contato-dpo', title: 'Contato e DPO' },
+];
+---
+<Base
+  title="Política de Privacidade — atalay.ia"
+  description="Política de Privacidade do atalay.ia. Como coletamos, usamos e protegemos seus dados pessoais."
+>
+  <Nav />
+
+  <section class="legal-page">
+    <div class="legal-wrap">
+
+      <div class="legal-header">
+        <div class="legal-label">Legal</div>
+        <h1>Política de Privacidade</h1>
+        <p class="legal-updated">Última atualização: {lastUpdated}</p>
+      </div>
+
+      <div class="legal-layout">
+
+        <!-- Sidebar TOC -->
+        <aside class="legal-toc">
+          <div class="legal-toc-title">Nesta página</div>
+          <nav>
+            {sections.map(s => (
+              <a href={`#${s.id}`} class="legal-toc-link">{s.title}</a>
+            ))}
+          </nav>
+        </aside>
+
+        <!-- Content -->
+        <div class="legal-content">
+
+          <p>A ATALAYIA LTDA ("atalay.ia", "nós", "nosso") opera a plataforma atalay.ia, uma ferramenta de inteligência editorial para redações. Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos suas informações pessoais.</p>
+          <p>Ao utilizar nossos serviços, você concorda com as práticas descritas nesta política. Se não concordar, por favor não utilize nossos serviços.</p>
+
+          <h2 id="escopo">O que esta Política cobre</h2>
+          <p>Esta Política se aplica a todos os dados pessoais coletados através de:</p>
+          <ul>
+            <li>Nosso site institucional (atalayia.com.br)</li>
+            <li>A plataforma atalay.ia (aplicação web)</li>
+            <li>Comunicações por email</li>
+            <li>Formulários de contato e demonstração</li>
+          </ul>
+          <p>Esta Política não cobre serviços de terceiros que possam ser acessados através de links em nosso site.</p>
+
+          <h2 id="dados-coletados">Dados que coletamos</h2>
+          <h3>Dados fornecidos por você</h3>
+          <ul>
+            <li><strong>Dados de cadastro:</strong> nome, email profissional, cargo, veículo/empresa</li>
+            <li><strong>Dados de perfil editorial:</strong> editoria de atuação, preferências de tom de voz, artigos de referência</li>
+            <li><strong>Dados de contato:</strong> informações enviadas através de formulários de contato ou solicitação de demonstração</li>
+          </ul>
+
+          <h3>Dados coletados automaticamente</h3>
+          <ul>
+            <li><strong>Dados de uso:</strong> páginas visitadas, funcionalidades utilizadas, tempo de sessão</li>
+            <li><strong>Dados técnicos:</strong> endereço IP, tipo de navegador, sistema operacional, resolução de tela</li>
+            <li><strong>Cookies:</strong> identificadores de sessão e preferências (veja seção <a href="#cookies">Cookies</a>)</li>
+          </ul>
+
+          <h3>Dados editoriais</h3>
+          <ul>
+            <li><strong>Conteúdo analisado:</strong> textos submetidos para análise, URLs de artigos, imagens avaliadas</li>
+            <li><strong>Dados de performance:</strong> métricas de Google Search Console e Google Discover do domínio do cliente</li>
+            <li><strong>Perfis de voz:</strong> padrões de escrita extraídos de artigos publicados</li>
+          </ul>
+          <p><strong>Importante:</strong> os dados editoriais são processados exclusivamente para fornecer o serviço contratado e não são utilizados para treinar modelos de IA de uso geral.</p>
+
+          <h2 id="como-usamos">Como usamos seus dados</h2>
+          <p>Utilizamos seus dados pessoais para:</p>
+          <ul>
+            <li>Fornecer e manter a plataforma atalay.ia</li>
+            <li>Personalizar a experiência editorial (perfis de voz, calibração por editoria)</li>
+            <li>Gerar análises e recomendações editoriais</li>
+            <li>Enviar comunicações sobre o serviço (atualizações, alertas de tendências)</li>
+            <li>Responder a solicitações de contato e suporte</li>
+            <li>Melhorar a qualidade e performance da plataforma</li>
+            <li>Cumprir obrigações legais</li>
+          </ul>
+
+          <h2 id="compartilhamento">Compartilhamento de dados</h2>
+          <p>Não vendemos seus dados pessoais. Podemos compartilhar dados nas seguintes situações:</p>
+          <ul>
+            <li><strong>Provedores de infraestrutura:</strong> Google Cloud Platform (hospedagem, Firestore, Cloud Run, Vertex AI)</li>
+            <li><strong>Processamento de IA:</strong> Google Gemini (processamento de linguagem natural — dados enviados sob acordo de processamento de dados do Google Cloud)</li>
+            <li><strong>Autenticação:</strong> Firebase Authentication (gerenciamento de login)</li>
+            <li><strong>Análise de performance:</strong> Google Search Console e Google Analytics (acesso autorizado pelo cliente)</li>
+            <li><strong>Obrigação legal:</strong> quando exigido por lei, ordem judicial ou autoridade competente</li>
+          </ul>
+          <p>Todos os provedores listados possuem acordos de processamento de dados e operam em conformidade com padrões de segurança internacionais.</p>
+
+          <h2 id="armazenamento">Armazenamento e segurança</h2>
+          <p>Seus dados são armazenados em infraestrutura do Google Cloud Platform, com servidores na região da América do Sul (southamerica-east1, São Paulo).</p>
+          <p>Medidas de segurança implementadas:</p>
+          <ul>
+            <li>Criptografia em trânsito (TLS/HTTPS) e em repouso</li>
+            <li>Autenticação via Firebase Auth com tokens JWT</li>
+            <li>Controle de acesso baseado em papéis (RBAC)</li>
+            <li>Logs de auditoria e monitoramento de acesso</li>
+            <li>Backups automáticos diários</li>
+            <li>Isolamento de dados por organização</li>
+          </ul>
+
+          <h2 id="cookies">Cookies e rastreamento</h2>
+          <p>Utilizamos cookies estritamente necessários para:</p>
+          <ul>
+            <li><strong>Sessão:</strong> manter seu login ativo</li>
+            <li><strong>Preferências:</strong> tema (escuro/claro), editoria selecionada</li>
+          </ul>
+          <p>Não utilizamos cookies de publicidade ou rastreamento de terceiros. Não participamos de redes de publicidade comportamental.</p>
+
+          <h2 id="seus-direitos">Seus direitos</h2>
+          <p>Você tem direito a:</p>
+          <ul>
+            <li><strong>Acessar</strong> seus dados pessoais armazenados</li>
+            <li><strong>Corrigir</strong> dados incompletos ou inexatos</li>
+            <li><strong>Excluir</strong> seus dados (direito ao esquecimento)</li>
+            <li><strong>Portar</strong> seus dados para outro serviço</li>
+            <li><strong>Revogar</strong> consentimento a qualquer momento</li>
+            <li><strong>Solicitar informações</strong> sobre compartilhamento com terceiros</li>
+          </ul>
+          <p>Para exercer qualquer desses direitos, entre em contato através do email indicado na seção <a href="#contato-dpo">Contato</a>.</p>
+
+          <h2 id="lgpd">LGPD — Lei Geral de Proteção de Dados</h2>
+          <p>Em conformidade com a Lei nº 13.709/2018 (LGPD), informamos que:</p>
+          <ul>
+            <li>O tratamento de dados pessoais é realizado com base no consentimento do titular e na execução de contrato</li>
+            <li>Os dados são tratados para finalidades legítimas, específicas e informadas ao titular</li>
+            <li>Mantemos registro das operações de tratamento de dados</li>
+            <li>Possuímos um Encarregado de Proteção de Dados (DPO) designado</li>
+          </ul>
+
+          <h2 id="menores">Menores de idade</h2>
+          <p>O atalay.ia é um serviço direcionado a profissionais de comunicação e não coleta intencionalmente dados de menores de 18 anos. Se tomarmos conhecimento de que coletamos dados de um menor, os excluiremos imediatamente.</p>
+
+          <h2 id="alteracoes">Alterações nesta Política</h2>
+          <p>Podemos atualizar esta Política periodicamente. Alterações significativas serão comunicadas por email ou através de aviso na plataforma. A data de última atualização está indicada no topo desta página.</p>
+
+          <h2 id="contato-dpo">Contato e DPO</h2>
+          <p>Para questões sobre privacidade, exercício de direitos ou comunicação com nosso Encarregado de Proteção de Dados:</p>
+          <div class="legal-contact-box">
+            <p><strong>ATALAYIA LTDA</strong></p>
+            <p>Email: <a href="mailto:privacidade@atalayia.com">privacidade@atalayia.com</a></p>
+            <p>Belo Horizonte, MG — Brasil</p>
+          </div>
+          <p>Respondemos a todas as solicitações em até 15 dias úteis, conforme previsto na LGPD.</p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Base>
+
+<style>
+  .legal-page {
+    padding: 140px 0 100px;
+    overflow-x: hidden;
+  }
+
+  .legal-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .legal-header {
+    margin-bottom: 48px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .legal-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 12px;
+  }
+
+  .legal-header h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 400;
+    letter-spacing: -.03em;
+    margin-bottom: 12px;
+  }
+
+  .legal-updated {
+    font-size: 14px;
+    color: var(--text-m);
+  }
+
+  /* Layout: TOC sidebar + content */
+  .legal-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  /* TOC */
+  .legal-toc {
+    position: sticky;
+    top: 88px;
+  }
+
+  .legal-toc-title {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-m);
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    margin-bottom: 14px;
+  }
+
+  .legal-toc nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .legal-toc-link {
+    font-size: 13px;
+    color: var(--text-m);
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border-left: 2px solid transparent;
+    transition: all .15s;
+    line-height: 1.4;
+  }
+
+  .legal-toc-link:hover {
+    color: var(--text-s);
+    background: rgba(255,255,255,.03);
+    border-left-color: var(--border-h);
+  }
+
+  /* Content */
+  .legal-content {
+    max-width: 720px;
+  }
+
+  .legal-content h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 26px;
+    font-weight: 400;
+    margin: 48px 0 16px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    letter-spacing: -.02em;
+  }
+
+  .legal-content h2:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .legal-content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 24px 0 10px;
+  }
+
+  .legal-content p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-s);
+    margin-bottom: 14px;
+  }
+
+  .legal-content a {
+    color: var(--orange);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(192,106,66,.25);
+    transition: border-color .2s;
+  }
+
+  .legal-content a:hover {
+    border-bottom-color: var(--orange);
+  }
+
+  .legal-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+  }
+
+  .legal-content li {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-s);
+    padding: 4px 0 4px 20px;
+    position: relative;
+  }
+
+  .legal-content li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--text-m);
+  }
+
+  .legal-content li strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .legal-contact-box {
+    padding: 20px 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-l);
+    border-radius: 12px;
+    margin: 16px 0 20px;
+  }
+
+  .legal-contact-box p {
+    margin-bottom: 4px;
+    font-size: 14px;
+  }
+
+  .legal-contact-box p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Mobile */
+  @media (max-width: 767px) {
+    .legal-page { padding: 100px 0 60px }
+    .legal-wrap { padding: 0 20px }
+    .legal-layout { grid-template-columns: 1fr; gap: 0 }
+    .legal-toc { position: static; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid var(--border) }
+    .legal-toc nav { flex-direction: row; flex-wrap: wrap; gap: 4px }
+    .legal-toc-link { font-size: 12px; padding: 4px 8px; border-left: none; border: 1px solid var(--border); border-radius: 6px }
+    .legal-toc-link:hover { border-color: var(--border-h) }
+    .legal-header h1 { font-size: 28px }
+    .legal-content h2 { font-size: 22px; margin-top: 32px }
+  }
+</style>
