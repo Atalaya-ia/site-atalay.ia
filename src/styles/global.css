@@ -577,15 +577,19 @@ footer { border-top: 1px solid var(--border); padding: 80px 0 40px }
    MOBILE (< 768px)
    ═══════════════════════════════════════════════════════════ */
 @media (max-width: 767px) {
+  /* Global overflow fix */
+  html, body { overflow-x: hidden; max-width: 100vw }
+
   /* Wrap */
   .wrap { padding: 0 20px }
 
   /* Nav */
   .nav-links { display: none !important }
   .nav-divider { display: none }
+  .nav-dd-panel { display: none }
 
   /* Hero — centered, clean */
-  .hero { padding: 100px 0 0; text-align: center }
+  .hero { padding: 100px 0 0; text-align: center; overflow: hidden }
   .hero-text { padding: 0 20px; display: flex; flex-direction: column; align-items: center }
   .hero-badge { font-size: 14px; padding: 6px 14px; margin-bottom: 28px }
   .hero h1 { font-size: 36px; line-height: 1.1; margin-bottom: 20px; max-width: 100% }
@@ -598,8 +602,8 @@ footer { border-top: 1px solid var(--border); padding: 80px 0 40px }
   .hero-fade { height: 0 }
   .hero { padding-bottom: 48px }
 
-  /* Proof */
-  .proof { padding: 40px 0 80px }
+  /* Proof — contain the scroll track */
+  .proof { padding: 40px 0 80px; overflow: hidden; max-width: 100vw }
   .proof-card { width: 300px; padding: 22px }
   .proof-card blockquote { font-size: 16px; margin-bottom: 16px }
   .proof-card cite { font-size: 13px; gap: 8px }
@@ -607,9 +611,9 @@ footer { border-top: 1px solid var(--border); padding: 80px 0 40px }
   .proof-card-stars { font-size: 13px; margin-bottom: 12px }
 
   /* Values */
-  .values { padding: 80px 0 60px }
+  .values { padding: 80px 0 60px; overflow: hidden }
   .values-statement { font-size: 26px; line-height: 1.25; margin-bottom: 48px; padding: 0 20px }
-  .values-grid { gap: 16px; padding: 0 20px }
+  .values-grid { gap: 16px; padding: 0 20px; max-width: 100% }
   .val { min-height: 380px; border-radius: 14px }
   .val-svg svg { width: 200px; height: 200px }
   .val-text { padding: 0 24px 28px }
@@ -618,7 +622,7 @@ footer { border-top: 1px solid var(--border); padding: 80px 0 40px }
   .val p { font-size: 15px; line-height: 1.55 }
 
   /* Feature sections */
-  .feat { padding: 60px 0 }
+  .feat { padding: 60px 0; overflow: hidden }
   .feat-header { margin-bottom: 36px; gap: 16px }
   .feat-header h2 { font-size: 28px }
   .feat-header p { font-size: 16px; line-height: 1.6 }
@@ -677,6 +681,10 @@ footer { border-top: 1px solid var(--border); padding: 80px 0 40px }
 
   /* Section border */
   .section-border::before { left: 20px; right: 20px }
+
+  /* Kill pseudo-elements that cause overflow */
+  .hero::before { width: 100%; max-width: 100vw }
+  .cta::before { width: 100%; max-width: 100vw }
 
   /* Toast */
   .toast { bottom: 16px; right: 16px; left: 16px }
