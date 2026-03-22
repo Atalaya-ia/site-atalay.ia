@@ -31,22 +31,20 @@ const sections = [
         <div class="legal-label">Legal</div>
         <h1>Política de Privacidade</h1>
         <p class="legal-updated">Última atualização: {lastUpdated}</p>
-      </div>
 
-      <div class="legal-layout">
-
-        <!-- Sidebar TOC -->
-        <aside class="legal-toc">
+        <!-- TOC (horizontal, below header) -->
+        <nav class="legal-toc">
           <div class="legal-toc-title">Nesta página</div>
-          <nav>
+          <div class="legal-toc-links">
             {sections.map(s => (
               <a href={`#${s.id}`} class="legal-toc-link">{s.title}</a>
             ))}
-          </nav>
-        </aside>
+          </div>
+        </nav>
+      </div>
 
-        <!-- Content -->
-        <div class="legal-content">
+      <!-- Content (single column) -->
+      <div class="legal-content">
 
           <p>A ATALAYIA LTDA ("atalay.ia", "nós", "nosso") opera a plataforma atalay.ia, uma ferramenta de inteligência editorial para redações. Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos suas informações pessoais.</p>
           <p>Ao utilizar nossos serviços, você concorda com as práticas descritas nesta política. Se não concordar, por favor não utilize nossos serviços.</p>
@@ -163,7 +161,6 @@ const sections = [
           </div>
           <p>Respondemos a todas as solicitações em até 15 dias úteis, conforme previsto na LGPD.</p>
 
-        </div>
       </div>
     </div>
   </section>
@@ -185,8 +182,6 @@ const sections = [
 
   .legal-header {
     margin-bottom: 48px;
-    padding-bottom: 32px;
-    border-bottom: 1px solid var(--border);
   }
 
   .legal-label {
@@ -211,18 +206,11 @@ const sections = [
     color: var(--text-m);
   }
 
-  /* Layout: TOC sidebar + content */
-  .legal-layout {
-    display: grid;
-    grid-template-columns: 220px 1fr;
-    gap: 60px;
-    align-items: start;
-  }
-
-  /* TOC */
+  /* TOC — horizontal links below header */
   .legal-toc {
-    position: sticky;
-    top: 88px;
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
   }
 
   .legal-toc-title {
@@ -231,22 +219,22 @@ const sections = [
     color: var(--text-m);
     text-transform: uppercase;
     letter-spacing: .8px;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
   }
 
-  .legal-toc nav {
+  .legal-toc-links {
     display: flex;
-    flex-direction: column;
-    gap: 2px;
+    flex-wrap: wrap;
+    gap: 6px;
   }
 
   .legal-toc-link {
     font-size: 13px;
     color: var(--text-m);
     text-decoration: none;
-    padding: 6px 10px;
+    padding: 6px 12px;
     border-radius: 6px;
-    border-left: 2px solid transparent;
+    border: 1px solid var(--border);
     transition: all .15s;
     line-height: 1.4;
   }
@@ -254,12 +242,12 @@ const sections = [
   .legal-toc-link:hover {
     color: var(--text-s);
     background: rgba(255,255,255,.03);
-    border-left-color: var(--border-h);
+    border-color: var(--border-h);
   }
 
   /* Content */
   .legal-content {
-    max-width: 720px;
+    max-width: 780px;
   }
 
   .legal-content h2 {
@@ -354,11 +342,7 @@ const sections = [
   @media (max-width: 767px) {
     .legal-page { padding: 100px 0 60px }
     .legal-wrap { padding: 0 20px }
-    .legal-layout { grid-template-columns: 1fr; gap: 0 }
-    .legal-toc { position: static; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid var(--border) }
-    .legal-toc nav { flex-direction: row; flex-wrap: wrap; gap: 4px }
-    .legal-toc-link { font-size: 12px; padding: 4px 8px; border-left: none; border: 1px solid var(--border); border-radius: 6px }
-    .legal-toc-link:hover { border-color: var(--border-h) }
+    .legal-toc-link { font-size: 12px; padding: 4px 8px }
     .legal-header h1 { font-size: 28px }
     .legal-content h2 { font-size: 22px; margin-top: 32px }
   }
