@@ -355,7 +355,7 @@ nav.scrolled { background: rgba(11,12,14,.92); backdrop-filter: blur(20px) }
 .val:hover { border-color: var(--border-h) }
 .val-fig { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; color: var(--text-m); letter-spacing: .5px; padding: 32px 32px 0 }
 .val-fig span { color: var(--orange) }
-.val-svg { width: 100%; flex: 1; display: flex; align-items: center; justify-content: center; opacity: .85; transition: opacity .5s }
+.val-svg { width: 100%; flex: 1; display: flex; align-items: center; justify-content: center; opacity: 1; transition: opacity .5s }
 .val-svg svg { width: 300px; height: 300px }
 .val-text { padding: 0 32px 40px }
 .val h3 { font-size: 19px; font-weight: 600; margin-bottom: 8px; color: var(--text) }
