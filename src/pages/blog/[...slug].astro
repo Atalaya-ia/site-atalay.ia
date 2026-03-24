@@ -75,7 +75,7 @@ const articles: Record<string, {
       <!-- Right side: data cards -->
       <g transform="translate(540,120)">
         <rect x="0" y="0" width="160" height="36" rx="6" stroke="rgba(255,255,255,.08)" stroke-width=".6" fill="rgba(255,255,255,.02)"/>
-        <text x="12" y="22" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,.4)">GSC Authority</text>
+        <text x="12" y="22" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,.4)">Authority</text>
         <rect x="110" y="10" width="38" height="16" rx="4" fill="rgba(192,106,66,.12)" stroke="rgba(192,106,66,.2)" stroke-width=".5"/>
         <text x="119" y="22" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(192,106,66,.7)">0.82</text>
       </g>
@@ -95,48 +95,46 @@ const articles: Record<string, {
     content: `
       <p class="article-lead">Redações trabalham com pressão constante. Deadline apertado, pauta mudando em tempo real, correções manuais que consomem horas. E mesmo assim, a maioria das ferramentas de IA disponíveis hoje trata jornalismo como qualquer outro tipo de texto.</p>
 
-      <p>Depois de 16 meses trabalhando com dados reais de performance editorial — analisando milhares de artigos, estudando o que funciona no Google Discover e na Busca, mapeando erros recorrentes por editoria — lançamos o <strong>atalay.ia</strong>.</p>
+      <p>Depois de mais de um ano trabalhando com dados reais de performance editorial — analisando milhares de artigos, estudando o que funciona em cada canal de distribuição, mapeando erros recorrentes por editoria — lançamos o <strong>atalay.ia</strong>.</p>
 
       <h2>O problema que resolvemos</h2>
 
-      <p>A IA genérica não funciona para jornalismo. ChatGPT, Gemini e Claude são ferramentas poderosas, mas não sabem que "Galo" no contexto de Belo Horizonte é o Atlético Mineiro. Não conhecem o Manual de Redação. Não entendem que um título para Discover precisa de apelo emocional diferente de um título para Busca.</p>
+      <p>IA genérica não funciona para jornalismo. Ferramentas de propósito geral não sabem que "Galo" no contexto de Minas Gerais é o Atlético Mineiro. Não conhecem o Manual de Redação da sua publicação. Não entendem que um título para Discover precisa de apelo emocional diferente de um título para Busca.</p>
 
-      <p>O atalay.ia foi construído de baixo para cima para resolver esse problema. Não é um wrapper sobre GPT com um prompt genérico. É um sistema de cinco camadas que começa com dados e termina com sugestão editorial.</p>
+      <p>O atalay.ia foi construído de baixo para cima para resolver esse problema. Não é um plugin genérico com um prompt por trás. É uma inteligência artificial própria, treinada e calibrada especificamente para o contexto editorial brasileiro.</p>
 
-      <h2>Como funciona</h2>
+      <h2>O que o atalay.ia faz</h2>
 
-      <p>O pipeline editorial do atalay.ia opera em camadas progressivas:</p>
+      <p>A plataforma atua em duas frentes complementares:</p>
 
       <ul>
-        <li><strong>Camada 1 — Detectar:</strong> monitoramento em tempo real do Google Trends, identificando picos de busca relevantes para cada editoria antes que virem pauta na concorrência.</li>
-        <li><strong>Camada 2 — Classificar:</strong> classificação automática por editoria usando categorias do Google combinadas com IA contextual, reduzindo o ruído para o jornalista.</li>
-        <li><strong>Camada 3 — Pontuar:</strong> score de autoridade baseado em dados reais do Google Search Console — não achismo, dados.</li>
-        <li><strong>Camada 4 — Alertar:</strong> verdicts de prioridade (P1, P2, P3) considerando volume, autoridade e timing.</li>
+        <li><strong>Trends:</strong> monitora oportunidades de pauta em tempo real, classifica por editoria, calcula a relevância para o seu domínio e prioriza o que merece atenção agora.</li>
+        <li><strong>Optimize:</strong> analisa textos antes da publicação em três dimensões — gramática, aderência ao manual de redação e potencial de performance — gerando sugestões que respeitam a voz do jornalista.</li>
       </ul>
 
-      <p>E no lado da otimização, o copiloto analisa textos contra três dimensões: gramática, manual de redação e SEO contextual.</p>
+      <p>O resultado é um copiloto que entende o universo de cada redação: quais termos o manual aceita, como cada jornalista escreve, quais padrões de título performam melhor em cada editoria.</p>
 
-      <h2>Construído com dados do domínio</h2>
+      <h2>IA própria, não genérica</h2>
 
-      <p>Cada redação tem seu próprio universo. O atalay.ia foi projetado para aprender esse universo: quais termos o manual aceita, como cada jornalista escreve, quais padrões de título performam melhor em cada editoria.</p>
+      <p>Cada redação tem seu próprio universo. O atalay.ia aprende esse universo com dados do domínio — não com dados genéricos da internet.</p>
 
       <blockquote>
         <p>"A diferença entre IA genérica e IA editorial é a mesma entre um corretor ortográfico e um editor de texto. Um corrige palavras, o outro entende contexto."</p>
       </blockquote>
 
-      <p>Durante o desenvolvimento, descobrimos que o Google Search Console é a melhor fonte de verdade para autoridade editorial. Não surveys, não benchmarks de mercado — dados reais de impressões e cliques no seu domínio.</p>
+      <p>Isso significa que as sugestões do atalay.ia não são as mesmas para todo mundo. Elas são calibradas para a realidade de cada veículo: seus dados de performance, suas regras, seus jornalistas.</p>
 
       <h2>Para quem é</h2>
 
-      <p>O atalay.ia foi desenhado para redações de médio e grande porte que publicam diariamente e dependem de tráfego orgânico. O primeiro cliente piloto é o jornal <strong>O TEMPO</strong>, de Belo Horizonte, com seis editorias ativas: Esportes, Cidades, Política, Variedades, Brasil e Mundo.</p>
+      <p>O atalay.ia foi desenhado para redações que publicam diariamente e dependem de tráfego orgânico. Veículos com editorias ativas, equipe produzindo em volume, e a necessidade de tomar decisões rápidas sobre pauta, título e otimização.</p>
 
-      <p>Nos próximos meses, vamos expandir para outras redações. Se você trabalha em uma publicação que enfrenta os mesmos desafios, <a href="/contato">entre em contato</a>.</p>
+      <p>Se a sua redação enfrenta esses desafios, <a href="/contato">entre em contato</a>.</p>
 
       <h2>O que vem a seguir</h2>
 
-      <p>Estamos construindo as camadas 5 e 6 do pipeline: previsão de performance (usando percentis históricos por editoria) e medição pós-publicação (tracking de URLs com dados do GSC em T+24h, T+48h e T+72h).</p>
+      <p>Estamos construindo as próximas camadas da plataforma: previsão de performance antes da publicação e medição de resultado pós-publicação. O objetivo é fechar o ciclo completo: detectar a oportunidade, ajudar na produção, e medir o impacto.</p>
 
-      <p>O objetivo final é fechar o ciclo: detectar a oportunidade, ajudar na produção, e medir o resultado. Inteligência editorial de ponta a ponta.</p>
+      <p>Inteligência editorial de ponta a ponta.</p>
     `,
   },
 
@@ -178,56 +176,56 @@ const articles: Record<string, {
         <rect x="-80" y="-70" width="160" height="140" rx="10" stroke="rgba(192,106,66,.3)" stroke-width="1" fill="rgba(192,106,66,.03)"/>
         <text x="0" y="-42" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" font-weight="600" fill="rgba(192,106,66,.7)">IA Contextual</text>
         <g font-family="JetBrains Mono, monospace" font-size="9">
-          <text x="-60" y="-18" fill="rgba(192,106,66,.5)">manual: ✓ 142 regras</text>
+          <text x="-60" y="-18" fill="rgba(192,106,66,.5)">manual: ✓ ativo</text>
           <text x="-60" y="0" fill="rgba(130,153,110,.5)">voice: ✓ perfil ativo</text>
-          <text x="-60" y="18" fill="rgba(192,106,66,.5)">GSC: ✓ 16 meses</text>
+          <text x="-60" y="18" fill="rgba(192,106,66,.5)">dados: ✓ domínio</text>
           <text x="-60" y="36" fill="rgba(130,153,110,.5)">editoria: ✓ Esportes</text>
-          <text x="-60" y="54" fill="rgba(192,106,66,.5)">geo: ✓ MG</text>
+          <text x="-60" y="54" fill="rgba(192,106,66,.5)">geo: ✓ regional</text>
         </g>
         <circle cx="80" cy="-70" r="4" fill="rgba(192,106,66,.5)"/>
         <circle cx="80" cy="-70" r="8" stroke="rgba(192,106,66,.15)" stroke-width=".5" fill="none"/>
       </g>
     </svg>`,
     content: `
-      <p class="article-lead">Quando o ChatGPT explodiu em popularidade, redações ao redor do mundo começaram a testar a tecnologia. A promessa era clara: escrever mais rápido, corrigir melhor, otimizar títulos. A realidade foi diferente.</p>
+      <p class="article-lead">Quando a IA generativa explodiu em popularidade, redações ao redor do mundo começaram a testar a tecnologia. A promessa era clara: escrever mais rápido, corrigir melhor, otimizar títulos. A realidade foi diferente.</p>
 
       <h2>O gap da IA genérica</h2>
 
-      <p>Modelos de linguagem como GPT-4, Gemini e Claude são treinados em bilhões de textos da internet. Eles sabem escrever bem. Mas "escrever bem" e "escrever bem para a sua redação" são coisas fundamentalmente diferentes.</p>
+      <p>Ferramentas de IA de propósito geral são treinadas em bilhões de textos da internet. Elas sabem escrever bem. Mas "escrever bem" e "escrever bem para a sua redação" são coisas fundamentalmente diferentes.</p>
 
-      <p>Um LLM genérico não sabe que:</p>
+      <p>Uma IA genérica não sabe que:</p>
 
       <ul>
         <li>O Manual de Redação do seu jornal proíbe "o mesmo" como pronome anafórico</li>
-        <li>"Cruzeiro" em Belo Horizonte é um clube de futebol, não a moeda antiga</li>
+        <li>"Cruzeiro" em Minas Gerais é um clube de futebol, não a moeda antiga</li>
         <li>Títulos para Google Discover precisam de gancho emocional, enquanto títulos para Busca precisam de keyword match</li>
         <li>Cada jornalista tem um estilo de escrita que deve ser preservado, não padronizado</li>
       </ul>
 
-      <p>Quando você pede para um ChatGPT "melhorar" um texto jornalístico, ele produz algo genérico. Gramaticalmente correto, mas editorialmente morto.</p>
+      <p>Quando você usa uma IA genérica para "melhorar" um texto jornalístico, ela produz algo estéril. Gramaticalmente correto, mas editorialmente morto.</p>
 
       <h2>O que é IA contextual</h2>
 
-      <p>IA contextual é o oposto de "one-size-fits-all". É IA que opera dentro de um domínio específico, com acesso a dados específicos, e calibrada para métricas específicas.</p>
+      <p>IA contextual é o oposto de "one-size-fits-all". É inteligência artificial que opera dentro de um domínio específico, com acesso a dados específicos, e calibrada para métricas específicas.</p>
 
       <p>No caso do jornalismo, isso significa:</p>
 
       <ul>
-        <li><strong>Dados de performance reais:</strong> não benchmarks de mercado, mas dados do Google Search Console do próprio domínio — impressões, cliques, CTR por editoria.</li>
+        <li><strong>Dados de performance reais:</strong> não benchmarks de mercado, mas dados do próprio domínio — como o público realmente interage com o conteúdo de cada editoria.</li>
         <li><strong>Regras editoriais explícitas:</strong> o Manual de Redação não é uma sugestão, é lei. A IA precisa conhecê-lo e aplicá-lo como guardrail.</li>
         <li><strong>Perfil de voz:</strong> cada jornalista escreve diferente. Um colunista de esportes tem tom diferente de um repórter de política. A IA precisa adaptar-se, não homogeneizar.</li>
-        <li><strong>Contexto geográfico:</strong> "MG" não é só uma sigla — é o estado onde está o público. Trends em Minas importam mais que trends nacionais.</li>
+        <li><strong>Contexto geográfico:</strong> uma redação regional precisa de uma IA que entenda a relevância local. O que importa em Minas nem sempre importa no resto do país.</li>
       </ul>
 
-      <h2>Como implementamos isso</h2>
+      <h2>Como o atalay.ia pensa</h2>
 
-      <p>O atalay.ia usa uma arquitetura de camadas onde cada etapa adiciona contexto. Quando o sistema analisa um texto, ele não pergunta apenas "está correto?". Ele pergunta "está correto segundo o manual?", "está otimizado para o canal de distribuição?", "soa como este jornalista?".</p>
+      <p>Quando o atalay.ia analisa um texto, ele não pergunta apenas "está correto?". Ele pergunta "está correto segundo o manual?", "está otimizado para o canal de distribuição?", "soa como este jornalista?".</p>
 
       <blockquote>
-        <p>"IA contextual não é IA mais inteligente. É IA com mais informação. O modelo pode ser o mesmo — a diferença está nos dados que o cercam."</p>
+        <p>"IA contextual não é IA mais inteligente. É IA com mais informação. A diferença está nos dados que a cercam."</p>
       </blockquote>
 
-      <p>Na prática, isso se traduz em três tipos de correção distintos: gramática (regras universais), manual (regras do veículo) e SEO (dados de performance). Cada tipo tem severidades diferentes e explicações diferentes. Não é um "score" único — é um diagnóstico editorial.</p>
+      <p>Na prática, isso se traduz em três tipos de análise distintos: gramática (regras universais), manual (regras do veículo) e performance (dados reais de distribuição). Cada tipo tem severidades diferentes e explicações diferentes. Não é um "score" único — é um diagnóstico editorial.</p>
 
       <h2>O custo de não contextualizar</h2>
 
@@ -235,16 +233,16 @@ const articles: Record<string, {
 
       <p>O resultado? Jornalistas rejeitam a ferramenta. Não porque IA não funciona, mas porque aquela IA não funciona <em>para eles</em>.</p>
 
-      <p>A solução não é mais IA. É IA melhor informada.</p>
+      <p>A solução não é mais IA. É IA construída para o seu domínio. É o que o atalay.ia faz.</p>
     `,
   },
 
   'pipeline-dados-editoriais': {
-    title: 'Dados primeiro, IA depois: como construímos o pipeline editorial',
-    description: '16 meses de dados de performance, mapeamento por editoria e calibração estatística antes de qualquer modelo de linguagem entrar em ação.',
+    title: 'Dados primeiro, IA depois: a filosofia por trás do atalay.ia',
+    description: 'Por que começamos com mais de um ano de dados reais antes de ligar qualquer modelo. A abordagem que muda tudo na inteligência editorial.',
     date: '2026-03-18',
-    category: 'Engenharia',
-    readTime: '10 min',
+    category: 'Produto',
+    readTime: '8 min',
     author: 'Bruno Lopes',
     role: 'Fundador, atalay.ia',
     heroSvg: `<svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -295,11 +293,11 @@ const articles: Record<string, {
       <!-- Data sources floating above -->
       <g font-family="JetBrains Mono, monospace" font-size="9">
         <rect x="80" y="80" width="80" height="24" rx="4" stroke="rgba(255,255,255,.08)" stroke-width=".5" fill="rgba(255,255,255,.02)"/>
-        <text x="120" y="96" text-anchor="middle" fill="rgba(255,255,255,.3)">Google Trends</text>
+        <text x="120" y="96" text-anchor="middle" fill="rgba(255,255,255,.3)">Trends data</text>
         <rect x="280" y="80" width="60" height="24" rx="4" stroke="rgba(130,153,110,.15)" stroke-width=".5" fill="rgba(130,153,110,.03)"/>
-        <text x="310" y="96" text-anchor="middle" fill="rgba(130,153,110,.4)">Gemini</text>
-        <rect x="460" y="80" width="50" height="24" rx="4" stroke="rgba(192,106,66,.15)" stroke-width=".5" fill="rgba(192,106,66,.03)"/>
-        <text x="485" y="96" text-anchor="middle" fill="rgba(192,106,66,.4)">GSC</text>
+        <text x="310" y="96" text-anchor="middle" fill="rgba(130,153,110,.4)">atalay.ia</text>
+        <rect x="460" y="80" width="60" height="24" rx="4" stroke="rgba(192,106,66,.15)" stroke-width=".5" fill="rgba(192,106,66,.03)"/>
+        <text x="490" y="96" text-anchor="middle" fill="rgba(192,106,66,.4)">Authority</text>
       </g>
       <!-- Dashed connectors from sources to cubes -->
       <line x1="120" y1="104" x2="120" y2="200" stroke="rgba(255,255,255,.06)" stroke-width=".4" stroke-dasharray="2 3"/>
@@ -307,60 +305,49 @@ const articles: Record<string, {
       <line x1="485" y1="104" x2="400" y2="200" stroke="rgba(192,106,66,.08)" stroke-width=".4" stroke-dasharray="2 3"/>
     </svg>`,
     content: `
-      <p class="article-lead">A tentação de começar pela IA é grande. Plugar um modelo de linguagem, criar um prompt elaborado, e dizer que a ferramenta "usa IA". Nós fizemos o contrário: passamos os primeiros meses sem IA nenhuma. Só dados.</p>
+      <p class="article-lead">A tentação de começar pela IA é grande. Plugar um modelo, criar um prompt elaborado, e dizer que a ferramenta "usa inteligência artificial". Nós fizemos o contrário: passamos os primeiros meses sem IA nenhuma. Só dados.</p>
 
       <h2>Por que dados primeiro</h2>
 
-      <p>Quando começamos a construir o atalay.ia, a primeira pergunta não foi "qual modelo usar?" — foi "o que o jornalista precisa saber que hoje não sabe?". A resposta veio dos dados.</p>
+      <p>Quando começamos a construir o atalay.ia, a primeira pergunta não foi "qual tecnologia usar?" — foi "o que o jornalista precisa saber que hoje não sabe?". A resposta veio dos dados.</p>
 
-      <p>O Google Search Console do O TEMPO tinha 16 meses de dados de performance: impressões, cliques, CTR, posição média — por URL, por query, por dia. Milhões de data points que ninguém estava olhando de forma sistemática.</p>
+      <p>Redações brasileiras sentam sobre meses (às vezes anos) de dados de performance editorial: como o público interage com cada tipo de conteúdo, quais editorias performam melhor em cada canal, quais padrões de título geram mais engajamento. São milhões de data points que ninguém está olhando de forma sistemática.</p>
 
       <h2>O que os dados revelaram</h2>
 
-      <p>Descobertas que mudaram completamente a direção do produto:</p>
+      <p>Quando analisamos dados reais de performance de grandes redações, as descobertas mudaram completamente a direção do produto:</p>
 
       <ul>
-        <li><strong>Autoridade por editoria é desigual:</strong> a editoria de Esportes tinha authority scores 3x maiores que Brasil/Mundo. Isso muda completamente quais trends são oportunidades reais.</li>
+        <li><strong>Autoridade por editoria é desigual:</strong> nem toda editoria tem a mesma credibilidade perante os algoritmos de distribuição. Uma editoria pode ter autoridade 3x maior que outra — e isso muda completamente quais oportunidades são reais.</li>
         <li><strong>Discover e Busca são jogos diferentes:</strong> os mesmos artigos performam de forma oposta nos dois canais. Otimizar para um pode prejudicar o outro.</li>
-        <li><strong>Timing importa mais que qualidade:</strong> artigos publicados nas primeiras 2h de um trend tinham CTR 4x maior que artigos publicados 6h depois, mesmo com qualidade superior.</li>
-        <li><strong>Keywords do GSC revelam authority real:</strong> as queries onde o domínio já ranqueia são o melhor proxy para "sobre o que este jornal tem credibilidade".</li>
+        <li><strong>Timing importa mais que qualidade:</strong> conteúdo publicado nas primeiras horas de um pico de interesse tem engajamento muito superior ao publicado horas depois, mesmo que a qualidade seja maior.</li>
+        <li><strong>O histórico do domínio revela autoridade real:</strong> os temas onde a redação já é referência são o melhor indicador de onde vale investir esforço editorial.</li>
       </ul>
 
-      <h2>A arquitetura do pipeline</h2>
+      <h2>A abordagem do atalay.ia</h2>
 
-      <p>O pipeline opera em camadas, cada uma adicionando uma dimensão de inteligência:</p>
+      <p>O atalay.ia opera em etapas progressivas. Cada etapa adiciona uma camada de inteligência:</p>
 
-      <h3>Camada 1 — Detecção</h3>
-      <p>Monitoramos o Google Trends em tempo real usando a API batchexecute. Capturamos 200+ trends por ciclo com volume, notícias associadas, queries relacionadas e categorias. Fallback para RSS quando a API principal falha.</p>
-
-      <h3>Camada 2 — Classificação</h3>
-      <p>Pré-classificação por categoria do Google (categoria 17 = Esportes, 20 = Tempo, 3 = Economia) elimina chamadas desnecessárias ao Gemini. Trends com categorias de alta confiança pulam a IA e vão direto para a editoria correta. Isso reduz custo em ~60%.</p>
-
-      <h3>Camada 3 — Pontuação</h3>
-      <p>Authority score em 4 dimensões: GSC queries diretas, GSC queries relacionadas, Gemini judge (para matches semânticos), e volume do trend. Quando o Gemini judge não encontra matches, o sistema faz fallback para consulta direta ao GSC API em tempo real.</p>
-
-      <h3>Camada 4 — Alertas</h3>
-      <p>Verdicts de prioridade baseados em regras determinísticas: P1 (publicar agora), P2 (considerar), P3 (monitorar). Inclui monitoramento de concorrentes de MG para detectar quando competidores já publicaram sobre o trend.</p>
+      <ul>
+        <li><strong>Detectar:</strong> o que está crescendo agora? Quais temas estão ganhando volume de interesse em tempo real?</li>
+        <li><strong>Classificar:</strong> isso é relevante para qual editoria? O sistema separa o sinal do ruído automaticamente.</li>
+        <li><strong>Avaliar:</strong> temos autoridade nesse tema? O atalay.ia cruza o que está em alta com o histórico real da redação.</li>
+        <li><strong>Priorizar:</strong> publicar agora, considerar ou só monitorar? A IA entrega um veredito claro com base nos dados.</li>
+      </ul>
 
       <blockquote>
-        <p>"O papel da IA no pipeline não é gerar conteúdo. É classificar, pontuar e priorizar. As decisões editoriais continuam sendo do jornalista."</p>
+        <p>"O papel da IA não é gerar conteúdo. É transformar dados brutos em decisões editoriais claras. Quem decide continua sendo o jornalista."</p>
       </blockquote>
 
-      <h2>O papel do Gemini</h2>
+      <h2>Contexto geográfico e temporal</h2>
 
-      <p>Usamos Gemini Flash Lite para classificação (barato, rápido, bom o suficiente para categorização) e Gemini como judge para matching semântico entre trends e keywords do GSC. O modelo nunca gera texto editorial — ele julga relevância.</p>
+      <p>Uma oportunidade de pauta não existe no vácuo. O atalay.ia entende que um trend pode ser relevante nacionalmente mas irrelevante para uma redação regional — e vice-versa. Da mesma forma, um trend em queda não é a mesma oportunidade que um trend em ascensão, mesmo que ambos tenham o mesmo volume.</p>
 
-      <p>A escolha de usar Gemini Flash Lite na pré-classificação em vez do modelo completo reduziu o custo por ciclo de ~$0.15 para ~$0.03. Em escala de 200+ trends por ciclo, isso importa.</p>
-
-      <h2>Enriquecimento via Google Trends Research API</h2>
-
-      <p>A camada 4.5 usa a Google Trends Research API (OAuth2 + service account) para duas consultas adicionais: breakdown geográfico (onde MG se posiciona entre os 27 estados) e séries temporais (o trend está subindo, estável ou caindo).</p>
-
-      <p>Um trend de volume alto mas em queda não é a mesma oportunidade que um trend de volume médio mas em ascensão. Os dados temporais mudam a prioridade.</p>
+      <p>Esse nível de contexto é o que separa uma IA útil de uma IA que só gera ruído.</p>
 
       <h2>O que aprendemos</h2>
 
-      <p>A decisão mais importante que tomamos foi <strong>não</strong> construir um chatbot. A IA generativa é sedutora, mas o valor real para uma redação não está em gerar texto — está em transformar dados brutos em decisões editoriais informadas.</p>
+      <p>A decisão mais importante que tomamos foi <strong>não</strong> construir um chatbot. O valor real para uma redação não está em gerar texto — está em informar decisões com dados que ninguém mais está olhando.</p>
 
       <p>Dados primeiro. IA depois. Sempre.</p>
     `,
@@ -427,44 +414,44 @@ const articles: Record<string, {
 
       <h2>Por que voz importa</h2>
 
-      <p>Um colunista de esportes do O TEMPO escreve diferente de um repórter de política. Não é só vocabulário — é ritmo, é comprimento de frase, é uso de aspas, é estrutura de lead. O leitor reconhece a voz do jornalista mesmo sem ver o nome. Isso é patrimônio editorial.</p>
+      <p>Um colunista de esportes escreve diferente de um repórter de política. Não é só vocabulário — é ritmo, é comprimento de frase, é uso de aspas, é estrutura de lead. O leitor reconhece a voz do jornalista mesmo sem ver o nome. Isso é patrimônio editorial.</p>
 
-      <p>Quando uma ferramenta de IA reescreve o texto de um jornalista e o resultado "soa como ChatGPT", o jornalista rejeita. Com razão. Ele não quer uma versão genérica do seu texto — quer uma versão melhor do <em>seu</em> texto.</p>
+      <p>Quando uma ferramenta de IA reescreve o texto de um jornalista e o resultado soa genérico, o jornalista rejeita. Com razão. Ele não quer uma versão pasteurizada do seu texto — quer uma versão melhor do <em>seu</em> texto.</p>
 
-      <h2>Três camadas de voz</h2>
+      <h2>Como o atalay.ia aprende a voz</h2>
 
-      <p>O atalay.ia captura o perfil de voz em três etapas:</p>
+      <p>O atalay.ia captura o perfil de voz em etapas progressivas:</p>
 
-      <h3>1. Preferências declaradas</h3>
-      <p>No onboarding, o jornalista escolhe entre dois perfis base: <strong>Factual/Rápido</strong> (frases curtas, lead direto, mínimo de adjetivos) ou <strong>Analítico/Denso</strong> (contexto expandido, subordinadas, dados de suporte). Isso estabelece a linha de base.</p>
+      <h3>Preferências declaradas</h3>
+      <p>No onboarding, o jornalista escolhe seu perfil base: <strong>Factual/Rápido</strong> (frases curtas, lead direto, mínimo de adjetivos) ou <strong>Analítico/Denso</strong> (contexto expandido, dados de suporte, mais nuance). Isso estabelece a linha de base.</p>
 
-      <h3>2. Análise de artigos</h3>
-      <p>O sistema analisa artigos publicados pelo jornalista para extrair padrões: comprimento médio de frase, vocabulário recorrente, estruturas sintáticas preferidas, uso de citações diretas vs. indiretas. Não é uma análise genérica — é calibrada por editoria.</p>
+      <h3>Aprendizado com o uso</h3>
+      <p>A IA analisa o histórico de produção do jornalista para identificar padrões: como ele constrói frases, que tipo de vocabulário prefere, como estrutura os leads. Não é uma análise genérica — é calibrada por editoria e por autor.</p>
 
-      <h3>3. Validação por feedback</h3>
-      <p>Quando o jornalista aceita ou rejeita sugestões, o sistema aprende. Rejeições consistentes de certo tipo de sugestão atualizam o perfil. É um loop de aprendizado contínuo que fica mais preciso com o uso.</p>
+      <h3>Feedback contínuo</h3>
+      <p>Quando o jornalista aceita ou rejeita sugestões, o atalay.ia aprende. Rejeições consistentes de certo tipo de sugestão refinam o perfil. Quanto mais uso, mais preciso.</p>
 
       <blockquote>
         <p>"O objetivo não é que a IA escreva como o jornalista. É que a IA sugira como um editor que conhece o jornalista."</p>
       </blockquote>
 
-      <h2>Tom de voz na prática</h2>
+      <h2>Na prática</h2>
 
-      <p>Quando o copiloto reescreve um título ou sugere uma correção, ele adapta a sugestão ao perfil de voz do jornalista. Um jornalista com perfil Factual recebe títulos curtos e diretos. Um com perfil Analítico recebe títulos com mais contexto.</p>
+      <p>Quando o atalay.ia sugere um título ou uma correção, ele adapta a sugestão ao perfil de voz. Um jornalista com perfil Factual recebe títulos curtos e diretos. Um com perfil Analítico recebe títulos com mais contexto.</p>
 
-      <p>Exemplo real:</p>
+      <p>Exemplo:</p>
 
       <ul>
-        <li><strong>Título original:</strong> "Prefeitura anuncia mudanças no transporte público de BH"</li>
-        <li><strong>Sugestão Factual:</strong> "BH muda 12 linhas de ônibus a partir de segunda"</li>
-        <li><strong>Sugestão Analítico:</strong> "Prefeitura de BH reorganiza 12 linhas de ônibus após auditoria que revelou rotas subutilizadas"</li>
+        <li><strong>Título original:</strong> "Prefeitura anuncia mudanças no transporte público"</li>
+        <li><strong>Sugestão Factual:</strong> "Cidade muda 12 linhas de ônibus a partir de segunda"</li>
+        <li><strong>Sugestão Analítico:</strong> "Prefeitura reorganiza 12 linhas de ônibus após auditoria que revelou rotas subutilizadas"</li>
       </ul>
 
       <p>Ambas são corretas. Ambas são otimizadas. Mas cada uma soa como um jornalista diferente.</p>
 
-      <h2>Agentes por editoria</h2>
+      <h2>Voz por editoria</h2>
 
-      <p>Além do perfil individual, o sistema mantém um perfil por editoria. Esportes tem vocabulário próprio. Política tem estruturas próprias. Cidades usa mais dados geográficos. Esses perfis de editoria funcionam como uma segunda camada de contexto que refina as sugestões.</p>
+      <p>Além do perfil individual, o atalay.ia mantém um perfil por editoria. Esportes tem vocabulário próprio. Política tem estruturas próprias. Cidades usa mais dados geográficos. Esses perfis funcionam como uma segunda camada de contexto que refina cada sugestão.</p>
 
       <p>O resultado é uma IA que não escreve — mas que edita como alguém que conhece a redação por dentro.</p>
     `,
@@ -525,15 +512,15 @@ const articles: Record<string, {
     content: `
       <p class="article-lead">O Google Discover e a Busca orgânica são os dois maiores canais de tráfego para a maioria dos veículos de notícia. Mas eles operam com lógicas completamente diferentes — e a maioria das redações otimiza para ambos como se fossem a mesma coisa.</p>
 
-      <h2>Os dados por trás da diferença</h2>
+      <h2>O que os dados mostram</h2>
 
-      <p>Analisamos 16 meses de dados do Google Search Console de uma redação com 6 editorias ativas. O que encontramos desafia a intuição de muitos editores:</p>
+      <p>Quando analisamos dados reais de performance de grandes redações, o que encontramos desafia a intuição de muitos editores:</p>
 
       <ul>
-        <li><strong>Títulos de Busca dependem de keywords:</strong> os 20% de artigos com melhor CTR na Busca tinham a keyword principal no primeiro terço do título. Para Discover, a posição da keyword era irrelevante.</li>
-        <li><strong>Títulos de Discover dependem de curiosidade:</strong> títulos com gancho emocional ("o que ninguém esperava", "a verdade sobre") tinham CTR 2.3x maior no Discover. Na Busca, esses mesmos títulos tinham CTR <em>menor</em>.</li>
-        <li><strong>Imagem importa 5x mais no Discover:</strong> artigos com imagens de alta qualidade e rosto humano tinham CTR significativamente maior no Discover. Na Busca, a imagem quase não influencia.</li>
-        <li><strong>Timing é tudo no Discover:</strong> a janela de oportunidade no Discover é de 2-4 horas. Na Busca, um artigo bem posicionado gera tráfego por semanas.</li>
+        <li><strong>Títulos de Busca dependem de keywords:</strong> artigos com melhor CTR na Busca tinham a keyword principal no primeiro terço do título. Para Discover, a posição da keyword era irrelevante.</li>
+        <li><strong>Títulos de Discover dependem de curiosidade:</strong> títulos com gancho emocional tinham engajamento muito maior no Discover. Na Busca, esses mesmos títulos performavam <em>pior</em>.</li>
+        <li><strong>Imagem importa muito mais no Discover:</strong> artigos com imagens de alta qualidade e rosto humano tinham CTR significativamente maior no Discover. Na Busca, a imagem quase não influencia.</li>
+        <li><strong>Timing é tudo no Discover:</strong> a janela de oportunidade no Discover é de poucas horas. Na Busca, um artigo bem posicionado gera tráfego por semanas.</li>
       </ul>
 
       <h2>O problema de otimizar para um só</h2>
@@ -543,53 +530,51 @@ const articles: Record<string, {
       <p>Discover é um canal de <em>recomendação</em>. O Google não mostra seu artigo porque alguém pesquisou sobre o tema — mostra porque o algoritmo decidiu que aquele usuário vai se interessar. As regras são diferentes:</p>
 
       <ul>
-        <li>Authority do domínio no tema importa mais que keyword match</li>
-        <li>Freshness (recência) é um fator dominante</li>
+        <li>Autoridade do domínio no tema importa mais que keyword match</li>
+        <li>Recência é um fator dominante</li>
         <li>Engajamento prévio do usuário com o veículo influencia a distribuição</li>
         <li>Qualidade da imagem de capa é um sinal forte</li>
       </ul>
 
-      <h2>Duas estratégias, um pipeline</h2>
+      <h2>Como o atalay.ia trata os dois canais</h2>
 
-      <p>No atalay.ia, tratamos Discover e Busca como canais distintos dentro do mesmo pipeline. Quando o copiloto analisa um artigo, ele gera sugestões separadas para cada canal:</p>
+      <p>O atalay.ia entende Discover e Busca como jogos distintos. Quando analisa um artigo, gera recomendações específicas para cada canal:</p>
 
       <h3>Para Busca</h3>
       <ul>
-        <li>Título com keyword principal no início</li>
-        <li>Meta description com variação semântica da keyword</li>
-        <li>Heading structure com H2s cobrindo subtópicos relacionados</li>
-        <li>Sugestão de internal links para artigos do mesmo cluster temático</li>
+        <li>Título otimizado para keyword match</li>
+        <li>Estrutura de headings cobrindo subtópicos relevantes</li>
+        <li>Sugestão de links internos para fortalecer clusters temáticos</li>
       </ul>
 
       <h3>Para Discover</h3>
       <ul>
         <li>Título com gancho emocional e curiosidade</li>
-        <li>Recomendação de imagem com análise de potencial de CTR</li>
-        <li>Indicação de timing ideal baseado em dados de trends</li>
-        <li>Flag de "autoridade alta" quando o domínio tem forte presença no tema</li>
+        <li>Análise da imagem de capa e potencial de clique</li>
+        <li>Indicação de timing ideal com base nos dados de trends</li>
       </ul>
 
       <blockquote>
         <p>"Otimizar para Discover e Busca ao mesmo tempo não é impossível — mas exige entender que cada canal tem seu próprio jogo. Um título não serve para dois propósitos."</p>
       </blockquote>
 
-      <h2>O papel dos dados de trends</h2>
+      <h2>Trends e Discover andam juntos</h2>
 
-      <p>O pipeline de trends do atalay.ia se conecta diretamente à estratégia de Discover. Quando um trend é detectado com alta relevância para a editoria, o sistema já indica que este é um momento de Discover — porque Discover favorece conteúdo fresh sobre temas em ascensão.</p>
+      <p>O monitoramento de trends do atalay.ia se conecta diretamente à estratégia de Discover. Quando um tema está em ascensão e a redação tem autoridade nele, é o momento perfeito para Discover — porque o canal favorece conteúdo recente sobre temas em alta.</p>
 
-      <p>A combinação de dados de trends (o que está subindo agora) com dados de authority (sobre o que temos credibilidade) cria um mapa de oportunidades que nenhuma das duas fontes fornece sozinha.</p>
+      <p>Essa combinação — o que está subindo agora + sobre o que temos credibilidade — cria um mapa de oportunidades que nenhuma das duas análises fornece sozinha.</p>
 
-      <h2>O que recomendamos</h2>
+      <h2>Por onde começar</h2>
 
-      <p>Se sua redação ainda trata Discover e Busca como um canal só, o primeiro passo é separar os relatórios no Search Console. Olhe para os dados de Discover isoladamente. Você vai se surpreender com o quanto as métricas divergem — e com as oportunidades que estão sendo perdidas.</p>
+      <p>Se sua redação ainda trata Discover e Busca como um canal só, o primeiro passo é olhar os dados separadamente. Você vai se surpreender com o quanto as métricas divergem — e com as oportunidades que estão sendo perdidas.</p>
     `,
   },
 
   'manual-redacao-ia': {
     title: 'O Manual de Redação como guardrail de IA',
-    description: 'Como integramos o manual editorial no pipeline de correção — garantindo que a IA nunca sugira algo que viole as regras da sua redação.',
+    description: 'Por que o atalay.ia nunca sugere algo que viole as regras da sua redação — e como o manual se torna o guardião de qualidade.',
     date: '2026-03-08',
-    category: 'Engenharia',
+    category: 'Produto',
     readTime: '7 min',
     author: 'Bruno Lopes',
     role: 'Fundador, atalay.ia',
@@ -639,64 +624,57 @@ const articles: Record<string, {
       </g>
     </svg>`,
     content: `
-      <p class="article-lead">Todo veículo jornalístico de respeito tem um Manual de Redação. É o documento que define como se escreve naquela publicação — não apenas gramática, mas estilo, terminologia, formato de citações, regras de atribuição. A IA precisa conhecê-lo.</p>
+      <p class="article-lead">Todo veículo jornalístico de respeito tem um Manual de Redação. É o documento que define como se escreve naquela publicação — não apenas gramática, mas estilo, terminologia, formato de citações, regras de atribuição. A IA precisa respeitá-lo.</p>
 
-      <h2>O problema dos manuais analógicos</h2>
+      <h2>O problema dos manuais esquecidos</h2>
 
-      <p>Manuais de redação existem há décadas. Alguns são livros publicados (como o Manual de Redação da Folha de S.Paulo), outros são documentos internos. Mas quase todos compartilham o mesmo problema: são consultados cada vez menos.</p>
+      <p>Manuais de redação existem há décadas. Alguns são livros publicados, outros são documentos internos. Mas quase todos compartilham o mesmo problema: são consultados cada vez menos.</p>
 
       <p>Jornalistas em deadline não param para abrir o manual e verificar se "infra-estrutura" ou "infraestrutura" é a grafia correta naquela publicação. Eles escrevem, o editor revisa (quando tem tempo), e erros passam.</p>
 
       <p>A consequência é uma erosão gradual da consistência editorial. Artigos na mesma edição usam convenções diferentes. A identidade do veículo se dilui.</p>
 
-      <h2>Manual como código</h2>
+      <h2>O manual como guardião</h2>
 
-      <p>No atalay.ia, transformamos o Manual de Redação em um conjunto estruturado de regras que o pipeline de correção aplica automaticamente. Cada regra tem:</p>
-
-      <ul>
-        <li><strong>Padrão:</strong> o que detectar (regex, match semântico ou padrão sintático)</li>
-        <li><strong>Severidade:</strong> error (violação clara), warning (possível violação), suggestion (melhoria opcional)</li>
-        <li><strong>Correção:</strong> o que sugerir como alternativa</li>
-        <li><strong>Explicação:</strong> por que esta é a regra — citando a seção do manual</li>
-      </ul>
-
-      <p>Exemplos reais de regras aplicadas:</p>
+      <p>O atalay.ia conhece o Manual de Redação da sua publicação. Cada regra vira um guardrail que a IA respeita em todas as sugestões. Quando o atalay.ia analisa um texto, ele verifica automaticamente:</p>
 
       <ul>
-        <li><strong>"o mesmo" como pronome:</strong> O Manual proíbe "ele entregou o relatório e o mesmo foi aprovado". A correção sugere "ele entregou o relatório, que foi aprovado".</li>
-        <li><strong>Siglas na primeira menção:</strong> O Manual exige que siglas sejam escritas por extenso na primeira ocorrência. "O BNDES anunciou" sem menção prévia ao nome completo é flagged.</li>
-        <li><strong>Números por extenso:</strong> Números de um a dez devem ser escritos por extenso, exceto em contextos de dados/estatísticas.</li>
-        <li><strong>Atribuição de fontes:</strong> "Segundo informações" sem atribuição específica é flagged como vago.</li>
+        <li><strong>Pronomes proibidos:</strong> "ele entregou o relatório e o mesmo foi aprovado" — o atalay.ia sugere "ele entregou o relatório, que foi aprovado" e explica a regra.</li>
+        <li><strong>Siglas na primeira menção:</strong> "O BNDES anunciou" sem menção prévia ao nome completo é sinalizado.</li>
+        <li><strong>Números por extenso:</strong> "3 pessoas" em vez de "três pessoas" — exceto em contextos de dados e estatísticas.</li>
+        <li><strong>Atribuição vaga:</strong> "Segundo informações" sem fonte específica é sinalizado como impreciso.</li>
       </ul>
 
-      <h2>Três camadas de correção</h2>
+      <p>Cada correção vem com a explicação do porquê — citando a regra do manual. O jornalista entende <em>por que</em> deve mudar, não apenas <em>o que</em> mudar.</p>
 
-      <p>O sistema separa correções em três categorias distintas, cada uma com sua lógica:</p>
+      <h2>Três dimensões de análise</h2>
+
+      <p>O atalay.ia separa a análise em três categorias, cada uma com sua lógica:</p>
 
       <h3>Gramática</h3>
-      <p>Regras universais do português. Concordância, regência, pontuação, ortografia. Essas são as mais simples — erros claros com correções claras.</p>
+      <p>Regras universais do português. Concordância, regência, pontuação, ortografia. Erros claros com correções claras.</p>
 
       <h3>Manual de Redação</h3>
-      <p>Regras específicas do veículo. Aqui é onde o atalay.ia se diferencia: cada correção cita a regra do manual, não apenas sugere uma alternativa. O jornalista entende <em>por que</em> deve mudar, não apenas <em>o que</em> mudar.</p>
+      <p>Regras específicas do veículo. Aqui é onde o atalay.ia se diferencia de qualquer ferramenta genérica: ele não apenas corrige — ele cita a regra e ensina.</p>
 
-      <h3>SEO contextual</h3>
-      <p>Sugestões baseadas em dados de performance. Keyword density, heading structure, meta description, title optimization. Essas não são "erros" — são oportunidades identificadas pelos dados.</p>
+      <h3>Performance</h3>
+      <p>Sugestões baseadas em dados reais de distribuição. Não são "erros" — são oportunidades de melhorar o alcance do conteúdo nos canais onde o público está.</p>
 
       <blockquote>
         <p>"O Manual de Redação não é uma restrição para a IA. É um guardrail. Sem ele, a IA sugere qualquer coisa que pareça correta. Com ele, a IA sugere o que é correto para aquela redação."</p>
       </blockquote>
 
-      <h2>A diferença na prática</h2>
+      <h2>Por que isso importa</h2>
 
-      <p>Testamos o pipeline de correção com 500 artigos do O TEMPO. A IA genérica (sem manual) encontrou em média 3.2 erros por artigo. O pipeline com manual encontrou 7.8 — porque mais da metade dos "erros" eram violações do manual que a IA genérica não tinha como saber.</p>
+      <p>Uma IA sem conhecimento do manual não apenas deixa erros passarem — ela <em>cria novos</em>. Sugere construções que parecem corretas mas violam regras do veículo. O jornalista confia na sugestão, publica, e a consistência editorial sofre.</p>
 
-      <p>Mais importante: a IA genérica também <em>sugeriu</em> correções que violavam o manual em 12% dos casos. Ou seja, a ferramenta sem guardrail não apenas deixa erros passarem — ela cria novos.</p>
+      <p>O atalay.ia inverte essa lógica: o manual é o primeiro filtro, não o último. Nenhuma sugestão é gerada sem antes passar pela validação das regras editoriais.</p>
 
-      <h2>Integração contínua do manual</h2>
+      <h2>Um manual vivo</h2>
 
-      <p>Manuais evoluem. Novas regras são adicionadas, termos mudam, exceções são criadas. O atalay.ia trata o manual como um recurso vivo: atualizações nas regras são refletidas no pipeline sem necessidade de retreinar modelos. É uma camada de regras sobre o modelo, não dentro dele.</p>
+      <p>Manuais evoluem. Novas regras são adicionadas, termos mudam, exceções são criadas. O atalay.ia trata o manual como um recurso vivo: quando o editor-chefe decide que "web" agora é grafado com minúscula (em vez de "Web"), a mudança é refletida imediatamente em todas as análises.</p>
 
-      <p>Isso significa que quando o editor-chefe decide que "web" agora é grafado com minúscula (em vez de "Web"), a mudança é aplicada em minutos, não em semanas de fine-tuning.</p>
+      <p>O manual deixa de ser um documento consultado ocasionalmente. Ele se torna parte ativa de cada texto que sai da redação.</p>
     `,
   },
 };
