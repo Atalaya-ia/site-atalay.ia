@@ -24,6 +24,7 @@ const articles: Record<string, {
   readTime: string;
   author: string;
   role: string;
+  heroSvg: string;
   content: string;
 }> = {
   'lancamento-atalay-ia': {
@@ -34,6 +35,63 @@ const articles: Record<string, {
     readTime: '8 min',
     author: 'Bruno Lopes',
     role: 'Fundador, atalay.ia',
+    heroSvg: `<svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="800" height="400" fill="#0e1011"/>
+      <defs><radialGradient id="g1" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(192,106,66,.12)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
+      <rect width="800" height="400" fill="url(#g1)"/>
+      <!-- Lighthouse beacon -->
+      <g transform="translate(400,180)">
+        <rect x="-18" y="20" width="36" height="80" rx="2" stroke="rgba(255,255,255,.12)" stroke-width=".8" fill="none"/>
+        <rect x="-14" y="28" width="28" height="14" rx="1" stroke="rgba(192,106,66,.3)" stroke-width=".6" fill="rgba(192,106,66,.04)"/>
+        <rect x="-14" y="48" width="28" height="14" rx="1" stroke="rgba(192,106,66,.3)" stroke-width=".6" fill="rgba(192,106,66,.04)"/>
+        <rect x="-14" y="68" width="28" height="14" rx="1" stroke="rgba(192,106,66,.3)" stroke-width=".6" fill="rgba(192,106,66,.04)"/>
+        <rect x="-22" y="8" width="44" height="16" rx="3" stroke="rgba(255,255,255,.15)" stroke-width=".8" fill="none"/>
+        <circle cx="0" cy="0" r="6" fill="rgba(192,106,66,.6)" stroke="rgba(192,106,66,.8)" stroke-width="1"/>
+        <circle cx="0" cy="0" r="14" stroke="rgba(192,106,66,.15)" stroke-width=".6" fill="none"/>
+        <circle cx="0" cy="0" r="24" stroke="rgba(192,106,66,.08)" stroke-width=".4" fill="none"/>
+        <circle cx="0" cy="0" r="38" stroke="rgba(192,106,66,.04)" stroke-width=".3" fill="none"/>
+        <!-- Light rays -->
+        <line x1="-50" y1="-30" x2="-120" y2="-60" stroke="rgba(192,106,66,.1)" stroke-width=".5"/>
+        <line x1="50" y1="-30" x2="120" y2="-60" stroke="rgba(192,106,66,.1)" stroke-width=".5"/>
+        <line x1="-60" y1="0" x2="-140" y2="0" stroke="rgba(192,106,66,.08)" stroke-width=".5"/>
+        <line x1="60" y1="0" x2="140" y2="0" stroke="rgba(192,106,66,.08)" stroke-width=".5"/>
+      </g>
+      <!-- 5 layer labels -->
+      <g font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(255,255,255,.25)">
+        <text x="160" y="130">DETECTAR</text>
+        <text x="160" y="170">CLASSIFICAR</text>
+        <text x="160" y="210">PONTUAR</text>
+        <text x="160" y="250">ALERTAR</text>
+        <text x="160" y="290">OTIMIZAR</text>
+      </g>
+      <g>
+        <line x1="148" y1="126" x2="148" y2="286" stroke="rgba(255,255,255,.06)" stroke-width=".5"/>
+        <circle cx="148" cy="126" r="3" fill="rgba(192,106,66,.5)"/>
+        <circle cx="148" cy="166" r="3" fill="rgba(192,106,66,.4)"/>
+        <circle cx="148" cy="206" r="3" fill="rgba(192,106,66,.3)"/>
+        <circle cx="148" cy="246" r="3" fill="rgba(192,106,66,.2)"/>
+        <circle cx="148" cy="286" r="3" fill="rgba(192,106,66,.15)"/>
+      </g>
+      <!-- Right side: data cards -->
+      <g transform="translate(540,120)">
+        <rect x="0" y="0" width="160" height="36" rx="6" stroke="rgba(255,255,255,.08)" stroke-width=".6" fill="rgba(255,255,255,.02)"/>
+        <text x="12" y="22" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,.4)">GSC Authority</text>
+        <rect x="110" y="10" width="38" height="16" rx="4" fill="rgba(192,106,66,.12)" stroke="rgba(192,106,66,.2)" stroke-width=".5"/>
+        <text x="119" y="22" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(192,106,66,.7)">0.82</text>
+      </g>
+      <g transform="translate(540,168)">
+        <rect x="0" y="0" width="160" height="36" rx="6" stroke="rgba(255,255,255,.08)" stroke-width=".6" fill="rgba(255,255,255,.02)"/>
+        <text x="12" y="22" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,.4)">Trend Volume</text>
+        <rect x="110" y="10" width="38" height="16" rx="4" fill="rgba(130,153,110,.1)" stroke="rgba(130,153,110,.2)" stroke-width=".5"/>
+        <text x="119" y="22" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(130,153,110,.7)">50K+</text>
+      </g>
+      <g transform="translate(540,216)">
+        <rect x="0" y="0" width="160" height="36" rx="6" stroke="rgba(255,255,255,.08)" stroke-width=".6" fill="rgba(255,255,255,.02)"/>
+        <text x="12" y="22" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,.4)">Verdict</text>
+        <rect x="110" y="10" width="38" height="16" rx="4" fill="rgba(192,106,66,.15)" stroke="rgba(192,106,66,.25)" stroke-width=".5"/>
+        <text x="124" y="22" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600" fill="rgba(192,106,66,.8)">P1</text>
+      </g>
+    </svg>`,
     content: `
       <p class="article-lead">Redações trabalham com pressão constante. Deadline apertado, pauta mudando em tempo real, correções manuais que consomem horas. E mesmo assim, a maioria das ferramentas de IA disponíveis hoje trata jornalismo como qualquer outro tipo de texto.</p>
 
@@ -90,6 +148,46 @@ const articles: Record<string, {
     readTime: '7 min',
     author: 'Bruno Lopes',
     role: 'Fundador, atalay.ia',
+    heroSvg: `<svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="800" height="400" fill="#0e1011"/>
+      <defs><radialGradient id="g2" cx="30%" cy="50%"><stop offset="0%" stop-color="rgba(153,110,110,.08)"/><stop offset="100%" stop-color="transparent"/></radialGradient><radialGradient id="g2b" cx="70%" cy="50%"><stop offset="0%" stop-color="rgba(192,106,66,.08)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
+      <rect width="800" height="400" fill="url(#g2)"/>
+      <rect width="800" height="400" fill="url(#g2b)"/>
+      <!-- Left: Generic AI (faded, crossed) -->
+      <g transform="translate(200,200)">
+        <rect x="-80" y="-70" width="160" height="140" rx="10" stroke="rgba(153,110,110,.2)" stroke-width=".8" fill="rgba(153,110,110,.03)" stroke-dasharray="4 3"/>
+        <text x="0" y="-42" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" font-weight="600" fill="rgba(153,110,110,.5)">IA Genérica</text>
+        <g font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(255,255,255,.2)">
+          <text x="-60" y="-18">prompt: "melhore"</text>
+          <text x="-60" y="0">context: null</text>
+          <text x="-60" y="18">manual: null</text>
+          <text x="-60" y="36">voice: null</text>
+          <text x="-60" y="54">data: null</text>
+        </g>
+        <!-- X mark -->
+        <line x1="-80" y1="-70" x2="80" y2="70" stroke="rgba(153,110,110,.15)" stroke-width="1"/>
+        <line x1="80" y1="-70" x2="-80" y2="70" stroke="rgba(153,110,110,.15)" stroke-width="1"/>
+      </g>
+      <!-- Arrow -->
+      <g>
+        <line x1="320" y1="200" x2="420" y2="200" stroke="rgba(255,255,255,.1)" stroke-width=".8"/>
+        <polygon points="420,196 430,200 420,204" fill="rgba(255,255,255,.15)"/>
+      </g>
+      <!-- Right: Contextual AI (active, glowing) -->
+      <g transform="translate(560,200)">
+        <rect x="-80" y="-70" width="160" height="140" rx="10" stroke="rgba(192,106,66,.3)" stroke-width="1" fill="rgba(192,106,66,.03)"/>
+        <text x="0" y="-42" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" font-weight="600" fill="rgba(192,106,66,.7)">IA Contextual</text>
+        <g font-family="JetBrains Mono, monospace" font-size="9">
+          <text x="-60" y="-18" fill="rgba(192,106,66,.5)">manual: ✓ 142 regras</text>
+          <text x="-60" y="0" fill="rgba(130,153,110,.5)">voice: ✓ perfil ativo</text>
+          <text x="-60" y="18" fill="rgba(192,106,66,.5)">GSC: ✓ 16 meses</text>
+          <text x="-60" y="36" fill="rgba(130,153,110,.5)">editoria: ✓ Esportes</text>
+          <text x="-60" y="54" fill="rgba(192,106,66,.5)">geo: ✓ MG</text>
+        </g>
+        <circle cx="80" cy="-70" r="4" fill="rgba(192,106,66,.5)"/>
+        <circle cx="80" cy="-70" r="8" stroke="rgba(192,106,66,.15)" stroke-width=".5" fill="none"/>
+      </g>
+    </svg>`,
     content: `
       <p class="article-lead">Quando o ChatGPT explodiu em popularidade, redações ao redor do mundo começaram a testar a tecnologia. A promessa era clara: escrever mais rápido, corrigir melhor, otimizar títulos. A realidade foi diferente.</p>
 
@@ -149,6 +247,65 @@ const articles: Record<string, {
     readTime: '10 min',
     author: 'Bruno Lopes',
     role: 'Fundador, atalay.ia',
+    heroSvg: `<svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="800" height="400" fill="#0e1011"/>
+      <defs><radialGradient id="g3" cx="50%" cy="60%"><stop offset="0%" stop-color="rgba(192,106,66,.1)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
+      <rect width="800" height="400" fill="url(#g3)"/>
+      <!-- Pipeline: 4 connected isometric cubes -->
+      <g transform="translate(120,240)">
+        <!-- Cube 1: Detect -->
+        <g transform="translate(0,0)">
+          <path d="M0,-30 L50,0 L0,30 L-50,0 Z" stroke="rgba(192,106,66,.3)" stroke-width=".8" fill="rgba(192,106,66,.04)"/>
+          <path d="M-50,0 L-50,30 L0,60 L0,30" stroke="rgba(192,106,66,.2)" stroke-width=".6" fill="rgba(192,106,66,.02)"/>
+          <path d="M50,0 L50,30 L0,60 L0,30" stroke="rgba(192,106,66,.2)" stroke-width=".6" fill="rgba(192,106,66,.03)"/>
+          <text x="0" y="-40" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(192,106,66,.6)">DETECT</text>
+          <text x="0" y="5" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(255,255,255,.25)">200+</text>
+        </g>
+        <!-- Connector -->
+        <line x1="55" y1="15" x2="85" y2="0" stroke="rgba(255,255,255,.08)" stroke-width=".6" stroke-dasharray="3 2"/>
+        <!-- Cube 2: Classify -->
+        <g transform="translate(140,0)">
+          <path d="M0,-30 L50,0 L0,30 L-50,0 Z" stroke="rgba(192,106,66,.3)" stroke-width=".8" fill="rgba(192,106,66,.04)"/>
+          <path d="M-50,0 L-50,30 L0,60 L0,30" stroke="rgba(192,106,66,.2)" stroke-width=".6" fill="rgba(192,106,66,.02)"/>
+          <path d="M50,0 L50,30 L0,60 L0,30" stroke="rgba(192,106,66,.2)" stroke-width=".6" fill="rgba(192,106,66,.03)"/>
+          <text x="0" y="-40" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(192,106,66,.5)">CLASSIFY</text>
+          <text x="0" y="5" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(255,255,255,.25)">6 ed.</text>
+        </g>
+        <line x1="195" y1="15" x2="225" y2="0" stroke="rgba(255,255,255,.08)" stroke-width=".6" stroke-dasharray="3 2"/>
+        <!-- Cube 3: Score -->
+        <g transform="translate(280,0)">
+          <path d="M0,-30 L50,0 L0,30 L-50,0 Z" stroke="rgba(192,106,66,.35)" stroke-width=".8" fill="rgba(192,106,66,.05)"/>
+          <path d="M-50,0 L-50,30 L0,60 L0,30" stroke="rgba(192,106,66,.25)" stroke-width=".6" fill="rgba(192,106,66,.03)"/>
+          <path d="M50,0 L50,30 L0,60 L0,30" stroke="rgba(192,106,66,.25)" stroke-width=".6" fill="rgba(192,106,66,.04)"/>
+          <text x="0" y="-40" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(192,106,66,.5)">SCORE</text>
+          <text x="0" y="5" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(255,255,255,.25)">4-dim</text>
+        </g>
+        <line x1="335" y1="15" x2="365" y2="0" stroke="rgba(255,255,255,.08)" stroke-width=".6" stroke-dasharray="3 2"/>
+        <!-- Cube 4: Alert (highlighted) -->
+        <g transform="translate(420,0)">
+          <path d="M0,-30 L50,0 L0,30 L-50,0 Z" stroke="rgba(192,106,66,.5)" stroke-width="1" fill="rgba(192,106,66,.08)"/>
+          <path d="M-50,0 L-50,30 L0,60 L0,30" stroke="rgba(192,106,66,.35)" stroke-width=".8" fill="rgba(192,106,66,.04)"/>
+          <path d="M50,0 L50,30 L0,60 L0,30" stroke="rgba(192,106,66,.35)" stroke-width=".8" fill="rgba(192,106,66,.06)"/>
+          <text x="0" y="-40" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" font-weight="600" fill="rgba(192,106,66,.7)">ALERT</text>
+          <text x="0" y="5" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(192,106,66,.5)">P1/P2/P3</text>
+          <circle cx="0" cy="-30" r="4" fill="rgba(192,106,66,.4)"/>
+          <circle cx="0" cy="-30" r="10" stroke="rgba(192,106,66,.12)" stroke-width=".5" fill="none"/>
+        </g>
+      </g>
+      <!-- Data sources floating above -->
+      <g font-family="JetBrains Mono, monospace" font-size="9">
+        <rect x="80" y="80" width="80" height="24" rx="4" stroke="rgba(255,255,255,.08)" stroke-width=".5" fill="rgba(255,255,255,.02)"/>
+        <text x="120" y="96" text-anchor="middle" fill="rgba(255,255,255,.3)">Google Trends</text>
+        <rect x="280" y="80" width="60" height="24" rx="4" stroke="rgba(130,153,110,.15)" stroke-width=".5" fill="rgba(130,153,110,.03)"/>
+        <text x="310" y="96" text-anchor="middle" fill="rgba(130,153,110,.4)">Gemini</text>
+        <rect x="460" y="80" width="50" height="24" rx="4" stroke="rgba(192,106,66,.15)" stroke-width=".5" fill="rgba(192,106,66,.03)"/>
+        <text x="485" y="96" text-anchor="middle" fill="rgba(192,106,66,.4)">GSC</text>
+      </g>
+      <!-- Dashed connectors from sources to cubes -->
+      <line x1="120" y1="104" x2="120" y2="200" stroke="rgba(255,255,255,.06)" stroke-width=".4" stroke-dasharray="2 3"/>
+      <line x1="310" y1="104" x2="260" y2="200" stroke="rgba(130,153,110,.08)" stroke-width=".4" stroke-dasharray="2 3"/>
+      <line x1="485" y1="104" x2="400" y2="200" stroke="rgba(192,106,66,.08)" stroke-width=".4" stroke-dasharray="2 3"/>
+    </svg>`,
     content: `
       <p class="article-lead">A tentação de começar pela IA é grande. Plugar um modelo de linguagem, criar um prompt elaborado, e dizer que a ferramenta "usa IA". Nós fizemos o contrário: passamos os primeiros meses sem IA nenhuma. Só dados.</p>
 
@@ -217,6 +374,54 @@ const articles: Record<string, {
     readTime: '6 min',
     author: 'Bruno Lopes',
     role: 'Fundador, atalay.ia',
+    heroSvg: `<svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="800" height="400" fill="#0e1011"/>
+      <defs><radialGradient id="g4" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(192,106,66,.08)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
+      <rect width="800" height="400" fill="url(#g4)"/>
+      <!-- Two voice profiles side by side -->
+      <!-- Profile 1: Factual -->
+      <g transform="translate(220,100)">
+        <rect x="-90" y="0" width="180" height="200" rx="10" stroke="rgba(192,106,66,.2)" stroke-width=".8" fill="rgba(192,106,66,.02)"/>
+        <text x="0" y="28" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="12" font-weight="600" fill="rgba(192,106,66,.6)">Factual / Rápido</text>
+        <line x1="-70" y1="40" x2="70" y2="40" stroke="rgba(255,255,255,.06)" stroke-width=".5"/>
+        <!-- Short lines representing short sentences -->
+        <rect x="-70" y="56" width="100" height="3" rx="1.5" fill="rgba(255,255,255,.12)"/>
+        <rect x="-70" y="68" width="60" height="3" rx="1.5" fill="rgba(255,255,255,.08)"/>
+        <rect x="-70" y="80" width="80" height="3" rx="1.5" fill="rgba(255,255,255,.1)"/>
+        <rect x="-70" y="92" width="45" height="3" rx="1.5" fill="rgba(255,255,255,.07)"/>
+        <rect x="-70" y="110" width="90" height="3" rx="1.5" fill="rgba(255,255,255,.12)"/>
+        <rect x="-70" y="122" width="55" height="3" rx="1.5" fill="rgba(255,255,255,.08)"/>
+        <!-- Metrics -->
+        <g font-family="JetBrains Mono, monospace" font-size="9">
+          <text x="-70" y="156" fill="rgba(255,255,255,.25)">avg sentence:</text><text x="30" y="156" fill="rgba(192,106,66,.5)">12 words</text>
+          <text x="-70" y="172" fill="rgba(255,255,255,.25)">lead style:</text><text x="30" y="172" fill="rgba(192,106,66,.5)">direct</text>
+          <text x="-70" y="188" fill="rgba(255,255,255,.25)">adjectives:</text><text x="30" y="188" fill="rgba(192,106,66,.5)">minimal</text>
+        </g>
+      </g>
+      <!-- Profile 2: Analítico -->
+      <g transform="translate(540,100)">
+        <rect x="-90" y="0" width="180" height="200" rx="10" stroke="rgba(130,153,110,.2)" stroke-width=".8" fill="rgba(130,153,110,.02)"/>
+        <text x="0" y="28" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="12" font-weight="600" fill="rgba(130,153,110,.6)">Analítico / Denso</text>
+        <line x1="-70" y1="40" x2="70" y2="40" stroke="rgba(255,255,255,.06)" stroke-width=".5"/>
+        <!-- Long lines representing long sentences -->
+        <rect x="-70" y="56" width="140" height="3" rx="1.5" fill="rgba(255,255,255,.12)"/>
+        <rect x="-70" y="68" width="130" height="3" rx="1.5" fill="rgba(255,255,255,.1)"/>
+        <rect x="-70" y="80" width="120" height="3" rx="1.5" fill="rgba(255,255,255,.08)"/>
+        <rect x="-70" y="92" width="140" height="3" rx="1.5" fill="rgba(255,255,255,.12)"/>
+        <rect x="-70" y="110" width="135" height="3" rx="1.5" fill="rgba(255,255,255,.1)"/>
+        <rect x="-70" y="122" width="125" height="3" rx="1.5" fill="rgba(255,255,255,.08)"/>
+        <!-- Metrics -->
+        <g font-family="JetBrains Mono, monospace" font-size="9">
+          <text x="-70" y="156" fill="rgba(255,255,255,.25)">avg sentence:</text><text x="30" y="156" fill="rgba(130,153,110,.5)">28 words</text>
+          <text x="-70" y="172" fill="rgba(255,255,255,.25)">lead style:</text><text x="30" y="172" fill="rgba(130,153,110,.5)">context</text>
+          <text x="-70" y="188" fill="rgba(255,255,255,.25)">adjectives:</text><text x="30" y="188" fill="rgba(130,153,110,.5)">rich</text>
+        </g>
+      </g>
+      <!-- Center connector -->
+      <g transform="translate(380,200)">
+        <text x="0" y="4" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(255,255,255,.15)">vs</text>
+      </g>
+    </svg>`,
     content: `
       <p class="article-lead">Uma das críticas mais comuns à IA na escrita é que ela homogeneiza. Tudo sai com o mesmo tom, a mesma estrutura, a mesma personalidade — nenhuma. Para jornalismo, isso é um problema fatal.</p>
 
@@ -273,6 +478,50 @@ const articles: Record<string, {
     readTime: '9 min',
     author: 'Bruno Lopes',
     role: 'Fundador, atalay.ia',
+    heroSvg: `<svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="800" height="400" fill="#0e1011"/>
+      <defs><radialGradient id="g5a" cx="30%" cy="50%"><stop offset="0%" stop-color="rgba(167,139,250,.06)"/><stop offset="100%" stop-color="transparent"/></radialGradient><radialGradient id="g5b" cx="70%" cy="50%"><stop offset="0%" stop-color="rgba(192,106,66,.06)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
+      <rect width="800" height="400" fill="url(#g5a)"/>
+      <rect width="800" height="400" fill="url(#g5b)"/>
+      <!-- Left chart: Search (Busca) -->
+      <g transform="translate(100,80)">
+        <text x="100" y="0" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="13" font-weight="600" fill="rgba(167,139,250,.6)">Busca</text>
+        <rect x="0" y="16" width="200" height="140" rx="8" stroke="rgba(167,139,250,.15)" stroke-width=".6" fill="rgba(167,139,250,.02)"/>
+        <!-- Steady long-tail curve -->
+        <polyline points="16,130 40,120 70,100 100,90 130,85 160,82 184,80" stroke="rgba(167,139,250,.4)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <text x="100" y="170" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(255,255,255,.2)">semanas →</text>
+        <!-- Labels -->
+        <g font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(167,139,250,.35)">
+          <text x="16" y="200">keyword match</text>
+          <text x="16" y="214">heading structure</text>
+          <text x="16" y="228">internal links</text>
+        </g>
+      </g>
+      <!-- Right chart: Discover -->
+      <g transform="translate(460,80)">
+        <text x="100" y="0" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="13" font-weight="600" fill="rgba(192,106,66,.6)">Discover</text>
+        <rect x="0" y="16" width="200" height="140" rx="8" stroke="rgba(192,106,66,.15)" stroke-width=".6" fill="rgba(192,106,66,.02)"/>
+        <!-- Spike and decay curve -->
+        <polyline points="16,130 40,128 60,110 70,40 80,38 90,50 110,90 140,120 170,128 184,130" stroke="rgba(192,106,66,.5)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <!-- Peak highlight -->
+        <circle cx="75" cy="38" r="3" fill="rgba(192,106,66,.5)"/>
+        <line x1="75" y1="42" x2="75" y2="58" stroke="rgba(192,106,66,.2)" stroke-width=".5" stroke-dasharray="2 2"/>
+        <text x="75" y="68" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(192,106,66,.4)">2-4h</text>
+        <text x="100" y="170" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(255,255,255,.2)">horas →</text>
+        <!-- Labels -->
+        <g font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(192,106,66,.35)">
+          <text x="16" y="200">emotional hook</text>
+          <text x="16" y="214">image quality</text>
+          <text x="16" y="228">freshness</text>
+        </g>
+      </g>
+      <!-- Center divider -->
+      <line x1="380" y1="100" x2="380" y2="300" stroke="rgba(255,255,255,.04)" stroke-width=".5" stroke-dasharray="4 4"/>
+      <!-- CTR comparison -->
+      <g transform="translate(340,330)">
+        <text x="40" y="0" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(255,255,255,.2)">CTR: opposite signals</text>
+      </g>
+    </svg>`,
     content: `
       <p class="article-lead">O Google Discover e a Busca orgânica são os dois maiores canais de tráfego para a maioria dos veículos de notícia. Mas eles operam com lógicas completamente diferentes — e a maioria das redações otimiza para ambos como se fossem a mesma coisa.</p>
 
@@ -344,6 +593,51 @@ const articles: Record<string, {
     readTime: '7 min',
     author: 'Bruno Lopes',
     role: 'Fundador, atalay.ia',
+    heroSvg: `<svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="800" height="400" fill="#0e1011"/>
+      <defs><radialGradient id="g6" cx="50%" cy="45%"><stop offset="0%" stop-color="rgba(192,106,66,.08)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
+      <rect width="800" height="400" fill="url(#g6)"/>
+      <!-- Book / Manual representation -->
+      <g transform="translate(400,180)">
+        <!-- Open book shape -->
+        <path d="M-120,-60 L-8,-50 L-8,70 L-120,60 Z" stroke="rgba(255,255,255,.12)" stroke-width=".8" fill="rgba(255,255,255,.02)"/>
+        <path d="M120,-60 L8,-50 L8,70 L120,60 Z" stroke="rgba(255,255,255,.12)" stroke-width=".8" fill="rgba(255,255,255,.02)"/>
+        <!-- Spine -->
+        <path d="M-8,-50 L-8,70" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
+        <path d="M8,-50 L8,70" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
+        <!-- Left page: rules -->
+        <g font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,255,255,.2)">
+          <text x="-100" y="-30">§ 4.2 Pronomes</text>
+          <rect x="-100" y="-24" width="70" height="2" rx="1" fill="rgba(255,255,255,.06)"/>
+          <rect x="-100" y="-16" width="55" height="2" rx="1" fill="rgba(255,255,255,.05)"/>
+          <text x="-100" y="0">§ 7.1 Siglas</text>
+          <rect x="-100" y="6" width="65" height="2" rx="1" fill="rgba(255,255,255,.06)"/>
+          <rect x="-100" y="14" width="50" height="2" rx="1" fill="rgba(255,255,255,.05)"/>
+          <text x="-100" y="30">§ 9.3 Números</text>
+          <rect x="-100" y="36" width="60" height="2" rx="1" fill="rgba(255,255,255,.06)"/>
+        </g>
+        <!-- Right page: corrections -->
+        <g>
+          <rect x="20" y="-36" width="80" height="20" rx="4" stroke="rgba(153,110,110,.2)" stroke-width=".5" fill="rgba(153,110,110,.03)"/>
+          <text x="28" y="-22" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(153,110,110,.4)">✗ "o mesmo"</text>
+          <rect x="20" y="-8" width="80" height="20" rx="4" stroke="rgba(130,153,110,.2)" stroke-width=".5" fill="rgba(130,153,110,.03)"/>
+          <text x="28" y="6" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(130,153,110,.4)">✓ "que foi"</text>
+          <rect x="20" y="22" width="80" height="20" rx="4" stroke="rgba(153,110,110,.2)" stroke-width=".5" fill="rgba(153,110,110,.03)"/>
+          <text x="28" y="36" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(153,110,110,.4)">✗ "O BNDES"</text>
+          <rect x="20" y="48" width="80" height="20" rx="4" stroke="rgba(130,153,110,.2)" stroke-width=".5" fill="rgba(130,153,110,.03)"/>
+          <text x="28" y="62" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(130,153,110,.4)">✓ "O Banco..."</text>
+        </g>
+      </g>
+      <!-- Guardrail lines -->
+      <line x1="160" y1="100" x2="160" y2="300" stroke="rgba(192,106,66,.15)" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="640" y1="100" x2="640" y2="300" stroke="rgba(192,106,66,.15)" stroke-width="1.5" stroke-linecap="round"/>
+      <text x="160" y="320" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(192,106,66,.3)">guardrail</text>
+      <text x="640" y="320" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(192,106,66,.3)">guardrail</text>
+      <!-- Stats -->
+      <g transform="translate(400,350)">
+        <text x="0" y="0" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(255,255,255,.15)">142 regras · 3 camadas · 0 violações</text>
+      </g>
+    </svg>`,
     content: `
       <p class="article-lead">Todo veículo jornalístico de respeito tem um Manual de Redação. É o documento que define como se escreve naquela publicação — não apenas gramática, mas estilo, terminologia, formato de citações, regras de atribuição. A IA precisa conhecê-lo.</p>
 
@@ -437,12 +731,8 @@ const prevArticle = prevSlug ? articles[prevSlug] : null;
   <article class="post">
     <div class="post-wrap">
 
-      <!-- Breadcrumb -->
-      <nav class="post-breadcrumb">
-        <a href="/blog">Blog</a>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-        <span>{article.category}</span>
-      </nav>
+      <!-- Hero image -->
+      <div class="post-hero" set:html={article.heroSvg} />
 
       <!-- Header -->
       <header class="post-header">
@@ -510,31 +800,18 @@ const prevArticle = prevSlug ? articles[prevSlug] : null;
     padding: 0 24px;
   }
 
-  /* Breadcrumb */
-  .post-breadcrumb {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  /* Hero */
+  .post-hero {
     margin-bottom: 40px;
-    font-size: 14px;
-    color: var(--text-m);
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--border);
   }
 
-  .post-breadcrumb a {
-    color: var(--text-m);
-    text-decoration: none;
-    transition: color .2s;
-  }
-
-  .post-breadcrumb a:hover {
-    color: var(--text-s);
-  }
-
-  .post-breadcrumb svg {
-    width: 14px;
-    height: 14px;
-    color: var(--text-m);
-    opacity: .5;
+  .post-hero svg {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 
   /* Header */
@@ -809,7 +1086,7 @@ const prevArticle = prevSlug ? articles[prevSlug] : null;
   @media (max-width: 767px) {
     .post { padding: 100px 0 60px }
     .post-wrap { padding: 0 20px }
-    .post-breadcrumb { margin-bottom: 28px }
+    .post-hero { margin-bottom: 28px }
     .post-title { font-size: 28px }
     .post-desc { font-size: 17px }
     .post-body { font-size: 16px }
