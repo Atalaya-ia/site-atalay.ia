@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 
-const lastUpdated = '22 de março de 2026';
+const lastUpdated = '25 de março de 2026';
 ---
 <Base
   title="Segurança — Atalay.ia"
@@ -27,26 +27,26 @@ const lastUpdated = '22 de março de 2026';
           <p>Investimos continuamente em infraestrutura, processos e práticas para garantir que seus dados estejam protegidos em todas as camadas da plataforma.</p>
 
           <h2>Infraestrutura</h2>
-          <p>O atalay.ia opera inteiramente na Google Cloud Platform (GCP), uma das infraestruturas de nuvem mais seguras do mundo:</p>
+          <p>O atalay.ia opera em infraestrutura de nuvem de nível empresarial, com certificações reconhecidas internacionalmente:</p>
           <ul>
-            <li><strong>Região:</strong> southamerica-east1 (São Paulo) — dados armazenados no Brasil</li>
-            <li><strong>Computação:</strong> Google Cloud Run — containers serverless com auto-scaling</li>
-            <li><strong>Banco de dados:</strong> Google Firestore — NoSQL gerenciado com SLA de 99.999%</li>
-            <li><strong>Inteligência Artificial:</strong> Google Vertex AI e Gemini — processamento sob acordos de segurança do Google Cloud</li>
+            <li><strong>Localização:</strong> dados armazenados em data centers no Brasil</li>
+            <li><strong>Computação:</strong> containers serverless com auto-scaling e isolamento por requisição</li>
+            <li><strong>Banco de dados:</strong> banco gerenciado com SLA de alta disponibilidade (99.999%)</li>
+            <li><strong>Inteligência Artificial:</strong> modelos de IA processados sob acordos de proteção de dados empresariais</li>
           </ul>
 
           <h2>Criptografia</h2>
           <p>Todos os dados são criptografados em trânsito e em repouso:</p>
           <ul>
             <li><strong>Em trânsito:</strong> TLS 1.3 obrigatório em todas as conexões — dados nunca trafegam em texto plano</li>
-            <li><strong>Em repouso:</strong> criptografia AES-256 gerenciada pelo Google Cloud — chaves rotacionadas automaticamente</li>
+            <li><strong>Em repouso:</strong> criptografia AES-256 com chaves rotacionadas automaticamente</li>
             <li><strong>Autenticação:</strong> tokens JWT com expiração curta, renovação automática e validação em cada request</li>
           </ul>
 
           <h2>Autenticação e Acesso</h2>
           <p>O controle de acesso à plataforma segue o princípio do menor privilégio:</p>
           <ul>
-            <li><strong>Firebase Authentication:</strong> autenticação segura com OTP por email (sem senhas armazenadas)</li>
+            <li><strong>Autenticação segura:</strong> login com código temporário por email (sem senhas armazenadas)</li>
             <li><strong>RBAC:</strong> controle de acesso baseado em papéis — admin, editor, jornalista</li>
             <li><strong>Convites:</strong> acesso exclusivamente por convite da organização, sem cadastro aberto</li>
             <li><strong>Sessões:</strong> expiração automática e possibilidade de revogar sessões ativas</li>
@@ -65,7 +65,7 @@ const lastUpdated = '22 de março de 2026';
           <p>Temos um compromisso claro com a privacidade dos dados editoriais no contexto de IA:</p>
           <ul>
             <li>Dados editoriais <strong>não são utilizados para treinar modelos de IA</strong> de uso geral</li>
-            <li>O processamento via Google Gemini ocorre sob o acordo de processamento de dados do Google Cloud</li>
+            <li>O processamento de IA ocorre sob acordos empresariais de proteção de dados</li>
             <li>Dados enviados para processamento de IA são utilizados exclusivamente para gerar a resposta solicitada</li>
             <li>Não armazenamos prompts ou respostas de IA além do necessário para o funcionamento do serviço</li>
           </ul>
@@ -76,13 +76,13 @@ const lastUpdated = '22 de março de 2026';
             <li><strong>Logging estruturado:</strong> todos os acessos e operações são registrados com contexto completo</li>
             <li><strong>Alertas automáticos:</strong> notificações imediatas para anomalias de segurança ou performance</li>
             <li><strong>Uptime checks:</strong> verificações de disponibilidade a cada minuto</li>
-            <li><strong>Cloud Trace:</strong> rastreamento completo de requests para diagnóstico e auditoria</li>
+            <li><strong>Rastreamento:</strong> tracing distribuído de requests para diagnóstico e auditoria</li>
           </ul>
 
           <h2>Backups</h2>
           <p>A continuidade dos seus dados é garantida por uma estratégia robusta de backup:</p>
           <ul>
-            <li>Backups automáticos diários de toda a base de dados no Firestore</li>
+            <li>Backups automáticos diários de toda a base de dados</li>
             <li>Retenção de 30 dias para restauração point-in-time</li>
             <li>Backups armazenados em região separada para proteção contra falhas regionais</li>
           </ul>
@@ -93,7 +93,7 @@ const lastUpdated = '22 de março de 2026';
             <li><strong>Code review:</strong> toda alteração de código passa por revisão obrigatória antes de ser integrada</li>
             <li><strong>Branch protection:</strong> branch principal protegida, sem commits diretos</li>
             <li><strong>Testes automatizados:</strong> mais de 3.000 testes garantem a integridade do código</li>
-            <li><strong>CI/CD:</strong> pipeline automatizado com GitHub Actions — build, lint e testes em cada pull request</li>
+            <li><strong>CI/CD:</strong> pipeline automatizado — build, lint e testes em cada pull request</li>
             <li><strong>Dependências:</strong> monitoramento contínuo de vulnerabilidades em bibliotecas terceiras</li>
           </ul>
 
@@ -111,7 +111,7 @@ const lastUpdated = '22 de março de 2026';
           <ul>
             <li><strong>LGPD</strong> (Lei nº 13.709/2018) — Lei Geral de Proteção de Dados do Brasil</li>
             <li><strong>OWASP:</strong> seguimos as boas práticas do OWASP Top 10 para proteção contra vulnerabilidades web mais comuns</li>
-            <li><strong>Google Cloud Security:</strong> herdamos as certificações e compliance do Google Cloud Platform (ISO 27001, SOC 2, SOC 3)</li>
+            <li><strong>Certificações:</strong> infraestrutura certificada ISO 27001, SOC 2 e SOC 3</li>
           </ul>
           <p>Para mais informações sobre nossas práticas de segurança, entre em contato pelo email <a href="mailto:seguranca@atalayia.com">seguranca@atalayia.com</a>.</p>
 
