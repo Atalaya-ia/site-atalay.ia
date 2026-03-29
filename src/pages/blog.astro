@@ -356,10 +356,22 @@ function formatDate(dateStr: string) {
   const d = new Date(dateStr + 'T00:00:00');
   return d.toLocaleDateString('pt-BR', { day: 'numeric', month: 'short', year: 'numeric' });
 }
+
+const blogJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  url: 'https://atalayia.com.br/blog/',
+  name: 'Blog — Atalay.ia',
+  description: 'Artigos sobre inteligência editorial, IA contextual, dados editoriais e práticas para redações de alto desempenho.',
+  isPartOf: { '@id': 'https://atalayia.com.br/#website' },
+  inLanguage: 'pt-BR',
+};
 ---
 <Base
   title="Blog — Atalay.ia"
   description="Artigos sobre inteligência editorial, IA contextual, dados editoriais e práticas para redações de alto desempenho."
+  url="https://atalayia.com.br/blog/"
+  jsonLd={blogJsonLd}
 >
   <Nav />
 

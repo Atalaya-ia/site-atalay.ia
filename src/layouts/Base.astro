@@ -21,8 +21,44 @@ const {
   publishedTime,
   modifiedTime,
   author,
-  jsonLd,
+  jsonLd: customJsonLd,
 } = Astro.props;
+
+const baseJsonLd: Record<string, unknown>[] = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': 'https://atalayia.com.br/#organization',
+    name: 'Atalay.ia',
+    url: 'https://atalayia.com.br',
+    logo: { '@type': 'ImageObject', url: 'https://atalayia.com.br/og-image.png' },
+    description: 'Inteligência editorial com IA para redações jornalísticas.',
+    sameAs: ['https://github.com/Atalaya-ia'],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': 'https://atalayia.com.br/#website',
+    url: 'https://atalayia.com.br',
+    name: 'Atalay.ia',
+    publisher: { '@id': 'https://atalayia.com.br/#organization' },
+    inLanguage: 'pt-BR',
+  },
+];
+
+const defaultWebPage: Record<string, unknown> = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  url,
+  name: title,
+  description,
+  isPartOf: { '@id': 'https://atalayia.com.br/#website' },
+  inLanguage: 'pt-BR',
+};
+
+const allJsonLd = customJsonLd
+  ? [...baseJsonLd, ...(Array.isArray(customJsonLd) ? customJsonLd : [customJsonLd])]
+  : [...baseJsonLd, defaultWebPage];
 ---
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -53,11 +89,7 @@ const {
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={image} />
   <!-- JSON-LD -->
-  {jsonLd && (
-    Array.isArray(jsonLd)
-      ? jsonLd.map((ld) => <script type="application/ld+json" set:html={JSON.stringify(ld)} />)
-      : <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-  )}
+  {allJsonLd.map((ld) => <script type="application/ld+json" set:html={JSON.stringify(ld)} />)}
   <!-- Security -->
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />

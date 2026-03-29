@@ -1992,24 +1992,6 @@ const publishedIso = `${article.date}T00:00:00-03:00`;
 const jsonLd = [
   {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Atalay.ia',
-    url: 'https://atalayia.com.br',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://atalayia.com.br/og-image.png',
-    },
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    url: 'https://atalayia.com.br',
-    name: 'Atalay.ia',
-    publisher: { '@id': 'https://atalayia.com.br/#organization' },
-    inLanguage: 'pt-BR',
-  },
-  {
-    '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: article.title,
     description: article.description,
