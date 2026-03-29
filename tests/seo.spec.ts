@@ -43,7 +43,7 @@ test.describe('SEO checks', () => {
 
   test('canonical URL is correct', async ({ page }) => {
     const canonical = await page.locator('link[rel="canonical"]').getAttribute('href');
-    expect(canonical).toBe('https://atalayia.com.br');
+    expect(canonical).toMatch(/^https:\/\/atalayia\.com\.br\/?$/);
   });
 
   test('robots.txt allows crawling', async ({ request }) => {

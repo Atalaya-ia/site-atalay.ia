@@ -17,6 +17,10 @@ export function getStaticPaths() {
     { params: { slug: 'como-levar-ia-para-redacao' } },
     { params: { slug: 'ia-ferramenta-ou-ameaca-jornalismo' } },
     { params: { slug: 'google-discover-trafico-redacoes' } },
+    { params: { slug: 'o-que-e-eeat' } },
+    { params: { slug: 'o-que-e-ymyl' } },
+    { params: { slug: 'google-discover-core-update-fevereiro-2026' } },
+    { params: { slug: 'google-spam-update-reescrita-titulos-ia' } },
   ];
 }
 
@@ -1961,6 +1965,675 @@ const articles: Record<string, {
         <p>No atalay.ia, estamos construindo cada camada do produto com essa realidade em mente. Monitoramento de trends, analise de titulos por canal, avaliacao de imagens, medicao de autoridade tematica -- tudo converge para uma pergunta: <strong>como a sua redacao pode capturar mais trafico de Discover, de forma consistente e sustentavel?</strong></p>
 
         <p>Os dados ja existem. O que falta e transforma-los em decisoes editoriais. Esse e o nosso trabalho.</p>
+      `,
+    },
+  'o-que-e-eeat': {
+      title: 'O que é E-E-A-T — e por que importa mais do que nunca em 2026',
+      description: 'Enquanto ferramentas de IA generativa produzem textos cada vez mais fluentes, o Google aperta o cerco sobre uma pergunta simples: quem está por trás desse conteúdo?',
+      date: '2026-03-29',
+      category: 'Análise',
+      readTime: '10 min',
+      author: 'Bruno Lopes',
+      role: 'Fundador, atalay.ia',
+      heroSvg: `<svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="800" height="400" fill="#0e1011"/>
+        <defs>
+          <radialGradient id="g-eeat" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(192,106,66,.1)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+        </defs>
+        <rect width="800" height="400" fill="url(#g-eeat)"/>
+        <!-- Trust center circle -->
+        <g transform="translate(400,200)">
+          <circle cx="0" cy="0" r="42" stroke="rgba(192,106,66,.4)" stroke-width="1.2" fill="rgba(192,106,66,.06)"/>
+          <text x="0" y="5" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" fill="rgba(192,106,66,.8)">TRUST</text>
+          <!-- Experience -->
+          <g transform="translate(-120,-90)">
+            <circle cx="0" cy="0" r="32" stroke="rgba(255,255,255,.15)" stroke-width=".8" fill="rgba(255,255,255,.02)"/>
+            <text x="0" y="-8" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600" fill="rgba(255,255,255,.45)">E</text>
+            <text x="0" y="8" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="8" fill="rgba(255,255,255,.25)">Experience</text>
+          </g>
+          <line x1="-88" y1="-62" x2="-34" y2="-22" stroke="rgba(255,255,255,.08)" stroke-width=".6" stroke-dasharray="3 2"/>
+          <!-- Expertise -->
+          <g transform="translate(120,-90)">
+            <circle cx="0" cy="0" r="32" stroke="rgba(255,255,255,.15)" stroke-width=".8" fill="rgba(255,255,255,.02)"/>
+            <text x="0" y="-8" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600" fill="rgba(255,255,255,.45)">E</text>
+            <text x="0" y="8" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="8" fill="rgba(255,255,255,.25)">Expertise</text>
+          </g>
+          <line x1="88" y1="-62" x2="34" y2="-22" stroke="rgba(255,255,255,.08)" stroke-width=".6" stroke-dasharray="3 2"/>
+          <!-- Authoritativeness -->
+          <g transform="translate(-120,110)">
+            <circle cx="0" cy="0" r="32" stroke="rgba(255,255,255,.15)" stroke-width=".8" fill="rgba(255,255,255,.02)"/>
+            <text x="0" y="-8" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600" fill="rgba(255,255,255,.45)">A</text>
+            <text x="0" y="8" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="7" fill="rgba(255,255,255,.25)">Authority</text>
+          </g>
+          <line x1="-88" y1="82" x2="-34" y2="34" stroke="rgba(255,255,255,.08)" stroke-width=".6" stroke-dasharray="3 2"/>
+          <!-- Trustworthiness -->
+          <g transform="translate(120,110)">
+            <circle cx="0" cy="0" r="32" stroke="rgba(255,255,255,.15)" stroke-width=".8" fill="rgba(255,255,255,.02)"/>
+            <text x="0" y="-8" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600" fill="rgba(255,255,255,.45)">T</text>
+            <text x="0" y="8" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="7" fill="rgba(255,255,255,.25)">Trust</text>
+          </g>
+          <line x1="88" y1="82" x2="34" y2="34" stroke="rgba(255,255,255,.08)" stroke-width=".6" stroke-dasharray="3 2"/>
+          <!-- Glow rings -->
+          <circle cx="0" cy="0" r="60" stroke="rgba(192,106,66,.08)" stroke-width=".4" fill="none"/>
+          <circle cx="0" cy="0" r="85" stroke="rgba(192,106,66,.04)" stroke-width=".3" fill="none"/>
+        </g>
+        <!-- Label -->
+        <text x="400" y="370" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(255,255,255,.15)">E-E-A-T FRAMEWORK</text>
+      </svg>`,
+      content: `
+        <p class="article-lead">Enquanto ferramentas de IA generativa produzem textos cada vez mais fluentes, o Google aperta o cerco sobre uma pergunta simples: quem está por trás desse conteúdo? O framework E-E-A-T (Experience, Expertise, Authoritativeness, Trust) não é novo, mas em 2026 ele se tornou o divisor de águas entre conteúdo que ranqueia e conteúdo que desaparece. Para redações que dependem de tráfego orgânico, entender cada pilar deixou de ser opcional.</p>
+
+        <h2>O que significa E-E-A-T, na prática</h2>
+
+        <p>E-E-A-T é o conjunto de critérios que o Google usa para avaliar a qualidade de conteúdo. Não é um fator de ranqueamento direto — não existe uma "nota de E-E-A-T" no algoritmo. É um framework de qualidade aplicado por avaliadores humanos (os quality raters) que calibram os sistemas de busca.</p>
+
+        <p>Os quatro pilares são:</p>
+
+        <ul>
+          <li><strong>Experience (Experiência):</strong> conhecimento de primeira mão sobre o assunto. Um médico escrevendo sobre tratamentos que administrou. Um jornalista cobrindo uma crise que acompanhou in loco.</li>
+          <li><strong>Expertise (Especialização):</strong> qualificação técnica e profundidade no tema. Formação, histórico de publicações, domínio comprovável.</li>
+          <li><strong>Authoritativeness (Autoridade):</strong> reconhecimento pela comunidade. Backlinks de instituições, citações por outros veículos, presença em fontes de referência.</li>
+          <li><strong>Trust (Confiança):</strong> o pilar central que sustenta todos os outros. Transparência editorial, política de correções, informações de contato acessíveis, HTTPS.</li>
+        </ul>
+
+        <p>O "Trust" não é apenas mais um item da lista. Nas diretrizes do Google, ele aparece como o elemento central — sem confiança, experiência e autoridade perdem valor.</p>
+
+        <h2>Por que o Google adicionou o primeiro "E"</h2>
+
+        <p>Até dezembro de 2022, o framework era E-A-T. O Google adicionou Experience — experiência vivida — como resposta direta a um problema que já se desenhava: conteúdo tecnicamente correto, mas genérico. Textos que compilavam informações de terceiros sem acrescentar perspectiva própria.</p>
+
+        <p>A adição mudou a régua. Não basta saber sobre um assunto; é preciso demonstrar que você esteve lá. Para jornalismo, isso é uma vantagem natural. Repórteres que vão a campo, que entrevistam fontes, que acompanham desdobramentos ao longo de meses — esse tipo de conteúdo carrega sinais de experiência que nenhum modelo de linguagem consegue fabricar.</p>
+
+        <p>É exatamente por isso que a <a href="/blog/voz-editorial-agentes/">construção de perfis de voz editorial</a> ganha relevância estratégica: quando a assinatura do jornalista é reconhecível e consistente, ela reforça o sinal de experiência que o Google procura.</p>
+
+        <h2>O que muda com AI Overviews e LLMs em 2026</h2>
+
+        <p>O cenário de busca em 2026 é radicalmente diferente do que era há dois anos. AI Overviews do Google, ChatGPT com navegação, Perplexity — todos geram respostas instantâneas a partir de conteúdo indexado. O resultado: para consultas genéricas, o usuário nem precisa clicar.</p>
+
+        <p>Isso cria um paradoxo. LLMs conseguem produzir texto fluente sobre qualquer tema, mas não conseguem demonstrar experiência. Não estiveram na coletiva. Não entrevistaram a fonte. Não têm byline com histórico verificável.</p>
+
+        <p>Para redações, a implicação é clara: conteúdo genérico vai perder espaço progressivamente. O que sobrevive é conteúdo com camadas que só humanos com experiência real produzem — análise contextual, apuração original, perspectiva editorial.</p>
+
+        <p>O próprio Google já declarou que IA é ferramenta suplementar, não substituta de expertise humana. Usar IA para acelerar processos editoriais é legítimo. Usar IA como autora principal, sem supervisão e sem experiência real por trás, é exatamente o tipo de conteúdo que o E-E-A-T foi desenhado para filtrar.</p>
+
+        <p>Uma <a href="/blog/pipeline-dados-editoriais/">abordagem baseada em dados editoriais</a> ajuda a identificar onde a IA agrega valor real — e onde ela precisa de intervenção humana para não diluir os sinais de qualidade que o Google valoriza.</p>
+
+        <h2>Como demonstrar E-E-A-T em conteúdo jornalístico</h2>
+
+        <p>Não existe checklist mágico, mas existem práticas concretas que reforçam cada pilar:</p>
+
+        <p><strong>Para Experiência:</strong></p>
+        <ul>
+          <li>Incluir relatos de apuração, contexto de bastidores, detalhes que só quem esteve presente conhece.</li>
+          <li>Usar bylines com bio do autor e histórico de coberturas.</li>
+          <li>Referenciar entrevistas e fontes primárias, não apenas dados secundários.</li>
+        </ul>
+
+        <p><strong>Para Especialização:</strong></p>
+        <ul>
+          <li>Manter cobertura consistente de uma editoria ao longo do tempo. Um jornalista que cobre saúde há dez anos carrega mais peso do que um texto avulso.</li>
+          <li>Publicar análises que demonstrem profundidade técnica, não apenas resumos.</li>
+        </ul>
+
+        <p><strong>Para Autoridade:</strong></p>
+        <ul>
+          <li>Buscar citações e links de fontes institucionais.</li>
+          <li>Manter presença em diretórios de imprensa e plataformas de referência.</li>
+          <li>Construir relacionamento com especialistas que referenciem o trabalho da redação.</li>
+        </ul>
+
+        <p><strong>Para Confiança:</strong></p>
+        <ul>
+          <li>Política de correções visível e aplicada.</li>
+          <li>Página de contato real, não apenas formulário genérico.</li>
+          <li>HTTPS (básico, mas ainda negligenciado por alguns veículos menores).</li>
+          <li>Transparência sobre uso de IA na produção — quando e como ferramentas são utilizadas.</li>
+        </ul>
+
+        <p>Um <a href="/blog/manual-redacao-ia/">manual de redação integrado à IA</a> funciona como guardrail: garante que o conteúdo assistido por inteligência artificial mantenha os padrões editoriais que sustentam a confiança do veículo.</p>
+
+        <h2>E-E-A-T não é sobre IA contra humanos</h2>
+
+        <p>Existe uma leitura equivocada de que E-E-A-T é uma barreira contra conteúdo gerado por IA. Não é. O Google não penaliza conteúdo por ser assistido por IA — penaliza conteúdo de baixa qualidade, independentemente de como foi produzido.</p>
+
+        <p>A questão real é outra: IA generativa torna trivial produzir conteúdo superficial em escala. Quando qualquer pessoa pode gerar um artigo de 1.500 palavras em segundos, o diferencial competitivo migra para o que a máquina não consegue entregar sozinha — experiência genuína, apuração original, autoridade construída ao longo de anos.</p>
+
+        <p>Redações que entendem isso usam IA como acelerador, não como substituto. A IA otimiza títulos, sugere estruturas, identifica gaps de SEO. O jornalista entrega o que só ele pode: contexto, fonte, vivência, julgamento editorial.</p>
+
+        <p>Como demonstra o <a href="/blog/como-ia-contextual-muda-jornalismo/">caso de uso de IA contextual no jornalismo</a>, a diferença entre IA genérica e IA que entende o contexto editorial é precisamente a diferença entre conteúdo que o E-E-A-T filtra e conteúdo que ele valoriza.</p>
+
+        <h2>O que vem pela frente</h2>
+
+        <p>A tendência é de aperto. Cada atualização de core algorithm do Google nos últimos dois anos reforçou sinais de E-E-A-T. O Helpful Content System, as atualizações de março e agosto de 2025, a integração com AI Overviews — tudo aponta na mesma direção: conteúdo com origem verificável e experiência demonstrável ganha; conteúdo genérico e anônimo perde.</p>
+
+        <p>Para redações em 2026, a estratégia é direta:</p>
+
+        <ul>
+          <li>Investir na identidade editorial de cada jornalista, não apenas do veículo.</li>
+          <li>Documentar processos de apuração e torná-los visíveis ao leitor.</li>
+          <li>Usar IA para potencializar expertise humana, nunca para substituí-la.</li>
+          <li>Tratar confiança como infraestrutura — política de correções, transparência, acessibilidade — e não como detalhe cosmético.</li>
+        </ul>
+
+        <p>E-E-A-T não é uma moda de SEO. É o reflexo de como o Google pretende separar sinal de ruído em um mundo onde gerar conteúdo ficou barato. Para quem faz jornalismo de verdade, isso é uma oportunidade, não uma ameaça.</p>
+      `,
+    },
+  'o-que-e-ymyl': {
+      title: 'O que é YMYL (Your Money or Your Life) — e como isso afeta redações em 2026',
+      description: 'Cada matéria que sua redação publica sobre saúde, economia ou segurança pública passa por um crivo mais rigoroso do Google. O nome técnico desse crivo é YMYL.',
+      date: '2026-03-29',
+      category: 'Análise',
+      readTime: '11 min',
+      author: 'Bruno Lopes',
+      role: 'Fundador, atalay.ia',
+      heroSvg: `<svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="800" height="400" fill="#0e1011"/>
+        <defs>
+          <radialGradient id="g-ymyl" cx="50%" cy="45%"><stop offset="0%" stop-color="rgba(192,106,66,.1)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+        </defs>
+        <rect width="800" height="400" fill="url(#g-ymyl)"/>
+        <!-- Shield -->
+        <g transform="translate(400,185)">
+          <path d="M0,-110 L70,-80 L70,20 Q70,80 0,110 Q-70,80 -70,20 L-70,-80 Z" stroke="rgba(192,106,66,.35)" stroke-width="1.2" fill="rgba(192,106,66,.04)"/>
+          <path d="M0,-90 L55,-65 L55,15 Q55,65 0,90 Q-55,65 -55,15 L-55,-65 Z" stroke="rgba(192,106,66,.15)" stroke-width=".6" fill="none"/>
+          <!-- YMYL text -->
+          <text x="0" y="-20" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="18" font-weight="700" fill="rgba(192,106,66,.7)">YMYL</text>
+          <text x="0" y="2" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9" fill="rgba(255,255,255,.3)">Your Money or Your Life</text>
+          <!-- Checkmark -->
+          <path d="M-10,20 L-3,28 L12,14" stroke="rgba(130,153,110,.5)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <!-- Category labels left -->
+        <g font-family="DM Sans, sans-serif" font-size="9" fill="rgba(255,255,255,.3)">
+          <g transform="translate(140,120)">
+            <rect x="-50" y="-12" width="100" height="24" rx="5" stroke="rgba(255,255,255,.08)" stroke-width=".5" fill="rgba(255,255,255,.015)"/>
+            <text x="0" y="4" text-anchor="middle">Saúde</text>
+          </g>
+          <g transform="translate(140,165)">
+            <rect x="-50" y="-12" width="100" height="24" rx="5" stroke="rgba(255,255,255,.08)" stroke-width=".5" fill="rgba(255,255,255,.015)"/>
+            <text x="0" y="4" text-anchor="middle">Finanças</text>
+          </g>
+          <g transform="translate(140,210)">
+            <rect x="-50" y="-12" width="100" height="24" rx="5" stroke="rgba(255,255,255,.08)" stroke-width=".5" fill="rgba(255,255,255,.015)"/>
+            <text x="0" y="4" text-anchor="middle">Legislação</text>
+          </g>
+          <g transform="translate(140,255)">
+            <rect x="-50" y="-12" width="100" height="24" rx="5" stroke="rgba(192,106,66,.15)" stroke-width=".5" fill="rgba(192,106,66,.03)"/>
+            <text x="0" y="4" fill="rgba(192,106,66,.5)">Notícias</text>
+          </g>
+        </g>
+        <!-- Category labels right -->
+        <g font-family="DM Sans, sans-serif" font-size="9" fill="rgba(255,255,255,.3)">
+          <g transform="translate(660,120)">
+            <rect x="-50" y="-12" width="100" height="24" rx="5" stroke="rgba(255,255,255,.08)" stroke-width=".5" fill="rgba(255,255,255,.015)"/>
+            <text x="0" y="4" text-anchor="middle">Segurança</text>
+          </g>
+          <g transform="translate(660,165)">
+            <rect x="-50" y="-12" width="100" height="24" rx="5" stroke="rgba(255,255,255,.08)" stroke-width=".5" fill="rgba(255,255,255,.015)"/>
+            <text x="0" y="4" text-anchor="middle">Governo</text>
+          </g>
+          <g transform="translate(660,210)">
+            <rect x="-50" y="-12" width="100" height="24" rx="5" stroke="rgba(255,255,255,.08)" stroke-width=".5" fill="rgba(255,255,255,.015)"/>
+            <text x="0" y="4" text-anchor="middle">Economia</text>
+          </g>
+          <g transform="translate(660,255)">
+            <rect x="-50" y="-12" width="100" height="24" rx="5" stroke="rgba(192,106,66,.15)" stroke-width=".5" fill="rgba(192,106,66,.03)"/>
+            <text x="0" y="4" fill="rgba(192,106,66,.5)">Política</text>
+          </g>
+        </g>
+        <!-- Connecting lines -->
+        <line x1="190" y1="120" x2="330" y2="150" stroke="rgba(255,255,255,.04)" stroke-width=".5" stroke-dasharray="2 2"/>
+        <line x1="190" y1="165" x2="330" y2="175" stroke="rgba(255,255,255,.04)" stroke-width=".5" stroke-dasharray="2 2"/>
+        <line x1="190" y1="210" x2="330" y2="200" stroke="rgba(255,255,255,.04)" stroke-width=".5" stroke-dasharray="2 2"/>
+        <line x1="190" y1="255" x2="330" y2="230" stroke="rgba(192,106,66,.08)" stroke-width=".5" stroke-dasharray="2 2"/>
+        <line x1="610" y1="120" x2="470" y2="150" stroke="rgba(255,255,255,.04)" stroke-width=".5" stroke-dasharray="2 2"/>
+        <line x1="610" y1="165" x2="470" y2="175" stroke="rgba(255,255,255,.04)" stroke-width=".5" stroke-dasharray="2 2"/>
+        <line x1="610" y1="210" x2="470" y2="200" stroke="rgba(255,255,255,.04)" stroke-width=".5" stroke-dasharray="2 2"/>
+        <line x1="610" y1="255" x2="470" y2="230" stroke="rgba(192,106,66,.08)" stroke-width=".5" stroke-dasharray="2 2"/>
+        <!-- Footer label -->
+        <text x="400" y="370" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(255,255,255,.15)">YMYL CLASSIFICATION</text>
+      </svg>`,
+      content: `
+        <p class="article-lead">Cada matéria que sua redação publica sobre saúde, economia ou segurança pública passa por um crivo mais rigoroso do Google. O nome técnico desse crivo é YMYL — Your Money or Your Life. Entender como ele funciona não é opcional para quem depende de tráfego orgânico.</p>
+
+        <p>Se a audiência do seu jornal vem caindo e você ainda não mapeou quais editorias são classificadas como YMYL, parte da explicação pode estar aí. O conceito existe desde 2014 nas diretrizes de qualidade do Google, mas em 2026, com a consolidação das AI Overviews e dos modelos de linguagem respondendo perguntas diretamente na busca, ele se tornou mais determinante do que nunca.</p>
+
+        <h2>O que significa YMYL, na prática</h2>
+
+        <p>YMYL é a sigla para "Your Money or Your Life" — literalmente, "seu dinheiro ou sua vida". O Google usa essa classificação para identificar páginas cujo conteúdo pode afetar diretamente a saúde, a estabilidade financeira, a segurança ou o bem-estar do leitor.</p>
+
+        <p>A lógica é simples: se uma página dá informação errada sobre um medicamento, alguém pode se prejudicar fisicamente. Se dá orientação financeira equivocada, alguém pode perder dinheiro. O Google não quer ser o intermediário que levou o usuário até um conteúdo danoso. Por isso, aplica critérios de avaliação mais rígidos a essas páginas.</p>
+
+        <p>As categorias principais de YMYL incluem:</p>
+
+        <ul>
+          <li><strong>Saúde e segurança</strong> — sintomas, tratamentos, medicamentos, emergências</li>
+          <li><strong>Finanças</strong> — investimentos, impostos, aposentadoria, crédito</li>
+          <li><strong>Governo e legislação</strong> — direitos, processos legais, serviços públicos</li>
+          <li><strong>Notícias e eventos atuais</strong> — política, economia, saúde pública, eleições, criminalidade</li>
+        </ul>
+
+        <p>O último item é o que importa aqui: <strong>jornalismo é YMYL</strong>. Não todo jornalismo — uma crítica de cinema provavelmente não entra nessa classificação. Mas reportagens sobre economia, saúde, segurança pública e política são avaliadas com o mesmo rigor que páginas de hospitais e bancos.</p>
+
+        <h2>A conexão com E-E-A-T — e por que ela é multiplicada no YMYL</h2>
+
+        <p>E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) é o framework que o Google usa para avaliar a qualidade de qualquer conteúdo. Mas quando o conteúdo é YMYL, a exigência em cada pilar se intensifica.</p>
+
+        <p>Para conteúdo genérico, um artigo razoavelmente bem escrito pode performar. Para conteúdo YMYL, o Google procura sinais concretos:</p>
+
+        <ul>
+          <li><strong>Experiência</strong> — O autor tem vivência direta no assunto? Um jornalista de saúde que cobre o setor há anos carrega mais peso do que um texto genérico sem autoria.</li>
+          <li><strong>Especialização</strong> — Há credenciais verificáveis? Fontes médicas, jurídicas ou econômicas citadas?</li>
+          <li><strong>Autoridade</strong> — O veículo é reconhecido naquele tema? Outros sites de referência linkam para ele?</li>
+          <li><strong>Confiabilidade</strong> — O site tem política de correções? Transparência editorial? HTTPS e dados de contato visíveis?</li>
+        </ul>
+
+        <p>Para redações, isso significa que a qualidade técnica do conteúdo não é suficiente. A estrutura ao redor do conteúdo — quem escreveu, quais fontes sustentam, como o veículo se posiciona editorialmente — pesa tanto quanto o texto em si. Ter um <a href="/blog/manual-redacao-ia/">manual de redação robusto</a> que funcione como guardrail editorial é parte dessa equação.</p>
+
+        <h2>O precedente do Medic Update — e o que ele ensinou</h2>
+
+        <p>Em agosto de 2018, o Google lançou o que ficou conhecido como "Medic Update". A atualização atingiu desproporcionalmente sites de saúde e bem-estar, mas também afetou portais de notícias. Alguns sites perderam até 90% do tráfego orgânico da noite para o dia.</p>
+
+        <p>Não existia — e ainda não existe — um "algoritmo YMYL" separado. O que aconteceu foi uma recalibração dos critérios de qualidade existentes, com peso maior para sinais de E-E-A-T em páginas classificadas como YMYL. Sites que tinham conteúdo de saúde sem autoria clara, sem fontes, sem credenciais verificáveis foram penalizados.</p>
+
+        <p>O aprendizado para redações foi claro: publicar matéria sobre saúde pública sem byline, sem fonte nomeada e sem contexto editorial é um risco de visibilidade orgânica. O Medic Update não foi o último ajuste nessa direção — foi o primeiro de uma série. Se você quer entender por que a audiência de muitos jornais tem caído consistentemente, <a href="/blog/por-que-audiencia-jornal-cai/">a análise das causas estruturais</a> passa necessariamente por aqui.</p>
+
+        <h2>YMYL em 2026: AI Overviews mudaram o jogo</h2>
+
+        <p>O cenário de 2026 é fundamentalmente diferente do de 2018. Com as AI Overviews consolidadas no topo dos resultados de busca, o Google agora sintetiza respostas diretamente — e precisa decidir quais fontes alimentam essas sínteses.</p>
+
+        <p>Para consultas YMYL, a seleção de fontes é ainda mais conservadora. O Google prioriza veículos com histórico de precisão factual, autoria clara e autoridade reconhecida no tema. Isso significa que, para redações que mantêm padrões editoriais rigorosos, a oportunidade é real: ser citado como fonte em uma AI Overview sobre um tema de saúde ou economia pode gerar mais visibilidade do que a primeira posição orgânica tradicional.</p>
+
+        <p>Mas o inverso também é verdadeiro. Conteúdo YMYL que não atende aos critérios de qualidade simplesmente desaparece. Não é rebaixado para a segunda página — é excluído do pool de fontes que alimentam as respostas geradas por IA.</p>
+
+        <p>Para quem trabalha com uma <a href="/blog/pipeline-dados-editoriais/">abordagem orientada a dados na produção editorial</a>, identificar quais pautas são YMYL e tratá-las com o rigor adequado se tornou parte do fluxo, não uma exceção.</p>
+
+        <h2>O que redações precisam fazer — checklist prático</h2>
+
+        <p>A boa notícia é que a maioria dos critérios que o Google exige para conteúdo YMYL já deveria ser padrão em jornalismo de qualidade. O problema é que, na prática da publicação digital em escala, muitos desses critérios são negligenciados.</p>
+
+        <p><strong>Autoria e credenciais:</strong></p>
+        <ul>
+          <li>Toda matéria YMYL precisa de byline com nome completo do autor</li>
+          <li>Páginas de autor com bio, histórico de cobertura e links para redes profissionais</li>
+          <li>Se a matéria cita especialistas, incluir nome, credencial e instituição</li>
+        </ul>
+
+        <p><strong>Fontes e verificação:</strong></p>
+        <ul>
+          <li>Fontes primárias linkadas sempre que possível (documentos oficiais, estudos, dados públicos)</li>
+          <li>Data de publicação e data de última atualização visíveis</li>
+          <li>Política de correções acessível e aplicada publicamente</li>
+        </ul>
+
+        <p><strong>Estrutura técnica:</strong></p>
+        <ul>
+          <li>Schema markup de NewsArticle com author, datePublished, dateModified</li>
+          <li>HTTPS obrigatório (já deveria ser universal, mas vale reforçar)</li>
+          <li>Dados de contato da redação acessíveis (página "Sobre", "Contato", "Expediente")</li>
+        </ul>
+
+        <p><strong>Consistência editorial:</strong></p>
+        <ul>
+          <li>Não publicar conteúdo de saúde, finanças ou segurança sem revisão editorial</li>
+          <li>Evitar títulos sensacionalistas que contradigam o corpo da matéria</li>
+          <li>Manter coerência entre título, lide e conteúdo — o Google avalia a relação entre eles</li>
+        </ul>
+
+        <p>Ferramentas de IA podem ajudar a manter essa consistência em escala, desde que usadas como instrumento de apoio e não como substituição do julgamento editorial. A discussão sobre <a href="/blog/ia-ferramenta-ou-ameaca-jornalismo/">IA como ferramenta ou ameaça ao jornalismo</a> é relevante aqui: no contexto YMYL, a IA que auxilia a verificação e padronização editorial é aliada; a que gera conteúdo sem supervisão é risco.</p>
+
+        <h2>O que vem pela frente</h2>
+
+        <p>A tendência é clara: a cada atualização de algoritmo, o Google reforça a exigência de qualidade para conteúdo que afeta a vida das pessoas. Com modelos de linguagem cada vez mais presentes na cadeia de distribuição de informação, a pressão sobre fontes confiáveis só aumenta.</p>
+
+        <p>Para redações brasileiras, isso representa ao mesmo tempo um desafio e uma oportunidade. Veículos que investirem em estrutura editorial verificável — autoria, fontes, correções, transparência — terão vantagem competitiva não apenas no ranking orgânico tradicional, mas no ecossistema emergente das respostas geradas por IA.</p>
+
+        <p>YMYL não é um conceito abstrato de SEO técnico. É o reconhecimento, codificado em algoritmo, de que informação sobre saúde, dinheiro e segurança carrega responsabilidade. Para o jornalismo, isso deveria soar familiar. A diferença é que agora essa responsabilidade tem impacto direto e mensurável na distribuição do conteúdo.</p>
+
+        <p>Redações que tratarem YMYL como prioridade editorial — e não como detalhe técnico delegado ao time de SEO — estarão melhor posicionadas para o que vem pela frente.</p>
+      `,
+    },
+  'google-discover-core-update-fevereiro-2026': {
+      title: 'Google Discover Core Update de fevereiro de 2026: o que mudou e o que fazer agora',
+      description: 'O Google lançou, pela primeira vez, uma atualização de algoritmo exclusiva para o Discover. O rollout durou 21 dias e redesenhou as regras do jogo.',
+      date: '2026-03-29',
+      category: 'Dados',
+      readTime: '13 min',
+      author: 'Bruno Lopes',
+      role: 'Fundador, atalay.ia',
+      heroSvg: `<svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="800" height="400" fill="#0e1011"/>
+        <defs>
+          <radialGradient id="g-dcu" cx="40%" cy="50%"><stop offset="0%" stop-color="rgba(192,106,66,.1)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+          <radialGradient id="g-dcu2" cx="70%" cy="40%"><stop offset="0%" stop-color="rgba(130,153,110,.06)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+        </defs>
+        <rect width="800" height="400" fill="url(#g-dcu)"/>
+        <rect width="800" height="400" fill="url(#g-dcu2)"/>
+        <!-- Geographic pin / map area -->
+        <g transform="translate(260,180)">
+          <!-- Map grid -->
+          <rect x="-100" y="-80" width="200" height="180" rx="8" stroke="rgba(255,255,255,.08)" stroke-width=".6" fill="rgba(255,255,255,.015)"/>
+          <line x1="-100" y1="-30" x2="100" y2="-30" stroke="rgba(255,255,255,.04)" stroke-width=".4"/>
+          <line x1="-100" y1="20" x2="100" y2="20" stroke="rgba(255,255,255,.04)" stroke-width=".4"/>
+          <line x1="-100" y1="70" x2="100" y2="70" stroke="rgba(255,255,255,.04)" stroke-width=".4"/>
+          <line x1="-50" y1="-80" x2="-50" y2="100" stroke="rgba(255,255,255,.04)" stroke-width=".4"/>
+          <line x1="0" y1="-80" x2="0" y2="100" stroke="rgba(255,255,255,.04)" stroke-width=".4"/>
+          <line x1="50" y1="-80" x2="50" y2="100" stroke="rgba(255,255,255,.04)" stroke-width=".4"/>
+          <!-- Location pin -->
+          <g transform="translate(-20,-20)">
+            <path d="M0,-22 C-14,-22 -22,-12 -22,0 C-22,16 0,34 0,34 C0,34 22,16 22,0 C22,-12 14,-22 0,-22 Z" stroke="rgba(192,106,66,.5)" stroke-width="1" fill="rgba(192,106,66,.12)"/>
+            <circle cx="0" cy="-2" r="6" fill="rgba(192,106,66,.4)" stroke="rgba(192,106,66,.6)" stroke-width=".8"/>
+          </g>
+          <!-- Ripple from pin -->
+          <circle cx="-20" cy="-20" r="35" stroke="rgba(192,106,66,.1)" stroke-width=".5" fill="none"/>
+          <circle cx="-20" cy="-20" r="55" stroke="rgba(192,106,66,.06)" stroke-width=".4" fill="none"/>
+          <!-- Region labels -->
+          <text x="-80" y="-50" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,255,255,.15)">LOCAL</text>
+          <text x="30" y="50" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,255,255,.1)">GLOBAL</text>
+        </g>
+        <!-- Feed cards on right -->
+        <g transform="translate(560,110)">
+          <rect x="-80" y="0" width="160" height="40" rx="6" stroke="rgba(192,106,66,.2)" stroke-width=".6" fill="rgba(192,106,66,.03)"/>
+          <rect x="-68" y="10" width="50" height="3" rx="1.5" fill="rgba(255,255,255,.12)"/>
+          <rect x="-68" y="18" width="80" height="2.5" rx="1" fill="rgba(255,255,255,.07)"/>
+          <rect x="-68" y="26" width="60" height="2.5" rx="1" fill="rgba(255,255,255,.05)"/>
+          <text x="62" y="24" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(130,153,110,.5)">+42%</text>
+        </g>
+        <g transform="translate(560,165)">
+          <rect x="-80" y="0" width="160" height="40" rx="6" stroke="rgba(255,255,255,.08)" stroke-width=".5" fill="rgba(255,255,255,.015)"/>
+          <rect x="-68" y="10" width="55" height="3" rx="1.5" fill="rgba(255,255,255,.1)"/>
+          <rect x="-68" y="18" width="70" height="2.5" rx="1" fill="rgba(255,255,255,.06)"/>
+          <rect x="-68" y="26" width="45" height="2.5" rx="1" fill="rgba(255,255,255,.04)"/>
+          <text x="62" y="24" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(200,100,100,.5)">-17%</text>
+        </g>
+        <g transform="translate(560,220)">
+          <rect x="-80" y="0" width="160" height="40" rx="6" stroke="rgba(255,255,255,.06)" stroke-width=".5" fill="rgba(255,255,255,.01)"/>
+          <rect x="-68" y="10" width="48" height="3" rx="1.5" fill="rgba(255,255,255,.08)"/>
+          <rect x="-68" y="18" width="65" height="2.5" rx="1" fill="rgba(255,255,255,.05)"/>
+          <rect x="-68" y="26" width="40" height="2.5" rx="1" fill="rgba(255,255,255,.04)"/>
+          <text x="62" y="24" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(200,100,100,.5)">-57%</text>
+        </g>
+        <!-- Metrics -->
+        <g transform="translate(560,290)" font-family="JetBrains Mono, monospace" font-size="8">
+          <text x="-60" y="0" fill="rgba(255,255,255,.18)">Domains</text>
+          <text x="30" y="0" fill="rgba(200,100,100,.5)">-8.1%</text>
+          <text x="-60" y="16" fill="rgba(255,255,255,.18)">Intl share</text>
+          <text x="30" y="16" fill="rgba(200,100,100,.5)">-17.4%</text>
+          <text x="-60" y="32" fill="rgba(255,255,255,.18)">Title len</text>
+          <text x="30" y="32" fill="rgba(130,153,110,.5)">+15.5%</text>
+        </g>
+        <!-- Label -->
+        <text x="400" y="380" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(255,255,255,.15)">DISCOVER CORE UPDATE FEB 2026</text>
+      </svg>`,
+      content: `
+        <p class="article-lead">O Google lançou, pela primeira vez na história, uma atualização de algoritmo exclusiva para o Discover — separada do Search. O rollout durou 21 dias, de 5 a 27 de fevereiro de 2026, e redesenhou as regras do jogo para quem depende desse canal de tráfego. Para redações brasileiras, as implicações são profundas e urgentes.</p>
+
+        <h2>Uma atualização sem precedentes</h2>
+
+        <p>Até agora, toda core update do Google afetava Search e Discover simultaneamente. Fevereiro de 2026 quebrou esse padrão. O Discover ganhou sua própria atualização dedicada, sinalizando que o Google trata o feed de recomendação como um produto independente, com critérios próprios de ranqueamento.</p>
+
+        <p>A atualização foi inicialmente restrita ao mercado de língua inglesa nos Estados Unidos, mas o Google confirmou que a expansão global está nos planos. Isso significa que o Brasil está na fila — e quem se preparar antes sai na frente.</p>
+
+        <p>Para entender por que isso importa, vale revisitar as <a href="/blog/discover-vs-busca/">diferenças fundamentais entre Discover e busca orgânica</a>. O Discover não responde a uma intenção de busca; ele antecipa interesse. Essa distinção agora se traduz em algoritmos completamente separados.</p>
+
+        <h2>Os três eixos da nova lógica</h2>
+
+        <p>A análise dos dados pós-update revela três eixos de otimização que o Google passou a priorizar no Discover:</p>
+
+        <p><strong>1. Relevância local (Geographic Hyperlocalization)</strong></p>
+
+        <p>O sinal geográfico ganhou peso brutal. Conteúdo sobre a Califórnia passou a aparecer cinco vezes mais nos feeds de usuários localizados na Califórnia. O Discover deixou de ser um feed genérico e passou a funcionar como um editorial local personalizado.</p>
+
+        <p><strong>2. Expertise por tópico (Topic-Level Authority)</strong></p>
+
+        <p>O Google abandonou a avaliação de autoridade no nível do domínio e migrou para uma avaliação tópico a tópico. Um veículo pode ter autoridade alta em política e baixa em esportes — e o Discover agora diferencia isso. Não basta ser um "grande portal"; é preciso demonstrar profundidade em cada vertical.</p>
+
+        <p><strong>3. Padrões de qualidade (Quality Standards)</strong></p>
+
+        <p>Títulos genéricos e conteúdo raso perderam espaço. O comprimento médio dos títulos no Top 1000 subiu 15,5%, de 72,9 para 84,2 caracteres — um indicador de que o algoritmo passou a favorecer títulos mais descritivos e específicos em detrimento de clickbait curto.</p>
+
+        <h2>Os números: concentração e queda internacional</h2>
+
+        <p>Os dados agregados do Top 1000 do Discover nos EUA mostram uma tendência clara de concentração e localização.</p>
+
+        <table>
+          <thead>
+            <tr><th>Métrica</th><th>Antes (jan/2026)</th><th>Depois (fev/2026)</th><th>Variação</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Domínios únicos no Top 1000</td><td>172</td><td>158</td><td>-8,1%</td></tr>
+            <tr><td>Participação de publishers internacionais</td><td>8,52%</td><td>7,04%</td><td>-17,4%</td></tr>
+            <tr><td>Comprimento médio de título (caracteres)</td><td>72,9</td><td>84,2</td><td>+15,5%</td></tr>
+          </tbody>
+        </table>
+
+        <p>Menos domínios dividindo o tráfego significa que o Discover ficou mais excludente. Quem está dentro ganha mais; quem está fora perde acesso. Essa dinâmica reforça a importância de uma <a href="/blog/google-discover-trafico-redacoes/">estratégia orientada por dados para capturar tráfego do Discover</a>.</p>
+
+        <h2>Vencedores e perdedores</h2>
+
+        <p>A redistribuição de tráfego foi agressiva. Os maiores beneficiados foram veículos americanos com forte presença local e cobertura factual:</p>
+
+        <p><strong>Ganharam visibilidade:</strong></p>
+        <ul>
+          <li>CBS News</li>
+          <li>NBC News</li>
+          <li>Axios</li>
+          <li>AP News</li>
+        </ul>
+
+        <p><strong>Perderam visibilidade:</strong></p>
+        <ul>
+          <li>The Guardian: queda de 11%</li>
+          <li>Reuters: queda de 20%</li>
+          <li>The Independent UK: queda de 57%</li>
+        </ul>
+
+        <p>O padrão é nítido. Veículos americanos com cobertura local e factual subiram. Veículos internacionais de língua inglesa — mesmo com reputação consolidada — foram penalizados pela nova lógica de relevância geográfica. A Reuters, uma das agências mais respeitadas do mundo, perdeu um quinto da sua visibilidade no Discover americano.</p>
+
+        <h2>Mudança por categoria: notícias e esportes sobem, entretenimento despenca</h2>
+
+        <p>A redistribuição não foi apenas entre publishers, mas entre verticais inteiras de conteúdo.</p>
+
+        <table>
+          <thead>
+            <tr><th>Categoria</th><th>Antes</th><th>Depois</th><th>Variação</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>News (hard news)</td><td>15,94%</td><td>19,16%</td><td>+3,22 p.p.</td></tr>
+            <tr><td>Sports</td><td>5,06%</td><td>8,52%</td><td>+3,46 p.p.</td></tr>
+            <tr><td>Arts &amp; Entertainment</td><td>24,40%</td><td>17,90%</td><td>-6,50 p.p.</td></tr>
+          </tbody>
+        </table>
+
+        <p>Entretenimento perdeu 6,5 pontos percentuais — a maior queda absoluta. Esportes quase dobrou sua fatia. Hard news cresceu consistentemente. A leitura possível: o Google está reposicionando o Discover como uma ferramenta de informação, não de distração. Conteúdo factual, relevante e local ganhou prioridade sobre conteúdo viral e de entretenimento leve.</p>
+
+        <p>Para redações que já observavam <a href="/blog/por-que-audiencia-jornal-cai/">quedas de audiência sem explicação clara</a>, essa redistribuição de categorias pode ser a peça que faltava no diagnóstico.</p>
+
+        <h2>O que muda quando chegar ao Brasil</h2>
+
+        <p>A expansão global da Discover Core Update é questão de quando, não de se. E quando chegar ao Brasil, três cenários são prováveis:</p>
+
+        <p><strong>Cenário 1: Regionalização radical.</strong> Se o Google aplicar a mesma lógica de hiperlocalização, um jornal de Belo Horizonte terá vantagem no Discover de leitores mineiros sobre portais nacionais generalistas. Redações regionais podem, pela primeira vez, competir de igual para igual com os grandes portais no Discover — desde que tenham conteúdo local de qualidade.</p>
+
+        <p><strong>Cenário 2: Avaliação tópica fragmentada.</strong> Um veículo forte em esportes mas fraco em política terá resultados discrepantes entre editorias. A autoridade deixa de ser do domínio e passa a ser da editoria. Isso exige que redações invistam em profundidade vertical, não em volume horizontal.</p>
+
+        <p><strong>Cenário 3: Morte do título genérico.</strong> O aumento de 15,5% no comprimento dos títulos não é coincidência. Títulos vagos como "Confira o que aconteceu" ou "Entenda a polêmica" tendem a perder espaço para títulos específicos, com dados concretos e contexto claro.</p>
+
+        <h2>O que redações brasileiras devem fazer agora</h2>
+
+        <p>Não espere o update chegar ao Brasil para reagir. As ações a seguir são vantajosas independentemente do algoritmo — e se tornam críticas quando a atualização desembarcar.</p>
+
+        <p><strong>1. Mapear autoridade por editoria.</strong></p>
+        <p>Pare de pensar no seu domínio como uma unidade monolítica. Identifique em quais tópicos sua redação tem profundidade real e quais são coberturas superficiais. Concentre esforço editorial onde há expertise demonstrável. Uma <a href="/blog/pipeline-dados-editoriais/">abordagem de pipeline de dados editoriais</a> ajuda a quantificar isso.</p>
+
+        <p><strong>2. Investir em cobertura local com profundidade.</strong></p>
+        <p>Se sua redação cobre uma região específica, esse é seu ativo mais valioso no novo Discover. Não dilua cobertura local tentando competir em temas nacionais genéricos. O algoritmo está se movendo na direção de quem tem raiz geográfica.</p>
+
+        <p><strong>3. Reescrever títulos com especificidade.</strong></p>
+        <p>Revise os títulos das últimas semanas. Quantos têm menos de 70 caracteres? Quantos poderiam ser de qualquer veículo? Títulos que funcionam no novo Discover incluem dados, localização e contexto. "Prefeitura de BH corta 12% do orçamento de saúde para 2026" performa melhor que "Prefeitura anuncia cortes".</p>
+
+        <p><strong>4. Desenvolver voz editorial consistente por vertical.</strong></p>
+        <p>A avaliação tópica do Google favorece consistência. Um perfil de <a href="/blog/voz-editorial-agentes/">voz editorial bem definido</a> por editoria sinaliza expertise e coerência — exatamente o que o algoritmo agora busca.</p>
+
+        <p><strong>5. Monitorar o Discover como canal separado.</strong></p>
+        <p>Se sua redação ainda analisa "tráfego do Google" como uma métrica única, está operando no escuro. Separe Discover de Search no seu analytics. Acompanhe por editoria, por formato, por região. O Discover agora tem dinâmica própria — trate-o assim.</p>
+
+        <h2>Conclusão</h2>
+
+        <p>A Discover Core Update de fevereiro de 2026 é a maior mudança estrutural no feed de recomendação do Google desde sua criação. A separação do Search, a hiperlocalização geográfica e a avaliação de autoridade por tópico redesenham o cenário competitivo.</p>
+
+        <p>Para redações brasileiras, a mensagem é direta: o futuro do Discover favorece quem tem profundidade local, expertise demonstrável e consistência editorial. Volume e generalismo perdem espaço. A janela para se adaptar é agora — antes que o update cruze o Atlântico.</p>
+      `,
+    },
+  'google-spam-update-reescrita-titulos-ia': {
+      title: 'Google Spam Update de março de 2026 e a reescrita de títulos com IA — o que redações precisam saber',
+      description: 'Em menos de 20 horas, o Google reconfigurou as regras do jogo. Enquanto o Spam Update varria conteúdo de baixa qualidade, uma mudança silenciosa na reescrita de títulos por IA ameaça tirar dos jornalistas o controle editorial.',
+      date: '2026-03-29',
+      category: 'Dados',
+      readTime: '12 min',
+      author: 'Bruno Lopes',
+      role: 'Fundador, atalay.ia',
+      heroSvg: `<svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="800" height="400" fill="#0e1011"/>
+        <defs>
+          <radialGradient id="g-spam" cx="35%" cy="50%"><stop offset="0%" stop-color="rgba(200,100,100,.08)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+          <radialGradient id="g-spam2" cx="65%" cy="50%"><stop offset="0%" stop-color="rgba(192,106,66,.08)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+        </defs>
+        <rect width="800" height="400" fill="url(#g-spam)"/>
+        <rect width="800" height="400" fill="url(#g-spam2)"/>
+        <!-- SpamBrain icon (left) -->
+        <g transform="translate(240,185)">
+          <!-- Brain outline -->
+          <ellipse cx="0" cy="0" rx="60" ry="50" stroke="rgba(200,100,100,.3)" stroke-width="1" fill="rgba(200,100,100,.03)"/>
+          <path d="M0,-50 Q30,-50 30,-20 Q50,-20 50,10 Q50,40 20,45 Q0,50 -20,45 Q-50,40 -50,10 Q-50,-20 -30,-20 Q-30,-50 0,-50" stroke="rgba(200,100,100,.15)" stroke-width=".6" fill="none"/>
+          <!-- Neural nodes -->
+          <circle cx="-20" cy="-15" r="4" fill="rgba(200,100,100,.3)" stroke="rgba(200,100,100,.4)" stroke-width=".6"/>
+          <circle cx="15" cy="-20" r="4" fill="rgba(200,100,100,.3)" stroke="rgba(200,100,100,.4)" stroke-width=".6"/>
+          <circle cx="-10" cy="15" r="4" fill="rgba(200,100,100,.3)" stroke="rgba(200,100,100,.4)" stroke-width=".6"/>
+          <circle cx="20" cy="10" r="4" fill="rgba(200,100,100,.3)" stroke="rgba(200,100,100,.4)" stroke-width=".6"/>
+          <circle cx="0" cy="-5" r="5" fill="rgba(200,100,100,.4)" stroke="rgba(200,100,100,.5)" stroke-width=".8"/>
+          <!-- Connections -->
+          <line x1="-20" y1="-15" x2="0" y2="-5" stroke="rgba(200,100,100,.2)" stroke-width=".5"/>
+          <line x1="15" y1="-20" x2="0" y2="-5" stroke="rgba(200,100,100,.2)" stroke-width=".5"/>
+          <line x1="-10" y1="15" x2="0" y2="-5" stroke="rgba(200,100,100,.2)" stroke-width=".5"/>
+          <line x1="20" y1="10" x2="0" y2="-5" stroke="rgba(200,100,100,.2)" stroke-width=".5"/>
+          <text x="0" y="70" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600" fill="rgba(200,100,100,.5)">SpamBrain</text>
+          <text x="0" y="84" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(255,255,255,.2)">19.5h rollout</text>
+        </g>
+        <!-- Arrow -->
+        <g>
+          <line x1="340" y1="185" x2="400" y2="185" stroke="rgba(255,255,255,.1)" stroke-width=".8"/>
+          <polygon points="400,182 408,185 400,188" fill="rgba(255,255,255,.12)"/>
+        </g>
+        <!-- Title rewriting (right) -->
+        <g transform="translate(560,150)">
+          <!-- Original title -->
+          <rect x="-120" y="-40" width="240" height="34" rx="5" stroke="rgba(255,255,255,.1)" stroke-width=".6" fill="rgba(255,255,255,.02)"/>
+          <text x="-108" y="-26" font-family="DM Sans, sans-serif" font-size="7" fill="rgba(255,255,255,.2)">ORIGINAL</text>
+          <rect x="-108" y="-20" width="140" height="3" rx="1.5" fill="rgba(255,255,255,.12)"/>
+          <rect x="-108" y="-12" width="100" height="2.5" rx="1" fill="rgba(255,255,255,.07)"/>
+          <!-- Strike through -->
+          <line x1="-108" y1="-16" x2="32" y2="-16" stroke="rgba(200,100,100,.25)" stroke-width=".8"/>
+          <!-- Arrow down -->
+          <line x1="0" y1="0" x2="0" y2="22" stroke="rgba(192,106,66,.3)" stroke-width=".8"/>
+          <polygon points="-4,22 0,28 4,22" fill="rgba(192,106,66,.35)"/>
+          <!-- Rewritten title -->
+          <rect x="-120" y="32" width="240" height="34" rx="5" stroke="rgba(192,106,66,.25)" stroke-width=".7" fill="rgba(192,106,66,.03)"/>
+          <text x="-108" y="46" font-family="DM Sans, sans-serif" font-size="7" fill="rgba(192,106,66,.45)">AI REWRITTEN</text>
+          <rect x="-108" y="52" width="160" height="3" rx="1.5" fill="rgba(192,106,66,.2)"/>
+          <rect x="-108" y="60" width="120" height="2.5" rx="1" fill="rgba(192,106,66,.12)"/>
+        </g>
+        <!-- Stats -->
+        <g transform="translate(560,260)" font-family="JetBrains Mono, monospace" font-size="8">
+          <text x="-80" y="0" fill="rgba(255,255,255,.18)">Discover share</text>
+          <text x="60" y="0" fill="rgba(192,106,66,.55)">37% → 68%</text>
+          <text x="-80" y="16" fill="rgba(255,255,255,.18)">Title rewrite</text>
+          <text x="60" y="16" fill="rgba(200,100,100,.5)">permanent</text>
+        </g>
+        <!-- Label -->
+        <text x="400" y="380" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(255,255,255,.15)">SPAM UPDATE MAR 2026 + AI TITLE REWRITE</text>
+      </svg>`,
+      content: `
+        <p class="article-lead">Em menos de 20 horas, o Google reconfigurou as regras do jogo para milhares de sites. Enquanto redações ainda tentavam entender o core update de março, o Spam Update varreu conteúdo de baixa qualidade em velocidade recorde — e uma mudança silenciosa na reescrita de títulos por IA ameaça tirar dos jornalistas o controle sobre como suas matérias aparecem para o leitor.</p>
+
+        <h2>O Spam Update mais rápido da história</h2>
+
+        <p>O Google Spam Update de março de 2026 foi concluído entre 24 e 25 de março — um ciclo de apenas 19,5 horas. Para efeito de comparação, atualizações anteriores de spam levaram até 27 dias para serem totalmente implementadas. A velocidade não é acidental: ela reflete a maturidade do SpamBrain, o sistema de inteligência artificial do Google dedicado exclusivamente à detecção de spam.</p>
+
+        <p>Esta foi a segunda atualização confirmada de 2026, aplicada globalmente e em todos os idiomas simultaneamente. O rollout sobrepôs-se ao core update de março, que já vinha recalibrando sinais de E-E-A-T (Experiência, Especialização, Autoridade e Confiabilidade) e intensificando o combate ao abuso de conteúdo gerado por IA em escala.</p>
+
+        <p>A mensagem é clara: o Google está comprimindo os ciclos de enforcement. O que antes levava semanas agora leva horas.</p>
+
+        <h2>O que o SpamBrain está mirando</h2>
+
+        <p>O update cobre mais de 15 categorias de políticas de spam. As principais frentes de ação incluem:</p>
+
+        <p><strong>Conteúdo gerado em escala.</strong> Sites que usam IA para produzir centenas ou milhares de páginas sem supervisão editorial significativa. Não se trata de proibir IA na produção — trata-se de punir automação sem valor agregado.</p>
+
+        <p><strong>Abuso de domínios expirados.</strong> A prática de comprar domínios com autoridade histórica para publicar conteúdo não relacionado ao tema original. Uma tática que cresceu exponencialmente com o barateamento de ferramentas de geração de texto.</p>
+
+        <p><strong>Abuso de reputação de site.</strong> Terceiros publicando conteúdo de baixa qualidade em subdomínios ou seções de sites com alta autoridade — os chamados "parasite SEO". Portais de notícias que alugam seções para conteúdo patrocinado sem curadoria estão particularmente expostos.</p>
+
+        <p><strong>Redirecionamentos enganosos, texto oculto e conteúdo raspado.</strong> Táticas antigas que persistem em novas formas. O SpamBrain evoluiu para detectar variantes sofisticadas dessas práticas.</p>
+
+        <p>Para redações que operam dentro de padrões editoriais legítimos, o risco direto é baixo. Mas o risco indireto é real: <a href="/blog/por-que-audiencia-jornal-cai/">a queda de audiência que muitos veículos já enfrentam</a> pode se agravar se concorrentes de baixa qualidade forem removidos e o tráfego resultante não migrar para fontes confiáveis — algo que depende inteiramente de como o Google redistribui a visibilidade.</p>
+
+        <h2>A recuperação é lenta — e o impacto, imediato</h2>
+
+        <p>Sites penalizados por spam updates não se recuperam com ajustes rápidos. O histórico mostra que a recuperação leva meses, frequentemente exigindo uma reavaliação completa de práticas editoriais e técnicas.</p>
+
+        <p>O problema para redações é que o efeito colateral aparece antes de qualquer diagnóstico. Quedas abruptas de tráfego orgânico entre 24 e 26 de março podem estar relacionadas ao spam update, ao core update ou à sobreposição de ambos. Isolar a causa exige análise granular — página por página, query por query.</p>
+
+        <p>Quem ainda não monitora o desempenho por superfície de busca separadamente — <a href="/blog/discover-vs-busca/">Discover versus Search orgânico</a> — está operando às cegas.</p>
+
+        <h2>A reescrita de títulos por IA: o teste que já virou rotina</h2>
+
+        <p>Enquanto o spam update dominava a atenção, o Google confirmou estar realizando um teste "pequeno e restrito" de reescrita de títulos por inteligência artificial nos resultados de busca (Search). A formulação é deliberadamente modesta. O contexto, não.</p>
+
+        <p>No Discover, a reescrita de títulos por IA já é permanente. Não é teste. Não é experimento. É o padrão operacional.</p>
+
+        <p>E os números falam por si: uma análise de mais de 400 publishers mostrou que a participação do Discover no tráfego total saltou de 37% para 68% após a implementação de headlines geradas por IA. O Discover não apenas reescreve títulos — ele os reescreve de um jeito que gera mais cliques. Para o Google, isso é otimização. Para redações, é perda de controle editorial.</p>
+
+        <h2>O problema editorial é concreto</h2>
+
+        <p>O caso mais emblemático até agora envolveu o The Verge: o Google alterou uma headline de forma que mudou tanto o tom quanto o significado da matéria original. Sean Hollister, do próprio The Verge, comparou a prática a "uma biblioteca trocando as capas dos livros sem permissão do autor".</p>
+
+        <p>A analogia é precisa. O título é a primeira — e frequentemente única — interface entre o leitor e a reportagem. Quando um algoritmo reescreve essa interface, o jornalista perde a autoria da primeira impressão.</p>
+
+        <p>O diretor de SEO da ESPN expressou preocupação com a erosão de confiança: se o leitor clica esperando uma coisa e encontra outra, quem perde credibilidade não é o Google — é o veículo.</p>
+
+        <p>Esse problema se conecta diretamente ao debate mais amplo sobre <a href="/blog/como-ia-contextual-muda-jornalismo/">como a IA contextual está transformando o jornalismo</a>. A diferença é que aqui a transformação não é escolha da redação. É imposta pela plataforma de distribuição.</p>
+
+        <h2>Do Discover para o Search: a trajetória previsível</h2>
+
+        <p>O padrão do Google é consistente: testar no Discover, validar métricas, expandir para o Search. Foi assim com snippets expandidos, com carrosséis de notícias e com sinais de engajamento.</p>
+
+        <p>A transição do Discover — onde a reescrita já é permanente — para o Search — onde ainda é descrita como teste — segue essa mesma lógica. O volume de tráfego do Discover já demonstrou que headlines reescritas por IA geram mais engajamento. Para o Google, não há incentivo para reverter.</p>
+
+        <p>Redações que dependem significativamente do tráfego Discover — <a href="/blog/google-discover-trafico-redacoes/">e a maioria dos grandes portais brasileiros está nessa situação</a> — precisam assumir que essa prática se tornará universal nos próximos meses.</p>
+
+        <h2>O que sua redação precisa fazer agora</h2>
+
+        <p>A convergência do spam update com a expansão da reescrita de títulos por IA exige ações concretas. Não são recomendações teóricas — são ajustes operacionais para as próximas semanas.</p>
+
+        <p><strong>1. Audite seu conteúdo legado.</strong> O SpamBrain está mais rápido e abrangente. Páginas antigas com pouco valor editorial, conteúdo duplicado ou seções de terceiros sem curadoria são passivos de risco. Identifique e trate antes do próximo ciclo.</p>
+
+        <p><strong>2. Separe a análise de tráfego por superfície.</strong> Monitore Search e Discover como canais distintos. Quedas no Discover podem estar ligadas à reescrita de títulos, não a penalizações. Quedas no Search podem refletir o spam update, o core update ou ambos. Sem essa separação, qualquer diagnóstico será impreciso.</p>
+
+        <p><strong>3. Reforce a estrutura dos títulos.</strong> Se o Google vai reescrever suas headlines, sua melhor defesa é torná-las difíceis de melhorar. Títulos claros, informativos, com a informação principal na frente e sem clickbait reduzem a probabilidade de reescrita — porque já atendem aos critérios que o algoritmo busca otimizar.</p>
+
+        <p><strong>4. Documente e compare.</strong> Crie um processo para verificar como seus títulos aparecem no Discover e nos resultados de busca. Compare com o original publicado. Documente divergências. Esse registro será essencial para qualquer reclamação futura ao Google ou para ajustar sua estratégia de titulação.</p>
+
+        <p><strong>5. Invista em sinais de E-E-A-T verificáveis.</strong> Autoria clara, bylines com links para perfis de autor, fontes citadas, datas de publicação e atualização visíveis. O core update de março reforçou esses sinais. O spam update penalizou quem os simula. A reescrita de títulos por IA favorece conteúdo que o Google consegue verificar como confiável.</p>
+
+        <p><strong>6. Não pare de publicar conteúdo original de qualidade.</strong> Parece óbvio, mas o contexto importa: em um cenário onde o Google remove spam em escala e reescreve títulos para maximizar engajamento, conteúdo editorial genuíno com assinatura humana verificável é vantagem competitiva real — não apenas boa prática.</p>
+
+        <h2>O cenário para os próximos meses</h2>
+
+        <p>O Google está simultaneamente limpando o ecossistema (spam update) e assumindo mais controle sobre a apresentação do conteúdo (reescrita de títulos). São movimentos complementares: menos lixo nos resultados e mais controle algorítmico sobre o que sobra.</p>
+
+        <p>Para redações, isso significa operar em um ambiente onde a qualidade editorial é mais importante do que nunca — mas onde o controle sobre como essa qualidade chega ao leitor é cada vez menor. O jornalismo de qualidade continua sendo condição necessária. Deixou de ser condição suficiente.</p>
+
+        <p>A velocidade desse spam update — 19,5 horas — é um sinal. O Google não está desacelerando. Redações que não acompanharem esse ritmo de adaptação vão sentir o impacto onde mais dói: no tráfego, na receita e na relevância.</p>
       `,
     },
 };
