@@ -1985,10 +1985,71 @@ const nextSlug = currentIndex < slugs.length - 1 ? slugs[currentIndex + 1] : nul
 const prevSlug = currentIndex > 0 ? slugs[currentIndex - 1] : null;
 const nextArticle = nextSlug ? articles[nextSlug] : null;
 const prevArticle = prevSlug ? articles[prevSlug] : null;
+
+const articleUrl = `https://atalayia.com.br/blog/${slug}/`;
+const publishedIso = `${article.date}T00:00:00-03:00`;
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Atalay.ia',
+    url: 'https://atalayia.com.br',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://atalayia.com.br/og-image.png',
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    url: 'https://atalayia.com.br',
+    name: 'Atalay.ia',
+    publisher: { '@id': 'https://atalayia.com.br/#organization' },
+    inLanguage: 'pt-BR',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: article.title,
+    description: article.description,
+    datePublished: publishedIso,
+    dateModified: publishedIso,
+    url: articleUrl,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': articleUrl },
+    inLanguage: 'pt-BR',
+    articleSection: article.category,
+    author: {
+      '@type': 'Person',
+      name: article.author,
+      jobTitle: article.role,
+      url: 'https://atalayia.com.br/quem-somos/',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Atalay.ia',
+      url: 'https://atalayia.com.br',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://atalayia.com.br/og-image.png',
+      },
+    },
+    image: {
+      '@type': 'ImageObject',
+      url: 'https://atalayia.com.br/og-image.png',
+    },
+  },
+];
 ---
 <Base
   title={`${article.title} — Atalay.ia`}
   description={article.description}
+  url={articleUrl}
+  ogType="article"
+  publishedTime={publishedIso}
+  modifiedTime={publishedIso}
+  author={article.author}
+  jsonLd={jsonLd}
 >
   <Nav />
 

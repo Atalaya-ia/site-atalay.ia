@@ -4,8 +4,25 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description: string;
+  url?: string;
+  ogType?: 'website' | 'article';
+  image?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
-const { title, description } = Astro.props;
+const {
+  title,
+  description,
+  url = Astro.url.href,
+  ogType = 'website',
+  image = 'https://atalayia.com.br/og-image.png',
+  publishedTime,
+  modifiedTime,
+  author,
+  jsonLd,
+} = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -17,18 +34,30 @@ const { title, description } = Astro.props;
   <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <link rel="canonical" href="https://atalayia.com.br" />
+  <link rel="canonical" href={url} />
+  <meta name="robots" content="max-image-preview:large" />
   <!-- Open Graph -->
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://atalayia.com.br" />
-  <meta property="og:image" content="https://atalayia.com.br/og-image.png" />
+  <meta property="og:type" content={ogType} />
+  <meta property="og:url" content={url} />
+  <meta property="og:image" content={image} />
   <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Atalay.ia" />
+  {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+  {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+  {author && <meta property="article:author" content={author} />}
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={image} />
+  <!-- JSON-LD -->
+  {jsonLd && (
+    Array.isArray(jsonLd)
+      ? jsonLd.map((ld) => <script type="application/ld+json" set:html={JSON.stringify(ld)} />)
+      : <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  )}
   <!-- Security -->
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
