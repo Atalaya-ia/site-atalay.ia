@@ -12,6 +12,11 @@ export function getStaticPaths() {
     { params: { slug: 'voz-editorial-agentes' } },
     { params: { slug: 'discover-vs-busca' } },
     { params: { slug: 'manual-redacao-ia' } },
+    { params: { slug: 'por-que-audiencia-jornal-cai' } },
+    { params: { slug: 'caso-nyt-ia-redacao' } },
+    { params: { slug: 'como-levar-ia-para-redacao' } },
+    { params: { slug: 'ia-ferramenta-ou-ameaca-jornalismo' } },
+    { params: { slug: 'google-discover-trafico-redacoes' } },
   ];
 }
 
@@ -677,6 +682,1287 @@ const articles: Record<string, {
       <p>O manual deixa de ser um documento consultado ocasionalmente. Ele se torna parte ativa de cada texto que sai da redação.</p>
     `,
   },
+
+  'por-que-audiencia-jornal-cai': {
+    title: 'Por que a audiência do seu jornal está caindo — e o que os dados mostram sobre como reverter',
+    description: 'Portais de notícia no Brasil perderam até 30% do tráfego orgânico nos últimos dois anos. Os dados mostram que a queda não é inevitável — redações que usam inteligência editorial estão revertendo a tendência.',
+    date: '2026-03-27',
+    category: 'Dados',
+    readTime: '14 min',
+    author: 'Bruno Lopes',
+    role: 'Fundador, atalay.ia',
+    heroSvg: `<svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="800" height="400" fill="#0e1011"/>
+      <defs>
+        <radialGradient id="g-aud-1" cx="40%" cy="55%"><stop offset="0%" stop-color="rgba(192,106,66,.1)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+        <radialGradient id="g-aud-2" cx="75%" cy="40%"><stop offset="0%" stop-color="rgba(130,153,110,.06)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+      </defs>
+      <rect width="800" height="400" fill="url(#g-aud-1)"/>
+      <rect width="800" height="400" fill="url(#g-aud-2)"/>
+      <g stroke="rgba(255,255,255,.03)" stroke-width=".4">
+        <line x1="100" y1="100" x2="100" y2="310"/>
+        <line x1="220" y1="100" x2="220" y2="310"/>
+        <line x1="340" y1="100" x2="340" y2="310"/>
+        <line x1="460" y1="100" x2="460" y2="310"/>
+        <line x1="580" y1="100" x2="580" y2="310"/>
+        <line x1="100" y1="150" x2="580" y2="150"/>
+        <line x1="100" y1="200" x2="580" y2="200"/>
+        <line x1="100" y1="250" x2="580" y2="250"/>
+        <line x1="100" y1="310" x2="580" y2="310"/>
+      </g>
+      <g font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(255,255,255,.15)">
+        <text x="88" y="153" text-anchor="end">100%</text>
+        <text x="88" y="203" text-anchor="end">75%</text>
+        <text x="88" y="253" text-anchor="end">50%</text>
+        <text x="88" y="313" text-anchor="end">25%</text>
+      </g>
+      <g font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(255,255,255,.15)">
+        <text x="100" y="330" text-anchor="middle">2024</text>
+        <text x="220" y="330" text-anchor="middle">Q2</text>
+        <text x="340" y="330" text-anchor="middle">2025</text>
+        <text x="460" y="330" text-anchor="middle">Q2</text>
+        <text x="580" y="330" text-anchor="middle">2026</text>
+      </g>
+      <polyline points="100,155 160,162 220,178 280,198 340,220 400,245 460,262 520,275 580,285" stroke="rgba(200,100,100,.4)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <text x="590" y="283" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(200,100,100,.5)">-30%</text>
+      <polyline points="340,220 400,215 460,198 520,178 580,160" stroke="rgba(130,153,110,.5)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <circle cx="340" cy="220" r="4" fill="rgba(192,106,66,.6)" stroke="rgba(192,106,66,.8)" stroke-width="1"/>
+      <circle cx="340" cy="220" r="10" stroke="rgba(192,106,66,.2)" stroke-width=".5" fill="none"/>
+      <circle cx="340" cy="220" r="18" stroke="rgba(192,106,66,.08)" stroke-width=".4" fill="none"/>
+      <line x1="340" y1="232" x2="340" y2="260" stroke="rgba(192,106,66,.2)" stroke-width=".5" stroke-dasharray="2 2"/>
+      <text x="340" y="274" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(192,106,66,.6)">inflexion</text>
+      <g transform="translate(630,110)">
+        <rect x="0" y="0" width="130" height="36" rx="6" stroke="rgba(255,255,255,.08)" stroke-width=".6" fill="rgba(255,255,255,.02)"/>
+        <text x="12" y="15" font-family="DM Sans, sans-serif" font-size="9" fill="rgba(255,255,255,.3)">Organic Traffic</text>
+        <text x="12" y="28" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600" fill="rgba(200,100,100,.6)">-28.4%</text>
+      </g>
+      <g transform="translate(630,158)">
+        <rect x="0" y="0" width="130" height="36" rx="6" stroke="rgba(255,255,255,.08)" stroke-width=".6" fill="rgba(255,255,255,.02)"/>
+        <text x="12" y="15" font-family="DM Sans, sans-serif" font-size="9" fill="rgba(255,255,255,.3)">Discover CTR</text>
+        <text x="12" y="28" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600" fill="rgba(192,106,66,.7)">4.2%</text>
+      </g>
+      <g transform="translate(630,206)">
+        <rect x="0" y="0" width="130" height="36" rx="6" stroke="rgba(255,255,255,.08)" stroke-width=".6" fill="rgba(255,255,255,.02)"/>
+        <text x="12" y="15" font-family="DM Sans, sans-serif" font-size="9" fill="rgba(255,255,255,.3)">Post-reversal</text>
+        <text x="12" y="28" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600" fill="rgba(130,153,110,.7)">+18.6%</text>
+      </g>
+      <g transform="translate(630,254)">
+        <rect x="0" y="0" width="130" height="36" rx="6" stroke="rgba(255,255,255,.08)" stroke-width=".6" fill="rgba(255,255,255,.02)"/>
+        <text x="12" y="15" font-family="DM Sans, sans-serif" font-size="9" fill="rgba(255,255,255,.3)">Sessions/article</text>
+        <text x="12" y="28" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600" fill="rgba(192,106,66,.6)">1.8K</text>
+      </g>
+      <g transform="translate(100,360)">
+        <line x1="0" y1="0" x2="20" y2="0" stroke="rgba(200,100,100,.4)" stroke-width="1.2"/>
+        <text x="26" y="3" font-family="DM Sans, sans-serif" font-size="8" fill="rgba(255,255,255,.25)">sem dados editoriais</text>
+        <line x1="180" y1="0" x2="200" y2="0" stroke="rgba(130,153,110,.5)" stroke-width="1.2"/>
+        <text x="206" y="3" font-family="DM Sans, sans-serif" font-size="8" fill="rgba(255,255,255,.25)">com inteligencia editorial</text>
+      </g>
+    </svg>`,
+    content: `
+      <p class="article-lead">Portais de noticia no Brasil perderam ate 30% do trafego organico nos ultimos dois anos. A queda nao e um fenomeno isolado — acontece em mercados do mundo todo. Mas os dados mostram que ela nao e inevitavel. Redacoes que adotaram inteligencia editorial baseada em dados estao revertendo a tendencia. Este artigo explica por que o trafego cai, o que as metricas realmente dizem, e quais acoes concretas funcionam.</p>
+
+      <h2>O cenario: queda estrutural do trafego de noticias</h2>
+
+      <p>O <a href="https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2025" target="_blank" rel="noopener">Reuters Institute Digital News Report 2025</a> documentou o que gestores de redacao ja sentiam: o consumo direto de noticias via busca organica e redes sociais caiu de forma consistente desde 2023. No Brasil, a situacao e particularmente aguda.</p>
+
+      <p>Segundo dados do Similarweb e do Google Search Console de veiculos brasileiros que acompanhamos, o padrao e claro:</p>
+
+      <ul>
+        <li><strong>Trafego organico via Google Search:</strong> queda media de 22% entre 2024 e 2026 para portais de noticias generalistas.</li>
+        <li><strong>Google Discover:</strong> volatilidade extrema — veiculos que dependiam de Discover para 40%+ do trafego viram oscilacoes de ate 60% entre meses.</li>
+        <li><strong>Redes sociais:</strong> o trafego de referencia do Facebook caiu mais de 50% desde que a Meta reduziu a priorizacao de links externos no feed.</li>
+        <li><strong>Direto:</strong> unico canal estavel, mas representa menos de 15% do total na maioria dos veiculos.</li>
+      </ul>
+
+      <p>A soma desses fatores cria uma crise de distribuicao. O conteudo existe, a qualidade muitas vezes e boa, mas o publico nao chega ate ele.</p>
+
+      <h2>Por que a busca organica esta encolhendo para noticias</h2>
+
+      <p>O Google mudou. Nao e teoria da conspiracao — e documentado. Tres mudancas estruturais explicam a maior parte da queda:</p>
+
+      <h3>1. AI Overviews e respostas diretas na SERP</h3>
+
+      <p>Desde o lancamento global dos AI Overviews em 2025, o Google responde diretamente a uma parcela crescente de buscas informacionais. Para consultas como "o que aconteceu no jogo do Atletico ontem", o usuario recebe a resposta sem clicar em nenhum link. O <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="noopener">Google Search Central</a> classifica isso como "melhorar a experiencia do usuario" — mas para redacoes, significa menos cliques.</p>
+
+      <p>Estudos da Authoritas e do Search Engine Land estimam que AI Overviews reduziram o CTR organico em 18-25% para queries informacionais. Noticias sao, por natureza, conteudo informacional.</p>
+
+      <h3>2. Atualizacoes de algoritmo focadas em autoridade</h3>
+
+      <p>As atualizacoes de core algorithm do Google em 2024 e 2025 elevaram o peso de <strong>E-E-A-T</strong> (Experience, Expertise, Authoritativeness, Trustworthiness). Para veiculos com boa reputacao, isso deveria ser positivo. Na pratica, muitos portais de noticias brasileiros nao estruturam seu conteudo para demonstrar autoridade tematica.</p>
+
+      <p>Artigos publicados sem byline, sem links internos para cobertura anterior do tema, sem dados estruturados adequados — tudo isso sinaliza para o Google que o conteudo nao tem a profundidade que o algoritmo agora exige.</p>
+
+      <h3>3. Indexacao mais seletiva</h3>
+
+      <p>O Google esta indexando menos paginas. O <a href="https://developers.google.com/search/docs/crawling-indexing/large-site-managing-crawl-budget" target="_blank" rel="noopener">crawl budget</a> se tornou um recurso escasso. Portais que publicam 200+ artigos por dia e nao gerenciam adequadamente canonicals, paginacao e conteudo thin estao vendo uma parcela crescente de seu conteudo simplesmente nao ser indexada.</p>
+
+      <h2>O caso do Google Discover: oportunidade e armadilha</h2>
+
+      <p>Enquanto a busca organica encolhe, o Google Discover se tornou o canal de crescimento para muitos veiculos. Como analisamos em profundidade no artigo <a href="/blog/discover-vs-busca/">Discover e Busca sao jogos diferentes</a>, os dois canais operam com logicas opostas.</p>
+
+      <p>O problema e que o Discover e imprevisivel por design. Ele depende de sinais de comportamento do usuario, qualidade de imagem, recencia e autoridade tematica — nenhum dos quais o veiculo controla diretamente. Redacoes que construiram sua estrategia inteira em cima de Discover descobriram isso da pior forma.</p>
+
+      <p>Os dados que coletamos em parceria com redacoes mostram um padrao recorrente: artigos com <a href="/blog/google-discover-trafico-redacoes/">alto desempenho no Discover</a> compartilham tres caracteristicas — imagem de alta qualidade com rosto humano, titulo com gancho emocional, e publicacao dentro de uma janela de 2-4 horas apos o pico de interesse no tema.</p>
+
+      <p>Nenhuma dessas caracteristicas e acidental. Todas podem ser otimizadas com dados.</p>
+
+      <h2>Mudancas de comportamento mobile que ninguem esta medindo</h2>
+
+      <p>Existe um fator que quase nenhuma redacao mede: como o comportamento mobile mudou.</p>
+
+      <ul>
+        <li><strong>Scroll depth caiu:</strong> o usuario medio rola menos. Se o lide nao prende nos primeiros 3 segundos, o artigo perde o leitor.</li>
+        <li><strong>Sessoes mais curtas:</strong> a sessao media em portais de noticias caiu de 4:30 para 2:50 entre 2023 e 2025.</li>
+        <li><strong>Consumo fragmentado:</strong> o usuario le 2-3 paragrafos, sai, volta depois. O modelo de "pageview unica" nao captura esse comportamento.</li>
+        <li><strong>Notificacoes competem:</strong> push notifications de apps concorrem diretamente com o habito de abrir o portal. Quem nao tem app ou newsletter forte perde essa disputa.</li>
+      </ul>
+
+      <p>Redacoes que ainda medem sucesso por pageviews estao olhando para a metrica errada. Engaged sessions, scroll depth e recirculacao sao metricas que explicam muito mais sobre a saude real da audiencia.</p>
+
+      <h2>Quais metricas realmente importam</h2>
+
+      <p>Quando gestores de redacao nos procuram, a primeira pergunta e quase sempre sobre pageviews. Nos redirecionamos a conversa para cinco metricas que, juntas, dao um diagnostico real:</p>
+
+      <ul>
+        <li><strong>Sessoes engajadas por artigo:</strong> nao quantos clicaram, mas quantos ficaram. O GA4 define como sessoes com mais de 10 segundos, evento de conversao ou 2+ pageviews.</li>
+        <li><strong>CTR por canal:</strong> separar CTR de Busca, Discover, redes sociais e direto. Um CTR medio mascara problemas graves em canais especificos.</li>
+        <li><strong>Taxa de indexacao:</strong> dos artigos publicados nos ultimos 30 dias, quantos foram indexados? Se menos de 80%, ha um problema tecnico ou de qualidade.</li>
+        <li><strong>Autoridade tematica:</strong> em quais editorias o veiculo aparece consistentemente no top 3? Isso define onde investir e onde recuar.</li>
+        <li><strong>Velocidade de cobertura:</strong> quanto tempo entre o surgimento de um trend e a publicacao do artigo? Cada hora de atraso custa trafego, especialmente no Discover.</li>
+      </ul>
+
+      <p>E exatamente esse tipo de diagnostico que construimos no <a href="/blog/pipeline-dados-editoriais/">pipeline de dados editoriais</a> do atalay.ia — a camada de dados precisa existir antes de qualquer otimizacao fazer sentido.</p>
+
+      <h2>O diagnostico: onde a redacao esta perdendo</h2>
+
+      <p>Na nossa experiencia trabalhando com dados de redacoes brasileiras, as perdas se concentram em cinco areas:</p>
+
+      <h3>Titulos que nao performam no canal certo</h3>
+
+      <p>A maioria dos veiculos publica com um titulo unico para todos os canais. Mas um titulo bom para Busca (keyword no inicio, descritivo) e ruim para Discover (precisa de curiosidade, gancho emocional). A solucao nao e escolher um — e gerar variantes otimizadas para cada canal.</p>
+
+      <h3>Imagens que matam o CTR no Discover</h3>
+
+      <p>Imagens genericas de banco, sem rosto humano, com texto sobreposto, em baixa resolucao. Os dados sao claros: artigos com imagem de rosto humano em alta resolucao tem CTR ate 3x maior no Discover.</p>
+
+      <h3>Cobertura reativa em vez de antecipatoria</h3>
+
+      <p>A redacao espera o fato acontecer, apura, escreve e publica. Nesse ciclo, veiculos mais ageis ja capturaram o pico de interesse. Monitorar trends em tempo real — o que o atalay.ia faz na aba Trends — permite antecipar a demanda e publicar na janela ideal.</p>
+
+      <h3>Ausencia de clusters tematicos</h3>
+
+      <p>Artigos isolados, sem links internos, sem cobertura de subtopicos relacionados. O Google interpreta isso como falta de profundidade. Veiculos que constroem clusters — um artigo principal conectado a 5-8 artigos de apoio — consolidam autoridade tematica e melhoram o ranking do cluster inteiro.</p>
+
+      <h3>Falta de consistencia editorial</h3>
+
+      <p>Erros de manual de redacao, estilos inconsistentes entre jornalistas, formatacao irregular. Parece detalhe, mas afeta E-E-A-T. O Google avalia sinais de qualidade editorial, e inconsistencia e um sinal negativo. Como exploramos em <a href="/blog/como-ia-contextual-muda-jornalismo/">por que IA generica nao funciona para jornalismo</a>, a solucao precisa ser contextual — especifica para cada redacao.</p>
+
+      <h2>O que as redacoes que estao revertendo fazem de diferente</h2>
+
+      <p>Nos ultimos 12 meses, identificamos um padrao entre veiculos que conseguiram reverter a tendencia de queda. Nao e uma bala de prata — e um conjunto de praticas sustentadas por dados.</p>
+
+      <h3>1. Separaram a estrategia por canal</h3>
+
+      <p>Param de tratar Busca e Discover como um canal so. Cada artigo passa por uma analise que determina qual canal tem maior potencial, e a otimizacao e feita de acordo. Em alguns casos, o mesmo conteudo e publicado com dois titulos diferentes — um para cada canal.</p>
+
+      <h3>2. Adotaram monitoramento de trends em tempo real</h3>
+
+      <p>Em vez de depender de reuniao de pauta matinal, passaram a usar sinais de dados em tempo real para decidir o que publicar e quando. A <a href="/blog/lancamento-atalay-ia/">abordagem do atalay.ia</a> combina dados de tendencias com autoridade tematica do veiculo para priorizar o que realmente merece atencao.</p>
+
+      <h3>3. Investiram em qualidade de imagem</h3>
+
+      <p>Parece basico, mas fez diferenca mensuravel. Veiculos que passaram a usar imagens de alta resolucao, com edicao consistente e rostos humanos como padrao, viram aumento de 40-60% no CTR do Discover em tres meses.</p>
+
+      <h3>4. Construiram autoridade tematica</h3>
+
+      <p>Em vez de cobrir tudo superficialmente, dobraram a aposta nas editorias onde ja tinham forca. Um veiculo regional que domina cobertura de politica estadual vai performar melhor aprofundando essa cobertura do que tentando competir com portais nacionais em economia global.</p>
+
+      <h3>5. Usaram dados para treinar a redacao</h3>
+
+      <p>Nao e sobre substituir jornalistas por IA — como discutimos em <a href="/blog/ia-ferramenta-ou-ameaca-jornalismo/">IA como ferramenta vs ameaca</a>. E sobre dar ao jornalista visibilidade sobre o que funciona. Quando um reporter ve que seus titulos com determinada estrutura geram 2x mais cliques, ele internaliza o padrao. O dado educa.</p>
+
+      <h2>O papel da inteligencia editorial</h2>
+
+      <p>Inteligencia editorial nao e um dashboard. Nao e um relatorio mensal de analytics. E a capacidade de transformar dados de performance em decisoes editoriais em tempo real.</p>
+
+      <p>Isso significa:</p>
+
+      <ul>
+        <li>Saber em 30 segundos se um tema em alta e relevante para o seu dominio</li>
+        <li>Gerar titulos otimizados para o canal certo antes da publicacao</li>
+        <li>Identificar erros de manual e oportunidades de SEO no mesmo fluxo</li>
+        <li>Medir o resultado e retroalimentar o sistema</li>
+      </ul>
+
+      <p>E o que construimos com o atalay.ia. Nao uma IA que escreve no lugar do jornalista, mas uma inteligencia que da contexto para decisoes melhores. A <a href="/blog/voz-editorial-agentes/">preservacao da voz editorial</a> e um principio central — a ferramenta adapta-se ao jornalista, nao o contrario.</p>
+
+      <p>Redacoes que estao avaliando <a href="/blog/como-levar-ia-para-redacao/">como trazer IA para dentro da redacao</a> encontram nessa abordagem um caminho pratico: comecar pelos dados, nao pelo modelo.</p>
+
+      <h2>Casos que ilustram a reversao</h2>
+
+      <p>O <a href="/blog/caso-nyt-ia-redacao/">caso do New York Times com IA na redacao</a> mostra que mesmo veiculos de referencia global estao investindo em inteligencia editorial como camada estrategica. A diferenca entre quem reverte e quem nao reverte nao e orcamento — e abordagem.</p>
+
+      <blockquote>
+        <p>"A queda de audiencia nao e um problema de conteudo. E um problema de distribuicao. E distribuicao se resolve com dados, nao com mais conteudo."</p>
+      </blockquote>
+
+      <p>Veiculos que publicam mais artigos sem estrategia de distribuicao estao diluindo seus proprios recursos. Os que publicam menos, mas com otimizacao por canal, timing baseado em dados e qualidade de imagem controlada, estao crescendo.</p>
+
+      <h2>Por onde comecar</h2>
+
+      <p>Se a audiencia do seu veiculo esta caindo, o primeiro passo nao e publicar mais. E entender onde esta perdendo e por que.</p>
+
+      <ul>
+        <li><strong>Audite seus canais:</strong> separe o trafego por Busca, Discover, redes e direto. Identifique qual canal esta caindo mais.</li>
+        <li><strong>Meca a taxa de indexacao:</strong> no Google Search Console, verifique quantas das suas paginas publicadas nos ultimos 30 dias foram indexadas.</li>
+        <li><strong>Compare titulos:</strong> pegue seus 10 artigos com melhor CTR e seus 10 piores. O padrao vai aparecer.</li>
+        <li><strong>Audite imagens:</strong> revise as imagens de capa dos ultimos 50 artigos. Quantas tem rosto humano? Quantas tem resolucao adequada para Discover (1200px+)?</li>
+        <li><strong>Meca velocidade editorial:</strong> quanto tempo entre o surgimento de um tema e a publicacao? Se for mais de 4 horas, voce esta perdendo a janela do Discover.</li>
+      </ul>
+
+      <p>Esses cinco diagnosticos podem ser feitos em uma semana, sem ferramenta nenhuma. Mas a diferenca entre fazer isso uma vez e fazer continuamente e o que separa insight de inteligencia editorial.</p>
+
+      <p>A queda de audiencia e real. Mas nao e sentenca. Os dados mostram o caminho — desde que alguem esteja olhando para eles.</p>
+    `,
+  },
+  'caso-nyt-ia-redacao': {
+      title: 'NYT acusado de publicar artigo com IA: o que o caso ensina sobre uso responsavel nas redacoes',
+      description: 'Uma analise da Pangram Labs revelou que 9% dos artigos de grandes jornais ja contem conteudo gerado por IA. O caso do New York Times expoe o dilema central: usar IA para escrever ou para informar decisoes editoriais?',
+      date: '2026-03-26',
+      category: 'Analise',
+      readTime: '12 min',
+      author: 'Bruno Lopes',
+      role: 'Fundador, atalay.ia',
+      heroSvg: `<svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="800" height="400" fill="#0e1011"/>
+        <defs>
+          <radialGradient id="g-nyt-1" cx="30%" cy="50%"><stop offset="0%" stop-color="rgba(153,70,70,.08)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+          <radialGradient id="g-nyt-2" cx="70%" cy="50%"><stop offset="0%" stop-color="rgba(192,106,66,.08)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+        </defs>
+        <rect width="800" height="400" fill="url(#g-nyt-1)"/>
+        <rect width="800" height="400" fill="url(#g-nyt-2)"/>
+        <!-- Left: Document with AI-detected lines -->
+        <g transform="translate(160,80)">
+          <rect x="0" y="0" width="200" height="240" rx="8" stroke="rgba(255,255,255,.1)" stroke-width=".8" fill="rgba(255,255,255,.02)"/>
+          <text x="100" y="28" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,.35)">Article Content</text>
+          <line x1="20" y1="38" x2="180" y2="38" stroke="rgba(255,255,255,.06)" stroke-width=".5"/>
+          <!-- Normal text lines -->
+          <rect x="20" y="52" width="140" height="3" rx="1.5" fill="rgba(255,255,255,.12)"/>
+          <rect x="20" y="64" width="120" height="3" rx="1.5" fill="rgba(255,255,255,.1)"/>
+          <rect x="20" y="76" width="155" height="3" rx="1.5" fill="rgba(255,255,255,.12)"/>
+          <!-- AI-flagged lines (red highlight) -->
+          <rect x="16" y="90" width="168" height="18" rx="3" fill="rgba(153,70,70,.08)" stroke="rgba(153,70,70,.2)" stroke-width=".5"/>
+          <rect x="20" y="96" width="130" height="3" rx="1.5" fill="rgba(153,70,70,.35)"/>
+          <rect x="20" y="104" width="100" height="3" rx="1.5" fill="rgba(153,70,70,.25)"/>
+          <!-- Normal lines -->
+          <rect x="20" y="118" width="145" height="3" rx="1.5" fill="rgba(255,255,255,.12)"/>
+          <rect x="20" y="130" width="110" height="3" rx="1.5" fill="rgba(255,255,255,.1)"/>
+          <!-- AI-flagged lines -->
+          <rect x="16" y="142" width="168" height="18" rx="3" fill="rgba(153,70,70,.08)" stroke="rgba(153,70,70,.2)" stroke-width=".5"/>
+          <rect x="20" y="148" width="150" height="3" rx="1.5" fill="rgba(153,70,70,.35)"/>
+          <rect x="20" y="156" width="90" height="3" rx="1.5" fill="rgba(153,70,70,.25)"/>
+          <!-- Normal lines -->
+          <rect x="20" y="172" width="160" height="3" rx="1.5" fill="rgba(255,255,255,.12)"/>
+          <rect x="20" y="184" width="125" height="3" rx="1.5" fill="rgba(255,255,255,.1)"/>
+          <rect x="20" y="196" width="140" height="3" rx="1.5" fill="rgba(255,255,255,.12)"/>
+          <rect x="20" y="208" width="100" height="3" rx="1.5" fill="rgba(255,255,255,.08)"/>
+          <!-- Detection tag -->
+          <rect x="120" y="220" width="68" height="14" rx="3" fill="rgba(153,70,70,.12)" stroke="rgba(153,70,70,.25)" stroke-width=".5"/>
+          <text x="154" y="230" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(153,70,70,.6)">AI FLAGGED</text>
+        </g>
+        <!-- Center: dividing line -->
+        <line x1="400" y1="90" x2="400" y2="310" stroke="rgba(255,255,255,.06)" stroke-width=".5" stroke-dasharray="4 4"/>
+        <!-- Divider labels -->
+        <g transform="translate(400,70)">
+          <text x="-60" y="0" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(153,70,70,.5)">IA que escreve</text>
+          <text x="60" y="0" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(192,106,66,.6)">IA que analisa</text>
+        </g>
+        <!-- Right: Detection score card -->
+        <g transform="translate(470,90)">
+          <rect x="0" y="0" width="190" height="220" rx="8" stroke="rgba(192,106,66,.2)" stroke-width=".8" fill="rgba(192,106,66,.02)"/>
+          <text x="95" y="28" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" font-weight="600" fill="rgba(192,106,66,.6)">Detection Analysis</text>
+          <line x1="16" y1="38" x2="174" y2="38" stroke="rgba(255,255,255,.06)" stroke-width=".5"/>
+          <!-- Big stat -->
+          <text x="95" y="82" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700" fill="rgba(153,70,70,.6)">9%</text>
+          <text x="95" y="100" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9" fill="rgba(255,255,255,.3)">AI-generated content</text>
+          <!-- Stats rows -->
+          <line x1="16" y1="114" x2="174" y2="114" stroke="rgba(255,255,255,.04)" stroke-width=".5"/>
+          <g font-family="JetBrains Mono, monospace" font-size="9">
+            <text x="20" y="136" fill="rgba(255,255,255,.25)">Opinion pieces</text>
+            <rect x="126" y="126" width="44" height="16" rx="4" fill="rgba(153,70,70,.1)" stroke="rgba(153,70,70,.2)" stroke-width=".5"/>
+            <text x="148" y="137" text-anchor="middle" fill="rgba(153,70,70,.6)">6x</text>
+          </g>
+          <g font-family="JetBrains Mono, monospace" font-size="9">
+            <text x="20" y="162" fill="rgba(255,255,255,.25)">Newsroom</text>
+            <rect x="126" y="152" width="44" height="16" rx="4" fill="rgba(130,153,110,.08)" stroke="rgba(130,153,110,.15)" stroke-width=".5"/>
+            <text x="148" y="163" text-anchor="middle" fill="rgba(130,153,110,.5)">LOW</text>
+          </g>
+          <g font-family="JetBrains Mono, monospace" font-size="9">
+            <text x="20" y="188" fill="rgba(255,255,255,.25)">Confidence</text>
+            <rect x="126" y="178" width="44" height="16" rx="4" fill="rgba(192,106,66,.1)" stroke="rgba(192,106,66,.2)" stroke-width=".5"/>
+            <text x="148" y="189" text-anchor="middle" fill="rgba(192,106,66,.6)">0.87</text>
+          </g>
+          <!-- Bottom label -->
+          <text x="95" y="212" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,255,255,.15)">Pangram Labs, 2025</text>
+        </g>
+        <!-- Bottom status bar -->
+        <g transform="translate(160,340)">
+          <rect x="0" y="0" width="500" height="28" rx="6" stroke="rgba(255,255,255,.06)" stroke-width=".5" fill="rgba(255,255,255,.015)"/>
+          <circle cx="16" cy="14" r="4" fill="rgba(192,106,66,.4)"/>
+          <text x="28" y="18" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(255,255,255,.2)">atalay.ia: dados e sugestoes, nunca ghostwriting</text>
+        </g>
+      </svg>`,
+      content: `
+        <p class="article-lead">Em novembro de 2025, um ensaio publicado na coluna "Modern Love" do New York Times acendeu um debate que se espalhou por redacoes do mundo inteiro. O texto, assinado por Kate Gilgan e intitulado "I Was Deemed Unfit to Be a Mother", foi publicamente acusado de ter sido gerado por inteligencia artificial. O caso nao e isolado: uma analise da Pangram Labs revelou que aproximadamente 9% dos artigos publicados por grandes veiculos ja contem conteudo parcial ou totalmente gerado por IA. O que isso significa para o jornalismo?</p>
+
+        <h2>O que aconteceu no New York Times</h2>
+
+        <p>A acusacao partiu de Becky Tuch, editora do Lit Mag News, que publicou no X (antigo Twitter) que o ensaio de Gilgan "reads EXACTLY like AI slop" -- ou seja, parecia exatamente como texto generico gerado por IA. Criticos apontaram padroes linguisticos tipicos de modelos de linguagem: paralelismos excessivos ("not X, not X, but Y"), uso repetido da "regra de tres", e uma fluidez superficial que carece de fricao humana.</p>
+
+        <p>O debate escalou rapidamente. Kate Gilgan acabou reconhecendo que usou ChatGPT, Claude e Gemini como "collaborative editor" -- para "inspiration, guidance, and correction". A distincao entre usar IA como inspiracao e usar IA como ghostwriter tornou-se o centro da controversia.</p>
+
+        <p>O New York Times, por sua vez, declarou que jornalismo e "inherently a human endeavor" e que sua politica interna exige "human oversight" e "clear labeling" de qualquer uso de IA. Mas o caso expos a distancia entre politica institucional e pratica real.</p>
+
+        <h2>O que os dados revelam: o estudo Pangram Labs</h2>
+
+        <p>O caso do NYT nao existe no vacuo. A <a href='https://futurism.com/artificial-intelligence/analysis-new-york-times-ai-articles' target='_blank' rel='noopener'>Pangram Labs</a>, empresa especializada em deteccao de conteudo gerado por IA, conduziu uma analise sistematica de artigos publicados por grandes veiculos de comunicacao. Os resultados sao significativos:</p>
+
+        <ul>
+          <li><strong>Aproximadamente 9% dos artigos recentemente publicados</strong> continham conteudo parcial ou totalmente gerado por IA.</li>
+          <li><strong>Artigos de opiniao eram 6 vezes mais propensos</strong> a conter conteudo gerado por IA do que materias produzidas por equipes de reportagem.</li>
+          <li>A deteccao foi baseada em analise de padroes linguisticos, distribuicao de tokens e sinais estatisticos que diferenciam texto humano de texto sintetico.</li>
+        </ul>
+
+        <p>Esses numeros indicam que o uso de IA na producao de conteudo jornalistico ja e uma realidade -- nao uma hipotese futura. E na maioria dos casos, acontece sem qualquer transparencia para o leitor.</p>
+
+        <h2>Ghost writer vs. ferramenta editorial: a distincao que importa</h2>
+
+        <p>Existe uma diferenca fundamental entre dois modelos de uso de IA em redacoes:</p>
+
+        <h3>IA como ghost writer</h3>
+        <p>Nesse modelo, a IA gera o texto que sera publicado -- integralmente ou com edicoes cosmeticas. O jornalista atua como curador, nao como autor. O problema: o leitor acredita estar lendo um ser humano. A relacao de confianca editorial se rompe.</p>
+
+        <h3>IA como ferramenta editorial</h3>
+        <p>Nesse modelo, a IA analisa dados, sugere otimizacoes, detecta erros, identifica oportunidades de pauta -- mas <strong>nunca escreve o texto final</strong>. O jornalista continua sendo o autor. A IA informa decisoes; nao as toma. Como exploramos em <a href='/blog/como-ia-contextual-muda-jornalismo/'>por que IA generica nao funciona para jornalismo</a>, o valor real esta no contexto que a IA traz, nao no texto que ela gera.</p>
+
+        <p>Essa distincao nao e apenas semantica. Ela define o que e uso responsavel. E o que os leitores e os algoritmos vao passar a cobrar com cada vez mais rigor.</p>
+
+        <h2>O paradoxo da deteccao: como funciona e por que falha</h2>
+
+        <p>Ferramentas de deteccao de IA, como as usadas pela Pangram Labs, analisam padroes estatisticos no texto: distribuicao de perplexidade (quao previsivel e cada palavra no contexto), entropia, e padroes de repetição estrutural. Modelos de linguagem tendem a produzir texto com perplexidade mais baixa e uniforme -- sao consistentemente "previsiveis".</p>
+
+        <p>Mas essas ferramentas tem limitacoes importantes:</p>
+
+        <ul>
+          <li><strong>Falsos positivos:</strong> textos humanos com estilo formal e repetitivo podem ser erroneamente classificados como IA. Escritores tecnicos, academicos e colunistas com estilo formulaico sao frequentemente flagrados.</li>
+          <li><strong>Falsos negativos:</strong> texto gerado por IA e depois editado extensivamente por humanos pode passar despercebido. Quanto mais edicao humana, mais dificil a deteccao.</li>
+          <li><strong>Evolucao dos modelos:</strong> cada nova geracao de LLM produz texto mais "humano", reduzindo a eficacia dos detectores atuais. E uma corrida armamentista.</li>
+          <li><strong>Multilinguismo:</strong> a maioria dos detectores foi treinada em ingles. A eficacia em portugues e outros idiomas e significativamente menor.</li>
+        </ul>
+
+        <p>Confiar exclusivamente em detectores de IA nao e uma estrategia viavel. A solucao precisa ser institucional, nao apenas tecnologica.</p>
+
+        <h2>O que as grandes redacoes estao fazendo</h2>
+
+        <p>O caso do NYT nao e o unico. Diversas redacoes ja adotam IA de formas variadas -- algumas transparentes, outras nao:</p>
+
+        <ul>
+          <li><strong>Washington Post:</strong> usa IA para gerar resumos de podcasts, com rotulagem clara.</li>
+          <li><strong>Bloomberg:</strong> publica artigos com resumos gerados por IA, sinalizados como tal.</li>
+          <li><strong>Diversos veiculos:</strong> usam IA para gerar titulos alternativos para teste A/B, sem necessariamente divulgar.</li>
+          <li><strong>Ars Technica:</strong> <a href='https://futurism.com/artificial-intelligence/new-york-times-accused-ai-article' target='_blank' rel='noopener'>demitiu um reporter</a> que acidentalmente incluiu citacoes fabricadas por IA em uma materia.</li>
+        </ul>
+
+        <p>O padrao que emerge e claro: quando a IA e usada para gerar conteudo, os riscos sao altos. Quando e usada para analisar e sugerir, os riscos sao gerenciaveis.</p>
+
+        <h2>Quais politicas as redacoes precisam ter</h2>
+
+        <p>Com base nos casos reais e nas diretrizes de organizacoes como o Reuters Institute e as proprias <a href='https://developers.google.com/search/docs/essentials' target='_blank' rel='noopener'>politicas do Google sobre conteudo de IA</a>, redacoes que querem usar IA de forma responsavel precisam de:</p>
+
+        <ul>
+          <li><strong>Politica de uso explicita:</strong> documentar o que e permitido e o que nao e. "Usar IA para pesquisa" e diferente de "usar IA para escrever o lide". Cada caso precisa de regra clara.</li>
+          <li><strong>Rotulagem transparente:</strong> quando IA contribuiu substancialmente para o conteudo, o leitor precisa saber. O Google ja afirmou que transparencia e um fator positivo.</li>
+          <li><strong>Revisao humana obrigatoria:</strong> nenhum conteudo gerado por IA deve ser publicado sem revisao editorial humana. Isso inclui titulos, resumos e legendas.</li>
+          <li><strong>Treinamento da equipe:</strong> jornalistas precisam entender o que a IA faz bem (analise de dados, deteccao de padroes, sugestoes) e o que ela faz mal (precisao factual, nuance, voz autoral).</li>
+          <li><strong>Auditoria periodica:</strong> revisar regularmente como a IA esta sendo usada na pratica, nao apenas na teoria. O gap entre politica e pratica, como o caso NYT mostrou, pode ser significativo.</li>
+        </ul>
+
+        <h2>O caso a favor da transparencia</h2>
+
+        <p>Existe uma narrativa de que admitir o uso de IA enfraquece a credibilidade. Os dados mostram o contrario. Veiculos que sao transparentes sobre como usam IA -- para analise, otimizacao, sugestoes -- constroem mais confianca do que aqueles que usam IA escondida e sao eventualmente descobertos.</p>
+
+        <blockquote>
+          <p>"A questao nao e se sua redacao usa IA. A questao e: ela usa IA para escrever no lugar do jornalista, ou para dar ao jornalista informacoes melhores? O primeiro caso destrói confianca. O segundo a constroi."</p>
+        </blockquote>
+
+        <p>Como discutimos em <a href='/blog/voz-editorial-agentes/'>como a IA pode respeitar a voz de cada jornalista</a>, a tecnologia mais avancada nao e a que escreve melhor -- e a que entende o contexto editorial e oferece sugestoes que o jornalista consegue incorporar como suas, porque foram calibradas para o estilo dele.</p>
+
+        <h2>IA que analisa dados vs. IA que gera texto</h2>
+
+        <p>O caso do NYT cristaliza um dilema que toda redacao vai enfrentar. A linha divisoria e clara:</p>
+
+        <ul>
+          <li><strong>Uso de baixo risco:</strong> IA para analisar dados de performance, detectar tendencias, sugerir otimizacoes de SEO, verificar conformidade com o manual de redacao, gerar opcoes de titulo para teste. Nenhum texto final e gerado pela IA.</li>
+          <li><strong>Uso de alto risco:</strong> IA para escrever artigos, gerar citacoes, produzir analises opinativas, criar conteudo publicavel. O jornalista deixa de ser autor e vira curador.</li>
+        </ul>
+
+        <p>Essa e a abordagem que adotamos no <a href='/blog/lancamento-atalay-ia/'>atalay.ia</a>: uma ferramenta que nunca escreve no lugar do jornalista. Que analisa dados reais de performance, identifica oportunidades de pauta, verifica aderencia ao manual, e sugere otimizacoes -- mas o texto final e sempre humano. Como detalhamos em <a href='/blog/como-levar-ia-para-redacao/'>como levar IA para a redacao de forma pratica</a>, a adocao responsavel comeca com clareza sobre o papel da tecnologia.</p>
+
+        <h2>O que isso significa para o futuro</h2>
+
+        <p>O percentual de 9% identificado pela Pangram Labs tende a crescer. Os modelos estao ficando melhores. A tentacao de usar IA para produzir mais conteudo com menos gente vai aumentar, especialmente em redacoes sob pressao financeira -- um cenario que ja <a href='/blog/por-que-audiencia-jornal-cai/'>afeta a audiencia de jornais no Brasil</a>.</p>
+
+        <p>Mas a historia do jornalismo mostra que atalhos de credibilidade cobram preco. Fabricar citacoes sempre foi motivo de demissao. Plagiar sempre foi motivo de demissao. Publicar como seu algo que nao e seu sempre foi motivo de demissao. O uso opaco de IA generativa e a versao contemporanea desses mesmos erros.</p>
+
+        <p>As redacoes que vao se destacar sao as que adotam IA como ferramenta de inteligencia -- nao de producao. Que usam dados para <a href='/blog/ia-ferramenta-ou-ameaca-jornalismo/'>informar decisoes editoriais</a>, nao para substituir o trabalho do jornalista.</p>
+
+        <p>O jornalismo e, como o proprio NYT definiu, "inherently a human endeavor". A IA mais util e a que potencializa esse trabalho humano -- nao a que tenta substitui-lo.</p>
+      `,
+    },
+  'como-levar-ia-para-redacao': {
+      title: 'Como levar IA para a redação sem resistência da equipe',
+      description: 'A maior barreira para adoção de IA em redações não é tecnológica — é cultural. Um guia prático para gestores que querem implementar inteligência artificial sem gerar rejeição na equipe editorial.',
+      date: '2026-03-25',
+      category: 'Práticas',
+      readTime: '14 min',
+      author: 'Bruno Lopes',
+      role: 'Fundador, atalay.ia',
+      heroSvg: `<svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="800" height="400" fill="#0e1011"/>
+        <defs>
+          <radialGradient id="g-team-1" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(192,106,66,.1)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+          <radialGradient id="g-team-2" cx="20%" cy="60%"><stop offset="0%" stop-color="rgba(130,153,110,.06)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+          <radialGradient id="g-team-3" cx="80%" cy="40%"><stop offset="0%" stop-color="rgba(192,106,66,.08)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+        </defs>
+        <rect width="800" height="400" fill="url(#g-team-1)"/>
+        <rect width="800" height="400" fill="url(#g-team-2)"/>
+        <rect width="800" height="400" fill="url(#g-team-3)"/>
+        <!-- Timeline base line -->
+        <line x1="100" y1="200" x2="700" y2="200" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
+        <!-- Stage 1: DADOS -->
+        <g transform="translate(150,200)">
+          <circle cx="0" cy="0" r="6" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.15)" stroke-width=".8"/>
+          <rect x="-40" y="-80" width="80" height="50" rx="8" stroke="rgba(255,255,255,.1)" stroke-width=".6" fill="rgba(255,255,255,.02)"/>
+          <!-- Person icon - arms down, passive -->
+          <circle cx="0" cy="-62" r="6" stroke="rgba(255,255,255,.2)" stroke-width=".8" fill="none"/>
+          <line x1="0" y1="-56" x2="0" y2="-42" stroke="rgba(255,255,255,.2)" stroke-width=".8"/>
+          <line x1="-8" y1="-48" x2="8" y2="-48" stroke="rgba(255,255,255,.2)" stroke-width=".8"/>
+          <text x="0" y="28" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600" fill="rgba(255,255,255,.25)">DADOS</text>
+          <text x="0" y="44" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="8" fill="rgba(255,255,255,.15)">observando</text>
+        </g>
+        <!-- Connector 1-2 -->
+        <line x1="196" y1="200" x2="254" y2="200" stroke="rgba(255,255,255,.08)" stroke-width=".6" stroke-dasharray="4 3"/>
+        <polygon points="254,197 260,200 254,203" fill="rgba(255,255,255,.1)"/>
+        <!-- Stage 2: ANALISE -->
+        <g transform="translate(310,200)">
+          <circle cx="0" cy="0" r="6" fill="rgba(192,106,66,.15)" stroke="rgba(192,106,66,.25)" stroke-width=".8"/>
+          <rect x="-40" y="-80" width="80" height="50" rx="8" stroke="rgba(192,106,66,.15)" stroke-width=".6" fill="rgba(192,106,66,.02)"/>
+          <!-- Person icon - one arm up, curious -->
+          <circle cx="0" cy="-62" r="6" stroke="rgba(192,106,66,.3)" stroke-width=".8" fill="none"/>
+          <line x1="0" y1="-56" x2="0" y2="-42" stroke="rgba(192,106,66,.3)" stroke-width=".8"/>
+          <line x1="-8" y1="-48" x2="0" y2="-50" stroke="rgba(192,106,66,.3)" stroke-width=".8"/>
+          <line x1="0" y1="-50" x2="8" y2="-42" stroke="rgba(192,106,66,.3)" stroke-width=".8"/>
+          <text x="0" y="28" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600" fill="rgba(192,106,66,.35)">ANALISE</text>
+          <text x="0" y="44" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="8" fill="rgba(192,106,66,.25)">testando</text>
+        </g>
+        <!-- Connector 2-3 -->
+        <line x1="356" y1="200" x2="414" y2="200" stroke="rgba(192,106,66,.1)" stroke-width=".6" stroke-dasharray="4 3"/>
+        <polygon points="414,197 420,200 414,203" fill="rgba(192,106,66,.15)"/>
+        <!-- Stage 3: SUGESTOES -->
+        <g transform="translate(470,200)">
+          <circle cx="0" cy="0" r="6" fill="rgba(192,106,66,.3)" stroke="rgba(192,106,66,.4)" stroke-width=".8"/>
+          <rect x="-40" y="-80" width="80" height="50" rx="8" stroke="rgba(192,106,66,.25)" stroke-width=".8" fill="rgba(192,106,66,.03)"/>
+          <!-- Person icon - both arms engaged -->
+          <circle cx="0" cy="-62" r="6" stroke="rgba(192,106,66,.5)" stroke-width=".8" fill="none"/>
+          <line x1="0" y1="-56" x2="0" y2="-42" stroke="rgba(192,106,66,.5)" stroke-width=".8"/>
+          <line x1="-10" y1="-44" x2="0" y2="-50" stroke="rgba(192,106,66,.5)" stroke-width=".8"/>
+          <line x1="10" y1="-44" x2="0" y2="-50" stroke="rgba(192,106,66,.5)" stroke-width=".8"/>
+          <text x="0" y="28" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600" fill="rgba(192,106,66,.5)">SUGESTOES</text>
+          <text x="0" y="44" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="8" fill="rgba(192,106,66,.35)">confiando</text>
+        </g>
+        <!-- Connector 3-4 -->
+        <line x1="516" y1="200" x2="574" y2="200" stroke="rgba(192,106,66,.15)" stroke-width=".6" stroke-dasharray="4 3"/>
+        <polygon points="574,197 580,200 574,203" fill="rgba(192,106,66,.25)"/>
+        <!-- Stage 4: COPILOTO (highlighted) -->
+        <g transform="translate(630,200)">
+          <circle cx="0" cy="0" r="7" fill="rgba(192,106,66,.5)" stroke="rgba(192,106,66,.6)" stroke-width="1"/>
+          <circle cx="0" cy="0" r="14" stroke="rgba(192,106,66,.12)" stroke-width=".5" fill="none"/>
+          <circle cx="0" cy="0" r="22" stroke="rgba(192,106,66,.06)" stroke-width=".4" fill="none"/>
+          <rect x="-40" y="-80" width="80" height="50" rx="8" stroke="rgba(192,106,66,.4)" stroke-width="1" fill="rgba(192,106,66,.05)"/>
+          <!-- Person icon - arms up, celebrating -->
+          <circle cx="0" cy="-62" r="6" stroke="rgba(192,106,66,.7)" stroke-width="1" fill="none"/>
+          <line x1="0" y1="-56" x2="0" y2="-42" stroke="rgba(192,106,66,.7)" stroke-width="1"/>
+          <line x1="-10" y1="-56" x2="0" y2="-50" stroke="rgba(192,106,66,.7)" stroke-width="1"/>
+          <line x1="10" y1="-56" x2="0" y2="-50" stroke="rgba(192,106,66,.7)" stroke-width="1"/>
+          <text x="0" y="36" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600" fill="rgba(192,106,66,.7)">COPILOTO</text>
+          <text x="0" y="52" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="8" fill="rgba(192,106,66,.5)">integrando</text>
+        </g>
+        <!-- Bottom label -->
+        <text x="400" y="370" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(255,255,255,.12)">jornada de adocao · semanas, nao dias</text>
+        <!-- Top context -->
+        <g font-family="JetBrains Mono, monospace" font-size="8">
+          <rect x="100" y="80" width="90" height="22" rx="4" stroke="rgba(255,255,255,.06)" stroke-width=".5" fill="rgba(255,255,255,.02)"/>
+          <text x="145" y="95" text-anchor="middle" fill="rgba(255,255,255,.2)">resistencia</text>
+          <rect x="350" y="80" width="90" height="22" rx="4" stroke="rgba(192,106,66,.1)" stroke-width=".5" fill="rgba(192,106,66,.02)"/>
+          <text x="395" y="95" text-anchor="middle" fill="rgba(192,106,66,.3)">curiosidade</text>
+          <rect x="600" y="80" width="90" height="22" rx="4" stroke="rgba(192,106,66,.2)" stroke-width=".5" fill="rgba(192,106,66,.03)"/>
+          <text x="645" y="95" text-anchor="middle" fill="rgba(192,106,66,.45)">confianca</text>
+        </g>
+        <!-- Dashed arcs from labels to stages -->
+        <line x1="145" y1="102" x2="150" y2="160" stroke="rgba(255,255,255,.05)" stroke-width=".4" stroke-dasharray="2 3"/>
+        <line x1="395" y1="102" x2="390" y2="160" stroke="rgba(192,106,66,.06)" stroke-width=".4" stroke-dasharray="2 3"/>
+        <line x1="645" y1="102" x2="630" y2="160" stroke="rgba(192,106,66,.1)" stroke-width=".4" stroke-dasharray="2 3"/>
+      </svg>`,
+      content: `
+        <p class="article-lead">A maior parte dos projetos de IA que fracassam em redações não falham por causa da tecnologia. Falham porque alguem decidiu implementar de cima para baixo, sem ouvir quem realmente usa a ferramenta todos os dias. Depois de trabalhar diretamente com equipes editoriais na adocao do atalay.ia, aprendi que o caminho importa mais do que a ferramenta.</p>
+
+        <h2>Por que jornalistas resistem a IA</h2>
+
+        <p>Antes de qualquer plano de implementacao, e preciso entender de onde vem a resistencia. Ela nao e irracional — e, na maioria das vezes, fundamentada.</p>
+
+        <h3>Medo de substituicao</h3>
+
+        <p>A narrativa dominante sobre IA na midia e de eliminacao de empregos. Jornalistas leem matérias sobre cortes em redacoes que adotaram IA e, compreensivelmente, ficam na defensiva. O <a href="https://rfrts.uk/DNR" target="_blank" rel="noopener">Reuters Institute Digital News Report</a> de 2025 identificou que 62% dos jornalistas veem IA como uma ameaca potencial ao emprego, mesmo entre aqueles que reconhecem seus beneficios.</p>
+
+        <p>Essa preocupacao nao pode ser descartada com um "nao vamos demitir ninguem". Precisa ser respondida com fatos e, principalmente, com acoes visiveis.</p>
+
+        <h3>Preocupacao com qualidade</h3>
+
+        <p>Jornalistas serios se preocupam com precisao. Eles viram as alucinacoes do ChatGPT. Viram textos gerados por IA que pareciam plausíveis mas estavam errados. E sabem que no jornalismo, um erro factual nao e apenas embaracoso — pode ser processado judicialmente. A reacao natural e rejeitar qualquer ferramenta que introduza risco editorial.</p>
+
+        <h3>Autonomia criativa</h3>
+
+        <p>Escrever e um ato criativo, mesmo no jornalismo hard news. Cada jornalista tem um estilo, uma voz, um jeito de construir narrativa. Ferramentas que padronizam o texto — que fazem tudo soar como se a mesma pessoa tivesse escrito — sao percebidas como uma agressao a identidade profissional.</p>
+
+        <p>Entender essas tres camadas de resistencia e o primeiro passo para supera-las. E cada uma exige uma resposta diferente.</p>
+
+        <h2>Copiloto vs. substituto: a distincao que muda tudo</h2>
+
+        <p>Existe uma diferenca fundamental entre IA que <strong>faz o trabalho do jornalista</strong> e IA que <strong>ajuda o jornalista a fazer melhor o proprio trabalho</strong>. A primeira gera rejeicao. A segunda gera adocao.</p>
+
+        <p>Um copiloto nao escreve a materia. Ele sinaliza que um termo viola o manual de redacao. Ele mostra que um titulo tem baixo potencial de clique no Discover. Ele alerta que um tema esta em alta e a redacao tem autoridade nele. A decisao continua sendo do jornalista — a IA apenas amplia a visao.</p>
+
+        <blockquote>
+          <p>"A pergunta certa nao e 'a IA consegue escrever?' — e 'o que o jornalista faria se tivesse acesso a dados que hoje ninguem esta olhando?'"</p>
+        </blockquote>
+
+        <p>Essa distincao precisa ser comunicada antes de qualquer implementacao. Se a equipe percebe a ferramenta como substituta, a resistencia sera maxima. Se percebe como copiloto — como um editor adicional que esta ali para ajudar, nao para julgar — a conversa muda completamente. Nos detalhamos essa dinamica em <a href="/blog/ia-ferramenta-ou-ameaca-jornalismo/">IA: ferramenta ou ameaca para o jornalismo</a>.</p>
+
+        <h2>Comece pelos dados, nao pela escrita</h2>
+
+        <p>O erro mais comum que vejo em redacoes tentando adotar IA e comecar pelo produto mais sensível: a escrita. Se a primeira coisa que a ferramenta faz e sugerir mudancas no texto do jornalista, a reacao reflexiva e defesa.</p>
+
+        <p>A abordagem que funciona e comecar pelo que nao ameaca ninguem: <strong>dados</strong>.</p>
+
+        <ul>
+          <li><strong>Monitoramento de trends:</strong> mostrar o que esta em alta e como isso se conecta com as editorias da redacao. Ninguem se sente ameacado por um painel de dados.</li>
+          <li><strong>Analise de performance:</strong> revelar quais tipos de conteudo performam melhor em cada canal. E informacao pura — sem julgamento sobre a qualidade do texto de ninguem.</li>
+          <li><strong>Autoridade por editoria:</strong> mostrar onde a redacao tem mais credibilidade perante os algoritmos de distribuicao. Isso gera curiosidade, nao resistencia.</li>
+        </ul>
+
+        <p>Essa e a filosofia que descrevemos em <a href="/blog/pipeline-dados-editoriais/">dados primeiro, IA depois</a>. Quando a equipe ja esta usando dados para tomar decisoes editoriais, o salto para sugestoes automatizadas se torna natural — e desejado.</p>
+
+        <h2>Quick wins que constroem confianca</h2>
+
+        <p>Confianca nao se constroi com apresentacoes bonitas. Se constroi com resultados tangiveis. As primeiras semanas de qualquer implementacao de IA em uma redacao precisam gerar vitorias rapidas e visiveis.</p>
+
+        <p>Exemplos que funcionaram nas redacoes com quem trabalhamos:</p>
+
+        <ul>
+          <li><strong>Tempo economizado em verificacao de manual:</strong> um jornalista que gastava 15 minutos revisando siglas, grafias e regras do manual agora tem isso feito em segundos. Ele nota. Ele agradece.</li>
+          <li><strong>Alertas de trend que viraram pauta:</strong> quando a IA sinaliza um tema em alta 2 horas antes da concorrencia, e a redacao publica primeiro, o credito fica visivel. Todo mundo viu o alerta. Todo mundo viu o resultado.</li>
+          <li><strong>Titulos A/B com dados:</strong> em vez de discutir qual titulo e melhor com base em opiniao, a equipe passa a ter dados de performance de titulos similares. A conversa muda de "eu acho" para "os dados mostram".</li>
+          <li><strong>Deteccao de erros que teriam passado:</strong> quando a IA flagra um erro factual ou uma violacao de manual que teria ido ao ar, o jornalista entende o valor imediatamente.</li>
+        </ul>
+
+        <p>Cada quick win e uma camada de confianca. Acumule o suficiente e a equipe para de perguntar "por que usar IA?" e comeca a perguntar "o que mais ela faz?".</p>
+
+        <h2>Metricas de adocao: o que medir</h2>
+
+        <p>Implementar IA sem medir adocao e voar cego. Mas as metricas certas nao sao as que a maioria dos gestores acompanha.</p>
+
+        <h3>Metricas que importam</h3>
+
+        <ul>
+          <li><strong>Taxa de aceitacao de sugestoes:</strong> de todas as sugestoes da IA, quantas o jornalista aceita? Se o numero e baixo, as sugestoes nao sao uteis — ou a confianca ainda nao existe.</li>
+          <li><strong>Tempo ate primeira interacao:</strong> quanto tempo demora entre o jornalista abrir a ferramenta e usá-la de fato? Se ele abre e fecha sem interagir, ha um problema de onboarding ou de valor percebido.</li>
+          <li><strong>Frequencia de uso voluntario:</strong> a equipe usa a ferramenta mesmo quando nao e obrigada? Uso voluntario e o melhor indicador de adocao real.</li>
+          <li><strong>Reducao de erros em publicacao:</strong> depois da implementacao, os erros de manual e gramática diminuiram? Esse dado convence editores-chefes.</li>
+          <li><strong>Impacto no trafego:</strong> as materias produzidas com auxilio da IA performam melhor? Essa e a metrica que sustenta o projeto a longo prazo. Abordamos esse tema em detalhe em <a href="/blog/por-que-audiencia-jornal-cai/">por que a audiencia do jornal cai</a>.</li>
+        </ul>
+
+        <h3>Metricas que enganam</h3>
+
+        <ul>
+          <li><strong>Numero de logins:</strong> logar nao significa usar. Um jornalista pode abrir a ferramenta por obrigacao e fechar em 10 segundos.</li>
+          <li><strong>Volume de texto processado:</strong> processar muito texto nao significa que o resultado esta sendo util. Qualidade da interacao importa mais que volume.</li>
+        </ul>
+
+        <h2>Envolvimento da equipe: nao imponha, convide</h2>
+
+        <p>A pior forma de introduzir IA em uma redacao e por decreto. "A partir de segunda, todos usam a ferramenta X" e uma receita para resistencia passiva — a equipe usa por obrigacao, mas sabota com desinteresse.</p>
+
+        <p>O que funciona:</p>
+
+        <ul>
+          <li><strong>Comece com voluntarios:</strong> identifique 2-3 jornalistas curiosos sobre tecnologia. Nao precisa ser o mais sênior — precisa ser alguem que vai testar com boa vontade e dar feedback honesto.</li>
+          <li><strong>Transforme-os em champions:</strong> quando esses voluntarios tem resultados positivos, eles viram embaixadores naturais. Um colega dizendo "isso me economizou 20 minutos" tem mais credibilidade do que qualquer apresentacao do gestor.</li>
+          <li><strong>Faca sessoes de feedback:</strong> reuna a equipe regularmente para ouvir o que funciona e o que irrita. Nao para defender a ferramenta — para melhorá-la. Quando a equipe percebe que o feedback deles muda a ferramenta, o senso de propriedade aumenta.</li>
+          <li><strong>Respeite os que nao querem:</strong> forcar adocao gera ressentimento. Alguns jornalistas vao adotar depois de ver colegas usando com sucesso. Outros podem nunca adotar — e tudo bem, se a producao deles continua forte.</li>
+        </ul>
+
+        <p>O projeto <a href="https://www.lse.ac.uk/media-and-communications/polis/JournalismAI" target="_blank" rel="noopener">JournalismAI da LSE</a> documentou que redacoes com abordagem bottom-up na adocao de IA — onde a equipe participa das decisoes — tem taxas de sucesso significativamente maiores do que aquelas com implementacao top-down.</p>
+
+        <h2>O que funciona vs. o que gera rejeicao</h2>
+
+        <p>Depois de acompanhar implementacoes em redacoes reais, os padroes ficam claros:</p>
+
+        <h3>Gera adocao</h3>
+
+        <ul>
+          <li>Comecou com dados e dashboards, nao com correcao de texto</li>
+          <li>Os primeiros usuarios foram voluntarios, nao designados</li>
+          <li>A IA sugere, nunca impoe — o jornalista decide</li>
+          <li>Resultados foram compartilhados publicamente (materia que performou bem por causa de um alerta de trend)</li>
+          <li>A ferramenta preserva a voz do jornalista em vez de padronizar</li>
+          <li>Feedback da equipe resultou em mudancas visiveis na ferramenta</li>
+        </ul>
+
+        <h3>Gera rejeicao</h3>
+
+        <ul>
+          <li>Implementacao por decreto, sem consulta a equipe</li>
+          <li>Primeira interacao e a IA "corrigindo" o texto do jornalista</li>
+          <li>Metricas de uso sendo cobradas ("voce usou a ferramenta esta semana?")</li>
+          <li>Sugestoes que soam genericas e nao conhecem o contexto da redacao</li>
+          <li>Falta de transparencia sobre como a IA funciona e o que ela faz com os dados</li>
+          <li>Promessas exageradas sobre resultados</li>
+        </ul>
+
+        <p>O caso do <a href="/blog/caso-nyt-ia-redacao/">New York Times com IA na redacao</a> ilustra bem como ate organizacoes de ponta enfrentam resistencia quando a comunicacao e a abordagem nao sao cuidadosas.</p>
+
+        <h2>Treinamento e transparencia</h2>
+
+        <p>Dois elementos sao inegociaveis para adocao sustentável: treinamento e transparencia.</p>
+
+        <h3>Treinamento pratico, nao teorico</h3>
+
+        <p>Jornalistas nao precisam saber como redes neurais funcionam. Precisam saber como a ferramenta os ajuda no dia a dia. O treinamento ideal e:</p>
+
+        <ul>
+          <li><strong>Curto:</strong> 30 minutos, nao 3 horas. Ninguem em uma redacao tem tempo para workshops longos.</li>
+          <li><strong>Pratico:</strong> use o proprio texto do jornalista como exemplo. Mostre a ferramenta funcionando com conteudo real, nao com demos preparadas.</li>
+          <li><strong>Recorrente:</strong> uma sessao nao basta. A cada nova funcionalidade, uma demonstracao rapida. Micro-treinamentos funcionam melhor que aulas formais.</li>
+          <li><strong>Peer-led:</strong> os champions da equipe treinando colegas tem mais impacto do que treinamento vindo de fora.</li>
+        </ul>
+
+        <h3>Transparencia radical</h3>
+
+        <p>A equipe precisa saber:</p>
+
+        <ul>
+          <li>O que a IA faz com o texto — e o que nao faz (o texto nao e armazenado para treinar modelos)</li>
+          <li>Como as sugestoes sao geradas — nao a arquitetura tecnica, mas a logica ("a sugestao e baseada em dados de performance dos ultimos 90 dias da sua editoria")</li>
+          <li>Quais dados a ferramenta acessa — e quais nao acessa</li>
+          <li>Quem ve as metricas de uso — e para que servem (melhorar a ferramenta, nao vigiar a equipe)</li>
+        </ul>
+
+        <p>O <a href="https://rfrts.uk/DNR" target="_blank" rel="noopener">Reuters Institute</a> destaca que a confianca dos jornalistas em ferramentas de IA esta diretamente correlacionada com o nivel de transparencia sobre como essas ferramentas operam. Sem transparencia, sem confianca.</p>
+
+        <h2>Preservacao da voz editorial: o antidoto contra o medo principal</h2>
+
+        <p>Se existe uma unica funcionalidade que muda a percepcao de jornalistas sobre IA, e a preservacao da voz. Quando o jornalista ve que a sugestao soa como algo que <em>ele</em> escreveria — e nao como texto generico de maquina — a resistencia dissolve.</p>
+
+        <p>Isso exige uma IA que conhece o perfil de escrita de cada jornalista: comprimento medio de frase, estilo de lead, uso de adjetivos, nivel de formalidade. Como descrevemos em <a href="/blog/voz-editorial-agentes/">perfis de voz editorial</a>, o atalay.ia captura esses padroes em tres camadas — preferencias declaradas, analise de historico e feedback continuo.</p>
+
+        <p>O resultado pratico: um jornalista com estilo direto e factual recebe sugestoes diretas e factuais. Um colunista analitico recebe sugestoes com mais contexto e nuance. A IA se adapta ao jornalista, nao o contrario.</p>
+
+        <p>Isso elimina o medo de homogeneizacao. E elimina a principal objecao criativa contra IA na redacao. A diferenca entre <a href="/blog/como-ia-contextual-muda-jornalismo/">IA contextual e IA generica</a> e exatamente essa: uma respeita o contexto, a outra ignora.</p>
+
+        <h2>Um roteiro pratico de implementacao</h2>
+
+        <p>Para gestores prontos para comecar, este e o roteiro que recomendo com base na experiencia real:</p>
+
+        <h3>Semana 1-2: Fundacao</h3>
+        <ul>
+          <li>Apresente a ferramenta em uma reuniao informal, nao em um comunicado corporativo</li>
+          <li>Explique o modelo copiloto: a IA sugere, o jornalista decide</li>
+          <li>Recrute 2-3 voluntarios para um piloto</li>
+          <li>Comece apenas com dados e monitoramento de trends</li>
+        </ul>
+
+        <h3>Semana 3-4: Primeiros resultados</h3>
+        <ul>
+          <li>Compartilhe os primeiros quick wins publicamente</li>
+          <li>Faca uma sessao de feedback com os voluntarios</li>
+          <li>Ajuste com base no que ouviu</li>
+          <li>Convide mais 3-4 pessoas que demonstraram curiosidade</li>
+        </ul>
+
+        <h3>Semana 5-6: Expansao</h3>
+        <ul>
+          <li>Introduza sugestoes de titulo e analise de texto</li>
+          <li>Mostre os perfis de voz — cada jornalista ve como a IA entende o estilo dele</li>
+          <li>Comece a medir taxa de aceitacao de sugestoes</li>
+          <li>Faca os champions treinarem colegas em sessoes curtas</li>
+        </ul>
+
+        <h3>Semana 7-8: Consolidacao</h3>
+        <ul>
+          <li>Abra acesso para toda a equipe (sem obrigatoriedade)</li>
+          <li>Publique um resumo de resultados: tempo economizado, erros evitados, pautas geradas</li>
+          <li>Colete depoimentos dos usuarios mais ativos</li>
+          <li>Defina metricas de longo prazo para acompanhamento contínuo</li>
+        </ul>
+
+        <h2>A mudanca cultural e o verdadeiro projeto</h2>
+
+        <p>Implementar uma ferramenta de IA leva dias. Mudar a cultura de uma redacao em relacao a IA leva meses. O erro e tratar a implementacao como um projeto de tecnologia quando, na verdade, e um projeto de gestao de mudanca.</p>
+
+        <p>Os gestores que tem sucesso nessa transicao sao os que entendem que a ferramenta e apenas o meio. O fim e uma redacao que toma decisoes editoriais melhores porque tem acesso a dados e inteligencia que antes nao existiam. Uma redacao onde o jornalista nao compete com a IA — ele e amplificado por ela.</p>
+
+        <p>A tecnologia esta pronta. A questao e se a abordagem vai ser digna da equipe que vai usa-la.</p>
+      `,
+    },
+  'ia-ferramenta-ou-ameaca-jornalismo': {
+      title: 'IA na redação: ferramenta editorial ou ameaça ao jornalismo?',
+      description: 'O debate sobre inteligência artificial nas redações está polarizado entre entusiastas e céticos. Os dados mostram um caminho do meio: IA que analisa, não IA que escreve.',
+      date: '2026-03-24',
+      category: 'Análise',
+      readTime: '14 min',
+      author: 'Bruno Lopes',
+      role: 'Fundador, atalay.ia',
+      heroSvg: `<svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="800" height="400" fill="#0e1011"/>
+        <defs>
+          <radialGradient id="g-bal-1" cx="25%" cy="50%"><stop offset="0%" stop-color="rgba(153,110,110,.1)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+          <radialGradient id="g-bal-2" cx="75%" cy="50%"><stop offset="0%" stop-color="rgba(192,106,66,.1)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+          <linearGradient id="g-bal-3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="rgba(192,106,66,.3)"/><stop offset="100%" stop-color="rgba(192,106,66,.05)"/></linearGradient>
+          <linearGradient id="g-bal-4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="rgba(153,110,110,.2)"/><stop offset="100%" stop-color="rgba(153,110,110,.04)"/></linearGradient>
+        </defs>
+        <rect width="800" height="400" fill="url(#g-bal-1)"/>
+        <rect width="800" height="400" fill="url(#g-bal-2)"/>
+        <!-- Center divider line -->
+        <line x1="400" y1="60" x2="400" y2="340" stroke="rgba(255,255,255,.06)" stroke-width=".5"/>
+        <!-- Balance fulcrum -->
+        <polygon points="400,220 390,240 410,240" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.1)" stroke-width=".5"/>
+        <line x1="390" y1="240" x2="410" y2="240" stroke="rgba(255,255,255,.1)" stroke-width=".6"/>
+        <line x1="395" y1="240" x2="395" y2="260" stroke="rgba(255,255,255,.06)" stroke-width=".5"/>
+        <line x1="405" y1="240" x2="405" y2="260" stroke="rgba(255,255,255,.06)" stroke-width=".5"/>
+        <rect x="385" y="258" width="30" height="6" rx="2" fill="rgba(255,255,255,.06)"/>
+        <!-- Balance beam (tilted: left side lower/heavier = risky, right side higher = better) -->
+        <line x1="180" y1="218" x2="620" y2="198" stroke="rgba(255,255,255,.12)" stroke-width="1.2" stroke-linecap="round"/>
+        <!-- LEFT SIDE: IA que escreve (faded, red-ish) -->
+        <g transform="translate(200,100)">
+          <text x="0" y="0" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="13" font-weight="600" fill="rgba(153,110,110,.6)">IA que escreve</text>
+          <rect x="-90" y="14" width="180" height="96" rx="8" stroke="rgba(153,110,110,.2)" stroke-width=".7" fill="rgba(153,110,110,.03)" stroke-dasharray="4 3"/>
+          <!-- Risk metrics -->
+          <g font-family="JetBrains Mono, monospace" font-size="9">
+            <text x="-72" y="36" fill="rgba(153,110,110,.4)">fabrication</text>
+            <rect x="40" y="27" width="38" height="14" rx="3" fill="rgba(153,110,110,.08)" stroke="rgba(153,110,110,.15)" stroke-width=".5"/>
+            <text x="49" y="38" fill="rgba(153,110,110,.55)">HIGH</text>
+            <text x="-72" y="58" fill="rgba(153,110,110,.4)">voice loss</text>
+            <rect x="40" y="49" width="38" height="14" rx="3" fill="rgba(153,110,110,.08)" stroke="rgba(153,110,110,.15)" stroke-width=".5"/>
+            <text x="49" y="60" fill="rgba(153,110,110,.55)">HIGH</text>
+            <text x="-72" y="80" fill="rgba(153,110,110,.4)">credibility</text>
+            <rect x="40" y="71" width="38" height="14" rx="3" fill="rgba(153,110,110,.08)" stroke="rgba(153,110,110,.15)" stroke-width=".5"/>
+            <text x="53" y="82" fill="rgba(153,110,110,.55)">-9%</text>
+            <text x="-72" y="102" fill="rgba(153,110,110,.35)">detection</text>
+            <rect x="40" y="93" width="38" height="14" rx="3" fill="rgba(153,110,110,.06)" stroke="rgba(153,110,110,.12)" stroke-width=".5"/>
+            <text x="53" y="104" fill="rgba(153,110,110,.45)">89%</text>
+          </g>
+          <!-- X mark overlay -->
+          <line x1="-90" y1="14" x2="90" y2="110" stroke="rgba(153,110,110,.1)" stroke-width=".8"/>
+          <line x1="90" y1="14" x2="-90" y2="110" stroke="rgba(153,110,110,.1)" stroke-width=".8"/>
+        </g>
+        <!-- RIGHT SIDE: IA que analisa (active, brand orange) -->
+        <g transform="translate(580,90)">
+          <text x="0" y="0" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="13" font-weight="600" fill="rgba(192,106,66,.7)">IA que analisa</text>
+          <rect x="-90" y="14" width="180" height="96" rx="8" stroke="rgba(192,106,66,.3)" stroke-width=".8" fill="rgba(192,106,66,.03)"/>
+          <!-- Positive metrics -->
+          <g font-family="JetBrains Mono, monospace" font-size="9">
+            <text x="-72" y="36" fill="rgba(192,106,66,.5)">data insight</text>
+            <rect x="40" y="27" width="38" height="14" rx="3" fill="rgba(130,153,110,.08)" stroke="rgba(130,153,110,.2)" stroke-width=".5"/>
+            <text x="53" y="38" fill="rgba(130,153,110,.6)">ON</text>
+            <text x="-72" y="58" fill="rgba(192,106,66,.5)">voice kept</text>
+            <rect x="40" y="49" width="38" height="14" rx="3" fill="rgba(130,153,110,.08)" stroke="rgba(130,153,110,.2)" stroke-width=".5"/>
+            <text x="49" y="60" fill="rgba(130,153,110,.6)">100%</text>
+            <text x="-72" y="80" fill="rgba(192,106,66,.5)">compliance</text>
+            <rect x="40" y="71" width="38" height="14" rx="3" fill="rgba(130,153,110,.08)" stroke="rgba(130,153,110,.2)" stroke-width=".5"/>
+            <text x="53" y="82" fill="rgba(130,153,110,.6)">YES</text>
+            <text x="-72" y="102" fill="rgba(192,106,66,.45)">efficiency</text>
+            <rect x="40" y="93" width="38" height="14" rx="3" fill="rgba(192,106,66,.1)" stroke="rgba(192,106,66,.2)" stroke-width=".5"/>
+            <text x="49" y="104" fill="rgba(192,106,66,.6)">+40%</text>
+          </g>
+          <!-- Active glow -->
+          <circle cx="90" cy="14" r="4" fill="rgba(192,106,66,.4)"/>
+          <circle cx="90" cy="14" r="9" stroke="rgba(192,106,66,.12)" stroke-width=".5" fill="none"/>
+        </g>
+        <!-- Bottom label -->
+        <g transform="translate(400,360)">
+          <text x="0" y="0" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(255,255,255,.15)">o mesmo modelo, dois usos opostos</text>
+        </g>
+        <!-- Hanging pans from balance beam -->
+        <line x1="200" y1="218" x2="200" y2="230" stroke="rgba(153,110,110,.15)" stroke-width=".6"/>
+        <path d="M170,230 Q200,245 230,230" stroke="rgba(153,110,110,.12)" stroke-width=".6" fill="rgba(153,110,110,.03)"/>
+        <line x1="580" y1="200" x2="580" y2="210" stroke="rgba(192,106,66,.2)" stroke-width=".6"/>
+        <path d="M550,210 Q580,225 610,210" stroke="rgba(192,106,66,.15)" stroke-width=".6" fill="rgba(192,106,66,.03)"/>
+      </svg>`,
+      content: `
+        <p class="article-lead">O debate sobre inteligencia artificial nas redacoes esta polarizado. De um lado, entusiastas prometem que a IA vai salvar o jornalismo. Do outro, ceticos alertam que ela vai destrui-lo. Os dois lados estao errados — e os dados mostram por que.</p>
+
+        <h2>A polarizacao que nao ajuda ninguem</h2>
+
+        <p>Nas ultimas semanas, dois eventos trouxeram o debate sobre IA e jornalismo de volta ao centro das atencoes. O <a href="https://futurism.com/artificial-intelligence/new-york-times-accused-ai-article" target="_blank" rel="noopener">caso do New York Times</a>, onde Kate Gilgan admitiu ter usado ChatGPT, Claude e Gemini para escrever um ensaio publicado na coluna "Modern Love", reacendeu a discussao sobre os limites eticos da IA na producao editorial. E uma <a href="https://futurism.com/artificial-intelligence/analysis-new-york-times-ai-articles" target="_blank" rel="noopener">analise da Pangram Labs</a> revelou que aproximadamente 9% dos artigos publicados em grandes jornais contem conteudo gerado por IA — com artigos de opiniao tendo probabilidade 6 vezes maior de conter texto artificial.</p>
+
+        <p>Esses numeros assustam. E deveriam. Mas a reacao binaria — "IA e o futuro" versus "IA e o fim" — nao ajuda ninguem a tomar decisoes praticas. A pergunta certa nao e se devemos usar IA nas redacoes. E <strong>como</strong> devemos usar.</p>
+
+        <p>Analisamos esse tema em profundidade no artigo sobre o <a href="/blog/caso-nyt-ia-redacao/">caso NYT e suas implicacoes para redacoes</a>. Aqui, vamos alem do caso individual para examinar o panorama completo.</p>
+
+        <h2>Os riscos reais: o que da errado quando IA escreve</h2>
+
+        <p>Vamos comecar pelo lado incomodo. Ha riscos concretos e documentados no uso de IA para geracao de conteudo jornalistico. Ignorar esses riscos nao e otimismo — e negligencia.</p>
+
+        <h3>Fabricacao e alucinacao</h3>
+
+        <p>Modelos de linguagem inventam. Nao por malicia, mas por design: eles geram texto estatisticamente provavel, nao factualmente verificado. Em 2024, um reporter da Ars Technica foi demitido apos publicar uma materia com citacoes fabricadas por IA. As aspas pareciam reais. As fontes nao existiam.</p>
+
+        <p>Para jornalismo, onde cada citacao precisa ser verificavel e cada dado precisa ter origem, esse comportamento e inaceitavel. Nao e uma falha corrigivel com um prompt melhor — e uma limitacao estrutural de como esses modelos funcionam.</p>
+
+        <h3>Homogeneizacao da voz editorial</h3>
+
+        <p>Quando multiplos jornalistas usam a mesma IA para "melhorar" seus textos, algo previsivel acontece: todos comecam a soar igual. A IA tem um estilo proprio — frases equilibradas, vocabulario neutro, estrutura previsivel. Esse estilo funciona para emails corporativos. Para jornalismo, <a href="/blog/voz-editorial-agentes/">a voz e patrimonio</a>.</p>
+
+        <p>Um colunista de esportes tem ritmo diferente de um reporter de politica. Essa diversidade de vozes e o que da personalidade a uma publicacao. Quando a IA padroniza tudo, o jornal perde identidade.</p>
+
+        <h3>Perda de credibilidade</h3>
+
+        <p>Pesquisas do <a href="https://reutersinstitute.politics.ox.ac.uk/" target="_blank" rel="noopener">Reuters Institute for the Study of Journalism</a> mostram que a confianca do publico em noticias geradas por IA e significativamente menor do que em noticias escritas por humanos. Leitores nao querem saber que estao lendo uma maquina — e quando descobrem, a confianca no veiculo inteiro e afetada.</p>
+
+        <p>O caso do NYT ilustra bem: mesmo que o texto fosse bom, a revelacao de que foi gerado por IA transformou a historia de "ensaio emocionante" para "fraude editorial". A percepcao importa tanto quanto a qualidade.</p>
+
+        <h2>Os beneficios reais: o que da certo quando IA analisa</h2>
+
+        <p>Agora o outro lado. Porque tambem ha riscos em <em>nao</em> usar IA — o risco de ficar para tras enquanto competidores encontram formas responsaveis de alavancar a tecnologia.</p>
+
+        <h3>Analise de dados de performance</h3>
+
+        <p>Redacoes geram terabytes de dados que ninguem olha sistematicamente. Como cada editoria performa em cada canal. Quais padroes de titulo geram mais engajamento. Que tipo de imagem atrai cliques no <a href="/blog/google-discover-trafico-redacoes/">Google Discover</a>. Quanto tempo apos a publicacao o trafego atinge o pico.</p>
+
+        <p>IA pode processar esses dados e <a href="/blog/pipeline-dados-editoriais/">transformar em insights acionaveis</a>. Nao e geracao de conteudo — e inteligencia sobre conteudo. E a diferenca entre um jornalista que publica baseado em intuicao e um que publica informado por dados reais do proprio dominio.</p>
+
+        <h3>Conformidade com o manual de redacao</h3>
+
+        <p>Todo jornalista conhece o manual de redacao. Poucos consultam no dia a dia. Em deadline, ninguem para para verificar se "infraestrutura" ou "infra-estrutura" e a grafia adotada pelo veiculo. A IA pode fazer essa verificacao instantaneamente — nao gerando texto, mas auditando o texto que o jornalista escreveu.</p>
+
+        <h3>Otimizacao para distribuicao</h3>
+
+        <p>Busca e Discover operam com logicas opostas. Um titulo otimizado para SEO nao e necessariamente bom para Discover, e vice-versa. A IA pode analisar um titulo e sugerir variacoes para cada canal — sem reescrever o artigo, sem tocar na voz do jornalista. Apenas informando: "este titulo tem potencial maior no Discover se voce ajustar X".</p>
+
+        <h3>Monitoramento de tendencias</h3>
+
+        <p>Identificar o que esta crescendo em volume de buscas, cruzar com a autoridade do dominio em cada tema, e calcular se vale investir esforco editorial — isso e trabalho de dados, nao de escrita. E e onde <a href="/blog/como-ia-contextual-muda-jornalismo/">IA contextual faz a diferenca</a>.</p>
+
+        <h2>A distincao critica: gerar versus informar</h2>
+
+        <p>O ponto central deste debate e simples, mas frequentemente ignorado: <strong>existe uma diferenca fundamental entre IA que gera conteudo e IA que informa decisoes editoriais</strong>.</p>
+
+        <ul>
+          <li><strong>IA que gera</strong> escreve titulos, paragrafos, artigos inteiros. Ela substitui o jornalista. Os riscos sao fabricacao, homogeneizacao, perda de credibilidade e questoes eticas sobre autoria.</li>
+          <li><strong>IA que informa</strong> analisa dados, verifica conformidade, sugere otimizacoes. Ela potencializa o jornalista. Os riscos sao menores porque a decisao final permanece humana.</li>
+        </ul>
+
+        <p>Essa nao e uma distincao sutil. E a diferenca entre uma ferramenta que escreve "a materia" e uma ferramenta que diz "essa materia tem potencial maior se publicada nas proximas duas horas, com este titulo para Discover e este outro para Busca, e a terceira frase viola a regra 4.2 do manual".</p>
+
+        <blockquote>
+          <p>"A pergunta nao e se a IA pode escrever jornalismo. Pode. A pergunta e se deveria. E os dados dizem que o valor real esta em outro lugar: na analise, nao na geracao."</p>
+        </blockquote>
+
+        <h2>O que "IA responsavel" significa na pratica</h2>
+
+        <p>O termo "IA responsavel" virou jargao vazio em muitos contextos. Na pratica editorial, ele precisa significar coisas concretas:</p>
+
+        <ul>
+          <li><strong>Transparencia:</strong> se a IA contribuiu para o processo, o leitor nao precisa ser notificado de cada sugestao de SEO aceita — mas se a IA gerou texto publicado como autoria humana, isso e fraude.</li>
+          <li><strong>Guardrails editoriais:</strong> a IA nao pode sugerir nada que viole o manual de redacao do veiculo. O manual e lei, nao sugestao.</li>
+          <li><strong>Preservacao de voz:</strong> sugestoes devem adaptar-se ao perfil de cada jornalista, nao homogeneizar. Se a IA nao sabe quem esta escrevendo, ela nao deveria sugerir como escrever.</li>
+          <li><strong>Dados proprios:</strong> IA que opera com dados genericos nao entende o contexto de nenhuma redacao. IA responsavel opera com os dados do dominio — performance real, nao benchmarks de mercado.</li>
+          <li><strong>Humano no controle:</strong> a IA sugere, o jornalista decide. Sempre. Sem excecoes. Sem automacao de publicacao sem revisao humana.</li>
+        </ul>
+
+        <p>Essas nao sao restricoes que limitam a IA. Sao guardrails que a tornam util. Sem eles, voce tem uma ferramenta que gera texto rapido. Com eles, voce tem uma ferramenta que melhora o jornalismo.</p>
+
+        <h2>Como a voz editorial e preservada — ou destruida</h2>
+
+        <p>O maior risco silencioso da IA nas redacoes nao e a fabricacao. E a erosao gradual da voz editorial. Acontece assim:</p>
+
+        <p>Um jornalista usa IA para "polir" um texto. A IA ajusta frases, suaviza transicoes, padroniza vocabulario. O texto fica "melhor" no sentido generico. Mas perde a personalidade. Multiplicado por dez jornalistas, cinquenta textos por dia, trezentos dias por ano — o jornal perde identidade.</p>
+
+        <p>A alternativa e uma IA que <em>conhece</em> a voz. Que sabe que aquele colunista usa frases curtas e lead direto. Que aquela reporter prefere contexto expandido e dados de apoio. Que a editoria de esportes tem vocabulario proprio e ritmo diferente da editoria de politica.</p>
+
+        <p>Essa e a abordagem que <a href="/blog/voz-editorial-agentes/">descrevemos no artigo sobre perfis de voz</a>: capturar o estilo de cada jornalista em camadas progressivas e usar isso como filtro para cada sugestao.</p>
+
+        <h2>O caso de negocio: IA que paga as contas</h2>
+
+        <p>Vamos falar de dinheiro. Redacoes estao sob pressao financeira. Equipes encolheram. O volume de publicacao precisa se manter ou crescer. A <a href="/blog/por-que-audiencia-jornal-cai/">audiencia enfrenta desafios</a> em multiplas frentes. O argumento "precisamos de IA" muitas vezes e um argumento de sobrevivencia.</p>
+
+        <p>Mas o caso de negocio nao e "vamos substituir jornalistas por IA e economizar salarios". Isso nao funciona — e nao apenas por questoes eticas. Conteudo gerado por IA e detectavel, tem menor engajamento, e <a href="https://developers.google.com/search/docs/essentials/spam-policies" target="_blank" rel="noopener">as diretrizes do Google</a> deixam claro que qualidade e autenticidade sao fatores de ranking.</p>
+
+        <p>O caso de negocio real e:</p>
+
+        <ul>
+          <li><strong>Mais eficiencia por jornalista:</strong> se cada reporter ganha 30 minutos por dia nao consultando manual, nao fazendo SEO basico, nao calculando timing de publicacao — isso e tempo redirecionado para apuracao e reportagem.</li>
+          <li><strong>Menos erros de distribuicao:</strong> publicar o conteudo certo no canal certo no momento certo. Cada oportunidade perdida tem custo real em trafego e receita.</li>
+          <li><strong>Dados acionaveis:</strong> transformar milhoes de data points em decisoes editoriais claras. Nao e sobre ter mais dados — e sobre usar os dados que ja existem.</li>
+        </ul>
+
+        <p>Uma <a href="/blog/como-levar-ia-para-redacao/">implementacao bem planejada</a> de IA editorial nao corta custos com pessoal. Ela aumenta a produtividade e a qualidade de cada pessoa que ja esta na redacao.</p>
+
+        <h2>Exemplos internacionais: quem esta fazendo certo</h2>
+
+        <p>O debate nao e teorico. Redacoes ao redor do mundo ja estao testando — e as abordagens mais bem-sucedidas confirmam a distincao entre gerar e analisar.</p>
+
+        <ul>
+          <li><strong>BBC:</strong> usa IA para transcricao automatica e organizacao de material bruto. Os jornalistas recebem dados processados, nao textos prontos.</li>
+          <li><strong>Reuters:</strong> desenvolveu ferramentas de IA para deteccao de noticias falsas e verificacao de fatos. A IA nao escreve — ela verifica.</li>
+          <li><strong>The Washington Post:</strong> seu sistema Heliograf gera relatorios automaticos para dados estruturados (resultados eleitorais, eventos esportivos), mas mantem jornalistas na producao de conteudo editorial.</li>
+          <li><strong>Schibsted (Noruega):</strong> usa IA para personalizar a distribuicao de conteudo, nao para produzi-lo. O foco e entregar o artigo certo para o leitor certo.</li>
+        </ul>
+
+        <p>O padrao e claro: as implementacoes que funcionam sao aquelas onde a IA opera na camada de dados e distribuicao, nao na camada de producao editorial. O <a href="https://www.lse.ac.uk/media-and-communications/polis/JournalismAI" target="_blank" rel="noopener">JournalismAI</a>, iniciativa da London School of Economics, documenta dezenas de casos similares com a mesma conclusao.</p>
+
+        <h2>O futuro: IA como infraestrutura, nao como autor</h2>
+
+        <p>A direcao que o mercado esta tomando aponta para IA como infraestrutura editorial — uma camada invisivel que processa dados, monitora tendencias, verifica conformidade e sugere otimizacoes. Nao uma camada visivel que assina artigos.</p>
+
+        <p>Pense assim: ninguem diz que "a eletricidade escreveu a materia" so porque o computador estava ligado. Da mesma forma, IA editorial deve ser a infraestrutura que torna o trabalho jornalistico mais informado, mais rapido e mais preciso — sem substituir quem faz o trabalho.</p>
+
+        <p>Na pratica, isso significa:</p>
+
+        <ul>
+          <li><strong>Antes de pautar:</strong> IA que analisa o que esta crescendo em interesse, cruza com a autoridade do dominio, e entrega oportunidades priorizadas.</li>
+          <li><strong>Antes de publicar:</strong> IA que verifica conformidade com o manual, sugere otimizacoes de distribuicao por canal, e avalia o potencial de performance.</li>
+          <li><strong>Depois de publicar:</strong> IA que monitora resultados em tempo real e alimenta o ciclo de volta com aprendizados.</li>
+        </ul>
+
+        <p>Em nenhum desses momentos a IA escreve. Em todos eles, a IA melhora a decisao de quem escreve.</p>
+
+        <h2>O que decidimos ao construir o atalay.ia</h2>
+
+        <p>Quando comecamos a construir o atalay.ia, a tentacao de criar "mais uma ferramenta de geracao de texto" era real. Modelos de linguagem sao impressionantes. A tecnologia esta disponivel. O mercado pede.</p>
+
+        <p>Mas os dados que coletamos ao longo de mais de um ano trabalhando com redacoes reais mostraram algo diferente. O gargalo nao e producao de texto — jornalistas sabem escrever. O gargalo e informacao: saber o que escrever, quando publicar, como otimizar para cada canal, e se o texto esta em conformidade com as regras do veiculo.</p>
+
+        <p>Por isso o atalay.ia nao gera conteudo. Ele <a href="/blog/como-ia-contextual-muda-jornalismo/">analisa, classifica, sugere e alerta</a>. A caneta continua na mao do jornalista. A IA fornece o contexto que faz a diferenca entre uma publicacao baseada em intuicao e uma publicacao informada por dados.</p>
+
+        <blockquote>
+          <p>"Nao construimos uma IA que escreve melhor que jornalistas. Construimos uma IA que torna jornalistas mais bem informados. A diferenca parece sutil. Os resultados nao sao."</p>
+        </blockquote>
+
+        <h2>Conclusao: o caminho do meio</h2>
+
+        <p>A IA nao vai salvar o jornalismo. E nao vai destrui-lo. Vai transformar a forma como redacoes operam — para melhor ou pior, dependendo de <em>como</em> for adotada.</p>
+
+        <p>O caminho do meio nao e moderacao por covardia. E precisao por experiencia. Depois de analisar milhares de artigos, centenas de padroes de performance e dezenas de casos de uso, a conclusao e clara: o valor da IA no jornalismo esta na analise, nao na geracao.</p>
+
+        <p>Redacoes que entenderem isso cedo vao ter uma vantagem real — nao porque usam IA, mas porque usam IA da forma certa. As que nao entenderem vao enfrentar os riscos que ja estamos vendo: fabricacao, perda de credibilidade, erosao de voz.</p>
+
+        <p>A escolha nao e entre IA e nenhuma IA. E entre IA que escreve e IA que informa. Os dados ja mostraram qual caminho funciona.</p>
+      `,
+    },
+  'google-discover-trafico-redacoes': {
+      title: 'Google Discover já responde por até 40% do tráfego de portais — como sua redação pode se posicionar',
+      description: 'O Discover se tornou a principal fonte de tráfego para portais de notícia no Brasil, superando a busca orgânica em muitos casos. Entenda como o algoritmo funciona e o que os dados mostram sobre como performar.',
+      date: '2026-03-23',
+      category: 'Dados',
+      readTime: '14 min',
+      author: 'Bruno Lopes',
+      role: 'Fundador, atalay.ia',
+      heroSvg: `<svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="800" height="400" fill="#0e1011"/>
+        <defs>
+          <radialGradient id="g-disc-1" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(192,106,66,.1)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+          <radialGradient id="g-disc-2" cx="25%" cy="60%"><stop offset="0%" stop-color="rgba(192,106,66,.06)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+        </defs>
+        <rect width="800" height="400" fill="url(#g-disc-1)"/>
+        <rect width="800" height="400" fill="url(#g-disc-2)"/>
+        <!-- Mobile phone outline -->
+        <g transform="translate(400,200)">
+          <rect x="-60" y="-120" width="120" height="240" rx="14" stroke="rgba(255,255,255,.15)" stroke-width="1" fill="rgba(255,255,255,.02)"/>
+          <!-- Status bar -->
+          <rect x="-20" y="-110" width="40" height="4" rx="2" fill="rgba(255,255,255,.1)"/>
+          <!-- Discover icon hint -->
+          <circle cx="0" cy="-95" r="6" stroke="rgba(192,106,66,.4)" stroke-width=".8" fill="rgba(192,106,66,.08)"/>
+          <text x="0" y="-92" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="7" font-weight="700" fill="rgba(192,106,66,.6)">D</text>
+          <!-- Card 1 -->
+          <rect x="-48" y="-78" width="96" height="52" rx="6" stroke="rgba(192,106,66,.25)" stroke-width=".6" fill="rgba(192,106,66,.04)"/>
+          <rect x="-40" y="-70" width="42" height="3" rx="1.5" fill="rgba(255,255,255,.15)"/>
+          <rect x="-40" y="-62" width="34" height="3" rx="1.5" fill="rgba(255,255,255,.1)"/>
+          <rect x="-40" y="-54" width="28" height="2" rx="1" fill="rgba(255,255,255,.06)"/>
+          <rect x="16" y="-70" width="28" height="28" rx="4" fill="rgba(192,106,66,.1)" stroke="rgba(192,106,66,.2)" stroke-width=".4"/>
+          <!-- Card 2 -->
+          <rect x="-48" y="-18" width="96" height="52" rx="6" stroke="rgba(255,255,255,.1)" stroke-width=".6" fill="rgba(255,255,255,.02)"/>
+          <rect x="-40" y="-10" width="38" height="3" rx="1.5" fill="rgba(255,255,255,.12)"/>
+          <rect x="-40" y="-2" width="30" height="3" rx="1.5" fill="rgba(255,255,255,.08)"/>
+          <rect x="-40" y="6" width="24" height="2" rx="1" fill="rgba(255,255,255,.05)"/>
+          <rect x="16" y="-10" width="28" height="28" rx="4" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.08)" stroke-width=".4"/>
+          <!-- Card 3 -->
+          <rect x="-48" y="42" width="96" height="52" rx="6" stroke="rgba(255,255,255,.08)" stroke-width=".6" fill="rgba(255,255,255,.015)"/>
+          <rect x="-40" y="50" width="40" height="3" rx="1.5" fill="rgba(255,255,255,.1)"/>
+          <rect x="-40" y="58" width="32" height="3" rx="1.5" fill="rgba(255,255,255,.07)"/>
+          <rect x="-40" y="66" width="26" height="2" rx="1" fill="rgba(255,255,255,.04)"/>
+          <rect x="16" y="50" width="28" height="28" rx="4" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.06)" stroke-width=".4"/>
+          <!-- Home indicator -->
+          <rect x="-20" y="108" width="40" height="3" rx="1.5" fill="rgba(255,255,255,.08)"/>
+        </g>
+        <!-- Left: metrics -->
+        <g transform="translate(100,130)">
+          <text x="0" y="0" font-family="DM Sans, sans-serif" font-size="10" font-weight="600" fill="rgba(255,255,255,.3)">Discover Metrics</text>
+          <line x1="0" y1="8" x2="120" y2="8" stroke="rgba(255,255,255,.06)" stroke-width=".5"/>
+          <text x="0" y="30" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(255,255,255,.2)">CTR</text>
+          <rect x="50" y="22" width="60" height="12" rx="3" fill="rgba(192,106,66,.08)" stroke="rgba(192,106,66,.2)" stroke-width=".5"/>
+          <text x="60" y="31" font-family="JetBrains Mono, monospace" font-size="9" font-weight="600" fill="rgba(192,106,66,.7)">8.4%</text>
+          <text x="0" y="56" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(255,255,255,.2)">Impr.</text>
+          <rect x="50" y="48" width="60" height="12" rx="3" fill="rgba(192,106,66,.06)" stroke="rgba(192,106,66,.15)" stroke-width=".5"/>
+          <text x="60" y="57" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(192,106,66,.6)">142K</text>
+          <text x="0" y="82" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(255,255,255,.2)">Clicks</text>
+          <rect x="50" y="74" width="60" height="12" rx="3" fill="rgba(192,106,66,.06)" stroke="rgba(192,106,66,.15)" stroke-width=".5"/>
+          <text x="60" y="83" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(192,106,66,.6)">11.9K</text>
+          <text x="0" y="108" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(255,255,255,.2)">Peak</text>
+          <rect x="50" y="100" width="60" height="12" rx="3" fill="rgba(130,153,110,.06)" stroke="rgba(130,153,110,.15)" stroke-width=".5"/>
+          <text x="60" y="109" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(130,153,110,.6)">2-4h</text>
+        </g>
+        <!-- Right: pie chart -->
+        <g transform="translate(640,180)">
+          <text x="0" y="-70" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="10" font-weight="600" fill="rgba(255,255,255,.3)">Traffic Split</text>
+          <!-- Pie slices (simplified arcs) -->
+          <!-- Discover 40% ~144deg -->
+          <path d="M0,-50 A50,50 0 0,1 47.55,-15.45 L0,0 Z" fill="rgba(192,106,66,.25)" stroke="rgba(192,106,66,.4)" stroke-width=".6"/>
+          <!-- Busca 35% ~126deg -->
+          <path d="M47.55,-15.45 A50,50 0 0,1 -14.05,48 L0,0 Z" fill="rgba(167,139,250,.15)" stroke="rgba(167,139,250,.3)" stroke-width=".6"/>
+          <!-- Direto 25% ~90deg -->
+          <path d="M-14.05,48 A50,50 0 0,1 0,-50 L0,0 Z" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.12)" stroke-width=".6"/>
+          <!-- Labels -->
+          <text x="28" y="-24" font-family="JetBrains Mono, monospace" font-size="8" font-weight="600" fill="rgba(192,106,66,.7)">40%</text>
+          <text x="20" y="28" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(167,139,250,.5)">35%</text>
+          <text x="-32" y="4" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(255,255,255,.2)">25%</text>
+          <!-- Legend -->
+          <g transform="translate(-40,70)">
+            <rect x="0" y="0" width="8" height="8" rx="2" fill="rgba(192,106,66,.3)"/>
+            <text x="14" y="8" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(192,106,66,.5)">Discover</text>
+            <rect x="0" y="16" width="8" height="8" rx="2" fill="rgba(167,139,250,.2)"/>
+            <text x="14" y="24" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(167,139,250,.4)">Busca</text>
+            <rect x="0" y="32" width="8" height="8" rx="2" fill="rgba(255,255,255,.08)"/>
+            <text x="14" y="40" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(255,255,255,.2)">Direto</text>
+          </g>
+        </g>
+        <!-- Connecting lines from phone to metrics -->
+        <line x1="340" y1="160" x2="220" y2="148" stroke="rgba(192,106,66,.08)" stroke-width=".4" stroke-dasharray="3 3"/>
+        <line x1="460" y1="160" x2="590" y2="148" stroke="rgba(192,106,66,.08)" stroke-width=".4" stroke-dasharray="3 3"/>
+      </svg>`,
+      content: `
+        <p class="article-lead">Se a sua redacao depende de trafico organico, existe uma boa chance de que o Google Discover ja seja o canal mais importante do seu portal -- e voce pode nao estar olhando para ele com a atencao que merece. Nos dados que analisamos diariamente no atalay.ia, Discover responde por 30% a 40% do trafico de grandes portais de noticia brasileiros. Em alguns casos, supera a Busca organica.</p>
+
+        <h2>O que e o Google Discover e por que ele mudou o jogo</h2>
+
+        <p>Discover e o feed de recomendacoes do Google que aparece na tela inicial do app Google e na pagina inicial do Chrome mobile. Diferente da Busca, onde o usuario digita uma query, no Discover o conteudo chega sem ser pedido -- o algoritmo decide o que mostrar com base no historico de interesses de cada usuario.</p>
+
+        <p>Essa diferenca e fundamental. Na Busca, voce compete por keywords. No Discover, voce compete por <strong>relevancia percebida</strong> para um usuario especifico, em um momento especifico. Nao existe query. Nao existe SERP. Existe um feed personalizado que muda a cada hora.</p>
+
+        <p>Para quem trabalha com noticias, isso criou uma nova dinamica: artigos que nunca ranqueariam bem na Busca podem explodir no Discover. E artigos perfeitamente otimizados para SEO tradicional podem passar despercebidos no feed. Ja exploramos essas diferencas em detalhe no artigo <a href="/blog/discover-vs-busca/">Discover e Busca sao jogos diferentes</a>.</p>
+
+        <h2>Por que Discover domina o trafico de portais de noticia</h2>
+
+        <p>Tres fatores explicam a ascensao do Discover como canal dominante:</p>
+
+        <ul>
+          <li><strong>Distribuicao mobile massiva:</strong> o Discover esta presente em todos os dispositivos Android por padrao e no Chrome mobile. No Brasil, onde Android domina mais de 80% do mercado, isso significa acesso a praticamente toda a base de usuarios mobile.</li>
+          <li><strong>Preferencia por conteudo fresco:</strong> o algoritmo do Discover favorece conteudo recente, o que beneficia portais de noticia que publicam em volume diariamente. Segundo o <a href="https://rfrpt.org/digital-news-report/2025/" target="_blank" rel="noopener">Reuters Institute Digital News Report</a>, o consumo de noticias via feeds algoritmicos superou o acesso direto em varios mercados.</li>
+          <li><strong>Engajamento visual:</strong> o formato de cards com imagens grandes gera taxas de clique significativamente maiores do que resultados textuais de busca. O Discover e, essencialmente, um canal visual -- e noticias com boas imagens se beneficiam.</li>
+        </ul>
+
+        <p>Os dados que coletamos no atalay.ia confirmam esse padrao. Em editorias como Esportes e Variedades, Discover frequentemente responde por mais trafico do que Busca e acesso direto combinados. Em editorias mais tecnicas como Politica e Economia, a proporcao e menor mas ainda significativa -- geralmente entre 20% e 30%.</p>
+
+        <h2>Como o algoritmo do Discover funciona</h2>
+
+        <p>O Google nao publica o algoritmo do Discover em detalhe, mas a <a href="https://developers.google.com/search/docs/appearance/google-discover" target="_blank" rel="noopener">documentacao oficial do Search Central</a> e a observacao sistematica de dados reais nos permitem entender os sinais mais relevantes:</p>
+
+        <h3>E-E-A-T (Experiencia, Expertise, Autoridade, Confiabilidade)</h3>
+
+        <p>E-E-A-T nao e um score numerico -- e um framework que o Google usa para avaliar a qualidade de conteudo. No Discover, ele se manifesta de forma concreta: dominios com historico consistente de publicacao em determinado tema recebem mais distribuicao nesse tema. Um portal com anos de cobertura de futebol mineiro tem vantagem no Discover para pautas de Atletico e Cruzeiro. Um portal generalista, nao.</p>
+
+        <p>Na pratica, isso significa que <strong>autoridade tematica e cumulativa</strong>. Cada artigo publicado sobre um tema refor a reputacao do dominio naquele nicho. Redacoes que entendem isso investem em clusters de conteudo -- coberturas profundas e interconectadas -- em vez de artigos soltos.</p>
+
+        <h3>Interesses do usuario</h3>
+
+        <p>O Discover constroi um perfil de interesses para cada usuario com base em historico de navegacao, buscas anteriores, interacoes com apps e localizacao. Seu artigo aparece no feed de alguem quando o algoritmo calcula que aquele tema casa com o perfil daquele usuario.</p>
+
+        <p>Isso cria um efeito de retroalimentacao: quando um usuario clica em artigos de um determinado portal sobre determinado tema, o Discover passa a mostrar mais conteudo desse portal sobre esse tema. Perder essa janela de engajamento significa perder o posicionamento no perfil do usuario.</p>
+
+        <h3>Freshness (recencia)</h3>
+
+        <p>Recencia e o sinal mais forte para conteudo de noticias no Discover. A janela de oportunidade e curta -- nossos dados mostram que o pico de trafico de Discover para uma noticia acontece entre 2 e 4 horas apos a publicacao, com decaimento rapido depois. Artigos evergreen podem performar, mas o Discover e fundamentalmente um canal de conteudo fresco.</p>
+
+        <h3>Engajamento</h3>
+
+        <p>O Discover monitora como usuarios interagem com o conteudo: clique, tempo de leitura, retorno ao feed. Artigos com alta taxa de clique e bom tempo de permanencia recebem mais distribuicao. Artigos com alta taxa de clique mas retorno rapido ao feed (sinal de clickbait) sao penalizados.</p>
+
+        <blockquote>
+          <p>"O Discover recompensa relevancia real. Um titulo chamativo que nao entrega o que promete nao apenas perde distribuicao -- prejudica o dominio inteiro."</p>
+        </blockquote>
+
+        <h2>O papel das imagens no CTR do Discover</h2>
+
+        <p>Se existe um unico fator que separa artigos com alto e baixo CTR no Discover, e a imagem. O feed e visual por natureza -- o usuario esta scrollando rapidamente, e a imagem e o primeiro elemento que captura atencao.</p>
+
+        <p>O que os dados nos mostram:</p>
+
+        <ul>
+          <li><strong>Imagens grandes performam melhor:</strong> o Google permite que portais optem por exibicao de imagens grandes no Discover via a tag <code>max-image-preview:large</code> nos meta robots. Segundo as <a href="https://developers.google.com/search/docs/appearance/visual-elements-gallery" target="_blank" rel="noopener">diretrizes do Google sobre imagens no Discover</a>, imagens devem ter pelo menos 1200px de largura. Portais que implementam isso corretamente veem aumentos significativos de CTR.</li>
+          <li><strong>Rostos humanos geram mais cliques:</strong> artigos com fotos que mostram rostos -- especialmente em close -- tem CTR consistentemente maior. Isso vale especialmente para editorias de Esportes e Variedades.</li>
+          <li><strong>Imagens genericas prejudicam:</strong> fotos de banco de imagem, mapas genericos e graficos complexos tem CTR inferior. O Discover favorece imagens editoriais com contexto claro.</li>
+          <li><strong>Proporcao importa:</strong> imagens em formato 16:9 ou 4:3 se adaptam melhor ao layout do card no Discover. Formatos verticais ou quadrados podem ser cortados de maneira desfavoravel.</li>
+        </ul>
+
+        <p>No atalay.ia, a analise de imagem e parte do pipeline de otimizacao. Quando um jornalista submete um artigo, avaliamos a imagem de capa quanto a resolucao, proporcao, presenca de rosto e potencial de clique no Discover. E um sinal que muitas redacoes ignoram completamente.</p>
+
+        <h2>Otimizacao de titulos: Discover vs. Busca</h2>
+
+        <p>Aqui e onde muitas redacoes erram. Um titulo otimizado para Busca e fundamentalmente diferente de um titulo otimizado para Discover. As logicas sao opostas:</p>
+
+        <h3>Titulo para Busca</h3>
+        <ul>
+          <li>Keyword principal no primeiro terco</li>
+          <li>Descritivo e objetivo</li>
+          <li>Responde a query implicita do usuario</li>
+          <li>Exemplo: "Resultado Atletico x Cruzeiro: placar e gols do classico mineiro"</li>
+        </ul>
+
+        <h3>Titulo para Discover</h3>
+        <ul>
+          <li>Gancho emocional ou de curiosidade</li>
+          <li>Cria expectativa sem entregar tudo</li>
+          <li>Nao depende de keyword match</li>
+          <li>Exemplo: "O lance que mudou o classico: como o Atletico virou nos acrescimos"</li>
+        </ul>
+
+        <p>O mesmo artigo pode (e deve) ter estrategias de titulo diferentes para cada canal. Algumas redacoes ja usam titulos dinamicos -- um para a pagina (Busca) e outro para o meta title social/Discover. No atalay.ia, geramos sugestoes para ambos os canais, separadamente, com base nos dados de performance de cada editoria.</p>
+
+        <p>Esse e um dos temas que abordamos com mais profundidade quando falamos sobre <a href="/blog/como-ia-contextual-muda-jornalismo/">como IA contextual pode ajudar redacoes</a>.</p>
+
+        <h2>Metricas essenciais para acompanhar no Discover</h2>
+
+        <p>O Google Search Console oferece um relatorio dedicado ao Discover. As metricas disponiveis sao limitadas mas essenciais:</p>
+
+        <ul>
+          <li><strong>Impressoes:</strong> quantas vezes seu conteudo apareceu no feed de usuarios. Volume alto de impressoes indica que o Google considera seu dominio relevante para aquele tema.</li>
+          <li><strong>Cliques:</strong> quantos usuarios clicaram. A relacao entre impressoes e cliques revela a eficiencia do seu titulo + imagem.</li>
+          <li><strong>CTR (taxa de clique):</strong> a metrica mais acionavel. CTR abaixo de 4% indica problemas de titulo ou imagem. CTR acima de 8% indica uma combinacao que funciona -- estude esses artigos para replicar o padrao.</li>
+        </ul>
+
+        <p>Alem do Search Console, recomendamos cruzar dados de Discover com metricas de engajamento do GA4: tempo medio na pagina, scroll depth e taxa de retorno. Um artigo com alto CTR no Discover mas baixo tempo de leitura e um sinal de alerta -- o titulo prometeu algo que o conteudo nao entregou.</p>
+
+        <p>No atalay.ia, consolidamos esses dados em um <a href="/blog/pipeline-dados-editoriais/">pipeline de dados editoriais</a> que permite a redacao ver, em tempo real, quais artigos estao performando no Discover e por que.</p>
+
+        <h2>Como dados editoriais ajudam a otimizar para Discover</h2>
+
+        <p>Dados isolados nao servem para nada. O que faz diferenca e a capacidade de conectar performance a decisoes editoriais especificas. Quando voce sabe que artigos de Esportes com imagem de rosto em close, titulo com gancho emocional e publicacao entre 6h e 8h da manha tem CTR medio de 9.2% no Discover -- voce tem uma estrategia acionavel.</p>
+
+        <p>E exatamente isso que construimos. O atalay.ia cruza dados de:</p>
+
+        <ul>
+          <li><strong>Performance por editoria:</strong> cada editoria tem padroes diferentes de performance no Discover. Esportes pica de manha, Variedades a tarde, Politica em horarios de pico noticioso.</li>
+          <li><strong>Performance por tipo de titulo:</strong> classificamos titulos por estrutura (pergunta, declaracao, como-fazer, numerico) e medimos CTR de cada tipo por canal.</li>
+          <li><strong>Performance por tipo de imagem:</strong> rosto, paisagem, grafico, infografico -- cada um tem taxas de clique diferentes no Discover.</li>
+          <li><strong>Historico do jornalista:</strong> jornalistas com historico de bons titulos para Discover recebem feedback diferente de jornalistas que estao comecando a otimizar.</li>
+        </ul>
+
+        <p>Essa camada de inteligencia editorial e o que permite passar de "publique e espere" para "publique com estrategia". Como discutimos no <a href="/blog/lancamento-atalay-ia/">lancamento do atalay.ia</a>, o objetivo e dar a redacao ferramentas para tomar decisoes baseadas em evidencia.</p>
+
+        <h2>Erros comuns que redacoes cometem com Discover</h2>
+
+        <p>Depois de analisar milhares de artigos e seus resultados no Discover, alguns padroes de erro se repetem com frequencia preocupante:</p>
+
+        <h3>1. Tratar Discover como SEO tradicional</h3>
+        <p>Stuffing de keywords no titulo, meta descriptions genericas, foco em heading structure -- tudo isso ajuda na Busca mas e irrelevante para Discover. O Discover nao funciona com queries. Otimizar para ele exige uma mentalidade diferente.</p>
+
+        <h3>2. Ignorar a imagem de capa</h3>
+        <p>Muitas redacoes colocam qualquer imagem disponivel como thumbnail. No Discover, a imagem e metade da decisao de clique. Usar uma foto de baixa resolucao, sem contexto editorial, e como publicar um artigo sem titulo.</p>
+
+        <h3>3. Clickbait sem entrega</h3>
+        <p>O Discover e sensivel a clickbait. Titulos exagerados que nao correspondem ao conteudo geram cliques no curto prazo mas penalizam o dominio no medio prazo. O algoritmo mede se o usuario volta rapidamente ao feed apos clicar -- e usa isso como sinal negativo.</p>
+
+        <h3>4. Nao monitorar o canal separadamente</h3>
+        <p>Muitas redacoes olham trafico total sem separar Discover de Busca. Resultado: nao sabem quais artigos vieram de onde, nao entendem o que funciona para cada canal, e nao conseguem replicar sucessos. Esse e um dos fatores por tras do problema que abordamos em <a href="/blog/por-que-audiencia-jornal-cai/">por que a audiencia de jornais cai</a>.</p>
+
+        <h3>5. Publicar fora do timing</h3>
+        <p>O Discover favorece conteudo recente sobre temas em alta. Publicar um artigo sobre um evento 6 horas depois dos concorrentes significa perder a janela. O monitoramento de trends -- como o que o atalay.ia faz -- e essencial para acertar o timing.</p>
+
+        <h2>O problema da volatilidade: por que o trafico de Discover e imprevisivel</h2>
+
+        <p>A maior frustracao das redacoes com o Discover e a volatilidade. Um dia o portal recebe 50 mil visitas do Discover; no dia seguinte, 8 mil. Sem mudanca na estrategia editorial, sem penalizacao aparente -- apenas a natureza do canal.</p>
+
+        <p>Essa volatilidade tem explicacoes concretas:</p>
+
+        <ul>
+          <li><strong>Dependencia de topicos trending:</strong> Discover mostra mais conteudo sobre assuntos que estao em alta. Se o dia e noticiariamente fraco para a sua editoria, o volume cai independente da qualidade.</li>
+          <li><strong>Competicao dinamica:</strong> quando um grande portal cobre o mesmo tema, o Discover redistribui impressoes. Seu artigo nao desapareceu -- ele perdeu espaco para um concorrente com mais autoridade naquele topico.</li>
+          <li><strong>Mudancas algoritmicas:</strong> o Google ajusta o Discover constantemente. Core updates afetam Discover tanto quanto Busca, mas de forma menos previsivel.</li>
+          <li><strong>Sazonalidade de interesses:</strong> os interesses dos usuarios flutuam. No dia de um classico de futebol, Esportes explode no Discover. Na semana seguinte, cai. Nao e problema do portal -- e a natureza do feed.</li>
+        </ul>
+
+        <p>A estrategia para lidar com a volatilidade nao e tentar elimina-la (impossivel), mas sim <strong>maximizar os picos e construir uma base estavel</strong>. Isso significa:</p>
+
+        <ul>
+          <li>Publicar consistentemente em temas de autoridade do dominio</li>
+          <li>Reagir rapido a temas trending com conteudo original</li>
+          <li>Manter padroes altos de imagem e titulo em todos os artigos -- nao apenas nos que voce acha que vao performar</li>
+          <li>Diversificar canais para nao depender exclusivamente de Discover</li>
+        </ul>
+
+        <h2>Sinais de autoridade e como eles afetam a distribuicao</h2>
+
+        <p>Autoridade no Discover nao e a mesma coisa que Domain Authority das ferramentas de SEO. E um conceito mais sutil que combina varios sinais:</p>
+
+        <ul>
+          <li><strong>Historico de publicacao no tema:</strong> quantos artigos o dominio publicou sobre aquele assunto, por quanto tempo, com que frequencia.</li>
+          <li><strong>Engajamento consistente:</strong> artigos anteriores sobre o tema tiveram bom CTR e tempo de leitura? O Discover lembra.</li>
+          <li><strong>Expertise demonstrada:</strong> cobertura profunda, com multiplos angulos, fontes e dados. Artigos superficiais nao constroem autoridade.</li>
+          <li><strong>Conformidade com diretrizes:</strong> sites que seguem as diretrizes de conteudo do Google (sem clickbait, sem conteudo enganoso, sem manipulacao) mantem o acesso ao Discover. Violacoes podem resultar em exclusao do feed.</li>
+        </ul>
+
+        <p>Construir autoridade para Discover e um processo de longo prazo. Nao existe hack. Existe trabalho editorial consistente, medido e otimizado ao longo de meses. Ferramentas como o atalay.ia ajudam a acelerar esse processo ao fornecer dados claros sobre onde a autoridade do dominio esta forte e onde ha lacunas.</p>
+
+        <p>Isso se conecta diretamente ao debate sobre <a href="/blog/ia-ferramenta-ou-ameaca-jornalismo/">IA como ferramenta ou ameaca no jornalismo</a> -- quando usada corretamente, a tecnologia amplifica a capacidade editorial em vez de substitui-la.</p>
+
+        <h2>O que fazer na pratica</h2>
+
+        <p>Se a sua redacao quer levar Discover a serio, aqui esta um roteiro minimo:</p>
+
+        <ul>
+          <li><strong>Separe os relatorios:</strong> olhe Discover e Busca como canais distintos no Search Console. Compare CTR, impressoes e cliques separadamente.</li>
+          <li><strong>Implemente max-image-preview:large:</strong> se voce ainda nao fez, esse e o quick win mais impactante. Permite que o Discover exiba imagens grandes dos seus artigos.</li>
+          <li><strong>Audite imagens de capa:</strong> revise os ultimos 50 artigos com melhor e pior CTR no Discover. Voce vai encontrar padroes claros de imagem.</li>
+          <li><strong>Teste titulos:</strong> comece a testar variantes de titulo para Discover. Gancho emocional, pergunta, numeros -- meça o CTR de cada tipo.</li>
+          <li><strong>Monitore trends:</strong> o Discover favorece conteudo sobre temas em alta. Ter um sistema de monitoramento de tendencias que alerte a redacao em tempo real e uma vantagem competitiva concreta.</li>
+          <li><strong>Construa clusters de autoridade:</strong> identifique os temas em que o dominio ja tem historico forte e invista em cobertura profunda e interconectada.</li>
+        </ul>
+
+        <blockquote>
+          <p>"Discover nao e sorte. E o resultado de decisoes editoriais consistentes, medidas ao longo do tempo, com dados reais de performance."</p>
+        </blockquote>
+
+        <h2>O futuro do Discover para redacoes</h2>
+
+        <p>O Discover esta evoluindo. O Google tem investido em mais formatos -- carrosseis, Web Stories, conteudo de video -- e em personalizacao cada vez mais granular. Para redacoes, isso significa que a importancia do canal so vai crescer.</p>
+
+        <p>Redacoes que constroem agora a infraestrutura de dados e otimizacao para Discover estao se posicionando para capturar uma fatia desproporcional de trafico no futuro. As que continuam tratando Discover como subproduto do SEO vao continuar dependendo de picos aleatorios.</p>
+
+        <p>No atalay.ia, estamos construindo cada camada do produto com essa realidade em mente. Monitoramento de trends, analise de titulos por canal, avaliacao de imagens, medicao de autoridade tematica -- tudo converge para uma pergunta: <strong>como a sua redacao pode capturar mais trafico de Discover, de forma consistente e sustentavel?</strong></p>
+
+        <p>Os dados ja existem. O que falta e transforma-los em decisoes editoriais. Esse e o nosso trabalho.</p>
+      `,
+    },
 };
 
 // ── Route logic ──
