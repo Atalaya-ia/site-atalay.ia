@@ -24,6 +24,7 @@ export function getStaticPaths() {
     { params: { slug: 'anthropic-vaza-codigo-claude-code' } },
     { params: { slug: 'anthropic-conter-vazamento-claude-code' } },
     { params: { slug: 'nyt-rompe-colaborador-ia-resenha' } },
+    { params: { slug: 'llms-txt-arquitetura-marca-fonte-ia' } },
   ];
 }
 
@@ -2900,6 +2901,124 @@ const articles: Record<string, {
       <p>No caso do <strong>New York Times</strong>, o constrangimento é ainda maior porque a empresa é vista como uma referência global em rigor editorial. Quando até um dos jornais mais influentes do mundo precisa acrescentar uma nota explicando que um texto publicado continha sobreposição com outra resenha por causa do uso de IA, o recado para o setor é direto: a tecnologia pode até acelerar processos, mas sem supervisão rigorosa ela também pode comprometer o ativo mais valioso do jornalismo, que é a confiança do leitor.</p>
 
       <p><em>Para uma análise mais ampla sobre como a IA está transformando o jornalismo — incluindo os riscos e oportunidades —, leia: <a href="/blog/caso-nyt-ia-redacao/">NYT acusado de publicar artigo com IA — o que o caso ensina sobre uso responsável nas redações</a>.</em></p>
+    `,
+  },
+
+  'llms-txt-arquitetura-marca-fonte-ia': {
+    title: 'llms.txt não basta: a arquitetura que vem depois para sua marca virar fonte da IA',
+    description: 'Mais do que um arquivo em Markdown, marcas precisam de uma estrutura com dados, relações, APIs e proveniência para alimentar agentes de IA.',
+    date: '2026-04-02',
+    category: 'Práticas',
+    readTime: '9 min',
+    author: 'Bruno Lopes',
+    role: 'Fundador, atalay.ia',
+    heroSvg: `<svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="800" height="400" fill="#0e1011"/>
+      <defs>
+        <radialGradient id="g-llm1" cx="30%" cy="45%"><stop offset="0%" stop-color="rgba(192,106,66,.1)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+        <radialGradient id="g-llm2" cx="70%" cy="55%"><stop offset="0%" stop-color="rgba(130,153,110,.08)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+      </defs>
+      <rect width="800" height="400" fill="url(#g-llm1)"/>
+      <rect width="800" height="400" fill="url(#g-llm2)"/>
+      <!-- Layer 1: llms.txt (base, small) -->
+      <g transform="translate(160,280)">
+        <rect x="-80" y="-22" width="160" height="44" rx="5" stroke="rgba(255,255,255,.12)" stroke-width=".7" fill="rgba(255,255,255,.02)"/>
+        <text x="0" y="0" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(255,255,255,.3)">llms.txt</text>
+        <text x="0" y="14" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,255,255,.15)">markdown index</text>
+      </g>
+      <!-- Arrow up -->
+      <line x1="160" y1="252" x2="160" y2="232" stroke="rgba(255,255,255,.08)" stroke-width=".6"/>
+      <polygon points="157,232 160,226 163,232" fill="rgba(255,255,255,.1)"/>
+      <!-- Layer 2: JSON-LD -->
+      <g transform="translate(260,210)">
+        <rect x="-80" y="-22" width="160" height="44" rx="5" stroke="rgba(192,106,66,.2)" stroke-width=".7" fill="rgba(192,106,66,.02)"/>
+        <text x="0" y="0" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(192,106,66,.5)">JSON-LD</text>
+        <text x="0" y="14" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(192,106,66,.3)">factual layer</text>
+      </g>
+      <!-- Arrow up -->
+      <line x1="340" y1="182" x2="380" y2="162" stroke="rgba(192,106,66,.12)" stroke-width=".6"/>
+      <polygon points="377,159 384,158 380,165" fill="rgba(192,106,66,.15)"/>
+      <!-- Layer 3: Entity relations -->
+      <g transform="translate(440,140)">
+        <rect x="-90" y="-22" width="180" height="44" rx="5" stroke="rgba(192,106,66,.25)" stroke-width=".7" fill="rgba(192,106,66,.03)"/>
+        <text x="0" y="0" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(192,106,66,.55)">Entity Graph</text>
+        <text x="0" y="14" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(192,106,66,.3)">relations map</text>
+        <!-- Mini graph nodes -->
+        <circle cx="-60" cy="-2" r="3" fill="rgba(192,106,66,.25)" stroke="rgba(192,106,66,.35)" stroke-width=".5"/>
+        <circle cx="-45" cy="8" r="3" fill="rgba(192,106,66,.2)" stroke="rgba(192,106,66,.3)" stroke-width=".5"/>
+        <line x1="-60" y1="-2" x2="-45" y2="8" stroke="rgba(192,106,66,.15)" stroke-width=".4"/>
+        <circle cx="45" cy="-2" r="3" fill="rgba(192,106,66,.25)" stroke="rgba(192,106,66,.35)" stroke-width=".5"/>
+        <circle cx="60" cy="8" r="3" fill="rgba(192,106,66,.2)" stroke="rgba(192,106,66,.3)" stroke-width=".5"/>
+        <line x1="45" y1="-2" x2="60" y2="8" stroke="rgba(192,106,66,.15)" stroke-width=".4"/>
+      </g>
+      <!-- Arrow up -->
+      <line x1="530" y1="112" x2="560" y2="95" stroke="rgba(130,153,110,.15)" stroke-width=".6"/>
+      <polygon points="557,92 564,91 561,98" fill="rgba(130,153,110,.18)"/>
+      <!-- Layer 4: Structured APIs -->
+      <g transform="translate(600,75)">
+        <rect x="-80" y="-22" width="160" height="44" rx="5" stroke="rgba(130,153,110,.25)" stroke-width=".7" fill="rgba(130,153,110,.03)"/>
+        <text x="0" y="0" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(130,153,110,.55)">/api/endpoints</text>
+        <text x="0" y="14" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(130,153,110,.3)">structured content</text>
+      </g>
+      <!-- Right side: provenance badge -->
+      <g transform="translate(680,180)">
+        <rect x="-50" y="-35" width="100" height="70" rx="6" stroke="rgba(167,139,250,.15)" stroke-width=".6" fill="rgba(167,139,250,.015)"/>
+        <text x="0" y="-16" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(167,139,250,.45)">Provenance</text>
+        <text x="0" y="0" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,255,255,.18)">author: ✓</text>
+        <text x="0" y="12" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,255,255,.18)">version: 2.1</text>
+        <text x="0" y="24" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,255,255,.18)">updated: now</text>
+      </g>
+      <!-- Bottom label -->
+      <text x="400" y="380" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(255,255,255,.12)">FROM PAGE TO SOURCE — MACHINE-READABLE BRAND</text>
+    </svg>`,
+    content: `
+      <p class="article-lead">O <strong>llms.txt</strong> virou assunto porque acerta no diagnóstico: os sites de hoje foram montados para pessoas, não para agentes de IA. Só que muita gente está tratando esse arquivo como solução final, quando ele é, na prática, só o começo da conversa.</p>
+
+      <p>Colocar um <strong>llms.txt</strong> no ar ajuda. Ele funciona como uma espécie de índice limpo, uma porta de entrada mais organizada para o que sua marca publica. O problema é achar que isso resolve tudo. Não resolve.</p>
+
+      <p>Para uma marca que vende produto, compara planos, atualiza preço, muda feature, publica FAQ, case, documentação e posicionamento oficial, um simples diretório em Markdown é pouco. O que a IA precisa de verdade não é só de uma lista de links. Ela precisa de <strong>acesso limpo, estruturado, atual, verificável e com contexto</strong>.</p>
+
+      <h2>O llms.txt ajuda, mas para no meio do caminho</h2>
+
+      <p>O mérito do <strong>llms.txt</strong> é reduzir ruído. Em vez de obrigar um modelo a navegar por menu, banner, script, pop-up e JavaScript quebrado, ele oferece um caminho mais simples até o conteúdo principal. Para documentação técnica, referência de API e conteúdo mais estático, isso já tem utilidade.</p>
+
+      <p>Mas, quando a operação fica mais complexa, ele começa a mostrar limite. O arquivo não explica bem relações entre entidades. Ele não deixa claro, por exemplo, que um plano pertence a uma família de produtos, que uma funcionalidade foi descontinuada, que outra entrou no lugar, que um porta-voz é a fonte mais confiável para determinado assunto ou que um preço mudou ontem à noite.</p>
+
+      <p>Em resumo: o <strong>llms.txt</strong> mostra <strong>o que existe</strong>, mas não explica direito <strong>como as coisas se conectam</strong>. E é justamente nessa falta de contexto que mora boa parte das respostas erradas, superficiais ou "confiantes demais" que a IA costuma dar.</p>
+
+      <p>Tem ainda um problema operacional. Se cada mudança estratégica exigir atualizar a página oficial e também um arquivo paralelo, você cria mais uma camada manual para manter. Em empresa pequena isso até passa. Em operação grande, com time distribuído, vira dívida técnica e editorial.</p>
+
+      <h2>O que vem depois: a pilha que faz a IA entender sua marca</h2>
+
+      <p>O caminho mais sólido é pensar em uma <strong>arquitetura legível por máquina</strong>. Não como substituição do <strong>llms.txt</strong>, mas como a próxima etapa. Algo parecido com o que aconteceu na web quando <strong>robots.txt</strong> deixou de ser suficiente e vieram sitemap, schema e outras camadas de estrutura.</p>
+
+      <p><strong>Primeira camada: fichas factuais com JSON-LD.</strong> Aqui entra o básico bem feito. Organização, produto, serviço, FAQ, review, autor, disponibilidade, preço, data de atualização. Não como truque para rich snippet, mas como uma <strong>camada oficial de fatos</strong> que a máquina consegue ler sem precisar adivinhar.</p>
+
+      <p><strong>Segunda camada: mapa de relações entre entidades.</strong> Não basta dizer que uma página existe. É preciso mostrar que o Produto A pertence à Categoria B, que a Integração C atende ao Caso de Uso D, que a Feature E só existe no plano enterprise, e que tudo isso aponta para uma fonte oficial. A IA responde melhor quando navega por relações, não por páginas soltas.</p>
+
+      <p><strong>Terceira camada: endpoints de conteúdo estruturado.</strong> Esse é o ponto em que a estratégia sai do "site bonito" e entra em infraestrutura de verdade. Em vez de deixar a IA inferir informação de uma página renderizada em JavaScript, você entrega um endpoint com dado organizado, atualizado, versionado e atribuível. Um <strong>/api/precos</strong>, um <strong>/api/faq</strong>, um <strong>/api/comparativo</strong>. Isso muda o jogo.</p>
+
+      <p><strong>Quarta camada: verificação e proveniência.</strong> Toda informação importante deveria carregar carimbo de origem: <strong>quem publicou, quando foi atualizado, qual é a versão e de onde veio o dado</strong>. Quando dois conteúdos entram em conflito, esse tipo de metadado ajuda a IA a decidir em quem confiar.</p>
+
+      <h2>Na prática, isso muda o que a IA responde sobre você</h2>
+
+      <p>Pensa em uma empresa brasileira de software de gestão vendendo para PMEs e grandes contas. Ela tem três planos, dezenas de integrações, páginas comerciais bonitas, comparativos em PDF e FAQs espalhados pelo site.</p>
+
+      <p>Hoje, para um comprador humano, isso pode funcionar muito bem. Para um agente de IA fazendo pesquisa de fornecedor, nem tanto. Se o preço está escondido em JavaScript, se o comparativo principal está em PDF e se as integrações estão espalhadas em páginas sem estrutura, a tendência é a IA errar. Ela pode confundir preço, omitir recurso enterprise ou deixar passar justamente a integração que o cliente precisa.</p>
+
+      <p>Com uma arquitetura legível por máquina, o cenário muda. A página comercial continua existindo para o humano, mas por baixo dela existe uma camada confiável para a IA consumir. O preço vem da mesma fonte do CMS. As features estão amarradas ao plano correto. As integrações aparecem agrupadas por solução. O FAQ sai por endpoint estruturado. E cada fato traz data, dono e versão.</p>
+
+      <p>Resultado: a IA para de "achar" e passa a <strong>recuperar informação oficial</strong>. E isso reduz um risco que muita marca ainda subestima: perder venda, reputação e contexto porque um agente respondeu errado sobre algo que estava no seu próprio site.</p>
+
+      <h2>O melhor momento para começar não é quando o padrão estiver perfeito</h2>
+
+      <p>É verdade que esse ecossistema ainda está se formando. O <strong>llms.txt</strong> ainda é uma proposta. O <strong>MCP</strong> ganhou força, mas o padrão definitivo de troca entre marca e agente ainda está amadurecendo. Mesmo assim, esperar tudo ficar "oficial demais" pode ser o erro.</p>
+
+      <p>Quem saiu na frente com dados estruturados no começo da década passada ajudou a moldar a forma como buscadores passaram a consumir informação. Agora, a lógica é parecida. As marcas que estruturarem cedo seus fatos, relações e fontes tendem a influenciar como os agentes vão consumir isso amanhã.</p>
+
+      <p>O mínimo viável já dá para fazer sem loucura: <strong>auditar o JSON-LD das páginas mais importantes</strong>, <strong>criar um endpoint estruturado para preço e recursos centrais</strong> e <strong>adicionar metadados de atualização e autoria nas informações públicas mais críticas</strong>.</p>
+
+      <p>Isso é muito mais útil do que publicar uma cópia em Markdown do site e torcer para algum robô entender tudo sozinho. No fim, a discussão não é sobre ter ou não ter <strong>llms.txt</strong>. É sobre algo maior: <strong>sua marca vai continuar sendo lida como página ou vai passar a ser entendida como fonte?</strong></p>
     `,
   },
 };
