@@ -3220,6 +3220,40 @@ const jsonLd = [
   </article>
 
   <Footer />
+
+  <!-- article_read: 75% scroll OR 30s on page -->
+  <script define:vars={{ articleId: slug, articleCategory: article.category, articleAuthor: article.author, articleDate: article.date }}>
+    (function() {
+      var fired = false;
+      function fire() {
+        if (fired) return;
+        fired = true;
+        try {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event: 'article_read',
+            article_id: articleId,
+            category: articleCategory,
+            author: articleAuthor,
+            publish_date: articleDate
+          });
+        } catch(e) {}
+      }
+      // 30s timer
+      var timer = setTimeout(fire, 30000);
+      // 75% scroll
+      function checkScroll() {
+        var scrolled = window.scrollY + window.innerHeight;
+        var total = document.documentElement.scrollHeight;
+        if (scrolled / total >= 0.75) {
+          fire();
+          window.removeEventListener('scroll', checkScroll);
+          clearTimeout(timer);
+        }
+      }
+      window.addEventListener('scroll', checkScroll, { passive: true });
+    })();
+  </script>
 </Base>
 
 <style is:global>
