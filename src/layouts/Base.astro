@@ -1,5 +1,8 @@
 ---
 import '../styles/global.css';
+import CookieBanner from '../components/CookieBanner.astro';
+
+const GTM_ID = 'GTM-PV2T6CSS';
 
 interface Props {
   title: string;
@@ -112,14 +115,46 @@ const allJsonLd = customJsonLd
   <!-- Security -->
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <!-- Consent Mode v2 — MUST load before GTM -->
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+    // Restore consent from previous session
+    if (localStorage.getItem('atalayia_consent') === 'granted') {
+      gtag('consent', 'update', {
+        ad_storage: 'granted',
+        ad_user_data: 'granted',
+        ad_personalization: 'granted',
+        analytics_storage: 'granted'
+      });
+    }
+  </script>
+  <!-- Google Tag Manager -->
+  <script is:inline define:vars={{ GTM_ID }}>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer',GTM_ID);
+  </script>
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <!-- GTM noscript fallback -->
+  <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`} height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <slot />
   <div class="toast" id="toast"></div>
+  <CookieBanner />
   <script>
     // Nav scroll detection
     const nav = document.getElementById('nav');
@@ -163,6 +198,20 @@ const allJsonLd = customJsonLd
           }
         }
       });
+    });
+
+    // Feature usage intent tracking — strategic CTA clicks
+    document.addEventListener('click', (e) => {
+      const target = (e.target as HTMLElement).closest<HTMLElement>('.btn-p, .btn-s, .nav-cta, .post-cta-btn');
+      if (!target) return;
+      try {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'feature_usage_intent',
+          feature_name: target.textContent?.trim() || '',
+          ui_location: target.closest('nav') ? 'nav' : target.closest('.post-cta') ? 'blog_cta' : target.closest('.cta') ? 'cta_section' : 'page',
+        });
+      } catch(e) {}
     });
 
     // Toast function

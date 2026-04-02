@@ -137,6 +137,12 @@ import Footer from '../components/Footer.astro';
       const body = encodeURIComponent(
         `Nome: ${name}\nCargo: ${role}\nEmail: ${email}\nVeículo: ${company}\nRedação: ${teamSize}\nCMS: ${cms}\n\nMensagem:\n${message}`
       );
+      // Track lead generation
+      try {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'generate_lead', lead_type: 'demo' });
+      } catch(e) {}
+
       window.location.href = `mailto:contato@atalayia.com?subject=${subject}&body=${body}`;
 
       if (typeof (window as any).showToast === 'function') {
