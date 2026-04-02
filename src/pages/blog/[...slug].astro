@@ -23,6 +23,7 @@ export function getStaticPaths() {
     { params: { slug: 'google-spam-update-reescrita-titulos-ia' } },
     { params: { slug: 'anthropic-vaza-codigo-claude-code' } },
     { params: { slug: 'anthropic-conter-vazamento-claude-code' } },
+    { params: { slug: 'nyt-rompe-colaborador-ia-resenha' } },
   ];
 }
 
@@ -2808,6 +2809,97 @@ const articles: Record<string, {
       <p>Por isso, o dano reputacional do vazamento vai além do erro operacional. A empresa precisou correr para conter a circulação do material, com pedidos de remoção se espalhando por repositórios e cópias derivadas. Mesmo assim, quando código estratégico cai na rede, o problema deixa de ser apenas "tirar do ar" e passa a ser <strong>conviver com o fato de que ele já foi estudado, copiado e reinterpretado</strong>.</p>
 
       <p>No fim, a discussão sobre se a culpa foi exclusivamente humana ou se houve excesso de confiança em fluxos automatizados muda pouco o centro da história. O que realmente importa é que a Anthropic, hoje uma das principais vitrines da programação orientada por IA, acabou atingida por uma falha básica de processo. E isso enfraquece justamente o discurso que mais tenta vender ao mercado: o de que consegue escalar inovação sem perder controle.</p>
+    `,
+  },
+
+  'nyt-rompe-colaborador-ia-resenha': {
+    title: 'NYT rompe com colaborador após IA copiar trechos de outra resenha',
+    description: 'Jornal encerrou parceria com Alex Preston após uso de IA gerar semelhanças com crítica publicada pelo The Guardian.',
+    date: '2026-04-02',
+    category: 'Análise',
+    readTime: '6 min',
+    author: 'Bruno Lopes',
+    role: 'Fundador, atalay.ia',
+    heroSvg: `<svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="800" height="400" fill="#0e1011"/>
+      <defs>
+        <radialGradient id="g-nyt2a" cx="35%" cy="45%"><stop offset="0%" stop-color="rgba(153,70,70,.08)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+        <radialGradient id="g-nyt2b" cx="65%" cy="55%"><stop offset="0%" stop-color="rgba(192,106,66,.08)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+      </defs>
+      <rect width="800" height="400" fill="url(#g-nyt2a)"/>
+      <rect width="800" height="400" fill="url(#g-nyt2b)"/>
+      <!-- Original review (Guardian) -->
+      <g transform="translate(220,165)">
+        <rect x="-90" y="-50" width="180" height="100" rx="6" stroke="rgba(255,255,255,.1)" stroke-width=".7" fill="rgba(255,255,255,.015)"/>
+        <text x="-74" y="-32" font-family="DM Sans, sans-serif" font-size="8" font-weight="600" fill="rgba(255,255,255,.25)">The Guardian</text>
+        <rect x="-74" y="-22" width="120" height="2.5" rx="1" fill="rgba(255,255,255,.1)"/>
+        <rect x="-74" y="-14" width="100" height="2.5" rx="1" fill="rgba(255,255,255,.07)"/>
+        <rect x="-74" y="-6" width="130" height="2.5" rx="1" fill="rgba(255,255,255,.08)"/>
+        <rect x="-74" y="2" width="90" height="2.5" rx="1" fill="rgba(255,255,255,.06)"/>
+        <rect x="-74" y="10" width="110" height="2.5" rx="1" fill="rgba(130,153,110,.15)"/>
+        <rect x="-74" y="18" width="95" height="2.5" rx="1" fill="rgba(130,153,110,.12)"/>
+        <rect x="-74" y="26" width="125" height="2.5" rx="1" fill="rgba(130,153,110,.15)"/>
+        <rect x="-74" y="34" width="80" height="2.5" rx="1" fill="rgba(255,255,255,.06)"/>
+      </g>
+      <!-- Arrow with AI label -->
+      <g transform="translate(400,165)">
+        <line x1="-60" y1="-10" x2="60" y2="-10" stroke="rgba(200,100,100,.2)" stroke-width=".7" stroke-dasharray="4 3"/>
+        <line x1="-60" y1="10" x2="60" y2="10" stroke="rgba(200,100,100,.2)" stroke-width=".7" stroke-dasharray="4 3"/>
+        <rect x="-22" y="-10" width="44" height="20" rx="4" fill="rgba(200,100,100,.08)" stroke="rgba(200,100,100,.2)" stroke-width=".5"/>
+        <text x="0" y="4" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="600" fill="rgba(200,100,100,.55)">AI</text>
+      </g>
+      <!-- NYT review (contaminated) -->
+      <g transform="translate(580,165)">
+        <rect x="-90" y="-50" width="180" height="100" rx="6" stroke="rgba(200,100,100,.2)" stroke-width=".7" fill="rgba(200,100,100,.015)"/>
+        <text x="-74" y="-32" font-family="DM Sans, sans-serif" font-size="8" font-weight="600" fill="rgba(255,255,255,.25)">New York Times</text>
+        <rect x="-74" y="-22" width="110" height="2.5" rx="1" fill="rgba(255,255,255,.08)"/>
+        <rect x="-74" y="-14" width="130" height="2.5" rx="1" fill="rgba(255,255,255,.07)"/>
+        <rect x="-74" y="-6" width="95" height="2.5" rx="1" fill="rgba(255,255,255,.06)"/>
+        <rect x="-74" y="2" width="120" height="2.5" rx="1" fill="rgba(255,255,255,.08)"/>
+        <rect x="-74" y="10" width="110" height="2.5" rx="1" fill="rgba(200,100,100,.2)"/>
+        <rect x="-74" y="18" width="95" height="2.5" rx="1" fill="rgba(200,100,100,.15)"/>
+        <rect x="-74" y="26" width="125" height="2.5" rx="1" fill="rgba(200,100,100,.2)"/>
+        <rect x="-74" y="34" width="85" height="2.5" rx="1" fill="rgba(255,255,255,.06)"/>
+        <!-- Strike / warning -->
+        <text x="68" y="-30" font-family="JetBrains Mono, monospace" font-size="12" fill="rgba(200,100,100,.4)">!</text>
+      </g>
+      <!-- Matching lines highlight -->
+      <line x1="146" y1="175" x2="506" y2="175" stroke="rgba(200,100,100,.1)" stroke-width=".4" stroke-dasharray="2 3"/>
+      <line x1="146" y1="183" x2="506" y2="183" stroke="rgba(200,100,100,.1)" stroke-width=".4" stroke-dasharray="2 3"/>
+      <line x1="146" y1="191" x2="506" y2="191" stroke="rgba(200,100,100,.1)" stroke-width=".4" stroke-dasharray="2 3"/>
+      <!-- Bottom labels -->
+      <g font-family="JetBrains Mono, monospace" font-size="9">
+        <text x="220" y="290" text-anchor="middle" fill="rgba(255,255,255,.18)">original review</text>
+        <text x="580" y="290" text-anchor="middle" fill="rgba(200,100,100,.45)">AI-contaminated</text>
+      </g>
+      <text x="400" y="380" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(255,255,255,.12)">NYT — AI PLAGIARISM INCIDENT</text>
+    </svg>`,
+    content: `
+      <p class="article-lead">O <strong>New York Times</strong> rompeu relações com o escritor freelancer <strong>Alex Preston</strong> após descobrir que uma resenha assinada por ele continha trechos e formulações muito semelhantes aos de uma crítica publicada anteriormente no <strong>The Guardian</strong>. O caso ampliou o debate sobre os limites do uso de <strong>inteligência artificial no jornalismo</strong> e reacendeu o temor de que ferramentas generativas estejam entrando nas redações mais tradicionais sem controles suficientes.</p>
+
+      <p>A polêmica envolve a resenha de <strong><em>Watching Over Her</em></strong>, romance de <strong>Jean-Baptiste Andrea</strong>. O texto publicado pelo Times em janeiro passou a ser questionado depois que um leitor percebeu semelhanças relevantes com uma análise escrita meses antes por <strong>Christobel Kent</strong> no jornal britânico. A partir daí, o NYT abriu uma apuração interna e ouviu o autor.</p>
+
+      <p><em>Este artigo aprofunda a análise sobre o impacto da IA nas redações tradicionais. Leia também: <a href="/blog/caso-nyt-ia-redacao/">NYT acusado de publicar artigo com IA — o que o caso ensina sobre uso responsável nas redações</a>.</em></p>
+
+      <h2>Como o caso veio à tona</h2>
+
+      <p>Durante a investigação, <strong>Preston admitiu ter usado uma ferramenta de IA</strong> para ajudar na elaboração da resenha. Segundo ele, o recurso acabou incorporando linguagem de outra crítica já publicada, e esse material passou despercebido na versão final. O problema não foi apenas uma coincidência de estilo, mas a presença de descrições e construções muito próximas das usadas no texto do <strong>The Guardian</strong>.</p>
+
+      <p>As semelhanças chamaram atenção principalmente em passagens que descrevem personagens do livro e também no fechamento da avaliação literária. Isso transformou o episódio em algo mais grave do que um simples deslize de redação, porque atingiu um ponto sensível para qualquer veículo jornalístico: a confiança de que o texto publicado é original, apurado e atribuído corretamente.</p>
+
+      <h2>Por que o New York Times tratou o episódio como grave</h2>
+
+      <p>Após o caso vir a público, os editores acrescentaram uma nota à resenha e o <strong>New York Times</strong> deixou claro que considera o uso de IA dessa forma uma violação séria de seus padrões. Em manifestação pública, o jornal afirmou que tanto a <strong>dependência de inteligência artificial</strong> quanto a inclusão de trabalho não atribuído de outro autor ferem a integridade editorial da publicação.</p>
+
+      <p>Preston disse estar profundamente envergonhado e reconheceu que cometeu um erro grave. O jornal informou ainda que revisou os outros textos produzidos por ele e não encontrou problemas semelhantes nas resenhas anteriores. Ainda assim, decidiu encerrar a colaboração, numa sinalização clara de que pretende endurecer o tratamento dado a casos em que a IA interfere na autoria jornalística.</p>
+
+      <h2>O caso aumenta a pressão sobre o uso de IA nas redações</h2>
+
+      <p>O episódio não acontece isoladamente. Nas últimas semanas, outros casos envolvendo conteúdo gerado ou contaminado por IA aumentaram a desconfiança sobre o uso dessas ferramentas em ambientes jornalísticos. O debate deixou de ser apenas tecnológico e passou a atingir o coração da atividade: <strong>credibilidade, autoria, checagem e responsabilidade</strong>.</p>
+
+      <p>No caso do <strong>New York Times</strong>, o constrangimento é ainda maior porque a empresa é vista como uma referência global em rigor editorial. Quando até um dos jornais mais influentes do mundo precisa acrescentar uma nota explicando que um texto publicado continha sobreposição com outra resenha por causa do uso de IA, o recado para o setor é direto: a tecnologia pode até acelerar processos, mas sem supervisão rigorosa ela também pode comprometer o ativo mais valioso do jornalismo, que é a confiança do leitor.</p>
+
+      <p><em>Para uma análise mais ampla sobre como a IA está transformando o jornalismo — incluindo os riscos e oportunidades —, leia: <a href="/blog/caso-nyt-ia-redacao/">NYT acusado de publicar artigo com IA — o que o caso ensina sobre uso responsável nas redações</a>.</em></p>
     `,
   },
 };
