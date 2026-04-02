@@ -1,0 +1,254 @@
+---
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+
+const authorName = 'Bruno Lopes';
+const authorUrl = 'https://atalayia.com.br/autor/bruno-lopes/';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': authorUrl,
+  name: authorName,
+  jobTitle: 'Head of Data & Innovation — O Tempo | Fundador — Atalay.ia',
+  url: authorUrl,
+  image: 'https://atalayia.com.br/autores/bruno-lopes.png',
+  sameAs: [
+    'https://www.linkedin.com/in/bruno-olopes/',
+    'https://github.com/brunoolopes',
+  ],
+  alumniOf: [
+    {
+      '@type': 'CollegeOrUniversity',
+      name: 'UFMG — Universidade Federal de Minas Gerais',
+    },
+  ],
+  knowsAbout: [
+    'Inteligência Artificial',
+    'Jornalismo de dados',
+    'Machine Learning',
+    'Deep Learning',
+    'SEO',
+    'Google Discover',
+    'Analytics',
+  ],
+  worksFor: [
+    {
+      '@type': 'Organization',
+      name: 'O Tempo',
+      url: 'https://www.otempo.com.br',
+    },
+    {
+      '@type': 'Organization',
+      name: 'Atalay.ia',
+      url: 'https://atalayia.com.br',
+    },
+  ],
+};
+---
+<Base
+  title={`${authorName} — Atalay.ia`}
+  description="Head of Data & Innovation no O Tempo e fundador do atalay.ia. Engenheiro da Computação com mestrado em Neurociências pela UFMG."
+  url={authorUrl}
+  jsonLd={jsonLd}
+>
+  <Nav />
+
+  <section class="author-page">
+    <div class="author-wrap">
+
+      <div class="author-header">
+        <div class="author-label">Autor</div>
+        <div class="author-profile">
+          <img
+            src="/autores/bruno-lopes.png"
+            alt="Bruno Lopes"
+            class="author-photo"
+            width="96"
+            height="96"
+            loading="eager"
+          />
+          <div>
+            <h1>Bruno Lopes</h1>
+            <p class="author-title">Head of Data & Innovation — O Tempo</p>
+            <p class="author-title">Fundador — Atalay.ia</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="author-content">
+
+        <h2>Sobre</h2>
+        <p>Nos últimos 10 anos, construí produtos de dados, plataformas de analytics e sistemas de IA que conectam trabalho técnico a resultados de negócio: uma virada de plataforma que aumentou a receita em 93% e reduziu custos de infraestrutura em 70%, sistemas de recomendação com ML que impulsionaram crescimento de 45% no tráfego orgânico, e workflows de IA que reduziram o tempo de publicação em 60%.</p>
+        <p>Hoje lidero iniciativas de IA integradas diretamente aos fluxos de trabalho da redação do O Tempo, incluindo um motor de recomendação em produção e um copiloto de IA integrado ao CMS, apoiando cerca de 600 conteúdos por dia em web, app, YouTube, Instagram, TikTok, Facebook e newsletter.</p>
+
+        <h2>Formação</h2>
+        <ul>
+          <li><strong>Engenharia da Computação</strong></li>
+          <li><strong>Mestrado em Neurociências</strong> — UFMG</li>
+          <li><strong>Especialização em Machine Learning e Deep Learning</strong> (em andamento)</li>
+        </ul>
+
+        <h2>Ferramentas e plataformas</h2>
+        <p>GA4, BigQuery, Chartbeat, Clarity, Looker.</p>
+
+        <h2>Links</h2>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/bruno-olopes/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/brunoolopes" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+
+        <div class="author-cta">
+          <p>Artigos publicados</p>
+          <a href="/blog" class="btn-p">Ver todos os artigos</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Base>
+
+<style is:global>
+  .author-page {
+    padding: 140px 0 100px;
+    overflow-x: hidden;
+  }
+
+  .author-wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .author-header {
+    margin-bottom: 48px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .author-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 20px;
+  }
+
+  .author-profile {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .author-photo {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--border-l);
+    flex-shrink: 0;
+  }
+
+  .author-profile h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 400;
+    letter-spacing: -.03em;
+    margin-bottom: 4px;
+  }
+
+  .author-title {
+    font-size: 15px;
+    color: var(--text-s);
+    line-height: 1.5;
+  }
+
+  .author-content h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 26px;
+    font-weight: 400;
+    margin: 48px 0 16px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    letter-spacing: -.02em;
+  }
+
+  .author-content h2:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .author-content p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-s);
+    margin-bottom: 14px;
+  }
+
+  .author-content a:not(.btn-p) {
+    color: var(--orange);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(192,106,66,.25);
+    transition: border-color .2s;
+  }
+
+  .author-content a:not(.btn-p):hover {
+    border-bottom-color: var(--orange);
+  }
+
+  .author-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+  }
+
+  .author-content li {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-s);
+    padding: 4px 0 4px 20px;
+    position: relative;
+  }
+
+  .author-content li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--text-m);
+  }
+
+  .author-content li strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .author-cta {
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+  }
+
+  .author-cta p {
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  @media (max-width: 767px) {
+    .author-page { padding: 100px 0 60px }
+    .author-wrap { padding: 0 20px }
+    .author-profile { flex-direction: column; align-items: flex-start; gap: 16px }
+    .author-profile h1 { font-size: 28px }
+    .author-content h2 { font-size: 22px; margin-top: 32px }
+  }
+</style>
