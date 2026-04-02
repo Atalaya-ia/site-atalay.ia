@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 
-const lastUpdated = '22 de março de 2026';
+const lastUpdated = '2 de abril de 2026';
 const sections = [
   { id: 'escopo', title: 'O que esta Política cobre' },
   { id: 'dados-coletados', title: 'Dados que coletamos' },
@@ -90,6 +90,7 @@ const sections = [
             <li><strong>Provedores de infraestrutura:</strong> Google Cloud Platform (hospedagem e processamento de dados)</li>
             <li><strong>Processamento de IA:</strong> modelos de linguagem natural operados sob acordo de processamento de dados</li>
             <li><strong>Autenticação:</strong> serviço de autenticação segura (gerenciamento de login)</li>
+            <li><strong>Análise e publicidade:</strong> Google Analytics 4 (análise de uso do site) e Google Ads (mensuração de conversões e remarketing), mediante consentimento do usuário</li>
             <li><strong>Análise de performance:</strong> ferramentas de análise de distribuição (acesso autorizado pelo cliente)</li>
             <li><strong>Obrigação legal:</strong> quando exigido por lei, ordem judicial ou autoridade competente</li>
           </ul>
@@ -108,12 +109,27 @@ const sections = [
           </ul>
 
           <h2 id="cookies">Cookies e rastreamento</h2>
-          <p>Utilizamos cookies estritamente necessários para:</p>
+          <p>Utilizamos cookies e tecnologias semelhantes nas seguintes categorias:</p>
+
+          <h3>Cookies estritamente necessários</h3>
           <ul>
             <li><strong>Sessão:</strong> manter seu login ativo</li>
             <li><strong>Preferências:</strong> tema (escuro/claro), editoria selecionada</li>
+            <li><strong>Consentimento:</strong> armazenar sua escolha sobre o uso de cookies</li>
           </ul>
-          <p>Não utilizamos cookies de publicidade ou rastreamento de terceiros. Não participamos de redes de publicidade comportamental.</p>
+          <p>Esses cookies não requerem consentimento e são essenciais para o funcionamento do site.</p>
+
+          <h3>Cookies de análise e publicidade (requerem consentimento)</h3>
+          <p>Mediante seu consentimento, utilizamos os seguintes serviços de terceiros:</p>
+          <ul>
+            <li><strong>Google Tag Manager (GTM):</strong> gerenciador de tags que coordena o carregamento de scripts de análise e publicidade</li>
+            <li><strong>Google Analytics 4 (GA4):</strong> coleta dados anônimos de navegação como páginas visitadas, tempo de leitura, cliques em botões e envio de formulários, para entendermos como o site é utilizado e melhorarmos a experiência</li>
+            <li><strong>Google Ads:</strong> utilizado para mensuração de conversões e remarketing, permitindo exibir anúncios relevantes em outros sites da rede Google</li>
+          </ul>
+
+          <h3>Consent Mode v2</h3>
+          <p>Implementamos o <strong>Google Consent Mode v2</strong>, que garante que nenhum cookie de análise ou publicidade é ativado antes do seu consentimento explícito. Ao visitar o site pela primeira vez, você verá um banner de consentimento com as opções de aceitar ou recusar. Sua escolha é armazenada localmente e respeitada em todas as visitas seguintes.</p>
+          <p>Você pode alterar sua escolha a qualquer momento limpando os dados do site no navegador.</p>
 
           <h2 id="seus-direitos">Seus direitos</h2>
           <p>Você tem direito a:</p>
