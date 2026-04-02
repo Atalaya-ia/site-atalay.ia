@@ -25,6 +25,7 @@ export function getStaticPaths() {
     { params: { slug: 'anthropic-conter-vazamento-claude-code' } },
     { params: { slug: 'nyt-rompe-colaborador-ia-resenha' } },
     { params: { slug: 'llms-txt-arquitetura-marca-fonte-ia' } },
+    { params: { slug: 'bimbofication-google-trends-kristi-noem' } },
   ];
 }
 
@@ -3019,6 +3020,74 @@ const articles: Record<string, {
       <p>O mínimo viável já dá para fazer sem loucura: <strong>auditar o JSON-LD das páginas mais importantes</strong>, <strong>criar um endpoint estruturado para preço e recursos centrais</strong> e <strong>adicionar metadados de atualização e autoria nas informações públicas mais críticas</strong>.</p>
 
       <p>Isso é muito mais útil do que publicar uma cópia em Markdown do site e torcer para algum robô entender tudo sozinho. No fim, a discussão não é sobre ter ou não ter <strong>llms.txt</strong>. É sobre algo maior: <strong>sua marca vai continuar sendo lida como página ou vai passar a ser entendida como fonte?</strong></p>
+    `,
+  },
+
+  'bimbofication-google-trends-kristi-noem': {
+    title: 'Por que "bimbofication" disparou no Google após escândalo ligado a Kristi Noem',
+    description: 'Termo de nicho explodiu nas buscas após reportagem sobre Bryon Noem, marido da ex-chefe de Segurança Interna dos EUA.',
+    date: '2026-04-02',
+    category: 'Dados',
+    readTime: '5 min',
+    author: 'Bruno Lopes',
+    role: 'Fundador, atalay.ia',
+    heroSvg: `<svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="800" height="400" fill="#0e1011"/>
+      <defs>
+        <radialGradient id="g-bimb1" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(192,106,66,.1)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+      </defs>
+      <rect width="800" height="400" fill="url(#g-bimb1)"/>
+      <!-- Google Trends chart -->
+      <g transform="translate(120,80)">
+        <text x="0" y="0" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(255,255,255,.25)">Google Trends</text>
+        <rect x="0" y="12" width="560" height="200" rx="6" stroke="rgba(255,255,255,.08)" stroke-width=".6" fill="rgba(255,255,255,.01)"/>
+        <!-- Grid lines -->
+        <line x1="0" y1="62" x2="560" y2="62" stroke="rgba(255,255,255,.03)" stroke-width=".4"/>
+        <line x1="0" y1="112" x2="560" y2="112" stroke="rgba(255,255,255,.03)" stroke-width=".4"/>
+        <line x1="0" y1="162" x2="560" y2="162" stroke="rgba(255,255,255,.03)" stroke-width=".4"/>
+        <!-- Y axis labels -->
+        <text x="-8" y="20" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,255,255,.12)">100</text>
+        <text x="-8" y="66" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,255,255,.12)">75</text>
+        <text x="-8" y="116" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,255,255,.12)">50</text>
+        <text x="-8" y="166" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,255,255,.12)">25</text>
+        <text x="-8" y="210" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,255,255,.12)">0</text>
+        <!-- Flat baseline then spike -->
+        <polyline points="14,205 60,204 110,205 160,204 200,205 240,204 280,205 320,203 360,204 400,200 420,195 435,170 445,100 450,40 455,18 460,18 465,30 475,55 490,90 510,130 530,165 546,190" stroke="rgba(192,106,66,.6)" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Spike highlight -->
+        <circle cx="455" cy="18" r="4" fill="rgba(192,106,66,.5)" stroke="rgba(192,106,66,.7)" stroke-width="1"/>
+        <line x1="455" y1="18" x2="455" y2="210" stroke="rgba(192,106,66,.1)" stroke-width=".5" stroke-dasharray="3 3"/>
+        <!-- Spike label -->
+        <rect x="420" y="230" width="70" height="18" rx="3" fill="rgba(192,106,66,.08)" stroke="rgba(192,106,66,.15)" stroke-width=".4"/>
+        <text x="455" y="242" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(192,106,66,.55)">breakout</text>
+      </g>
+      <!-- Search term -->
+      <text x="400" y="350" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="rgba(255,255,255,.2)">"bimbofication"</text>
+      <text x="400" y="380" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(255,255,255,.12)">SEARCH INTEREST — BREAKOUT SPIKE</text>
+    </svg>`,
+    content: `
+      <p class="article-lead">Um termo obscuro da internet saiu do submundo dos nichos online e foi parar no centro do debate político e cultural nos Estados Unidos. <strong>"Bimbofication"</strong>, palavra pouco conhecida fora de certos fóruns, disparou nas buscas do Google depois que uma reportagem ligou o assunto a <strong>Bryon Noem</strong>, marido de <strong>Kristi Noem</strong>, ex-secretária de Segurança Interna dos EUA.</p>
+
+      <p>O caso virou assunto porque mistura três ingredientes que costumam incendiar a internet: <strong>escândalo pessoal</strong>, <strong>hipocrisia política</strong> e <strong>um termo estranho que muita gente correu para pesquisar</strong>. Em poucas horas, a palavra passou de curiosidade de nicho para tema viral, puxada por memes, comentários e reações públicas de figuras importantes da política americana.</p>
+
+      <h2>Por que o termo disparou de repente</h2>
+
+      <p>O gatilho foi uma reportagem do <strong><a href="https://www.dailymail.co.uk" target="_blank" rel="noopener">Daily Mail</a></strong>, repercutida por outros veículos, com alegações sobre a vida privada de <strong>Bryon Noem</strong>. A publicação disse ter reunido mensagens e imagens que o ligariam a um universo online associado à chamada <strong>"bimbofication"</strong>, um termo usado em nichos da internet para descrever uma estética ou fantasia de <strong>hiperfeminilidade caricata</strong>, geralmente marcada por visual exagerado, roupas chamativas e aparência inspirada em bonecas.</p>
+
+      <p>Foi esse detalhe que tirou a história do campo do escândalo privado e a empurrou para o topo das buscas. Muita gente simplesmente não sabia o que a palavra significava e correu ao Google para entender do que se tratava. O resultado foi uma explosão instantânea no <strong><a href="https://trends.google.com/trends/explore?q=bimbofication&geo=US" target="_blank" rel="noopener">Google Trends</a></strong>, com o termo chegando ao pico de interesse em um único dia.</p>
+
+      <h2>O que a reportagem diz sobre o caso</h2>
+
+      <p>Segundo a repercussão da investigação, <strong>Bryon Noem</strong> teria trocado mensagens com modelos ligadas a esse nicho e enviado dinheiro ao longo do tempo. Parte da atenção se concentrou em imagens compartilhadas pela imprensa, que rapidamente circularam nas redes sociais e ajudaram a transformar o episódio em assunto nacional. Até aqui, o ponto central da história não é só o conteúdo em si, mas o impacto público que ele teve ao vazar para fora de um ambiente privado e cair em cheio no debate político.</p>
+
+      <p>A família pediu privacidade, e a cobertura deixou claro que o tema ganhou outra dimensão porque envolve a ex-chefe de um dos órgãos mais sensíveis do governo americano. A situação ficou ainda mais ruidosa depois que <strong>Donald Trump</strong>, questionado sobre o caso, reagiu dizendo que sentia pelo que a família estaria passando e resumiu o episódio com a frase: <strong>"That's too bad"</strong>.</p>
+
+      <h2>Por que isso virou assunto muito além do Google</h2>
+
+      <p>Se fosse apenas uma fofoca sobre a vida íntima de um personagem pouco conhecido, provavelmente a história morreria rápido. Mas o caso atingiu em cheio uma família ligada a uma ala política conservadora que passou anos travando guerras culturais em temas de comportamento, gênero e costumes. Foi isso que deu ao episódio uma camada extra de repercussão.</p>
+
+      <p>Na prática, o que fez <strong>"bimbofication"</strong> explodir nas buscas não foi só a curiosidade pelo significado da palavra. Foi o contraste entre a imagem pública construída ao redor de <strong>Kristi Noem</strong> e a natureza das alegações envolvendo seu marido. Quando esse tipo de choque entre discurso público e vida privada aparece, a internet costuma reagir da forma mais previsível possível: com espanto, ironia, memes e uma avalanche de pesquisas no Google.</p>
+
+      <p>No fim, o episódio mostra como a lógica da atenção funciona hoje. Às vezes, basta uma reportagem com um termo desconhecido, um personagem conectado ao poder e uma pitada de constrangimento público para transformar uma palavra de nicho em assunto do dia. Foi exatamente isso que aconteceu com <strong>"bimbofication"</strong>. Acompanhe a evolução do interesse pelo termo no <strong><a href="https://trends.google.com/trends/explore?q=bimbofication" target="_blank" rel="noopener">Google Trends</a></strong>.</p>
     `,
   },
 };
