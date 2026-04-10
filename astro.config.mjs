@@ -17,6 +17,7 @@ const lastModified = {
   '/blog/como-levar-ia-para-redacao/': '2026-03-25',
   '/blog/ia-ferramenta-ou-ameaca-jornalismo/': '2026-03-24',
   '/blog/google-discover-trafico-redacoes/': '2026-03-23',
+  '/blog/anthropic-libera-mythos-apple-ciberataques/': '2026-04-09',
   '/contato/': '2026-03-22',
   '/quem-somos/': '2026-03-22',
   '/privacidade/': '2026-03-22',

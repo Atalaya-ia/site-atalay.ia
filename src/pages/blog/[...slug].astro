@@ -26,6 +26,7 @@ export function getStaticPaths() {
     { params: { slug: 'nyt-rompe-colaborador-ia-resenha' } },
     { params: { slug: 'llms-txt-arquitetura-marca-fonte-ia' } },
     { params: { slug: 'bimbofication-google-trends-kristi-noem' } },
+    { params: { slug: 'anthropic-libera-mythos-apple-ciberataques' } },
   ];
 }
 
@@ -3088,6 +3089,92 @@ const articles: Record<string, {
       <p>Na prática, o que fez <strong>"bimbofication"</strong> explodir nas buscas não foi só a curiosidade pelo significado da palavra. Foi o contraste entre a imagem pública construída ao redor de <strong>Kristi Noem</strong> e a natureza das alegações envolvendo seu marido. Quando esse tipo de choque entre discurso público e vida privada aparece, a internet costuma reagir da forma mais previsível possível: com espanto, ironia, memes e uma avalanche de pesquisas no Google.</p>
 
       <p>No fim, o episódio mostra como a lógica da atenção funciona hoje. Às vezes, basta uma reportagem com um termo desconhecido, um personagem conectado ao poder e uma pitada de constrangimento público para transformar uma palavra de nicho em assunto do dia. Foi exatamente isso que aconteceu com <strong>"bimbofication"</strong>. Acompanhe a evolução do interesse pelo termo no <strong><a href="https://trends.google.com/trends/explore?q=bimbofication" target="_blank" rel="noopener">Google Trends</a></strong>.</p>
+    `,
+  },
+
+  'anthropic-libera-mythos-apple-ciberataques': {
+    title: 'Anthropic libera Mythos para Apple e gigantes de tecnologia reforçarem defesa contra ciberataques',
+    description: 'Novo modelo da Anthropic ficará restrito a Apple, Microsoft, Google e outras parceiras para identificar falhas graves antes de um lançamento mais amplo.',
+    date: '2026-04-09',
+    category: 'Análise',
+    readTime: '6 min',
+    author: 'Bruno Lopes',
+    role: 'Fundador, atalay.ia',
+    heroSvg: `<svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="800" height="400" fill="#0e1011"/>
+      <defs>
+        <radialGradient id="g-myth1" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(192,106,66,.1)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+        <radialGradient id="g-myth2" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(130,153,110,.05)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+      </defs>
+      <rect width="800" height="400" fill="url(#g-myth1)"/>
+      <rect width="800" height="400" fill="url(#g-myth2)"/>
+      <!-- Central shield -->
+      <g transform="translate(400,200)">
+        <path d="M0,-90 L75,-55 L75,30 Q75,82 0,105 Q-75,82 -75,30 L-75,-55 Z" stroke="rgba(192,106,66,.35)" stroke-width="1.2" fill="rgba(192,106,66,.03)"/>
+        <path d="M0,-65 L52,-38 L52,22 Q52,58 0,75 Q-52,58 -52,22 L-52,-38 Z" stroke="rgba(192,106,66,.22)" stroke-width=".7" fill="rgba(192,106,66,.02)"/>
+        <line x1="-40" y1="-30" x2="40" y2="-30" stroke="rgba(192,106,66,.25)" stroke-width=".5" stroke-dasharray="2 2"/>
+        <line x1="-40" y1="-15" x2="40" y2="-15" stroke="rgba(192,106,66,.25)" stroke-width=".5" stroke-dasharray="2 2"/>
+        <line x1="-40" y1="0" x2="40" y2="0" stroke="rgba(130,153,110,.4)" stroke-width=".7"/>
+        <line x1="-40" y1="15" x2="40" y2="15" stroke="rgba(192,106,66,.25)" stroke-width=".5" stroke-dasharray="2 2"/>
+        <line x1="-40" y1="30" x2="40" y2="30" stroke="rgba(192,106,66,.25)" stroke-width=".5" stroke-dasharray="2 2"/>
+        <circle cx="0" cy="0" r="4" fill="rgba(130,153,110,.55)" stroke="rgba(130,153,110,.7)" stroke-width=".8"/>
+        <text x="0" y="125" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(192,106,66,.55)">MYTHOS</text>
+        <text x="0" y="140" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(255,255,255,.22)">varredura: crítica</text>
+      </g>
+      <!-- Partner tiles -->
+      <g font-family="DM Sans, sans-serif" font-size="9" fill="rgba(255,255,255,.4)">
+        <g transform="translate(120,90)"><rect x="0" y="0" width="80" height="26" rx="4" stroke="rgba(255,255,255,.1)" stroke-width=".5" fill="rgba(255,255,255,.015)"/><text x="40" y="17" text-anchor="middle">Apple</text></g>
+        <g transform="translate(120,150)"><rect x="0" y="0" width="80" height="26" rx="4" stroke="rgba(255,255,255,.1)" stroke-width=".5" fill="rgba(255,255,255,.015)"/><text x="40" y="17" text-anchor="middle">Microsoft</text></g>
+        <g transform="translate(120,210)"><rect x="0" y="0" width="80" height="26" rx="4" stroke="rgba(255,255,255,.1)" stroke-width=".5" fill="rgba(255,255,255,.015)"/><text x="40" y="17" text-anchor="middle">Google</text></g>
+        <g transform="translate(120,270)"><rect x="0" y="0" width="80" height="26" rx="4" stroke="rgba(255,255,255,.1)" stroke-width=".5" fill="rgba(255,255,255,.015)"/><text x="40" y="17" text-anchor="middle">AWS</text></g>
+        <g transform="translate(600,90)"><rect x="0" y="0" width="80" height="26" rx="4" stroke="rgba(255,255,255,.1)" stroke-width=".5" fill="rgba(255,255,255,.015)"/><text x="40" y="17" text-anchor="middle">NVIDIA</text></g>
+        <g transform="translate(600,150)"><rect x="0" y="0" width="80" height="26" rx="4" stroke="rgba(255,255,255,.1)" stroke-width=".5" fill="rgba(255,255,255,.015)"/><text x="40" y="17" text-anchor="middle">Cisco</text></g>
+        <g transform="translate(600,210)"><rect x="0" y="0" width="80" height="26" rx="4" stroke="rgba(255,255,255,.1)" stroke-width=".5" fill="rgba(255,255,255,.015)"/><text x="40" y="17" text-anchor="middle">CrowdStrike</text></g>
+        <g transform="translate(600,270)"><rect x="0" y="0" width="80" height="26" rx="4" stroke="rgba(255,255,255,.1)" stroke-width=".5" fill="rgba(255,255,255,.015)"/><text x="40" y="17" text-anchor="middle">Palo Alto</text></g>
+      </g>
+      <!-- Connecting lines -->
+      <g stroke="rgba(192,106,66,.12)" stroke-width=".4" stroke-dasharray="2 2">
+        <line x1="200" y1="103" x2="325" y2="170"/>
+        <line x1="200" y1="163" x2="325" y2="190"/>
+        <line x1="200" y1="223" x2="325" y2="210"/>
+        <line x1="200" y1="283" x2="325" y2="230"/>
+        <line x1="600" y1="103" x2="475" y2="170"/>
+        <line x1="600" y1="163" x2="475" y2="190"/>
+        <line x1="600" y1="223" x2="475" y2="210"/>
+        <line x1="600" y1="283" x2="475" y2="230"/>
+      </g>
+      <text x="400" y="380" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(255,255,255,.15)">PROJETO GLASSWING — PRÉVIA DEFENSIVA</text>
+    </svg>`,
+    content: `
+      <p class="article-lead">A <strong>Anthropic</strong> anunciou uma nova ofensiva no campo da cibersegurança ao liberar o acesso ao <strong>Claude Mythos</strong> para um grupo seleto de gigantes da tecnologia, entre elas a <strong>Apple</strong>. O modelo, ainda inédito para o público, será usado dentro do <strong>Projeto Glasswing</strong>, iniciativa criada para ajudar grandes empresas e organizações estratégicas a encontrar e corrigir falhas críticas de software antes que elas virem alvo de ataques reais.</p>
+
+      <p>Além da Apple, o projeto reúne nomes de peso como <strong>Amazon Web Services</strong>, <strong>Google</strong>, <strong>Microsoft</strong>, <strong>Cisco</strong>, <strong>NVIDIA</strong>, <strong>CrowdStrike</strong>, <strong>Palo Alto Networks</strong>, <strong>Broadcom</strong>, <strong>JPMorganChase</strong> e a <strong>Linux Foundation</strong>. A proposta é simples no papel, mas ambiciosa na prática: usar uma IA extremamente avançada para proteger infraestruturas críticas antes que modelos com capacidades semelhantes se espalhem de forma mais ampla.</p>
+
+      <h2>O que é o Mythos e por que ele chamou tanta atenção</h2>
+
+      <p>Segundo a Anthropic, o <strong>Mythos</strong> é um modelo de uso geral, mas com capacidade de programação e raciocínio em segurança digital muito acima do normal. A empresa afirma que ele já encontrou <strong>milhares de vulnerabilidades de alta gravidade</strong>, inclusive em <strong>todos os principais sistemas operacionais</strong> e <strong>todos os grandes navegadores</strong>.</p>
+
+      <p>Em alguns testes, o modelo teria identificado falhas antigas que passaram anos — e até décadas — despercebidas por revisões humanas e ferramentas automatizadas. Entre os exemplos citados pela Anthropic estão uma vulnerabilidade de <strong>27 anos no OpenBSD</strong>, uma falha de <strong>16 anos no FFmpeg</strong> e uma cadeia de problemas no <strong>kernel Linux</strong> que poderia permitir a tomada completa de uma máquina.</p>
+
+      <h2>Por que a Anthropic não abriu o acesso ao público</h2>
+
+      <p>O ponto central da estratégia é justamente o risco. A Anthropic deixa claro que modelos com esse nível de capacidade podem ajudar defensores, mas também poderiam ser usados para acelerar ataques cibernéticos, ampliar o alcance de invasores e reduzir o tempo entre a descoberta de uma falha e sua exploração.</p>
+
+      <p>Por isso, o <strong>Claude Mythos</strong> não será liberado para qualquer usuário neste momento. Em vez disso, ele ficará nas mãos de parceiros escolhidos, em um ambiente controlado, com foco exclusivo em <strong>segurança defensiva</strong>. A empresa também disse que está em diálogo com autoridades dos Estados Unidos sobre os impactos dessa nova geração de modelos no cenário de segurança digital.</p>
+
+      <h2>O papel da Apple e das outras gigantes da tecnologia</h2>
+
+      <p>Para a Apple e as demais parceiras, o acesso antecipado ao Mythos funciona como uma espécie de vantagem estratégica. Essas empresas poderão usar o modelo para examinar seus próprios sistemas, bibliotecas, produtos e componentes críticos em busca de brechas que poderiam ser exploradas quando esse tipo de capacidade de IA se tornar mais comum no mercado.</p>
+
+      <p>Na prática, a corrida mudou de patamar. O debate já não é apenas sobre usar IA para escrever código ou ganhar produtividade, mas sobre como evitar que a mesma tecnologia passe a turbinar uma nova geração de <strong>ciberataques automatizados</strong>. O Glasswing nasce exatamente dessa preocupação: se a IA está ficando poderosa o suficiente para encontrar falhas como os melhores especialistas do mundo, o lado da defesa precisa sair na frente.</p>
+
+      <h2>O que a Anthropic quer construir com o Projeto Glasswing</h2>
+
+      <p>A Anthropic definiu o projeto como um primeiro passo para dar aos defensores uma vantagem real antes que essas capacidades se tornem amplamente acessíveis. Além de abrir o Mythos para as parceiras principais, a empresa disse que também estendeu o acesso a <strong>mais de 40 organizações</strong> responsáveis por softwares e infraestruturas críticas.</p>
+
+      <p>Para sustentar a iniciativa, a companhia prometeu até <strong>US$ 100 milhões em créditos de uso</strong> do modelo e mais <strong>US$ 4 milhões em apoio direto</strong> a grupos ligados à segurança de software de código aberto. A mensagem é clara: a Anthropic quer posicionar o Mythos não como mais um chatbot poderoso, mas como uma ferramenta de linha de frente em uma nova disputa entre IA defensiva e IA ofensiva.</p>
+
+      <p>Para o mercado, o movimento também serve como alerta. Se empresas como Apple, Google e Microsoft já estão testando modelos desse nível para proteger suas plataformas, é porque a indústria começa a tratar como inevitável um futuro em que a segurança digital será travada, cada vez mais, entre sistemas inteligentes dos dois lados.</p>
     `,
   },
 };
