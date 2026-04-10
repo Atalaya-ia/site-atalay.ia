@@ -3317,4 +3317,96 @@ export const articles: Record<string, Article> = {
       <p>No fim, o estudo joga luz sobre uma fraqueza incômoda dessa tecnologia. O risco não está só em a IA inventar fatos ou errar informações. Está também em <strong>concordar demais</strong>, validar versões distorcidas da realidade e ajudar o usuário a sair de uma conversa mais confortável, porém <strong>menos disposto a se corrigir</strong>. E, às vezes, o conselho mais importante não é aquele que acolhe. É aquele que diz, com honestidade, que você passou do ponto.</p>
     `,
   },
+
+  'ia-muda-redacoes-2025-nao-aposenta-jornalista': {
+    title: 'IA muda redações em 2025, mas não aposenta o jornalista',
+    description: 'Automação, personalização e checagem ganham espaço nas redações, enquanto ética, confiança e autoria viram o centro do debate.',
+    date: '2026-04-10',
+    category: 'Análise',
+    readTime: '5 min',
+    author: 'Bruno Lopes',
+    role: 'Fundador, atalay.ia',
+    heroSvg: `<svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="800" height="400" fill="#0e1011"/>
+      <defs>
+        <radialGradient id="g-hib1" cx="35%" cy="45%"><stop offset="0%" stop-color="rgba(192,106,66,.1)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+        <radialGradient id="g-hib2" cx="65%" cy="55%"><stop offset="0%" stop-color="rgba(130,153,110,.06)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+      </defs>
+      <rect width="800" height="400" fill="url(#g-hib1)"/>
+      <rect width="800" height="400" fill="url(#g-hib2)"/>
+      <!-- Jornalista -->
+      <g transform="translate(260,175)">
+        <circle cx="0" cy="-28" r="18" stroke="rgba(255,255,255,.15)" stroke-width=".8" fill="rgba(255,255,255,.02)"/>
+        <line x1="0" y1="-10" x2="0" y2="25" stroke="rgba(255,255,255,.15)" stroke-width=".8"/>
+        <line x1="-20" y1="5" x2="20" y2="5" stroke="rgba(255,255,255,.15)" stroke-width=".8"/>
+        <line x1="-10" y1="25" x2="0" y2="45" stroke="rgba(255,255,255,.12)" stroke-width=".7"/>
+        <line x1="10" y1="25" x2="0" y2="45" stroke="rgba(255,255,255,.12)" stroke-width=".7"/>
+        <text x="0" y="65" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,.3)">jornalista</text>
+        <g font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(255,255,255,.18)">
+          <text x="0" y="82" text-anchor="middle">apuração · contexto · critério</text>
+        </g>
+      </g>
+      <!-- Sinal de + -->
+      <g transform="translate(400,175)">
+        <line x1="-12" y1="0" x2="12" y2="0" stroke="rgba(255,255,255,.12)" stroke-width="1"/>
+        <line x1="0" y1="-12" x2="0" y2="12" stroke="rgba(255,255,255,.12)" stroke-width="1"/>
+      </g>
+      <!-- IA -->
+      <g transform="translate(540,175)">
+        <rect x="-50" y="-45" width="100" height="90" rx="10" stroke="rgba(192,106,66,.25)" stroke-width=".8" fill="rgba(192,106,66,.02)"/>
+        <text x="0" y="5" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="18" fill="rgba(192,106,66,.5)">IA</text>
+        <text x="0" y="65" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(192,106,66,.45)">copiloto</text>
+        <g font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(192,106,66,.3)">
+          <text x="0" y="82" text-anchor="middle">dados · velocidade · escala</text>
+        </g>
+      </g>
+      <!-- Resultado -->
+      <g transform="translate(400,310)">
+        <rect x="-120" y="-16" width="240" height="32" rx="6" stroke="rgba(130,153,110,.25)" stroke-width=".6" fill="rgba(130,153,110,.02)"/>
+        <text x="0" y="4" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(130,153,110,.5)">jornalismo híbrido · 2025</text>
+      </g>
+      <!-- Rótulos superiores -->
+      <g font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(255,255,255,.12)">
+        <text x="260" y="90" text-anchor="middle">confiança</text>
+        <text x="400" y="90" text-anchor="middle">+</text>
+        <text x="540" y="90" text-anchor="middle">eficiência</text>
+      </g>
+      <text x="400" y="375" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(255,255,255,.1)">a máquina acelera · o humano decide</text>
+    </svg>`,
+    content: `
+      <p class="article-lead">Em 2025, a <strong>inteligência artificial</strong> deixou de ser promessa de laboratório e virou ferramenta de rotina nas redações. O que antes parecia experimento agora participa do dia a dia de veículos no mundo inteiro: ajuda a monitorar tendências, resume documentos, acelera transcrições, organiza bases de dados, sugere manchetes e apoia a distribuição de conteúdo em diferentes plataformas.</p>
+
+      <p>Essa mudança não significa que a máquina assumiu o lugar do repórter. O que está acontecendo é algo mais complexo — e mais profundo. A IA passou a ocupar o papel de <strong>copiloto da produção jornalística</strong>, ganhando espaço nas tarefas repetitivas e analíticas, enquanto o trabalho humano fica ainda mais valioso nas etapas que exigem contexto, sensibilidade, apuração e responsabilidade editorial.</p>
+
+      <h2>A IA já entrou na rotina das redações</h2>
+
+      <p>Grandes organizações de notícia vêm usando automação e ferramentas de IA há anos, mas 2025 consolidou essa transição em outro patamar. O <a href="https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2025" target="_blank" rel="noopener">Digital News Report 2025 do Reuters Institute</a> documentou como veículos do mundo todo passaram a integrar IA em seus fluxos de produção. O movimento ganhou força porque o jornalismo digital vive sob pressão permanente por <strong>velocidade, escala e produtividade</strong>.</p>
+
+      <p>Na prática, isso significa que sistemas automatizados conseguem ler grandes volumes de informação em segundos, identificar padrões em documentos extensos, cruzar dados e apontar sinais que talvez passassem despercebidos em uma rotina manual. Em redações pressionadas por tempo e orçamento, esse ganho operacional é visto como uma vantagem importante.</p>
+
+      <p>Ao mesmo tempo, a IA também passou a influenciar a forma como a notícia chega ao público. Ferramentas de personalização, resumo e adaptação de linguagem ajudam veículos a distribuir o mesmo conteúdo em formatos diferentes, adequando a entrega para celular, boletim, rede social, assistente conversacional e busca.</p>
+
+      <h2>O ganho de eficiência não elimina o valor humano</h2>
+
+      <p>Se a IA é boa para acelerar, o jornalista continua sendo indispensável para dar <strong>sentido</strong> ao que foi encontrado. Isso vale especialmente em coberturas complexas, investigações, entrevistas, análises políticas, temas culturais e decisões editoriais delicadas. Uma máquina pode resumir uma fala, mas não entende com profundidade o peso simbólico de uma declaração. Pode organizar fatos, mas não substitui o olhar treinado que percebe contradições, interesses ocultos e impacto social.</p>
+
+      <p>É por isso que o debate mais maduro sobre IA no jornalismo já não gira em torno da pergunta "a máquina vai substituir o repórter?". A pergunta certa passou a ser outra: <strong>como usar essa tecnologia sem enfraquecer a credibilidade da notícia?</strong> Quanto mais a automação avança, mais importante fica o papel humano na checagem, na interpretação, na transparência e no julgamento editorial. O projeto <a href="https://www.lse.ac.uk/media-and-communications/polis/JournalismAI" target="_blank" rel="noopener">JournalismAI da London School of Economics</a> acompanha de perto como redações do mundo todo estão tentando responder a essa pergunta.</p>
+
+      <p>Em outras palavras, a IA pode ajudar a produzir mais rápido. Mas <strong>confiança</strong>, <strong>autoridade</strong> e <strong>responsabilidade</strong> continuam sendo ativos humanos.</p>
+
+      <h2>Os riscos também cresceram</h2>
+
+      <p>O avanço da IA nas redações trouxe benefícios, mas também empurrou problemas para o centro da mesa. O primeiro deles é o risco de <strong>erro com aparência de certeza</strong>. Sistemas generativos conseguem escrever com fluidez e segurança mesmo quando a resposta está incompleta, mal sustentada ou simplesmente errada. No jornalismo, isso é especialmente grave porque a credibilidade pode ser corroída por falhas que o leitor não percebe de imediato.</p>
+
+      <p>Há também preocupações com <strong>viés</strong>, <strong>plágio</strong>, <strong>autoria</strong>, <strong>uso indevido de conteúdo de terceiros</strong> e <strong>transparência com o público</strong>. Se uma redação usa IA para resumir, redigir ou editar, o leitor deve saber? Se o sistema aprende com grandes massas de conteúdo jornalístico, como ficam os direitos autorais? E, se uma ferramenta reproduz vieses presentes nos dados de treinamento, quem responde pelo resultado final?</p>
+
+      <p>Essas perguntas explicam por que tantas empresas de mídia passaram a discutir códigos internos, regras de uso e limites claros para automação. As próprias <a href="https://developers.google.com/search/docs/essentials" target="_blank" rel="noopener">diretrizes do Google para conteúdo</a> já deixam claro que transparência e qualidade editorial são fatores relevantes para visibilidade na busca. O foco já não é apenas inovar, mas inovar sem destruir a base ética que sustenta a atividade jornalística.</p>
+
+      <h2>O futuro da notícia será híbrido</h2>
+
+      <p>O cenário que se desenha não é de redação totalmente automatizada nem de rejeição completa à tecnologia. O caminho mais provável é o de um jornalismo <strong>híbrido</strong>, em que a IA assume parte da infraestrutura de apoio e os profissionais concentram energia no que gera diferenciação real: apuração, profundidade, linguagem, contexto, comunidade e confiança.</p>
+
+      <p>No fim, a transformação de 2025 deixa uma lição importante. A IA pode até reorganizar o fluxo de trabalho, mudar métricas, encurtar etapas e ampliar a capacidade de produção. Mas o jornalismo continua dependendo de algo que algoritmo nenhum entrega sozinho: <strong>critério</strong>. E, numa era em que publicar ficou fácil e o ruído informacional só aumenta, esse critério vale mais do que nunca.</p>
+    `,
+  },
 };
