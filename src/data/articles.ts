@@ -77,7 +77,7 @@ export const articles: Record<string, Article> = {
       </g>
     </svg>`,
     content: `
-      <p class="article-lead">Redações trabalham com pressão constante. Deadline apertado, pauta mudando em tempo real, correções manuais que consomem horas. E mesmo assim, a maioria das ferramentas de IA disponíveis hoje trata jornalismo como qualquer outro tipo de texto.</p>
+      <p class="article-lead">Redações trabalham com pressão constante. Prazo apertado, pauta mudando em tempo real, correções manuais que consomem horas. E mesmo assim, a maioria das ferramentas de IA disponíveis hoje trata jornalismo como qualquer outro tipo de texto.</p>
 
       <p>Depois de mais de um ano trabalhando com dados reais de performance editorial — analisando milhares de artigos, estudando o que funciona em cada canal de distribuição, mapeando erros recorrentes por editoria — lançamos o <strong>atalay.ia</strong>.</p>
 
@@ -182,7 +182,7 @@ export const articles: Record<string, Article> = {
       <ul>
         <li>O Manual de Redação do seu jornal proíbe "o mesmo" como pronome anafórico</li>
         <li>"Cruzeiro" em Minas Gerais é um clube de futebol, não a moeda antiga</li>
-        <li>Títulos para <a href="https://developers.google.com/search/docs/appearance/google-discover" target="_blank" rel="noopener">Google Discover</a> precisam de gancho emocional, enquanto títulos para Busca precisam de keyword match</li>
+        <li>Títulos para <a href="https://developers.google.com/search/docs/appearance/google-discover" target="_blank" rel="noopener">Google Discover</a> precisam de gancho emocional, enquanto títulos para Busca precisam de correspondência exata com a palavra-chave</li>
         <li>Cada jornalista tem um estilo de escrita que deve ser preservado, não padronizado</li>
       </ul>
 
@@ -195,7 +195,7 @@ export const articles: Record<string, Article> = {
       <p>No caso do jornalismo, isso significa:</p>
 
       <ul>
-        <li><strong>Dados de performance reais:</strong> não benchmarks de mercado, mas dados do próprio domínio — como o público realmente interage com o conteúdo de cada editoria.</li>
+        <li><strong>Dados de performance reais:</strong> não referências de mercado, mas dados do próprio domínio — como o público realmente interage com o conteúdo de cada editoria.</li>
         <li><strong>Regras editoriais explícitas:</strong> o Manual de Redação não é uma sugestão, é lei. A IA precisa conhecê-lo e aplicá-lo como guardrail.</li>
         <li><strong>Perfil de voz:</strong> cada jornalista escreve diferente. Um colunista de esportes tem tom diferente de um repórter de política. A IA precisa adaptar-se, não homogeneizar.</li>
         <li><strong>Contexto geográfico:</strong> uma redação regional precisa de uma IA que entenda a relevância local. O que importa em Minas nem sempre importa no resto do país.</li>
@@ -407,12 +407,12 @@ export const articles: Record<string, Article> = {
       <p>O atalay.ia captura o perfil de voz em etapas progressivas:</p>
 
       <h3>Preferências declaradas</h3>
-      <p>No onboarding, o jornalista escolhe seu perfil base: <strong>Factual/Rápido</strong> (frases curtas, lead direto, mínimo de adjetivos) ou <strong>Analítico/Denso</strong> (contexto expandido, dados de suporte, mais nuance). Isso estabelece a linha de base.</p>
+      <p>Na integração inicial, o jornalista escolhe seu perfil base: <strong>Factual/Rápido</strong> (frases curtas, lead direto, mínimo de adjetivos) ou <strong>Analítico/Denso</strong> (contexto expandido, dados de suporte, mais nuance). Isso estabelece a linha de base.</p>
 
       <h3>Aprendizado com o uso</h3>
       <p>A IA analisa o histórico de produção do jornalista para identificar padrões — usando técnicas de <a href="https://en.wikipedia.org/wiki/Stylometry" target="_blank" rel="noopener">estilometria computacional</a>: como ele constrói frases, que tipo de vocabulário prefere, como estrutura os leads. Não é uma análise genérica — é calibrada por editoria e por autor.</p>
 
-      <h3>Feedback contínuo</h3>
+      <h3>Retorno contínuo</h3>
       <p>Quando o jornalista aceita ou rejeita sugestões, o atalay.ia aprende. Rejeições consistentes de certo tipo de sugestão refinam o perfil. Quanto mais uso, mais preciso.</p>
 
       <blockquote>
@@ -509,12 +509,12 @@ export const articles: Record<string, Article> = {
 
       <h2>O problema de otimizar para um só</h2>
 
-      <p>A maioria das redações tem uma cultura de SEO focada em Busca — keyword research, heading structure, internal linking. Essas práticas são válidas, mas insuficientes para Discover.</p>
+      <p>A maioria das redações tem uma cultura de SEO focada em Busca — pesquisa de palavras-chave, estrutura de headings, links internos. Essas práticas são válidas, mas insuficientes para Discover.</p>
 
       <p>Discover é um canal de <em>recomendação</em>. O Google não mostra seu artigo porque alguém pesquisou sobre o tema — mostra porque o algoritmo decidiu que aquele usuário vai se interessar. As <a href="https://developers.google.com/search/docs/appearance/google-discover" target="_blank" rel="noopener">regras do Discover</a> são diferentes:</p>
 
       <ul>
-        <li>Autoridade do domínio no tema importa mais que keyword match</li>
+        <li>Autoridade do domínio no tema importa mais que correspondência de palavra-chave</li>
         <li>Recência é um fator dominante</li>
         <li>Engajamento prévio do usuário com o veículo influencia a distribuição</li>
         <li>Qualidade da imagem de capa é um sinal forte</li>
@@ -526,7 +526,7 @@ export const articles: Record<string, Article> = {
 
       <h3>Para Busca</h3>
       <ul>
-        <li>Título otimizado para keyword match</li>
+        <li>Título otimizado para correspondência de palavra-chave</li>
         <li>Estrutura de headings cobrindo subtópicos relevantes</li>
         <li>Sugestão de links internos para fortalecer clusters temáticos</li>
       </ul>
@@ -641,7 +641,7 @@ export const articles: Record<string, Article> = {
       <h3>Manual de Redação</h3>
       <p>Regras específicas do veículo. Aqui é onde o atalay.ia se diferencia de qualquer ferramenta genérica: ele não apenas corrige — ele cita a regra e ensina.</p>
 
-      <h3>Performance</h3>
+      <h3>Desempenho</h3>
       <p>Sugestões baseadas em dados reais de distribuição. Não são "erros" — são oportunidades de melhorar o alcance do conteúdo nos canais onde o público está.</p>
 
       <blockquote>
@@ -763,17 +763,17 @@ export const articles: Record<string, Article> = {
 
       <p>Desde o lancamento global dos AI Overviews em 2025, o Google responde diretamente a uma parcela crescente de buscas informacionais. Para consultas como "o que aconteceu no jogo do Atletico ontem", o usuario recebe a resposta sem clicar em nenhum link. O <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="noopener">Google Search Central</a> classifica isso como "melhorar a experiencia do usuario" — mas para redacoes, significa menos cliques.</p>
 
-      <p>Estudos da Authoritas e do Search Engine Land estimam que AI Overviews reduziram o CTR organico em 18-25% para queries informacionais. Noticias sao, por natureza, conteudo informacional.</p>
+      <p>Estudos da Authoritas e do Search Engine Land estimam que AI Overviews reduziram o CTR organico em 18-25% para consultas informacionais. Noticias sao, por natureza, conteudo informacional.</p>
 
       <h3>2. Atualizacoes de algoritmo focadas em autoridade</h3>
 
       <p>As atualizacoes de core algorithm do Google em 2024 e 2025 elevaram o peso de <strong>E-E-A-T</strong> (Experience, Expertise, Authoritativeness, Trustworthiness). Para veiculos com boa reputacao, isso deveria ser positivo. Na pratica, muitos portais de noticias brasileiros nao estruturam seu conteudo para demonstrar autoridade tematica.</p>
 
-      <p>Artigos publicados sem byline, sem links internos para cobertura anterior do tema, sem dados estruturados adequados — tudo isso sinaliza para o Google que o conteudo nao tem a profundidade que o algoritmo agora exige.</p>
+      <p>Artigos publicados sem assinatura, sem links internos para cobertura anterior do tema, sem dados estruturados adequados — tudo isso sinaliza para o Google que o conteudo nao tem a profundidade que o algoritmo agora exige.</p>
 
       <h3>3. Indexacao mais seletiva</h3>
 
-      <p>O Google esta indexando menos paginas. O <a href="https://developers.google.com/search/docs/crawling-indexing/large-site-managing-crawl-budget" target="_blank" rel="noopener">crawl budget</a> se tornou um recurso escasso. Portais que publicam 200+ artigos por dia e nao gerenciam adequadamente canonicals, paginacao e conteudo thin estao vendo uma parcela crescente de seu conteudo simplesmente nao ser indexada.</p>
+      <p>O Google esta indexando menos paginas. O <a href="https://developers.google.com/search/docs/crawling-indexing/large-site-managing-crawl-budget" target="_blank" rel="noopener">orçamento de rastreamento</a> (crawl budget) se tornou um recurso escasso. Portais que publicam 200+ artigos por dia e nao gerenciam adequadamente canonicals, paginacao e conteúdo raso estão vendo uma parcela crescente de seu conteudo simplesmente nao ser indexada.</p>
 
       <h2>O caso do Google Discover: oportunidade e armadilha</h2>
 
@@ -793,7 +793,7 @@ export const articles: Record<string, Article> = {
         <li><strong>Scroll depth caiu:</strong> o usuario medio rola menos. Se o lide nao prende nos primeiros 3 segundos, o artigo perde o leitor.</li>
         <li><strong>Sessoes mais curtas:</strong> a sessao media em portais de noticias caiu de 4:30 para 2:50 entre 2023 e 2025.</li>
         <li><strong>Consumo fragmentado:</strong> o usuario le 2-3 paragrafos, sai, volta depois. O modelo de "pageview unica" nao captura esse comportamento.</li>
-        <li><strong>Notificacoes competem:</strong> push notifications de apps concorrem diretamente com o habito de abrir o portal. Quem nao tem app ou newsletter forte perde essa disputa.</li>
+        <li><strong>Notificacoes competem:</strong> notificações de apps concorrem diretamente com o habito de abrir o portal. Quem nao tem app ou boletim por e-mail forte perde essa disputa.</li>
       </ul>
 
       <p>Redacoes que ainda medem sucesso por pageviews estao olhando para a metrica errada. Engaged sessions, scroll depth e recirculacao sao metricas que explicam muito mais sobre a saude real da audiencia.</p>
@@ -828,9 +828,9 @@ export const articles: Record<string, Article> = {
 
       <p>A redacao espera o fato acontecer, apura, escreve e publica. Nesse ciclo, veiculos mais ageis ja capturaram o pico de interesse. Monitorar trends em tempo real — o que o atalay.ia faz na aba Trends — permite antecipar a demanda e publicar na janela ideal.</p>
 
-      <h3>Ausencia de clusters tematicos</h3>
+      <h3>Ausência de agrupamentos temáticos</h3>
 
-      <p>Artigos isolados, sem links internos, sem cobertura de subtopicos relacionados. O Google interpreta isso como falta de profundidade. Veiculos que constroem clusters — um artigo principal conectado a 5-8 artigos de apoio — consolidam autoridade tematica e melhoram o ranking do cluster inteiro.</p>
+      <p>Artigos isolados, sem links internos, sem cobertura de subtopicos relacionados. O Google interpreta isso como falta de profundidade. Veiculos que constroem agrupamentos — um artigo principal conectado a 5-8 artigos de apoio — consolidam autoridade tematica e melhoram o ranking do cluster inteiro.</p>
 
       <h3>Falta de consistencia editorial</h3>
 
@@ -862,7 +862,7 @@ export const articles: Record<string, Article> = {
 
       <h2>O papel da inteligencia editorial</h2>
 
-      <p>Inteligencia editorial nao e um dashboard. Nao e um relatorio mensal de analytics. E a capacidade de transformar dados de performance em decisoes editoriais em tempo real.</p>
+      <p>Inteligencia editorial não é um painel de dados. Nao e um relatorio mensal de analytics. E a capacidade de transformar dados de performance em decisoes editoriais em tempo real.</p>
 
       <p>Isso significa:</p>
 
@@ -996,11 +996,11 @@ export const articles: Record<string, Article> = {
 
         <h2>O que aconteceu no New York Times</h2>
 
-        <p>A acusacao partiu de Becky Tuch, editora do Lit Mag News, que publicou no X (antigo Twitter) que o ensaio de Gilgan "reads EXACTLY like AI slop" -- ou seja, parecia exatamente como texto generico gerado por IA. Criticos apontaram padroes linguisticos tipicos de modelos de linguagem: paralelismos excessivos ("not X, not X, but Y"), uso repetido da "regra de tres", e uma fluidez superficial que carece de fricao humana.</p>
+        <p>A acusacao partiu de Becky Tuch, editora do Lit Mag News, que publicou no X (antigo Twitter) que o ensaio de Gilgan "parece exatamente texto genérico de IA" (no original, "reads EXACTLY like AI slop"). Criticos apontaram padroes linguisticos tipicos de modelos de linguagem: paralelismos excessivos ("not X, not X, but Y"), uso repetido da "regra de tres", e uma fluidez superficial que carece de fricao humana.</p>
 
-        <p>O debate escalou rapidamente. Kate Gilgan acabou reconhecendo que usou ChatGPT, Claude e Gemini como "collaborative editor" -- para "inspiration, guidance, and correction". A distincao entre usar IA como inspiracao e usar IA como ghostwriter tornou-se o centro da controversia.</p>
+        <p>O debate escalou rapidamente. Kate Gilgan acabou reconhecendo que usou ChatGPT, Claude e Gemini como "editor colaborativo" — para "inspiração, orientação e correção". A distincao entre usar IA como inspiracao e usar IA como redatora-fantasma tornou-se o centro da controversia.</p>
 
-        <p>O New York Times, por sua vez, declarou que jornalismo e "inherently a human endeavor" e que sua politica interna exige "human oversight" e "clear labeling" de qualquer uso de IA. Mas o caso expos a distancia entre politica institucional e pratica real.</p>
+        <p>O New York Times, por sua vez, declarou que jornalismo é "uma atividade inerentemente humana" e que sua política interna exige "supervisão humana" e "rotulagem clara" de qualquer uso de IA. Mas o caso expos a distancia entre politica institucional e pratica real.</p>
 
         <h2>O que os dados revelam: o estudo Pangram Labs</h2>
 
@@ -1014,11 +1014,11 @@ export const articles: Record<string, Article> = {
 
         <p>Esses numeros indicam que o uso de IA na producao de conteudo jornalistico ja e uma realidade -- nao uma hipotese futura. E na maioria dos casos, acontece sem qualquer transparencia para o leitor.</p>
 
-        <h2>Ghost writer vs. ferramenta editorial: a distincao que importa</h2>
+        <h2>IA que escreve vs. ferramenta editorial: a distinção que importa</h2>
 
         <p>Existe uma diferenca fundamental entre dois modelos de uso de IA em redacoes:</p>
 
-        <h3>IA como ghost writer</h3>
+        <h3>IA como redatora-fantasma</h3>
         <p>Nesse modelo, a IA gera o texto que sera publicado -- integralmente ou com edicoes cosmeticas. O jornalista atua como curador, nao como autor. O problema: o leitor acredita estar lendo um ser humano. A relacao de confianca editorial se rompe.</p>
 
         <h3>IA como ferramenta editorial</h3>
@@ -1095,7 +1095,7 @@ export const articles: Record<string, Article> = {
 
         <p>As redacoes que vao se destacar sao as que adotam IA como ferramenta de inteligencia -- nao de producao. Que usam dados para <a href='/blog/ia-ferramenta-ou-ameaca-jornalismo/'>informar decisoes editoriais</a>, nao para substituir o trabalho do jornalista.</p>
 
-        <p>O jornalismo e, como o proprio NYT definiu, "inherently a human endeavor". A IA mais util e a que potencializa esse trabalho humano -- nao a que tenta substitui-lo.</p>
+        <p>O jornalismo e, como o proprio NYT definiu, "uma atividade inerentemente humana". A IA mais útil e a que potencializa esse trabalho humano -- nao a que tenta substitui-lo.</p>
       `,
     },
   'como-levar-ia-para-redacao': {
@@ -1241,7 +1241,7 @@ export const articles: Record<string, Article> = {
 
         <p>Essa e a filosofia que descrevemos em <a href="/blog/pipeline-dados-editoriais/">dados primeiro, IA depois</a>. Quando a equipe ja esta usando dados para tomar decisoes editoriais, o salto para sugestoes automatizadas se torna natural — e desejado.</p>
 
-        <h2>Quick wins que constroem confianca</h2>
+        <h2>Vitórias rápidas que constroem confiança</h2>
 
         <p>Confianca nao se constroi com apresentacoes bonitas. Se constroi com resultados tangiveis. As primeiras semanas de qualquer implementacao de IA em uma redacao precisam gerar vitorias rapidas e visiveis.</p>
 
@@ -1254,7 +1254,7 @@ export const articles: Record<string, Article> = {
           <li><strong>Deteccao de erros que teriam passado:</strong> quando a IA flagra um erro factual ou uma violacao de manual que teria ido ao ar, o jornalista entende o valor imediatamente.</li>
         </ul>
 
-        <p>Cada quick win e uma camada de confianca. Acumule o suficiente e a equipe para de perguntar "por que usar IA?" e comeca a perguntar "o que mais ela faz?".</p>
+        <p>Cada vitória rápida e uma camada de confianca. Acumule o suficiente e a equipe para de perguntar "por que usar IA?" e comeca a perguntar "o que mais ela faz?".</p>
 
         <h2>Metricas de adocao: o que medir</h2>
 
@@ -1264,7 +1264,7 @@ export const articles: Record<string, Article> = {
 
         <ul>
           <li><strong>Taxa de aceitacao de sugestoes:</strong> de todas as sugestoes da IA, quantas o jornalista aceita? Se o numero e baixo, as sugestoes nao sao uteis — ou a confianca ainda nao existe.</li>
-          <li><strong>Tempo ate primeira interacao:</strong> quanto tempo demora entre o jornalista abrir a ferramenta e usá-la de fato? Se ele abre e fecha sem interagir, ha um problema de onboarding ou de valor percebido.</li>
+          <li><strong>Tempo ate primeira interacao:</strong> quanto tempo demora entre o jornalista abrir a ferramenta e usá-la de fato? Se ele abre e fecha sem interagir, há um problema de integração ou de valor percebido.</li>
           <li><strong>Frequencia de uso voluntario:</strong> a equipe usa a ferramenta mesmo quando nao e obrigada? Uso voluntario e o melhor indicador de adocao real.</li>
           <li><strong>Reducao de erros em publicacao:</strong> depois da implementacao, os erros de manual e gramática diminuiram? Esse dado convence editores-chefes.</li>
           <li><strong>Impacto no trafego:</strong> as materias produzidas com auxilio da IA performam melhor? Essa e a metrica que sustenta o projeto a longo prazo. Abordamos esse tema em detalhe em <a href="/blog/por-que-audiencia-jornal-cai/">por que a audiencia do jornal cai</a>.</li>
@@ -1285,12 +1285,12 @@ export const articles: Record<string, Article> = {
 
         <ul>
           <li><strong>Comece com voluntarios:</strong> identifique 2-3 jornalistas curiosos sobre tecnologia. Nao precisa ser o mais sênior — precisa ser alguem que vai testar com boa vontade e dar feedback honesto.</li>
-          <li><strong>Transforme-os em champions:</strong> quando esses voluntarios tem resultados positivos, eles viram embaixadores naturais. Um colega dizendo "isso me economizou 20 minutos" tem mais credibilidade do que qualquer apresentacao do gestor.</li>
+          <li><strong>Transforme-os em embaixadores:</strong> quando esses voluntarios tem resultados positivos, eles viram embaixadores naturais. Um colega dizendo "isso me economizou 20 minutos" tem mais credibilidade do que qualquer apresentacao do gestor.</li>
           <li><strong>Faca sessoes de feedback:</strong> reuna a equipe regularmente para ouvir o que funciona e o que irrita. Nao para defender a ferramenta — para melhorá-la. Quando a equipe percebe que o feedback deles muda a ferramenta, o senso de propriedade aumenta.</li>
           <li><strong>Respeite os que nao querem:</strong> forcar adocao gera ressentimento. Alguns jornalistas vao adotar depois de ver colegas usando com sucesso. Outros podem nunca adotar — e tudo bem, se a producao deles continua forte.</li>
         </ul>
 
-        <p>O projeto <a href="https://www.lse.ac.uk/media-and-communications/polis/JournalismAI" target="_blank" rel="noopener">JournalismAI da LSE</a> documentou que redacoes com abordagem bottom-up na adocao de IA — onde a equipe participa das decisoes — tem taxas de sucesso significativamente maiores do que aquelas com implementacao top-down.</p>
+        <p>O projeto <a href="https://www.lse.ac.uk/media-and-communications/polis/JournalismAI" target="_blank" rel="noopener">JournalismAI da LSE</a> documentou que redacoes com abordagem de baixo para cima na adoção de IA — onde a equipe participa das decisões — têm taxas de sucesso significativamente maiores do que aquelas com implementação de cima para baixo.</p>
 
         <h2>O que funciona vs. o que gera rejeicao</h2>
 
@@ -1299,12 +1299,12 @@ export const articles: Record<string, Article> = {
         <h3>Gera adocao</h3>
 
         <ul>
-          <li>Comecou com dados e dashboards, nao com correcao de texto</li>
+          <li>Comecou com dados e painéis, nao com correcao de texto</li>
           <li>Os primeiros usuarios foram voluntarios, nao designados</li>
           <li>A IA sugere, nunca impoe — o jornalista decide</li>
           <li>Resultados foram compartilhados publicamente (materia que performou bem por causa de um alerta de trend)</li>
           <li>A ferramenta preserva a voz do jornalista em vez de padronizar</li>
-          <li>Feedback da equipe resultou em mudancas visiveis na ferramenta</li>
+          <li>Retorno da equipe resultou em mudancas visiveis na ferramenta</li>
         </ul>
 
         <h3>Gera rejeicao</h3>
@@ -1332,7 +1332,7 @@ export const articles: Record<string, Article> = {
           <li><strong>Curto:</strong> 30 minutos, nao 3 horas. Ninguem em uma redacao tem tempo para workshops longos.</li>
           <li><strong>Pratico:</strong> use o proprio texto do jornalista como exemplo. Mostre a ferramenta funcionando com conteudo real, nao com demos preparadas.</li>
           <li><strong>Recorrente:</strong> uma sessao nao basta. A cada nova funcionalidade, uma demonstracao rapida. Micro-treinamentos funcionam melhor que aulas formais.</li>
-          <li><strong>Peer-led:</strong> os champions da equipe treinando colegas tem mais impacto do que treinamento vindo de fora.</li>
+          <li><strong>Liderado por pares:</strong> os embaixadores da equipe treinando colegas tem mais impacto do que treinamento vindo de fora.</li>
         </ul>
 
         <h3>Transparencia radical</h3>
@@ -1372,7 +1372,7 @@ export const articles: Record<string, Article> = {
 
         <h3>Semana 3-4: Primeiros resultados</h3>
         <ul>
-          <li>Compartilhe os primeiros quick wins publicamente</li>
+          <li>Compartilhe os primeiros vitória rápidas publicamente</li>
           <li>Faca uma sessao de feedback com os voluntarios</li>
           <li>Ajuste com base no que ouviu</li>
           <li>Convide mais 3-4 pessoas que demonstraram curiosidade</li>
@@ -1383,7 +1383,7 @@ export const articles: Record<string, Article> = {
           <li>Introduza sugestoes de titulo e analise de texto</li>
           <li>Mostre os perfis de voz — cada jornalista ve como a IA entende o estilo dele</li>
           <li>Comece a medir taxa de aceitacao de sugestoes</li>
-          <li>Faca os champions treinarem colegas em sessoes curtas</li>
+          <li>Faca os embaixadores treinarem colegas em sessoes curtas</li>
         </ul>
 
         <h3>Semana 7-8: Consolidacao</h3>
@@ -1524,7 +1524,7 @@ export const articles: Record<string, Article> = {
 
         <p>Agora o outro lado. Porque tambem ha riscos em <em>nao</em> usar IA — o risco de ficar para tras enquanto competidores encontram formas responsaveis de alavancar a tecnologia.</p>
 
-        <h3>Analise de dados de performance</h3>
+        <h3>Análise de dados de desempenho</h3>
 
         <p>Redacoes geram terabytes de dados que ninguem olha sistematicamente. Como cada editoria performa em cada canal. Quais padroes de titulo geram mais engajamento. Que tipo de imagem atrai cliques no <a href="/blog/google-discover-trafico-redacoes/">Google Discover</a>. Quanto tempo apos a publicacao o trafego atinge o pico.</p>
 
@@ -1565,7 +1565,7 @@ export const articles: Record<string, Article> = {
           <li><strong>Transparencia:</strong> se a IA contribuiu para o processo, o leitor nao precisa ser notificado de cada sugestao de SEO aceita — mas se a IA gerou texto publicado como autoria humana, isso e fraude.</li>
           <li><strong>Guardrails editoriais:</strong> a IA nao pode sugerir nada que viole o manual de redacao do veiculo. O manual e lei, nao sugestao.</li>
           <li><strong>Preservacao de voz:</strong> sugestoes devem adaptar-se ao perfil de cada jornalista, nao homogeneizar. Se a IA nao sabe quem esta escrevendo, ela nao deveria sugerir como escrever.</li>
-          <li><strong>Dados proprios:</strong> IA que opera com dados genericos nao entende o contexto de nenhuma redacao. IA responsavel opera com os dados do dominio — performance real, nao benchmarks de mercado.</li>
+          <li><strong>Dados proprios:</strong> IA que opera com dados genericos nao entende o contexto de nenhuma redacao. IA responsavel opera com os dados do dominio — performance real, nao referências de mercado.</li>
           <li><strong>Humano no controle:</strong> a IA sugere, o jornalista decide. Sempre. Sem excecoes. Sem automacao de publicacao sem revisao humana.</li>
         </ul>
 
@@ -1778,7 +1778,7 @@ export const articles: Record<string, Article> = {
 
         <p>Isso cria um efeito de retroalimentacao: quando um usuario clica em artigos de um determinado portal sobre determinado tema, o Discover passa a mostrar mais conteudo desse portal sobre esse tema. Perder essa janela de engajamento significa perder o posicionamento no perfil do usuario.</p>
 
-        <h3>Freshness (recencia)</h3>
+        <h3>Recência</h3>
 
         <p>Recencia e o sinal mais forte para conteudo de noticias no Discover. A janela de oportunidade e curta -- nossos dados mostram que o pico de trafico de Discover para uma noticia acontece entre 2 e 4 horas apos a publicacao, com decaimento rapido depois. Artigos evergreen podem performar, mas o Discover e fundamentalmente um canal de conteudo fresco.</p>
 
@@ -1821,7 +1821,7 @@ export const articles: Record<string, Article> = {
         <ul>
           <li>Gancho emocional ou de curiosidade</li>
           <li>Cria expectativa sem entregar tudo</li>
-          <li>Nao depende de keyword match</li>
+          <li>Não depende de correspondência de palavra-chave</li>
           <li>Exemplo: "O lance que mudou o classico: como o Atletico virou nos acrescimos"</li>
         </ul>
 
@@ -1863,12 +1863,12 @@ export const articles: Record<string, Article> = {
         <p>Depois de analisar milhares de artigos e seus resultados no Discover, alguns padroes de erro se repetem com frequencia preocupante:</p>
 
         <h3>1. Tratar Discover como SEO tradicional</h3>
-        <p>Stuffing de keywords no titulo, meta descriptions genericas, foco em heading structure -- tudo isso ajuda na Busca mas e irrelevante para Discover. O Discover nao funciona com queries. Otimizar para ele exige uma mentalidade diferente.</p>
+        <p>Excesso de palavras-chave no título, meta descriptions genericas, foco em estrutura de headings -- tudo isso ajuda na Busca mas e irrelevante para Discover. O Discover nao funciona com queries. Otimizar para ele exige uma mentalidade diferente.</p>
 
         <h3>2. Ignorar a imagem de capa</h3>
         <p>Muitas redacoes colocam qualquer imagem disponivel como thumbnail. No Discover, a imagem e metade da decisao de clique. Usar uma foto de baixa resolucao, sem contexto editorial, e como publicar um artigo sem titulo.</p>
 
-        <h3>3. Clickbait sem entrega</h3>
+        <h3>3. Isca de clique sem entrega</h3>
         <p>O Discover e sensivel a clickbait. Titulos exagerados que nao correspondem ao conteudo geram cliques no curto prazo mas penalizam o dominio no medio prazo. O algoritmo mede se o usuario volta rapidamente ao feed apos clicar -- e usa isso como sinal negativo.</p>
 
         <h3>4. Nao monitorar o canal separadamente</h3>
@@ -1920,7 +1920,7 @@ export const articles: Record<string, Article> = {
 
         <ul>
           <li><strong>Separe os relatorios:</strong> olhe Discover e Busca como canais distintos no Search Console. Compare CTR, impressoes e cliques separadamente.</li>
-          <li><strong>Implemente max-image-preview:large:</strong> se voce ainda nao fez, esse e o quick win mais impactante. Permite que o Discover exiba imagens grandes dos seus artigos.</li>
+          <li><strong>Implemente max-image-preview:large:</strong> se voce ainda nao fez, esse e o vitória rápida mais impactante. Permite que o Discover exiba imagens grandes dos seus artigos.</li>
           <li><strong>Audite imagens de capa:</strong> revise os ultimos 50 artigos com melhor e pior CTR no Discover. Voce vai encontrar padroes claros de imagem.</li>
           <li><strong>Teste titulos:</strong> comece a testar variantes de titulo para Discover. Gancho emocional, pergunta, numeros -- meça o CTR de cada tipo.</li>
           <li><strong>Monitore trends:</strong> o Discover favorece conteudo sobre temas em alta. Ter um sistema de monitoramento de tendencias que alerte a redacao em tempo real e uma vantagem competitiva concreta.</li>
@@ -2025,7 +2025,7 @@ export const articles: Record<string, Article> = {
 
         <p>O cenário de busca em 2026 é radicalmente diferente do que era há dois anos. AI Overviews do Google, ChatGPT com navegação, Perplexity — todos geram respostas instantâneas a partir de conteúdo indexado. O resultado: para consultas genéricas, o usuário nem precisa clicar.</p>
 
-        <p>Isso cria um paradoxo. LLMs conseguem produzir texto fluente sobre qualquer tema, mas não conseguem demonstrar experiência. Não estiveram na coletiva. Não entrevistaram a fonte. Não têm byline com histórico verificável.</p>
+        <p>Isso cria um paradoxo. LLMs conseguem produzir texto fluente sobre qualquer tema, mas não conseguem demonstrar experiência. Não estiveram na coletiva. Não entrevistaram a fonte. Não têm assinatura com histórico verificável.</p>
 
         <p>Para redações, a implicação é clara: conteúdo genérico vai perder espaço progressivamente. O que sobrevive é conteúdo com camadas que só humanos com experiência real produzem — análise contextual, apuração original, perspectiva editorial.</p>
 
@@ -2040,7 +2040,7 @@ export const articles: Record<string, Article> = {
         <p><strong>Para Experiência:</strong></p>
         <ul>
           <li>Incluir relatos de apuração, contexto de bastidores, detalhes que só quem esteve presente conhece.</li>
-          <li>Usar bylines com bio do autor e histórico de coberturas.</li>
+          <li>Usar assinaturas com bio do autor e histórico de coberturas.</li>
           <li>Referenciar entrevistas e fontes primárias, não apenas dados secundários.</li>
         </ul>
 
@@ -2210,7 +2210,7 @@ export const articles: Record<string, Article> = {
 
         <p>Não existia — e ainda não existe — um "algoritmo YMYL" separado. O que aconteceu foi uma recalibração dos <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="noopener">critérios de qualidade</a> existentes, com peso maior para sinais de E-E-A-T em páginas classificadas como YMYL. Sites que tinham conteúdo de saúde sem autoria clara, sem fontes, sem credenciais verificáveis foram penalizados.</p>
 
-        <p>O aprendizado para redações foi claro: publicar matéria sobre saúde pública sem byline, sem fonte nomeada e sem contexto editorial é um risco de visibilidade orgânica. O Medic Update não foi o último ajuste nessa direção — foi o primeiro de uma série. Se você quer entender por que a audiência de muitos jornais tem caído consistentemente, <a href="/blog/por-que-audiencia-jornal-cai/">a análise das causas estruturais</a> passa necessariamente por aqui.</p>
+        <p>O aprendizado para redações foi claro: publicar matéria sobre saúde pública sem assinatura, sem fonte nomeada e sem contexto editorial é um risco de visibilidade orgânica. O Medic Update não foi o último ajuste nessa direção — foi o primeiro de uma série. Se você quer entender por que a audiência de muitos jornais tem caído consistentemente, <a href="/blog/por-que-audiencia-jornal-cai/">a análise das causas estruturais</a> passa necessariamente por aqui.</p>
 
         <h2>YMYL em 2026: AI Overviews mudaram o jogo</h2>
 
@@ -2228,7 +2228,7 @@ export const articles: Record<string, Article> = {
 
         <p><strong>Autoria e credenciais:</strong></p>
         <ul>
-          <li>Toda matéria YMYL precisa de byline com nome completo do autor</li>
+          <li>Toda matéria YMYL precisa de assinatura com nome completo do autor</li>
           <li>Páginas de autor com bio, histórico de cobertura e links para redes profissionais</li>
           <li>Se a matéria cita especialistas, incluir nome, credencial e instituição</li>
         </ul>
@@ -2358,7 +2358,7 @@ export const articles: Record<string, Article> = {
 
         <p>O sinal geográfico ganhou peso brutal. Conteúdo sobre a Califórnia passou a aparecer cinco vezes mais nos feeds de usuários localizados na Califórnia. O <a href="https://developers.google.com/search/docs/appearance/google-discover" target="_blank" rel="noopener">Discover</a> deixou de ser um feed genérico e passou a funcionar como um editorial local personalizado.</p>
 
-        <p><strong>2. Expertise por tópico (Topic-Level Authority)</strong></p>
+        <p><strong>2. Autoridade por tópico</strong></p>
 
         <p>O Google abandonou a avaliação de autoridade no nível do domínio e migrou para uma avaliação tópico a tópico. Um veículo pode ter autoridade alta em política e baixa em esportes — e o Discover agora diferencia isso. Não basta ser um "grande portal"; é preciso demonstrar profundidade em cada vertical.</p>
 
@@ -2566,11 +2566,11 @@ export const articles: Record<string, Article> = {
 
         <p>No Discover, a reescrita de títulos por IA já é permanente. Não é teste. Não é experimento. É o padrão operacional.</p>
 
-        <p>E os números falam por si: uma análise de mais de 400 publishers mostrou que a participação do Discover no tráfego total saltou de 37% para 68% após a implementação de headlines geradas por IA. O Discover não apenas reescreve títulos — ele os reescreve de um jeito que gera mais cliques. Para o Google, isso é otimização. Para redações, é perda de controle editorial.</p>
+        <p>E os números falam por si: uma análise de mais de 400 publishers mostrou que a participação do Discover no tráfego total saltou de 37% para 68% após a implementação de títulos gerados por IA. O Discover não apenas reescreve títulos — ele os reescreve de um jeito que gera mais cliques. Para o Google, isso é otimização. Para redações, é perda de controle editorial.</p>
 
         <h2>O problema editorial é concreto</h2>
 
-        <p>O caso mais emblemático até agora envolveu o The Verge: o Google alterou uma headline de forma que mudou tanto o tom quanto o significado da matéria original. Sean Hollister, do próprio The Verge, comparou a prática a "uma biblioteca trocando as capas dos livros sem permissão do autor".</p>
+        <p>O caso mais emblemático até agora envolveu o The Verge: o Google alterou um título de forma que mudou tanto o tom quanto o significado da matéria original. Sean Hollister, do próprio The Verge, comparou a prática a "uma biblioteca trocando as capas dos livros sem permissão do autor".</p>
 
         <p>A analogia é precisa. O título é a primeira — e frequentemente única — interface entre o leitor e a reportagem. Quando um algoritmo reescreve essa interface, o jornalista perde a autoria da primeira impressão.</p>
 
@@ -2582,7 +2582,7 @@ export const articles: Record<string, Article> = {
 
         <p>O padrão do Google é consistente: testar no Discover, validar métricas, expandir para o Search. Foi assim com snippets expandidos, com carrosséis de notícias e com sinais de engajamento.</p>
 
-        <p>A transição do Discover — onde a reescrita já é permanente — para o Search — onde ainda é descrita como teste — segue essa mesma lógica. O volume de tráfego do Discover já demonstrou que headlines reescritas por IA geram mais engajamento. Para o Google, não há incentivo para reverter.</p>
+        <p>A transição do Discover — onde a reescrita já é permanente — para o Search — onde ainda é descrita como teste — segue essa mesma lógica. O volume de tráfego do Discover já demonstrou que títulos reescritos por IA geram mais engajamento. Para o Google, não há incentivo para reverter.</p>
 
         <p>Redações que dependem significativamente do tráfego Discover — <a href="/blog/google-discover-trafico-redacoes/">e a maioria dos grandes portais brasileiros está nessa situação</a> — precisam assumir que essa prática se tornará universal nos próximos meses.</p>
 
@@ -2594,11 +2594,11 @@ export const articles: Record<string, Article> = {
 
         <p><strong>2. Separe a análise de tráfego por superfície.</strong> Monitore Search e Discover como canais distintos. Quedas no Discover podem estar ligadas à reescrita de títulos, não a penalizações. Quedas no Search podem refletir o spam update, o core update ou ambos. Sem essa separação, qualquer diagnóstico será impreciso.</p>
 
-        <p><strong>3. Reforce a estrutura dos títulos.</strong> Se o Google vai reescrever suas headlines, sua melhor defesa é torná-las difíceis de melhorar. Títulos claros, informativos, com a informação principal na frente e sem clickbait reduzem a probabilidade de reescrita — porque já atendem aos critérios que o algoritmo busca otimizar.</p>
+        <p><strong>3. Reforce a estrutura dos títulos.</strong> Se o Google vai reescrever seus títulos, sua melhor defesa é torná-las difíceis de melhorar. Títulos claros, informativos, com a informação principal na frente e sem isca de clique reduzem a probabilidade de reescrita — porque já atendem aos critérios que o algoritmo busca otimizar.</p>
 
         <p><strong>4. Documente e compare.</strong> Crie um processo para verificar como seus títulos aparecem no Discover e nos resultados de busca. Compare com o original publicado. Documente divergências. Esse registro será essencial para qualquer reclamação futura ao Google ou para ajustar sua estratégia de titulação.</p>
 
-        <p><strong>5. Invista em sinais de E-E-A-T verificáveis.</strong> Autoria clara, bylines com links para perfis de autor, fontes citadas, datas de publicação e atualização visíveis. O core update de março reforçou esses sinais. O spam update penalizou quem os simula. A reescrita de títulos por IA favorece conteúdo que o Google consegue verificar como confiável.</p>
+        <p><strong>5. Invista em sinais de E-E-A-T verificáveis.</strong> Autoria clara, assinaturas com links para perfis de autor, fontes citadas, datas de publicação e atualização visíveis. O core update de março reforçou esses sinais. O spam update penalizou quem os simula. A reescrita de títulos por IA favorece conteúdo que o Google consegue verificar como confiável.</p>
 
         <p><strong>6. Não pare de publicar conteúdo original de qualidade.</strong> Parece óbvio, mas o contexto importa: em um cenário onde o Google remove spam em escala e reescreve títulos para maximizar engajamento, <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="noopener">conteúdo editorial genuíno</a> com assinatura humana verificável é vantagem competitiva real — não apenas boa prática.</p>
 
@@ -2947,7 +2947,7 @@ export const articles: Record<string, Article> = {
 
       <p>Colocar um <strong>llms.txt</strong> no ar ajuda. Ele funciona como uma espécie de índice limpo, uma porta de entrada mais organizada para o que sua marca publica. O problema é achar que isso resolve tudo. Não resolve.</p>
 
-      <p>Para uma marca que vende produto, compara planos, atualiza preço, muda feature, publica FAQ, case, documentação e posicionamento oficial, um simples diretório em Markdown é pouco. O que a IA precisa de verdade não é só de uma lista de links. Ela precisa de <strong>acesso limpo, estruturado, atual, verificável e com contexto</strong>.</p>
+      <p>Para uma marca que vende produto, compara planos, atualiza preço, muda funcionalidade, publica FAQ, case, documentação e posicionamento oficial, um simples diretório em Markdown é pouco. O que a IA precisa de verdade não é só de uma lista de links. Ela precisa de <strong>acesso limpo, estruturado, atual, verificável e com contexto</strong>.</p>
 
       <h2>O llms.txt ajuda, mas para no meio do caminho</h2>
 
@@ -2977,7 +2977,7 @@ export const articles: Record<string, Article> = {
 
       <p>Hoje, para um comprador humano, isso pode funcionar muito bem. Para um agente de IA fazendo pesquisa de fornecedor, nem tanto. Se o preço está escondido em JavaScript, se o comparativo principal está em PDF e se as integrações estão espalhadas em páginas sem estrutura, a tendência é a IA errar. Ela pode confundir preço, omitir recurso enterprise ou deixar passar justamente a integração que o cliente precisa.</p>
 
-      <p>Com uma arquitetura legível por máquina, o cenário muda. A página comercial continua existindo para o humano, mas por baixo dela existe uma camada confiável para a IA consumir. O preço vem da mesma fonte do CMS. As features estão amarradas ao plano correto. As integrações aparecem agrupadas por solução. O FAQ sai por endpoint estruturado. E cada fato traz data, dono e versão.</p>
+      <p>Com uma arquitetura legível por máquina, o cenário muda. A página comercial continua existindo para o humano, mas por baixo dela existe uma camada confiável para a IA consumir. O preço vem da mesma fonte do CMS. As funcionalidades estão amarradas ao plano correto. As integrações aparecem agrupadas por solução. O FAQ sai por endpoint estruturado. E cada fato traz data, dono e versão.</p>
 
       <p>Resultado: a IA para de "achar" e passa a <strong>recuperar informação oficial</strong>. E isso reduz um risco que muita marca ainda subestima: perder venda, reputação e contexto porque um agente respondeu errado sobre algo que estava no seu próprio site.</p>
 
