@@ -27,6 +27,7 @@ export function getStaticPaths() {
     { params: { slug: 'llms-txt-arquitetura-marca-fonte-ia' } },
     { params: { slug: 'bimbofication-google-trends-kristi-noem' } },
     { params: { slug: 'anthropic-libera-mythos-apple-ciberataques' } },
+    { params: { slug: 'ai-overviews-google-respostas-erradas-escala' } },
   ];
 }
 
@@ -3175,6 +3176,99 @@ const articles: Record<string, {
       <p>Para sustentar a iniciativa, a companhia prometeu até <strong>US$ 100 milhões em créditos de uso</strong> do modelo e mais <strong>US$ 4 milhões em apoio direto</strong> a grupos ligados à segurança de software de código aberto. A mensagem é clara: a Anthropic quer posicionar o Mythos não como mais um chatbot poderoso, mas como uma ferramenta de linha de frente em uma nova disputa entre IA defensiva e IA ofensiva.</p>
 
       <p>Para o mercado, o movimento também serve como alerta. Se empresas como Apple, Google e Microsoft já estão testando modelos desse nível para proteger suas plataformas, é porque a indústria começa a tratar como inevitável um futuro em que a segurança digital será travada, cada vez mais, entre sistemas inteligentes dos dois lados.</p>
+    `,
+  },
+
+  'ai-overviews-google-respostas-erradas-escala': {
+    title: 'AI Overviews do Google ainda entregam respostas erradas em escala massiva',
+    description: 'Estudo da Oumi para o NYT testou 4.326 buscas e revelou que os resumos de IA do Google erram quase 1 em cada 10 respostas — milhões de erros por hora na escala da plataforma.',
+    date: '2026-04-10',
+    category: 'Análise',
+    readTime: '5 min',
+    author: 'Bruno Lopes',
+    role: 'Fundador, atalay.ia',
+    heroSvg: `<svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="800" height="400" fill="#0e1011"/>
+      <defs>
+        <radialGradient id="g-aio1" cx="50%" cy="45%"><stop offset="0%" stop-color="rgba(192,106,66,.1)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+        <radialGradient id="g-aio2" cx="50%" cy="60%"><stop offset="0%" stop-color="rgba(153,80,80,.06)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+      </defs>
+      <rect width="800" height="400" fill="url(#g-aio1)"/>
+      <rect width="800" height="400" fill="url(#g-aio2)"/>
+      <!-- Search box -->
+      <g transform="translate(400,80)">
+        <rect x="-180" y="-18" width="360" height="36" rx="18" stroke="rgba(255,255,255,.12)" stroke-width=".7" fill="rgba(255,255,255,.02)"/>
+        <circle cx="-155" cy="0" r="8" stroke="rgba(255,255,255,.15)" stroke-width=".7" fill="none"/>
+        <line x1="-149" y1="5" x2="-145" y2="9" stroke="rgba(255,255,255,.15)" stroke-width=".7"/>
+        <text x="-130" y="4" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,.25)">pesquisa do usuário</text>
+      </g>
+      <!-- AI Overview card -->
+      <g transform="translate(400,200)">
+        <rect x="-200" y="-70" width="400" height="140" rx="10" stroke="rgba(192,106,66,.22)" stroke-width=".8" fill="rgba(192,106,66,.02)"/>
+        <rect x="-180" y="-55" width="250" height="14" rx="2" fill="rgba(192,106,66,.07)" stroke="rgba(192,106,66,.2)" stroke-width=".4"/>
+        <text x="-170" y="-44" font-family="DM Sans, sans-serif" font-size="8" font-weight="600" fill="rgba(192,106,66,.5)">AI Overview</text>
+        <rect x="-180" y="-32" width="200" height="6" rx="1" fill="rgba(255,255,255,.04)"/>
+        <rect x="-180" y="-20" width="240" height="6" rx="1" fill="rgba(255,255,255,.04)"/>
+        <rect x="-180" y="-8" width="180" height="6" rx="1" fill="rgba(255,255,255,.04)"/>
+        <rect x="-180" y="4" width="220" height="6" rx="1" fill="rgba(255,255,255,.04)"/>
+        <rect x="-180" y="16" width="160" height="6" rx="1" fill="rgba(255,255,255,.04)"/>
+        <rect x="-180" y="28" width="200" height="6" rx="1" fill="rgba(255,255,255,.04)"/>
+        <!-- Error indicator -->
+        <g transform="translate(150,-10)">
+          <circle cx="0" cy="0" r="28" stroke="rgba(153,80,80,.45)" stroke-width="1.2" fill="rgba(153,80,80,.05)"/>
+          <line x1="-12" y1="-12" x2="12" y2="12" stroke="rgba(153,80,80,.55)" stroke-width="1.4"/>
+          <line x1="12" y1="-12" x2="-12" y2="12" stroke="rgba(153,80,80,.55)" stroke-width="1.4"/>
+        </g>
+        <!-- Source badges -->
+        <g transform="translate(-180,48)">
+          <rect x="0" y="0" width="60" height="14" rx="3" stroke="rgba(255,255,255,.08)" stroke-width=".4" fill="rgba(255,255,255,.015)"/>
+          <text x="30" y="10" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6" fill="rgba(255,255,255,.2)">fonte?</text>
+          <rect x="70" y="0" width="60" height="14" rx="3" stroke="rgba(255,255,255,.08)" stroke-width=".4" fill="rgba(255,255,255,.015)"/>
+          <text x="100" y="10" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6" fill="rgba(255,255,255,.2)">fonte?</text>
+          <rect x="140" y="0" width="60" height="14" rx="3" stroke="rgba(153,80,80,.2)" stroke-width=".4" fill="rgba(153,80,80,.02)"/>
+          <text x="170" y="10" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6" fill="rgba(153,80,80,.4)">56% s/ base</text>
+        </g>
+      </g>
+      <!-- Stats bar -->
+      <g transform="translate(400,340)">
+        <g font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(255,255,255,.2)">
+          <text x="-160" y="0" text-anchor="middle">4.326 buscas</text>
+          <text x="0" y="0" text-anchor="middle" fill="rgba(153,80,80,.5)">~9% erro</text>
+          <text x="160" y="0" text-anchor="middle">5 tri buscas/ano</text>
+        </g>
+      </g>
+      <text x="400" y="380" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(153,80,80,.35)">milhões de respostas erradas por hora</text>
+    </svg>`,
+    content: `
+      <p class="article-lead">Os <strong>AI Overviews</strong>, resumos gerados por inteligência artificial que o Google exibe no topo da busca, voltaram ao centro da polêmica após uma análise indicar que a ferramenta ainda entrega respostas erradas em escala enorme. O ponto mais incômodo para o Google é que o sistema até melhorou, mas continua distante de um nível de confiabilidade que justificaria a autoridade com que aparece na tela.</p>
+
+      <p>O levantamento foi feito pela startup <strong>Oumi</strong> a pedido do <strong>The New York Times</strong> e testou <strong>4.326 buscas</strong> em dois momentos diferentes: em outubro, quando os resumos eram alimentados por uma versão ligada ao <strong>Gemini 2</strong>, e em fevereiro, já com a mudança para o <strong>Gemini 3</strong>. O resultado mostrou evolução, mas também escancarou o tamanho do problema quando a escala do Google entra na conta.</p>
+
+      <h2>O número parece bom, até virar um problema gigantesco</h2>
+
+      <p>No recorte mais recente, os AI Overviews acertaram cerca de <strong>91% das respostas</strong>. Na rodada anterior, o índice era de <strong>85%</strong>. À primeira vista, o avanço parece positivo. O problema é que o Google processa <strong>mais de 5 trilhões de buscas por ano</strong>. Em um volume desse tamanho, errar perto de 1 em cada 10 respostas significa espalhar <strong>milhões de respostas incorretas por hora</strong>.</p>
+
+      <p>É aí que a discussão muda de patamar. O debate deixa de ser "a IA ainda erra?" e passa a ser "quantas pessoas estão recebendo uma resposta errada com aparência de verdade?". Quando o resumo vem pronto, no topo da busca, com tom seguro e links ao lado, muita gente simplesmente assume que aquilo já foi checado. E esse efeito de confiança automática transforma um erro estatístico em risco real de desinformação.</p>
+
+      <h2>O problema não é só errar. É citar sem sustentar</h2>
+
+      <p>O dado mais preocupante da análise talvez nem seja a taxa bruta de erro. Segundo o estudo, cresceu o número de respostas classificadas como <strong>"ungrounded"</strong>, ou seja, resumos em que os links mostrados pelo Google <strong>não sustentavam de forma clara o que a IA afirmava</strong>. Em outubro, isso aparecia em <strong>37%</strong> dos casos analisados. Em fevereiro, esse índice subiu para <strong>56%</strong>.</p>
+
+      <p>Na prática, isso cria um problema ainda mais traiçoeiro. A resposta pode até parecer confiável porque vem acompanhada de fonte, mas o usuário que clicar nem sempre encontra ali a base exata da afirmação feita pela IA. Ou seja: o sistema não apenas pode errar, como também pode dar a sensação de que está bem amparado quando não está.</p>
+
+      <h2>Os exemplos ajudam a entender por que isso assusta</h2>
+
+      <p>A análise trouxe casos concretos. Em uma busca sobre quando a casa de <strong>Bob Marley</strong> virou museu, o Google respondeu <strong>1987</strong>, quando o ano correto era <strong>1986</strong>. Em outra, o sistema apontou que não havia registro da entrada de <strong>Yo-Yo Ma</strong> em determinada instituição, mesmo linkando para uma página relacionada ao tema. Também houve caso em que a IA acertou a idade na morte de <strong>Dick Drago</strong>, mas errou a data do falecimento.</p>
+
+      <p>Esses exemplos mostram um ponto importante: não se trata só de delírios absurdos ou respostas obviamente erradas. Muitas vezes, o erro é pequeno, plausível e fácil de passar despercebido. E justamente por isso ele pode ser mais perigoso, porque entra no fluxo da consulta como se fosse apenas um detalhe confiável.</p>
+
+      <h2>Google contesta, mas a pressão só aumenta</h2>
+
+      <p>O Google rebateu a análise e disse que o estudo tem <strong>"falhas sérias"</strong> e não reflete o que as pessoas realmente pesquisam na plataforma. A empresa sustenta que os AI Overviews são mais confiáveis porque combinam o modelo de IA com os sistemas tradicionais de ranking e segurança da própria busca. Ainda assim, a reação mostra que a companhia já entendeu o tamanho do desgaste quando os erros deixam de ser casos isolados e passam a ser lidos como um efeito estrutural do produto.</p>
+
+      <p>Esse desgaste vem se somando a outra frente de pressão: a relação cada vez mais tensa com os publishers. Críticos afirmam que os AI Overviews usam conteúdo da web para responder diretamente ao usuário, reduzindo cliques e enfraquecendo quem produz a informação original. Quando esse cenário se junta aos erros e às citações frágeis, a percepção de risco cresce ainda mais.</p>
+
+      <p>No fim, a crítica mais dura não é que a IA do Google erre. Toda tecnologia desse tipo erra. O que assusta é a combinação entre <strong>escala massiva</strong>, <strong>posição privilegiada na página</strong> e <strong>aparência de autoridade</strong>. Quando isso se junta, um erro deixa de ser só um tropeço técnico e passa a virar uma máquina de espalhar informação duvidosa com a força da maior busca do planeta.</p>
     `,
   },
 };
