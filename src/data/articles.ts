@@ -83,9 +83,9 @@ export const articles: Record<string, Article> = {
 
       <h2>O problema que resolvemos</h2>
 
-      <p>IA genérica não funciona para jornalismo. Ferramentas de propósito geral não sabem que "Galo" no contexto de Minas Gerais é o Atlético Mineiro. Não conhecem o Manual de Redação da sua publicação. Não entendem que um título para Discover precisa de apelo emocional diferente de um título para Busca.</p>
+      <p>IA genérica não funciona para jornalismo. Ferramentas de propósito geral não sabem que "Galo" no contexto de Minas Gerais é o Atlético Mineiro. Não conhecem o Manual de Redação da sua publicação. Não entendem que um título para <a href="https://developers.google.com/search/docs/appearance/google-discover" target="_blank" rel="noopener">Google Discover</a> precisa de apelo emocional diferente de um título para Busca.</p>
 
-      <p>O atalay.ia foi construído de baixo para cima para resolver esse problema. Não é um plugin genérico com um prompt por trás. É uma inteligência artificial própria, treinada e calibrada especificamente para o contexto editorial brasileiro.</p>
+      <p>O atalay.ia foi construído de baixo para cima para resolver esse problema. Não é um plugin genérico com um prompt por trás. É uma inteligência artificial própria, treinada e calibrada especificamente para o contexto editorial brasileiro, alinhada com os princípios de <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="noopener">conteúdo útil e confiável do Google</a>.</p>
 
       <h2>O que o atalay.ia faz</h2>
 
@@ -110,7 +110,7 @@ export const articles: Record<string, Article> = {
 
       <h2>Para quem é</h2>
 
-      <p>O atalay.ia foi desenhado para redações que publicam diariamente e dependem de tráfego orgânico. Veículos com editorias ativas, equipe produzindo em volume, e a necessidade de tomar decisões rápidas sobre pauta, título e otimização.</p>
+      <p>O atalay.ia foi desenhado para redações que publicam diariamente e dependem de tráfego orgânico — especialmente aquelas que buscam atender aos critérios de <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content#experience" target="_blank" rel="noopener">E-E-A-T (Experiência, Expertise, Autoridade e Confiabilidade)</a>. Veículos com editorias ativas, equipe produzindo em volume, e a necessidade de tomar decisões rápidas sobre pauta, título e otimização.</p>
 
       <p>Se a sua redação enfrenta esses desafios, <a href="/contato">entre em contato</a>.</p>
 
@@ -171,7 +171,7 @@ export const articles: Record<string, Article> = {
       </g>
     </svg>`,
     content: `
-      <p class="article-lead">Quando a IA generativa explodiu em popularidade, redações ao redor do mundo começaram a testar a tecnologia. A promessa era clara: escrever mais rápido, corrigir melhor, otimizar títulos. A realidade foi diferente.</p>
+      <p class="article-lead">Quando a IA generativa explodiu em popularidade, redações ao redor do mundo começaram a testar a tecnologia — um movimento documentado por organizações como o <a href="https://www.lse.ac.uk/media-and-communications/polis/JournalismAI" target="_blank" rel="noopener">JournalismAI da London School of Economics</a>. A promessa era clara: escrever mais rápido, corrigir melhor, otimizar títulos. A realidade foi diferente.</p>
 
       <h2>O gap da IA genérica</h2>
 
@@ -182,7 +182,7 @@ export const articles: Record<string, Article> = {
       <ul>
         <li>O Manual de Redação do seu jornal proíbe "o mesmo" como pronome anafórico</li>
         <li>"Cruzeiro" em Minas Gerais é um clube de futebol, não a moeda antiga</li>
-        <li>Títulos para Google Discover precisam de gancho emocional, enquanto títulos para Busca precisam de keyword match</li>
+        <li>Títulos para <a href="https://developers.google.com/search/docs/appearance/google-discover" target="_blank" rel="noopener">Google Discover</a> precisam de gancho emocional, enquanto títulos para Busca precisam de keyword match</li>
         <li>Cada jornalista tem um estilo de escrita que deve ser preservado, não padronizado</li>
       </ul>
 
@@ -213,7 +213,7 @@ export const articles: Record<string, Article> = {
 
       <h2>O custo de não contextualizar</h2>
 
-      <p>Redações que adotam IA genérica sem contextualização enfrentam um problema sutil: a padronização. Todos os textos começam a soar iguais. Os títulos perdem personalidade. As correções são tecnicamente corretas mas editorialmente irrelevantes.</p>
+      <p>Redações que adotam IA genérica sem contextualização enfrentam um problema sutil: a padronização. Todos os textos começam a soar iguais. Os títulos perdem personalidade. As correções são tecnicamente corretas mas editorialmente irrelevantes — o oposto do que o Google valoriza nas suas <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="noopener">diretrizes de conteúdo útil</a>.</p>
 
       <p>O resultado? Jornalistas rejeitam a ferramenta. Não porque IA não funciona, mas porque aquela IA não funciona <em>para eles</em>.</p>
 
@@ -295,14 +295,14 @@ export const articles: Record<string, Article> = {
 
       <p>Quando começamos a construir o atalay.ia, a primeira pergunta não foi "qual tecnologia usar?" — foi "o que o jornalista precisa saber que hoje não sabe?". A resposta veio dos dados.</p>
 
-      <p>Redações brasileiras sentam sobre meses (às vezes anos) de dados de performance editorial: como o público interage com cada tipo de conteúdo, quais editorias performam melhor em cada canal, quais padrões de título geram mais engajamento. São milhões de data points que ninguém está olhando de forma sistemática.</p>
+      <p>Redações brasileiras sentam sobre meses (às vezes anos) de dados de performance editorial — acessíveis por ferramentas como o <a href="https://developers.google.com/search/docs/monitor-debug/search-console-about" target="_blank" rel="noopener">Google Search Console</a>: como o público interage com cada tipo de conteúdo, quais editorias performam melhor em cada canal, quais padrões de título geram mais engajamento. São milhões de data points que ninguém está olhando de forma sistemática.</p>
 
       <h2>O que os dados revelaram</h2>
 
       <p>Quando analisamos dados reais de performance de grandes redações, as descobertas mudaram completamente a direção do produto:</p>
 
       <ul>
-        <li><strong>Autoridade por editoria é desigual:</strong> nem toda editoria tem a mesma credibilidade perante os algoritmos de distribuição. Uma editoria pode ter autoridade 3x maior que outra — e isso muda completamente quais oportunidades são reais.</li>
+        <li><strong>Autoridade por editoria é desigual:</strong> nem toda editoria tem a mesma credibilidade perante os algoritmos de distribuição, conforme os <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="noopener">critérios de qualidade do Google</a>. Uma editoria pode ter autoridade 3x maior que outra — e isso muda completamente quais oportunidades são reais.</li>
         <li><strong>Discover e Busca são jogos diferentes:</strong> os mesmos artigos performam de forma oposta nos dois canais. Otimizar para um pode prejudicar o outro.</li>
         <li><strong>Timing importa mais que qualidade:</strong> conteúdo publicado nas primeiras horas de um pico de interesse tem engajamento muito superior ao publicado horas depois, mesmo que a qualidade seja maior.</li>
         <li><strong>O histórico do domínio revela autoridade real:</strong> os temas onde a redação já é referência são o melhor indicador de onde vale investir esforço editorial.</li>
@@ -313,7 +313,7 @@ export const articles: Record<string, Article> = {
       <p>O atalay.ia opera em etapas progressivas. Cada etapa adiciona uma camada de inteligência:</p>
 
       <ul>
-        <li><strong>Detectar:</strong> o que está crescendo agora? Quais temas estão ganhando volume de interesse em tempo real?</li>
+        <li><strong>Detectar:</strong> o que está crescendo agora? Usando dados de fontes como o <a href="https://trends.google.com/trends/" target="_blank" rel="noopener">Google Trends</a>, quais temas estão ganhando volume de interesse em tempo real?</li>
         <li><strong>Classificar:</strong> isso é relevante para qual editoria? O sistema separa o sinal do ruído automaticamente.</li>
         <li><strong>Avaliar:</strong> temos autoridade nesse tema? O atalay.ia cruza o que está em alta com o histórico real da redação.</li>
         <li><strong>Priorizar:</strong> publicar agora, considerar ou só monitorar? A IA entrega um veredito claro com base nos dados.</li>
@@ -394,7 +394,7 @@ export const articles: Record<string, Article> = {
       </g>
     </svg>`,
     content: `
-      <p class="article-lead">Uma das críticas mais comuns à IA na escrita é que ela homogeneiza. Tudo sai com o mesmo tom, a mesma estrutura, a mesma personalidade — nenhuma. Para jornalismo, isso é um problema fatal.</p>
+      <p class="article-lead">Uma das críticas mais comuns à IA na escrita é que ela homogeneiza — uma preocupação levantada por pesquisadores do <a href="https://reutersinstitute.politics.ox.ac.uk/news/how-journalists-can-use-ai-responsibly" target="_blank" rel="noopener">Reuters Institute for the Study of Journalism</a>. Tudo sai com o mesmo tom, a mesma estrutura, a mesma personalidade — nenhuma. Para jornalismo, isso é um problema fatal.</p>
 
       <h2>Por que voz importa</h2>
 
@@ -410,7 +410,7 @@ export const articles: Record<string, Article> = {
       <p>No onboarding, o jornalista escolhe seu perfil base: <strong>Factual/Rápido</strong> (frases curtas, lead direto, mínimo de adjetivos) ou <strong>Analítico/Denso</strong> (contexto expandido, dados de suporte, mais nuance). Isso estabelece a linha de base.</p>
 
       <h3>Aprendizado com o uso</h3>
-      <p>A IA analisa o histórico de produção do jornalista para identificar padrões: como ele constrói frases, que tipo de vocabulário prefere, como estrutura os leads. Não é uma análise genérica — é calibrada por editoria e por autor.</p>
+      <p>A IA analisa o histórico de produção do jornalista para identificar padrões — usando técnicas de <a href="https://en.wikipedia.org/wiki/Stylometry" target="_blank" rel="noopener">estilometria computacional</a>: como ele constrói frases, que tipo de vocabulário prefere, como estrutura os leads. Não é uma análise genérica — é calibrada por editoria e por autor.</p>
 
       <h3>Feedback contínuo</h3>
       <p>Quando o jornalista aceita ou rejeita sugestões, o atalay.ia aprende. Rejeições consistentes de certo tipo de sugestão refinam o perfil. Quanto mais uso, mais preciso.</p>
@@ -435,7 +435,7 @@ export const articles: Record<string, Article> = {
 
       <h2>Voz por editoria</h2>
 
-      <p>Além do perfil individual, o atalay.ia mantém um perfil por editoria. Esportes tem vocabulário próprio. Política tem estruturas próprias. Cidades usa mais dados geográficos. Esses perfis funcionam como uma segunda camada de contexto que refina cada sugestão.</p>
+      <p>Além do perfil individual, o atalay.ia mantém um perfil por editoria. Esportes tem vocabulário próprio. Política tem estruturas próprias. Cidades usa mais dados geográficos. Esses perfis funcionam como uma segunda camada de contexto que refina cada sugestão — abordagem alinhada com as recomendações do <a href="https://www.lse.ac.uk/media-and-communications/polis/JournalismAI" target="_blank" rel="noopener">JournalismAI</a> sobre personalização responsável de IA em redações.</p>
 
       <p>O resultado é uma IA que não escreve — mas que edita como alguém que conhece a redação por dentro.</p>
     `,
@@ -494,7 +494,7 @@ export const articles: Record<string, Article> = {
       </g>
     </svg>`,
     content: `
-      <p class="article-lead">O Google Discover e a Busca orgânica são os dois maiores canais de tráfego para a maioria dos veículos de notícia. Mas eles operam com lógicas completamente diferentes — e a maioria das redações otimiza para ambos como se fossem a mesma coisa.</p>
+      <p class="article-lead">O <a href="https://developers.google.com/search/docs/appearance/google-discover" target="_blank" rel="noopener">Google Discover</a> e a Busca orgânica são os dois maiores canais de tráfego para a maioria dos veículos de notícia. Mas eles operam com lógicas completamente diferentes — e a maioria das redações otimiza para ambos como se fossem a mesma coisa.</p>
 
       <h2>O que os dados mostram</h2>
 
@@ -511,7 +511,7 @@ export const articles: Record<string, Article> = {
 
       <p>A maioria das redações tem uma cultura de SEO focada em Busca — keyword research, heading structure, internal linking. Essas práticas são válidas, mas insuficientes para Discover.</p>
 
-      <p>Discover é um canal de <em>recomendação</em>. O Google não mostra seu artigo porque alguém pesquisou sobre o tema — mostra porque o algoritmo decidiu que aquele usuário vai se interessar. As regras são diferentes:</p>
+      <p>Discover é um canal de <em>recomendação</em>. O Google não mostra seu artigo porque alguém pesquisou sobre o tema — mostra porque o algoritmo decidiu que aquele usuário vai se interessar. As <a href="https://developers.google.com/search/docs/appearance/google-discover" target="_blank" rel="noopener">regras do Discover</a> são diferentes:</p>
 
       <ul>
         <li>Autoridade do domínio no tema importa mais que keyword match</li>
@@ -550,7 +550,7 @@ export const articles: Record<string, Article> = {
 
       <h2>Por onde começar</h2>
 
-      <p>Se sua redação ainda trata Discover e Busca como um canal só, o primeiro passo é olhar os dados separadamente. Você vai se surpreender com o quanto as métricas divergem — e com as oportunidades que estão sendo perdidas.</p>
+      <p>Se sua redação ainda trata Discover e Busca como um canal só, o primeiro passo é olhar os dados separadamente. A própria documentação do Google sobre <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="noopener">criação de conteúdo útil</a> reforça que qualidade e relevância são avaliadas de formas distintas conforme a superfície. Você vai se surpreender com o quanto as métricas divergem — e com as oportunidades que estão sendo perdidas.</p>
     `,
   },
 
@@ -612,11 +612,11 @@ export const articles: Record<string, Article> = {
 
       <h2>O problema dos manuais esquecidos</h2>
 
-      <p>Manuais de redação existem há décadas. Alguns são livros publicados, outros são documentos internos. Mas quase todos compartilham o mesmo problema: são consultados cada vez menos.</p>
+      <p>Manuais de redação existem há décadas. Alguns são livros publicados — como o <a href="https://pt.wikipedia.org/wiki/Manual_de_Reda%C3%A7%C3%A3o_da_Folha_de_S.Paulo" target="_blank" rel="noopener">Manual de Redação da Folha de S.Paulo</a> —, outros são documentos internos. Mas quase todos compartilham o mesmo problema: são consultados cada vez menos.</p>
 
       <p>Jornalistas em deadline não param para abrir o manual e verificar se "infra-estrutura" ou "infraestrutura" é a grafia correta naquela publicação. Eles escrevem, o editor revisa (quando tem tempo), e erros passam.</p>
 
-      <p>A consequência é uma erosão gradual da consistência editorial. Artigos na mesma edição usam convenções diferentes. A identidade do veículo se dilui.</p>
+      <p>A consequência é uma erosão gradual da consistência editorial. Artigos na mesma edição usam convenções diferentes. A identidade do veículo se dilui — e com ela, os sinais de qualidade que o Google avalia dentro do seu framework de <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="noopener">conteúdo útil e confiável</a>.</p>
 
       <h2>O manual como guardião</h2>
 
@@ -2000,7 +2000,7 @@ export const articles: Record<string, Article> = {
 
         <h2>O que significa E-E-A-T, na prática</h2>
 
-        <p>E-E-A-T é o conjunto de critérios que o Google usa para avaliar a qualidade de conteúdo. Não é um fator de ranqueamento direto — não existe uma "nota de E-E-A-T" no algoritmo. É um framework de qualidade aplicado por avaliadores humanos (os quality raters) que calibram os sistemas de busca.</p>
+        <p>E-E-A-T é o conjunto de critérios que o Google usa para avaliar a qualidade de conteúdo. Não é um fator de ranqueamento direto — não existe uma "nota de E-E-A-T" no algoritmo. É um framework de qualidade aplicado por avaliadores humanos (os quality raters), conforme detalhado nas <a href="https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf" target="_blank" rel="noopener">Search Quality Rater Guidelines</a>, que calibram os sistemas de busca.</p>
 
         <p>Os quatro pilares são:</p>
 
@@ -2015,7 +2015,7 @@ export const articles: Record<string, Article> = {
 
         <h2>Por que o Google adicionou o primeiro "E"</h2>
 
-        <p>Até dezembro de 2022, o framework era E-A-T. O Google adicionou Experience — experiência vivida — como resposta direta a um problema que já se desenhava: conteúdo tecnicamente correto, mas genérico. Textos que compilavam informações de terceiros sem acrescentar perspectiva própria.</p>
+        <p>Até <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="noopener">dezembro de 2022</a>, o framework era E-A-T. O Google adicionou Experience — experiência vivida — como resposta direta a um problema que já se desenhava: conteúdo tecnicamente correto, mas genérico. Textos que compilavam informações de terceiros sem acrescentar perspectiva própria.</p>
 
         <p>A adição mudou a régua. Não basta saber sobre um assunto; é preciso demonstrar que você esteve lá. Para jornalismo, isso é uma vantagem natural. Repórteres que vão a campo, que entrevistam fontes, que acompanham desdobramentos ao longo de meses — esse tipo de conteúdo carrega sinais de experiência que nenhum modelo de linguagem consegue fabricar.</p>
 
@@ -2079,7 +2079,7 @@ export const articles: Record<string, Article> = {
 
         <h2>O que vem pela frente</h2>
 
-        <p>A tendência é de aperto. Cada atualização de core algorithm do Google nos últimos dois anos reforçou sinais de E-E-A-T. O Helpful Content System, as atualizações de março e agosto de 2025, a integração com AI Overviews — tudo aponta na mesma direção: conteúdo com origem verificável e experiência demonstrável ganha; conteúdo genérico e anônimo perde.</p>
+        <p>A tendência é de aperto. Cada atualização de core algorithm do Google nos últimos dois anos reforçou sinais de E-E-A-T. O <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="noopener">Helpful Content System</a>, as atualizações de março e agosto de 2025, a integração com AI Overviews — tudo aponta na mesma direção: conteúdo com origem verificável e experiência demonstrável ganha; conteúdo genérico e anônimo perde.</p>
 
         <p>Para redações em 2026, a estratégia é direta:</p>
 
@@ -2170,7 +2170,7 @@ export const articles: Record<string, Article> = {
       content: `
         <p class="article-lead">Cada matéria que sua redação publica sobre saúde, economia ou segurança pública passa por um crivo mais rigoroso do Google. O nome técnico desse crivo é YMYL — Your Money or Your Life. Entender como ele funciona não é opcional para quem depende de tráfego orgânico.</p>
 
-        <p>Se a audiência do seu jornal vem caindo e você ainda não mapeou quais editorias são classificadas como YMYL, parte da explicação pode estar aí. O conceito existe desde 2014 nas diretrizes de qualidade do Google, mas em 2026, com a consolidação das AI Overviews e dos modelos de linguagem respondendo perguntas diretamente na busca, ele se tornou mais determinante do que nunca.</p>
+        <p>Se a audiência do seu jornal vem caindo e você ainda não mapeou quais editorias são classificadas como YMYL, parte da explicação pode estar aí. O conceito existe desde 2014 nas <a href="https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf" target="_blank" rel="noopener">diretrizes de qualidade do Google</a>, mas em 2026, com a consolidação das AI Overviews e dos modelos de linguagem respondendo perguntas diretamente na busca, ele se tornou mais determinante do que nunca.</p>
 
         <h2>O que significa YMYL, na prática</h2>
 
@@ -2191,7 +2191,7 @@ export const articles: Record<string, Article> = {
 
         <h2>A conexão com E-E-A-T — e por que ela é multiplicada no YMYL</h2>
 
-        <p>E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) é o framework que o Google usa para avaliar a qualidade de qualquer conteúdo. Mas quando o conteúdo é YMYL, a exigência em cada pilar se intensifica.</p>
+        <p><a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="noopener">E-E-A-T</a> (Experience, Expertise, Authoritativeness, Trustworthiness) é o framework que o Google usa para avaliar a qualidade de qualquer conteúdo. Mas quando o conteúdo é YMYL, a exigência em cada pilar se intensifica.</p>
 
         <p>Para conteúdo genérico, um artigo razoavelmente bem escrito pode performar. Para conteúdo YMYL, o Google procura sinais concretos:</p>
 
@@ -2208,7 +2208,7 @@ export const articles: Record<string, Article> = {
 
         <p>Em agosto de 2018, o Google lançou o que ficou conhecido como "Medic Update". A atualização atingiu desproporcionalmente sites de saúde e bem-estar, mas também afetou portais de notícias. Alguns sites perderam até 90% do tráfego orgânico da noite para o dia.</p>
 
-        <p>Não existia — e ainda não existe — um "algoritmo YMYL" separado. O que aconteceu foi uma recalibração dos critérios de qualidade existentes, com peso maior para sinais de E-E-A-T em páginas classificadas como YMYL. Sites que tinham conteúdo de saúde sem autoria clara, sem fontes, sem credenciais verificáveis foram penalizados.</p>
+        <p>Não existia — e ainda não existe — um "algoritmo YMYL" separado. O que aconteceu foi uma recalibração dos <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="noopener">critérios de qualidade</a> existentes, com peso maior para sinais de E-E-A-T em páginas classificadas como YMYL. Sites que tinham conteúdo de saúde sem autoria clara, sem fontes, sem credenciais verificáveis foram penalizados.</p>
 
         <p>O aprendizado para redações foi claro: publicar matéria sobre saúde pública sem byline, sem fonte nomeada e sem contexto editorial é um risco de visibilidade orgânica. O Medic Update não foi o último ajuste nessa direção — foi o primeiro de uma série. Se você quer entender por que a audiência de muitos jornais tem caído consistentemente, <a href="/blog/por-que-audiencia-jornal-cai/">a análise das causas estruturais</a> passa necessariamente por aqui.</p>
 
@@ -2344,7 +2344,7 @@ export const articles: Record<string, Article> = {
 
         <h2>Uma atualização sem precedentes</h2>
 
-        <p>Até agora, toda core update do Google afetava Search e Discover simultaneamente. Fevereiro de 2026 quebrou esse padrão. O Discover ganhou sua própria atualização dedicada, sinalizando que o Google trata o feed de recomendação como um produto independente, com critérios próprios de ranqueamento.</p>
+        <p>Até agora, toda core update do Google afetava Search e Discover simultaneamente. Fevereiro de 2026 quebrou esse padrão. O Discover ganhou sua própria <a href="https://developers.google.com/search/updates" target="_blank" rel="noopener">atualização dedicada</a>, sinalizando que o Google trata o feed de recomendação como um produto independente, com critérios próprios de ranqueamento.</p>
 
         <p>A atualização foi inicialmente restrita ao mercado de língua inglesa nos Estados Unidos, mas o Google confirmou que a expansão global está nos planos. Isso significa que o Brasil está na fila — e quem se preparar antes sai na frente.</p>
 
@@ -2356,7 +2356,7 @@ export const articles: Record<string, Article> = {
 
         <p><strong>1. Relevância local (Geographic Hyperlocalization)</strong></p>
 
-        <p>O sinal geográfico ganhou peso brutal. Conteúdo sobre a Califórnia passou a aparecer cinco vezes mais nos feeds de usuários localizados na Califórnia. O Discover deixou de ser um feed genérico e passou a funcionar como um editorial local personalizado.</p>
+        <p>O sinal geográfico ganhou peso brutal. Conteúdo sobre a Califórnia passou a aparecer cinco vezes mais nos feeds de usuários localizados na Califórnia. O <a href="https://developers.google.com/search/docs/appearance/google-discover" target="_blank" rel="noopener">Discover</a> deixou de ser um feed genérico e passou a funcionar como um editorial local personalizado.</p>
 
         <p><strong>2. Expertise por tópico (Topic-Level Authority)</strong></p>
 
@@ -2364,7 +2364,7 @@ export const articles: Record<string, Article> = {
 
         <p><strong>3. Padrões de qualidade (Quality Standards)</strong></p>
 
-        <p>Títulos genéricos e conteúdo raso perderam espaço. O comprimento médio dos títulos no Top 1000 subiu 15,5%, de 72,9 para 84,2 caracteres — um indicador de que o algoritmo passou a favorecer títulos mais descritivos e específicos em detrimento de clickbait curto.</p>
+        <p>Títulos genéricos e conteúdo raso perderam espaço. O comprimento médio dos títulos no Top 1000 subiu 15,5%, de 72,9 para 84,2 caracteres — um indicador de que o algoritmo passou a favorecer títulos mais descritivos e específicos em detrimento de clickbait curto. As diretrizes do Google sobre <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="noopener">criação de conteúdo útil</a> ajudam a entender a lógica por trás dessa mudança.</p>
 
         <h2>Os números: concentração e queda internacional</h2>
 
@@ -2540,7 +2540,7 @@ export const articles: Record<string, Article> = {
 
         <h2>O que o SpamBrain está mirando</h2>
 
-        <p>O update cobre mais de 15 categorias de políticas de spam. As principais frentes de ação incluem:</p>
+        <p>O update cobre mais de 15 categorias de <a href="https://developers.google.com/search/docs/essentials/spam-policies" target="_blank" rel="noopener">políticas de spam</a>. As principais frentes de ação incluem:</p>
 
         <p><strong>Conteúdo gerado em escala.</strong> Sites que usam IA para produzir centenas ou milhares de páginas sem supervisão editorial significativa. Não se trata de proibir IA na produção — trata-se de punir automação sem valor agregado.</p>
 
@@ -2562,7 +2562,7 @@ export const articles: Record<string, Article> = {
 
         <h2>A reescrita de títulos por IA: o teste que já virou rotina</h2>
 
-        <p>Enquanto o spam update dominava a atenção, o Google confirmou estar realizando um teste "pequeno e restrito" de reescrita de títulos por inteligência artificial nos resultados de busca (Search). A formulação é deliberadamente modesta. O contexto, não.</p>
+        <p>Enquanto o spam update dominava a atenção, o Google confirmou estar realizando um teste "pequeno e restrito" de <a href="https://developers.google.com/search/docs/appearance/title-link" target="_blank" rel="noopener">reescrita de títulos</a> por inteligência artificial nos resultados de busca (Search). A formulação é deliberadamente modesta. O contexto, não.</p>
 
         <p>No Discover, a reescrita de títulos por IA já é permanente. Não é teste. Não é experimento. É o padrão operacional.</p>
 
@@ -2600,7 +2600,7 @@ export const articles: Record<string, Article> = {
 
         <p><strong>5. Invista em sinais de E-E-A-T verificáveis.</strong> Autoria clara, bylines com links para perfis de autor, fontes citadas, datas de publicação e atualização visíveis. O core update de março reforçou esses sinais. O spam update penalizou quem os simula. A reescrita de títulos por IA favorece conteúdo que o Google consegue verificar como confiável.</p>
 
-        <p><strong>6. Não pare de publicar conteúdo original de qualidade.</strong> Parece óbvio, mas o contexto importa: em um cenário onde o Google remove spam em escala e reescreve títulos para maximizar engajamento, conteúdo editorial genuíno com assinatura humana verificável é vantagem competitiva real — não apenas boa prática.</p>
+        <p><strong>6. Não pare de publicar conteúdo original de qualidade.</strong> Parece óbvio, mas o contexto importa: em um cenário onde o Google remove spam em escala e reescreve títulos para maximizar engajamento, <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="noopener">conteúdo editorial genuíno</a> com assinatura humana verificável é vantagem competitiva real — não apenas boa prática.</p>
 
         <h2>O cenário para os próximos meses</h2>
 
@@ -2664,7 +2664,7 @@ export const articles: Record<string, Article> = {
       <text x="400" y="380" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(255,255,255,.12)">CLAUDE CODE — NPM SOURCE MAP LEAK</text>
     </svg>`,
     content: `
-      <p class="article-lead">A <strong>Anthropic</strong> entrou em crise após vazar parte do código interno do <strong>Claude Code</strong>, sua ferramenta de programação com inteligência artificial. O episódio ganhou repercussão imediata porque a empresa vinha sendo apresentada como um dos maiores exemplos da nova fase da engenharia de software, em que agentes de IA escrevem, testam e executam tarefas com cada vez menos intervenção humana.</p>
+      <p class="article-lead">A <strong><a href="https://www.anthropic.com" target="_blank" rel="noopener">Anthropic</a></strong> entrou em crise após vazar parte do código interno do <strong>Claude Code</strong>, sua ferramenta de programação com inteligência artificial. O episódio ganhou repercussão imediata porque a empresa vinha sendo apresentada como um dos maiores exemplos da nova fase da engenharia de software, em que agentes de IA escrevem, testam e executam tarefas com cada vez menos intervenção humana.</p>
 
       <p>O caso ficou ainda mais simbólico porque <strong>Boris Cherny</strong>, uma das principais vozes ligadas ao produto, havia defendido publicamente que já não escrevia código manualmente havia meses. A fala ajudou a consolidar a imagem da Anthropic como vitrine de um novo modelo de desenvolvimento. Agora, a mesma companhia se vê obrigada a explicar como deixou escapar justamente o código de uma de suas ferramentas mais estratégicas.</p>
 
@@ -2688,9 +2688,9 @@ export const articles: Record<string, Article> = {
 
       <h2>O que a Anthropic perde com isso</h2>
 
-      <p>Mesmo sem atingir os modelos centrais do Claude, o vazamento representa um golpe reputacional e estratégico. O <strong>Claude Code</strong> se tornou um dos ativos mais importantes da empresa na disputa com rivais como <strong>OpenAI</strong> e <strong>Google</strong>. Ao deixar esse código escapar, a Anthropic oferece ao mercado um atalho para entender parte de sua execução prática, justamente em um momento em que ferramentas de programação com IA viraram um dos campos mais disputados do setor.</p>
+      <p>Mesmo sem atingir os modelos centrais do Claude, o vazamento representa um golpe reputacional e estratégico. O <strong><a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank" rel="noopener">Claude Code</a></strong> se tornou um dos ativos mais importantes da empresa na disputa com rivais como <strong>OpenAI</strong> e <strong>Google</strong>. Ao deixar esse código escapar, a Anthropic oferece ao mercado um atalho para entender parte de sua execução prática, justamente em um momento em que ferramentas de programação com IA viraram um dos campos mais disputados do setor.</p>
 
-      <p>A empresa correu para limitar os danos e tentar remover cópias espalhadas pela internet, mas esse tipo de contenção costuma chegar tarde demais. Quando o material já foi replicado, estudado e adaptado por terceiros, o prejuízo deixa de ser apenas técnico e passa a ser também competitivo. No fim, o episódio vira um lembrete duro para todo o setor: <strong>não basta prometer que a IA consegue escrever software; é preciso provar que a organização continua capaz de controlar o que publica</strong>.</p>
+      <p>A empresa correu para limitar os danos e tentar remover cópias espalhadas pela internet, mas esse tipo de contenção costuma chegar tarde demais. Quando o material já foi replicado, estudado e adaptado por terceiros, o prejuízo deixa de ser apenas técnico e passa a ser também competitivo. O episódio reforça a importância de práticas de <a href="https://en.wikipedia.org/wiki/Responsible_disclosure" target="_blank" rel="noopener">divulgação responsável</a> em incidentes de segurança. No fim, o episódio vira um lembrete duro para todo o setor: <strong>não basta prometer que a IA consegue escrever software; é preciso provar que a organização continua capaz de controlar o que publica</strong>.</p>
 
       <p><em>Leia também: <a href="/blog/anthropic-conter-vazamento-claude-code/">Anthropic corre para conter vazamento do Claude Code após defender código feito por IA</a></em></p>
     `,
@@ -2750,7 +2750,7 @@ export const articles: Record<string, Article> = {
       <text x="400" y="380" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(255,255,255,.12)">ANTHROPIC — DAMAGE CONTROL</text>
     </svg>`,
     content: `
-      <p class="article-lead">A <strong>Anthropic</strong> tenta conter uma crise incômoda no pior momento possível. A empresa, que virou símbolo da nova fase em que agentes de IA ajudam a construir software em velocidade inédita, viu parte relevante do código interno do <strong>Claude Code</strong> escapar para a internet após um erro de publicação. O episódio chamou ainda mais atenção porque <strong>Boris Cherny</strong>, nome ligado ao produto, havia defendido publicamente um fluxo de trabalho em que a IA já escrevia praticamente tudo no seu dia a dia.</p>
+      <p class="article-lead">A <strong><a href="https://www.anthropic.com" target="_blank" rel="noopener">Anthropic</a></strong> tenta conter uma crise incômoda no pior momento possível. A empresa, que virou símbolo da nova fase em que agentes de IA ajudam a construir software em velocidade inédita, viu parte relevante do código interno do <strong>Claude Code</strong> escapar para a internet após um erro de publicação. O episódio chamou ainda mais atenção porque <strong>Boris Cherny</strong>, nome ligado ao produto, havia defendido publicamente um fluxo de trabalho em que a IA já escrevia praticamente tudo no seu dia a dia.</p>
 
       <p>O contraste pesa. De um lado, a Anthropic ajudou a popularizar a ideia de que a programação entrou em uma nova era, com agentes capazes de produzir código, revisar tarefas e acelerar entregas. Do outro, agora precisa explicar como deixou vazar justamente a base técnica de uma de suas ferramentas mais estratégicas.</p>
 
@@ -2776,11 +2776,11 @@ export const articles: Record<string, Article> = {
 
       <h2>O timing piora ainda mais a crise</h2>
 
-      <p>O episódio acontece num momento em que a Anthropic vive alta visibilidade e pressão máxima. O <strong>Claude Code</strong> virou peça central da narrativa de crescimento da empresa, e a companhia reforçou recentemente sua posição no mercado com uma rodada que a avaliou em <strong>US$ 380 bilhões</strong>. Ao mesmo tempo, a marca tenta sustentar a imagem de empresa cuidadosa com segurança e governança em IA.</p>
+      <p>O episódio acontece num momento em que a Anthropic vive alta visibilidade e pressão máxima. O <strong>Claude Code</strong> virou peça central da narrativa de crescimento da empresa, e a companhia reforçou recentemente sua posição no mercado com uma rodada que a avaliou em <strong>US$ 380 bilhões</strong>. Ao mesmo tempo, a marca tenta sustentar a imagem de empresa cuidadosa com segurança e governança em IA, como refletido em seus <a href="https://www.anthropic.com/news" target="_blank" rel="noopener">comunicados oficiais</a>.</p>
 
       <p>Por isso, o dano reputacional do vazamento vai além do erro operacional. A empresa precisou correr para conter a circulação do material, com pedidos de remoção se espalhando por repositórios e cópias derivadas. Mesmo assim, quando código estratégico cai na rede, o problema deixa de ser apenas "tirar do ar" e passa a ser <strong>conviver com o fato de que ele já foi estudado, copiado e reinterpretado</strong>.</p>
 
-      <p>No fim, a discussão sobre se a culpa foi exclusivamente humana ou se houve excesso de confiança em fluxos automatizados muda pouco o centro da história. O que realmente importa é que a Anthropic, hoje uma das principais vitrines da programação orientada por IA, acabou atingida por uma falha básica de processo. E isso enfraquece justamente o discurso que mais tenta vender ao mercado: o de que consegue escalar inovação sem perder controle.</p>
+      <p>No fim, a discussão sobre se a culpa foi exclusivamente humana ou se houve excesso de confiança em fluxos automatizados muda pouco o centro da história. O que realmente importa é que a Anthropic, hoje uma das principais vitrines da programação orientada por IA, acabou atingida por uma falha básica de processo. O caso reacende o debate sobre <a href="https://en.wikipedia.org/wiki/Open-source_software_security" target="_blank" rel="noopener">segurança em software distribuído por registros públicos</a> e os riscos de publicações automatizadas sem verificação rigorosa. E isso enfraquece justamente o discurso que mais tenta vender ao mercado: o de que consegue escalar inovação sem perder controle.</p>
     `,
   },
 
@@ -2847,7 +2847,7 @@ export const articles: Record<string, Article> = {
       <text x="400" y="380" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(255,255,255,.12)">NYT — AI PLAGIARISM INCIDENT</text>
     </svg>`,
     content: `
-      <p class="article-lead">O <strong>New York Times</strong> rompeu relações com o escritor freelancer <strong>Alex Preston</strong> após descobrir que uma resenha assinada por ele continha trechos e formulações muito semelhantes aos de uma crítica publicada anteriormente no <strong>The Guardian</strong>. O caso ampliou o debate sobre os limites do uso de <strong>inteligência artificial no jornalismo</strong> e reacendeu o temor de que ferramentas generativas estejam entrando nas redações mais tradicionais sem controles suficientes.</p>
+      <p class="article-lead">O <strong><a href="https://www.nytimes.com" target="_blank" rel="noopener">New York Times</a></strong> rompeu relações com o escritor freelancer <strong>Alex Preston</strong> após descobrir que uma resenha assinada por ele continha trechos e formulações muito semelhantes aos de uma crítica publicada anteriormente no <strong>The Guardian</strong>. O caso ampliou o debate sobre os limites do uso de <strong>inteligência artificial no jornalismo</strong> e reacendeu o temor de que ferramentas generativas estejam entrando nas redações mais tradicionais sem controles suficientes.</p>
 
       <p>A polêmica envolve a resenha de <strong><em>Watching Over Her</em></strong>, romance de <strong>Jean-Baptiste Andrea</strong>. O texto publicado pelo Times em janeiro passou a ser questionado depois que um leitor percebeu semelhanças relevantes com uma análise escrita meses antes por <strong>Christobel Kent</strong> no jornal britânico. A partir daí, o NYT abriu uma apuração interna e ouviu o autor.</p>
 
@@ -2857,7 +2857,7 @@ export const articles: Record<string, Article> = {
 
       <p>Durante a investigação, <strong>Preston admitiu ter usado uma ferramenta de IA</strong> para ajudar na elaboração da resenha. Segundo ele, o recurso acabou incorporando linguagem de outra crítica já publicada, e esse material passou despercebido na versão final. O problema não foi apenas uma coincidência de estilo, mas a presença de descrições e construções muito próximas das usadas no texto do <strong>The Guardian</strong>.</p>
 
-      <p>As semelhanças chamaram atenção principalmente em passagens que descrevem personagens do livro e também no fechamento da avaliação literária. Isso transformou o episódio em algo mais grave do que um simples deslize de redação, porque atingiu um ponto sensível para qualquer veículo jornalístico: a confiança de que o texto publicado é original, apurado e atribuído corretamente.</p>
+      <p>As semelhanças chamaram atenção principalmente em passagens que descrevem personagens do livro e também no fechamento da avaliação literária. Isso transformou o episódio em algo mais grave do que um simples deslize de redação, porque atingiu um ponto sensível para qualquer veículo jornalístico: a confiança de que o texto publicado é original, apurado e atribuído corretamente — princípios centrais do <a href="https://www.spj.org/ethicscode.asp" target="_blank" rel="noopener">código de ética da Society of Professional Journalists</a>.</p>
 
       <h2>Por que o New York Times tratou o episódio como grave</h2>
 
@@ -2867,7 +2867,7 @@ export const articles: Record<string, Article> = {
 
       <h2>O caso aumenta a pressão sobre o uso de IA nas redações</h2>
 
-      <p>O episódio não acontece isoladamente. Nas últimas semanas, outros casos envolvendo conteúdo gerado ou contaminado por IA aumentaram a desconfiança sobre o uso dessas ferramentas em ambientes jornalísticos. O debate deixou de ser apenas tecnológico e passou a atingir o coração da atividade: <strong>credibilidade, autoria, checagem e responsabilidade</strong>.</p>
+      <p>O episódio não acontece isoladamente. Nas últimas semanas, outros casos envolvendo conteúdo gerado ou contaminado por IA — detectáveis cada vez mais por <a href="https://openai.com/index/new-ai-classifier-for-indicating-ai-written-text/" target="_blank" rel="noopener">ferramentas de detecção de texto gerado por IA</a> — aumentaram a desconfiança sobre o uso dessas ferramentas em ambientes jornalísticos. O debate deixou de ser apenas tecnológico e passou a atingir o coração da atividade: <strong>credibilidade, autoria, checagem e responsabilidade</strong>.</p>
 
       <p>No caso do <strong>New York Times</strong>, o constrangimento é ainda maior porque a empresa é vista como uma referência global em rigor editorial. Quando até um dos jornais mais influentes do mundo precisa acrescentar uma nota explicando que um texto publicado continha sobreposição com outra resenha por causa do uso de IA, o recado para o setor é direto: a tecnologia pode até acelerar processos, mas sem supervisão rigorosa ela também pode comprometer o ativo mais valioso do jornalismo, que é a confiança do leitor.</p>
 
@@ -2943,7 +2943,7 @@ export const articles: Record<string, Article> = {
       <text x="400" y="380" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(255,255,255,.12)">FROM PAGE TO SOURCE — MACHINE-READABLE BRAND</text>
     </svg>`,
     content: `
-      <p class="article-lead">O <strong>llms.txt</strong> virou assunto porque acerta no diagnóstico: os sites de hoje foram montados para pessoas, não para agentes de IA. Só que muita gente está tratando esse arquivo como solução final, quando ele é, na prática, só o começo da conversa.</p>
+      <p class="article-lead">O <strong><a href="https://llmstxt.org" target="_blank" rel="noopener">llms.txt</a></strong> virou assunto porque acerta no diagnóstico: os sites de hoje foram montados para pessoas, não para agentes de IA. Só que muita gente está tratando esse arquivo como solução final, quando ele é, na prática, só o começo da conversa.</p>
 
       <p>Colocar um <strong>llms.txt</strong> no ar ajuda. Ele funciona como uma espécie de índice limpo, uma porta de entrada mais organizada para o que sua marca publica. O problema é achar que isso resolve tudo. Não resolve.</p>
 
@@ -2961,9 +2961,9 @@ export const articles: Record<string, Article> = {
 
       <h2>O que vem depois: a pilha que faz a IA entender sua marca</h2>
 
-      <p>O caminho mais sólido é pensar em uma <strong>arquitetura legível por máquina</strong>. Não como substituição do <strong>llms.txt</strong>, mas como a próxima etapa. Algo parecido com o que aconteceu na web quando <strong>robots.txt</strong> deixou de ser suficiente e vieram sitemap, schema e outras camadas de estrutura.</p>
+      <p>O caminho mais sólido é pensar em uma <strong>arquitetura legível por máquina</strong>. Não como substituição do <strong>llms.txt</strong>, mas como a próxima etapa. Algo parecido com o que aconteceu na web quando <strong><a href="https://en.wikipedia.org/wiki/Robots.txt" target="_blank" rel="noopener">robots.txt</a></strong> deixou de ser suficiente e vieram sitemap, schema e outras camadas de estrutura.</p>
 
-      <p><strong>Primeira camada: fichas factuais com JSON-LD.</strong> Aqui entra o básico bem feito. Organização, produto, serviço, FAQ, review, autor, disponibilidade, preço, data de atualização. Não como truque para rich snippet, mas como uma <strong>camada oficial de fatos</strong> que a máquina consegue ler sem precisar adivinhar.</p>
+      <p><strong>Primeira camada: fichas factuais com <a href="https://schema.org" target="_blank" rel="noopener">JSON-LD</a>.</strong> Aqui entra o básico bem feito. Organização, produto, serviço, FAQ, review, autor, disponibilidade, preço, data de atualização. Não como truque para rich snippet, mas como uma <strong>camada oficial de fatos</strong> que a máquina consegue ler sem precisar adivinhar.</p>
 
       <p><strong>Segunda camada: mapa de relações entre entidades.</strong> Não basta dizer que uma página existe. É preciso mostrar que o Produto A pertence à Categoria B, que a Integração C atende ao Caso de Uso D, que a Feature E só existe no plano enterprise, e que tudo isso aponta para uma fonte oficial. A IA responde melhor quando navega por relações, não por páginas soltas.</p>
 
@@ -3115,13 +3115,13 @@ export const articles: Record<string, Article> = {
       <text x="400" y="380" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(255,255,255,.15)">PROJETO GLASSWING — PRÉVIA DEFENSIVA</text>
     </svg>`,
     content: `
-      <p class="article-lead">A <strong>Anthropic</strong> anunciou uma nova ofensiva no campo da cibersegurança ao liberar o acesso ao <strong>Claude Mythos</strong> para um grupo seleto de gigantes da tecnologia, entre elas a <strong>Apple</strong>. O modelo, ainda inédito para o público, será usado dentro do <strong>Projeto Glasswing</strong>, iniciativa criada para ajudar grandes empresas e organizações estratégicas a encontrar e corrigir falhas críticas de software antes que elas virem alvo de ataques reais.</p>
+      <p class="article-lead">A <strong><a href="https://www.anthropic.com" target="_blank" rel="noopener">Anthropic</a></strong> anunciou uma nova ofensiva no campo da cibersegurança ao liberar o acesso ao <strong>Claude Mythos</strong> para um grupo seleto de gigantes da tecnologia, entre elas a <strong><a href="https://www.apple.com" target="_blank" rel="noopener">Apple</a></strong>. O modelo, ainda inédito para o público, será usado dentro do <strong>Projeto Glasswing</strong>, iniciativa criada para ajudar grandes empresas e organizações estratégicas a encontrar e corrigir falhas críticas de software antes que elas virem alvo de ataques reais.</p>
 
       <p>Além da Apple, o projeto reúne nomes de peso como <strong>Amazon Web Services</strong>, <strong>Google</strong>, <strong>Microsoft</strong>, <strong>Cisco</strong>, <strong>NVIDIA</strong>, <strong>CrowdStrike</strong>, <strong>Palo Alto Networks</strong>, <strong>Broadcom</strong>, <strong>JPMorganChase</strong> e a <strong>Linux Foundation</strong>. A proposta é simples no papel, mas ambiciosa na prática: usar uma IA extremamente avançada para proteger infraestruturas críticas antes que modelos com capacidades semelhantes se espalhem de forma mais ampla.</p>
 
       <h2>O que é o Mythos e por que ele chamou tanta atenção</h2>
 
-      <p>Segundo a Anthropic, o <strong>Mythos</strong> é um modelo de uso geral, mas com capacidade de programação e raciocínio em segurança digital muito acima do normal. A empresa afirma que ele já encontrou <strong>milhares de vulnerabilidades de alta gravidade</strong>, inclusive em <strong>todos os principais sistemas operacionais</strong> e <strong>todos os grandes navegadores</strong>.</p>
+      <p>Segundo a Anthropic, o <strong>Mythos</strong> é um modelo de uso geral, mas com capacidade de programação e raciocínio em segurança digital muito acima do normal. A empresa afirma que ele já encontrou <strong>milhares de <a href="https://www.cve.org" target="_blank" rel="noopener">vulnerabilidades</a> de alta gravidade</strong>, inclusive em <strong>todos os principais sistemas operacionais</strong> e <strong>todos os grandes navegadores</strong>.</p>
 
       <p>Em alguns testes, o modelo teria identificado falhas antigas que passaram anos — e até décadas — despercebidas por revisões humanas e ferramentas automatizadas. Entre os exemplos citados pela Anthropic estão uma vulnerabilidade de <strong>27 anos no OpenBSD</strong>, uma falha de <strong>16 anos no FFmpeg</strong> e uma cadeia de problemas no <strong>kernel Linux</strong> que poderia permitir a tomada completa de uma máquina.</p>
 
@@ -3139,7 +3139,7 @@ export const articles: Record<string, Article> = {
 
       <h2>O que a Anthropic quer construir com o Projeto Glasswing</h2>
 
-      <p>A Anthropic definiu o projeto como um primeiro passo para dar aos defensores uma vantagem real antes que essas capacidades se tornem amplamente acessíveis. Além de abrir o Mythos para as parceiras principais, a empresa disse que também estendeu o acesso a <strong>mais de 40 organizações</strong> responsáveis por softwares e infraestruturas críticas.</p>
+      <p>A <a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Anthropic</a> definiu o projeto como um primeiro passo para dar aos defensores uma vantagem real antes que essas capacidades se tornem amplamente acessíveis. Além de abrir o Mythos para as parceiras principais, a empresa disse que também estendeu o acesso a <strong>mais de 40 organizações</strong> responsáveis por softwares e infraestruturas críticas.</p>
 
       <p>Para sustentar a iniciativa, a companhia prometeu até <strong>US$ 100 milhões em créditos de uso</strong> do modelo e mais <strong>US$ 4 milhões em apoio direto</strong> a grupos ligados à segurança de software de código aberto. A mensagem é clara: a Anthropic quer posicionar o Mythos não como mais um chatbot poderoso, mas como uma ferramenta de linha de frente em uma nova disputa entre IA defensiva e IA ofensiva.</p>
 
@@ -3210,7 +3210,7 @@ export const articles: Record<string, Article> = {
     content: `
       <p class="article-lead">Os <strong>AI Overviews</strong>, resumos gerados por inteligência artificial que o Google exibe no topo da busca, voltaram ao centro da polêmica após uma análise indicar que a ferramenta ainda entrega respostas erradas em escala enorme. O ponto mais incômodo para o Google é que o sistema até melhorou, mas continua distante de um nível de confiabilidade que justificaria a autoridade com que aparece na tela.</p>
 
-      <p>O levantamento foi feito pela startup <strong>Oumi</strong> a pedido do <strong>The New York Times</strong> e testou <strong>4.326 buscas</strong> em dois momentos diferentes: em outubro, quando os resumos eram alimentados por uma versão ligada ao <strong>Gemini 2</strong>, e em fevereiro, já com a mudança para o <strong>Gemini 3</strong>. O resultado mostrou evolução, mas também escancarou o tamanho do problema quando a escala do Google entra na conta.</p>
+      <p>O levantamento foi feito pela startup <strong><a href="https://www.oumi.ai" target="_blank" rel="noopener">Oumi</a></strong> a pedido do <strong><a href="https://www.nytimes.com" target="_blank" rel="noopener">The New York Times</a></strong> e testou <strong>4.326 buscas</strong> em dois momentos diferentes: em outubro, quando os resumos eram alimentados por uma versão ligada ao <strong>Gemini 2</strong>, e em fevereiro, já com a mudança para o <strong>Gemini 3</strong>. O resultado mostrou evolução, mas também escancarou o tamanho do problema quando a escala do Google entra na conta.</p>
 
       <h2>O número parece bom, até virar um problema gigantesco</h2>
 
@@ -3232,7 +3232,7 @@ export const articles: Record<string, Article> = {
 
       <h2>Google contesta, mas a pressão só aumenta</h2>
 
-      <p>O Google rebateu a análise e disse que o estudo tem <strong>"falhas sérias"</strong> e não reflete o que as pessoas realmente pesquisam na plataforma. A empresa sustenta que os AI Overviews são mais confiáveis porque combinam o modelo de IA com os sistemas tradicionais de ranking e segurança da própria busca. Ainda assim, a reação mostra que a companhia já entendeu o tamanho do desgaste quando os erros deixam de ser casos isolados e passam a ser lidos como um efeito estrutural do produto.</p>
+      <p>O Google rebateu a análise e disse que o estudo tem <strong>"falhas sérias"</strong> e não reflete o que as pessoas realmente pesquisam na plataforma. A empresa sustenta que os <a href="https://blog.google/products/search/" target="_blank" rel="noopener">AI Overviews</a> são mais confiáveis porque combinam o modelo de IA com os sistemas tradicionais de ranking e segurança da própria busca. Ainda assim, a reação mostra que a companhia já entendeu o tamanho do desgaste quando os erros deixam de ser casos isolados e passam a ser lidos como um efeito estrutural do produto.</p>
 
       <p>Esse desgaste vem se somando a outra frente de pressão: a relação cada vez mais tensa com os publishers. Críticos afirmam que os AI Overviews usam conteúdo da web para responder diretamente ao usuário, reduzindo cliques e enfraquecendo quem produz a informação original. Quando esse cenário se junta aos erros e às citações frágeis, a percepção de risco cresce ainda mais.</p>
 
