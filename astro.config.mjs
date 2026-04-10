@@ -30,6 +30,7 @@ const lastModified = {
   '/blog/ai-overviews-google-respostas-erradas-escala/': '2026-04-10',
   '/blog/chatbots-ia-bajulacao-sycophancy-stanford/': '2026-04-10',
   '/blog/ia-muda-redacoes-2025-nao-aposenta-jornalista/': '2026-04-10',
+  '/blog/openai-crises-trocas-comando-pressao-lucro/': '2026-04-10',
   '/autor/bruno-lopes/': '2026-04-10',
   '/contato/': '2026-03-22',
   '/quem-somos/': '2026-03-22',

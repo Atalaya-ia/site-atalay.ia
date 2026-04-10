@@ -3409,4 +3409,114 @@ export const articles: Record<string, Article> = {
       <p>No fim, a transformação de 2025 deixa uma lição importante. A IA pode até reorganizar o fluxo de trabalho, mudar métricas, encurtar etapas e ampliar a capacidade de produção. Mas o jornalismo continua dependendo de algo que algoritmo nenhum entrega sozinho: <strong>critério</strong>. E, numa era em que publicar ficou fácil e o ruído informacional só aumenta, esse critério vale mais do que nunca.</p>
     `,
   },
+  'openai-crises-trocas-comando-pressao-lucro': {
+    title: 'Clima pesa na OpenAI com crises, trocas no comando e pressão por lucro',
+    description: 'Mesmo após captar US$ 122 bilhões, dona do ChatGPT enfrenta polêmicas, cancelamentos e mais cobrança por resultados.',
+    date: '2026-04-10',
+    category: 'Análise',
+    readTime: '6 min',
+    author: 'Bruno Lopes',
+    role: 'Fundador, atalay.ia',
+    heroSvg: `<svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="800" height="400" fill="#0e1011"/>
+      <defs>
+        <radialGradient id="g-oai1" cx="45%" cy="45%"><stop offset="0%" stop-color="rgba(200,100,100,.1)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+        <radialGradient id="g-oai2" cx="60%" cy="55%"><stop offset="0%" stop-color="rgba(192,106,66,.06)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+      </defs>
+      <rect width="800" height="400" fill="url(#g-oai1)"/>
+      <rect width="800" height="400" fill="url(#g-oai2)"/>
+      <!-- Central tower representing OpenAI -->
+      <g transform="translate(400,185)">
+        <rect x="-40" y="-85" width="80" height="170" rx="4" stroke="rgba(255,255,255,.1)" stroke-width=".8" fill="rgba(255,255,255,.02)"/>
+        <line x1="-40" y1="-42" x2="40" y2="-42" stroke="rgba(255,255,255,.06)" stroke-width=".5"/>
+        <line x1="-40" y1="0" x2="40" y2="0" stroke="rgba(255,255,255,.06)" stroke-width=".5"/>
+        <line x1="-40" y1="42" x2="40" y2="42" stroke="rgba(255,255,255,.06)" stroke-width=".5"/>
+        <!-- Warning indicators on each floor -->
+        <circle cx="0" cy="-63" r="4" fill="rgba(200,100,100,.5)" stroke="rgba(200,100,100,.7)" stroke-width=".6"/>
+        <circle cx="0" cy="-21" r="4" fill="rgba(192,106,66,.4)" stroke="rgba(192,106,66,.6)" stroke-width=".6"/>
+        <circle cx="0" cy="21" r="4" fill="rgba(200,100,100,.3)" stroke="rgba(200,100,100,.5)" stroke-width=".6"/>
+        <circle cx="0" cy="63" r="4" fill="rgba(192,106,66,.3)" stroke="rgba(192,106,66,.5)" stroke-width=".6"/>
+        <!-- Pressure cracks -->
+        <line x1="40" y1="-30" x2="55" y2="-45" stroke="rgba(200,100,100,.2)" stroke-width=".6"/>
+        <line x1="40" y1="10" x2="52" y2="18" stroke="rgba(200,100,100,.15)" stroke-width=".5"/>
+        <line x1="-40" y1="30" x2="-52" y2="22" stroke="rgba(200,100,100,.15)" stroke-width=".5"/>
+      </g>
+      <!-- Left: money metrics -->
+      <g transform="translate(155,145)">
+        <rect x="-70" y="-14" width="140" height="28" rx="5" stroke="rgba(130,153,110,.2)" stroke-width=".5" fill="rgba(130,153,110,.02)"/>
+        <text x="-55" y="4" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(130,153,110,.5)">captação</text>
+        <text x="40" y="4" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600" fill="rgba(130,153,110,.6)">$122B</text>
+      </g>
+      <g transform="translate(155,190)">
+        <rect x="-70" y="-14" width="140" height="28" rx="5" stroke="rgba(192,106,66,.18)" stroke-width=".5" fill="rgba(192,106,66,.02)"/>
+        <text x="-55" y="4" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(192,106,66,.4)">valuation</text>
+        <text x="36" y="4" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600" fill="rgba(192,106,66,.6)">$852B</text>
+      </g>
+      <g transform="translate(155,235)">
+        <rect x="-70" y="-14" width="140" height="28" rx="5" stroke="rgba(255,255,255,.08)" stroke-width=".5" fill="rgba(255,255,255,.015)"/>
+        <text x="-55" y="4" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(255,255,255,.25)">IPO</text>
+        <text x="26" y="4" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(255,255,255,.2)">pendente</text>
+      </g>
+      <!-- Right: warning signals -->
+      <g transform="translate(635,122)">
+        <rect x="-72" y="-12" width="144" height="24" rx="4" stroke="rgba(200,100,100,.2)" stroke-width=".5" fill="rgba(200,100,100,.02)"/>
+        <text x="-60" y="3" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(200,100,100,.5)">Sora encerrado</text>
+      </g>
+      <g transform="translate(635,160)">
+        <rect x="-72" y="-12" width="144" height="24" rx="4" stroke="rgba(200,100,100,.18)" stroke-width=".5" fill="rgba(200,100,100,.02)"/>
+        <text x="-60" y="3" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(200,100,100,.45)">cúpula reorganizada</text>
+      </g>
+      <g transform="translate(635,198)">
+        <rect x="-72" y="-12" width="144" height="24" rx="4" stroke="rgba(200,100,100,.15)" stroke-width=".5" fill="rgba(200,100,100,.02)"/>
+        <text x="-60" y="3" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(200,100,100,.4)">data center pausado</text>
+      </g>
+      <g transform="translate(635,236)">
+        <rect x="-72" y="-12" width="144" height="24" rx="4" stroke="rgba(192,106,66,.18)" stroke-width=".5" fill="rgba(192,106,66,.02)"/>
+        <text x="-60" y="3" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(192,106,66,.4)">ação judicial Musk</text>
+      </g>
+      <!-- Bottom label -->
+      <text x="400" y="375" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(255,255,255,.15)">OPENAI · PRESSÃO INTERNA E EXTERNA</text>
+    </svg>`,
+    content: `
+      <p class="article-lead">A <strong>OpenAI</strong> continua sendo uma potência da inteligência artificial, mas o clima em torno da empresa já não é de domínio tranquilo. Dona do <strong>ChatGPT</strong> e uma das marcas mais valiosas do setor, a companhia entrou em uma fase em que a ambição continua gigante, mas a sensação de controle parece menor. Nos bastidores e fora deles, se acumulam sinais de desgaste: polêmicas públicas, mudança de rota em produtos, mexidas no comando, pressão por receita e uma concorrência cada vez mais agressiva.</p>
+
+      <p>O contraste chama atenção porque a empresa segue cercada de dinheiro e influência. Depois de levantar uma <a href="https://www.reuters.com/technology/artificial-intelligence/" target="_blank" rel="noopener">nova rodada bilionária</a> e reforçar o discurso de que ainda quer liderar a próxima etapa da IA, a OpenAI agora precisa convencer mercado, parceiros e funcionários de que consegue crescer sem perder o rumo. E essa conta ficou mais difícil nas últimas semanas.</p>
+
+      <h2>Da euforia ao desconforto</h2>
+
+      <p>Parte do desgaste começou quando a OpenAI se aproximou mais do governo dos Estados Unidos em projetos de defesa, num movimento que gerou reação dentro e fora da empresa. O episódio alimentou críticas porque aconteceu justamente num momento em que rivais tentavam vender uma imagem mais cautelosa sobre os limites do uso militar da IA.</p>
+
+      <p>O problema para a OpenAI não foi só fechar acordos delicados, mas parecer pragmática demais ao fazer isso. Quando uma empresa se apresenta como protagonista de uma tecnologia que pode mudar a sociedade, cada decisão controversa pesa mais. E, nesse caso, a percepção de oportunismo passou a contaminar o debate público sobre a companhia — alimentando dúvidas semelhantes às que já existem sobre <a href="/blog/chatbots-ia-bajulacao-sycophancy-stanford/">a confiabilidade dos chatbots de IA</a> em geral.</p>
+
+      <h2>Projetos foram cortados e a prioridade mudou</h2>
+
+      <p>Na sequência, vieram as decisões que deram cara mais visível a essa guinada interna. A OpenAI encerrou o <strong>Sora</strong>, sua aposta em vídeo gerado por IA, de forma abrupta e surpreendeu até a <strong>Disney</strong>, que ainda estava em conversas com a empresa pouco antes do anúncio. Também colocou no freio outros planos mais experimentais e deixou claro que quer concentrar energia no que considera mais rentável agora: <strong>ferramentas de código</strong>, <strong>uso corporativo</strong> e a construção de um produto mais centralizado.</p>
+
+      <p>O recado é claro: a fase de explorar várias frentes ao mesmo tempo perdeu espaço para uma agenda mais dura de foco e monetização. Em outras palavras, a OpenAI parece ter concluído que não pode mais dispersar poder computacional e atenção executiva em projetos paralelos enquanto enfrenta rivais que avançam rápido em áreas mais lucrativas. A discussão sobre se <a href="/blog/ia-ferramenta-ou-ameaca-jornalismo/">a IA é ferramenta ou ameaça</a> vale também para a própria OpenAI, que agora precisa escolher qual versão de si mesma quer ser.</p>
+
+      <p>Até mesmo iniciativas de infraestrutura passaram a emitir sinais mistos. Um dos projetos de data center da empresa no Reino Unido foi pausado em meio a queixas sobre regulação e custo de energia, o que reforçou a leitura de que nem tudo está andando com a velocidade e a fluidez que a narrativa de crescimento costuma sugerir.</p>
+
+      <h2>O topo da empresa também entrou em turbulência</h2>
+
+      <p>Se os produtos mudaram de rota, o comando também passou por nova reorganização. A OpenAI anunciou mudanças importantes na cúpula, com <strong>Fidji Simo</strong> se afastando por licença médica, <strong>Greg Brockman</strong> assumindo mais responsabilidades sobre produto, <strong>Kate Rouch</strong> saindo do marketing para cuidar da saúde e <strong>Brad Lightcap</strong> deixando a operação tradicional para tocar projetos especiais ligados diretamente a <strong>Sam Altman</strong>.</p>
+
+      <p>Isoladamente, qualquer uma dessas mudanças poderia ser tratada como ajuste normal de uma empresa em crescimento. O problema é o acúmulo. Quando cortes de projeto, reposicionamento estratégico e troca-troca no alto escalão acontecem quase ao mesmo tempo, o mercado começa a ler o conjunto como sinal de instabilidade — e não apenas de reorganização.</p>
+
+      <p>Foi nesse ambiente que a OpenAI também comprou o <strong>TBPN</strong>, um programa online de tecnologia e negócios. A justificativa oficial foi criar um espaço melhor para explicar o impacto da IA e melhorar a conversa pública sobre o setor. Mas o movimento também foi lido como tentativa de controlar melhor a própria narrativa num momento em que a empresa vem sendo pressionada de vários lados.</p>
+
+      <h2>Sam Altman volta ao centro das dúvidas</h2>
+
+      <p>Como se isso não bastasse, o escrutínio sobre <strong>Sam Altman</strong> voltou a crescer. Uma nova reportagem da <a href="https://www.newyorker.com/" target="_blank" rel="noopener">The New Yorker</a> retomou acusações antigas e ampliou dúvidas sobre sua relação com o conselho, com executivos e com compromissos de segurança assumidos ao longo da trajetória da OpenAI. Não se trata de uma crise nova, mas de uma ferida que nunca fechou completamente e reaparece toda vez que a empresa entra em fase sensível.</p>
+
+      <p>O timing é ruim porque a OpenAI também se aproxima de mais um capítulo da briga judicial com <strong>Elon Musk</strong>. O <a href="https://www.bloomberg.com/news/features/openai/" target="_blank" rel="noopener">processo</a> já expôs comunicações internas dos primeiros anos da empresa e tende a manter os holofotes sobre decisões antigas, promessas rompidas e disputas sobre a verdadeira missão da organização.</p>
+
+      <h2>O dinheiro é gigante, mas a pressão agora é maior</h2>
+
+      <p>A OpenAI ainda parece enorme demais para ser tratada como empresa enfraquecida. Ela tem marca global, escala de uso difícil de igualar e uma base de consumidores que transformou o nome <strong>ChatGPT</strong> em sinônimo popular de IA. Só que isso não elimina a cobrança. Quanto mais dinheiro entra, mais o mercado quer saber quando esse tamanho vai virar resultado consistente.</p>
+
+      <p>É aí que a história fica mais delicada. A empresa precisa mostrar que consegue justificar investimentos bilionários, sustentar a corrida por infraestrutura e, ao mesmo tempo, provar que seu foco atual realmente faz sentido. O desafio cresceu porque a <a href="/blog/anthropic-libera-mythos-apple-ciberataques/">Anthropic ganhou força</a> em programação e a <strong>Google</strong> segue empurrando o <a href="/blog/ai-overviews-google-respostas-erradas-escala/">Gemini</a> para dentro de um ecossistema já integrado a busca, nuvem, produtividade e dispositivos.</p>
+
+      <p>No fim, a OpenAI continua sendo uma protagonista óbvia da corrida da IA. Mas a sensação de invencibilidade já não é a mesma. O que se vê agora é uma empresa enorme, valiosa e ainda influente, só que mais pressionada, mais observada e obrigada a provar, em tempo real, que sua próxima fase será tão forte quanto a primeira. Como mostra a <a href="/blog/ia-muda-redacoes-2025-nao-aposenta-jornalista/">transformação das redações em 2025</a>, nem mesmo as empresas que criam a tecnologia estão imunes à pressão que a IA impõe sobre quem precisa provar resultado.</p>
+    `,
+  },
 };
