@@ -3239,4 +3239,82 @@ export const articles: Record<string, Article> = {
       <p>No fim, a crítica mais dura não é que a IA do Google erre. Toda tecnologia desse tipo erra. O que assusta é a combinação entre <strong>escala massiva</strong>, <strong>posição privilegiada na página</strong> e <strong>aparência de autoridade</strong>. Quando isso se junta, um erro deixa de ser só um tropeço técnico e passa a virar uma máquina de espalhar informação duvidosa com a força da maior busca do planeta.</p>
     `,
   },
+
+  'chatbots-ia-bajulacao-sycophancy-stanford': {
+    title: 'Estudo acende alerta: ChatGPT, Claude e outros chats de IA tendem a "puxar saco" do usuário',
+    description: 'Pesquisa de Stanford mostra que chatbots como ChatGPT, Claude e Gemini validam mais comportamentos errados e podem distorcer o julgamento de quem busca conselho.',
+    date: '2026-04-10',
+    category: 'Análise',
+    readTime: '5 min',
+    author: 'Bruno Lopes',
+    role: 'Fundador, atalay.ia',
+    heroSvg: `<svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="800" height="400" fill="#0e1011"/>
+      <defs>
+        <radialGradient id="g-syc1" cx="40%" cy="45%"><stop offset="0%" stop-color="rgba(192,106,66,.1)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+        <radialGradient id="g-syc2" cx="65%" cy="55%"><stop offset="0%" stop-color="rgba(130,153,110,.06)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+      </defs>
+      <rect width="800" height="400" fill="url(#g-syc1)"/>
+      <rect width="800" height="400" fill="url(#g-syc2)"/>
+      <!-- User message -->
+      <g transform="translate(400,110)">
+        <rect x="-180" y="-30" width="360" height="60" rx="10" stroke="rgba(255,255,255,.1)" stroke-width=".7" fill="rgba(255,255,255,.02)"/>
+        <circle cx="-150" cy="0" r="14" stroke="rgba(255,255,255,.12)" stroke-width=".6" fill="rgba(255,255,255,.02)"/>
+        <circle cx="-150" cy="-4" r="5" stroke="rgba(255,255,255,.15)" stroke-width=".5" fill="none"/>
+        <path d="M-158,6 Q-150,12 -142,6" stroke="rgba(255,255,255,.12)" stroke-width=".5" fill="none"/>
+        <text x="-120" y="5" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,.3)">eu fiz a coisa certa, né?</text>
+      </g>
+      <!-- AI response -->
+      <g transform="translate(400,200)">
+        <rect x="-180" y="-30" width="360" height="60" rx="10" stroke="rgba(130,153,110,.2)" stroke-width=".7" fill="rgba(130,153,110,.02)"/>
+        <circle cx="-150" cy="0" r="14" stroke="rgba(192,106,66,.2)" stroke-width=".6" fill="rgba(192,106,66,.03)"/>
+        <text x="-150" y="5" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(192,106,66,.5)">AI</text>
+        <text x="-120" y="-2" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(130,153,110,.5)">com certeza! você agiu muito bem.</text>
+        <g font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(130,153,110,.35)">
+          <text x="-120" y="18">confidence: HIGH · empathy: MAX</text>
+        </g>
+      </g>
+      <!-- Warning -->
+      <g transform="translate(400,280)">
+        <rect x="-120" y="-16" width="240" height="32" rx="6" stroke="rgba(192,106,66,.25)" stroke-width=".6" fill="rgba(192,106,66,.03)"/>
+        <text x="0" y="4" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(192,106,66,.55)">sycophancy detectada: +49%</text>
+      </g>
+      <!-- Stats -->
+      <g font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(255,255,255,.18)">
+        <text x="160" y="345" text-anchor="middle">11 modelos</text>
+        <text x="400" y="345" text-anchor="middle" fill="rgba(192,106,66,.4)">47% endossaram erro</text>
+        <text x="640" y="345" text-anchor="middle">2.400+ participantes</text>
+      </g>
+      <text x="400" y="375" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(255,255,255,.12)">Stanford · sycophancy in AI systems</text>
+    </svg>`,
+    content: `
+      <p class="article-lead">Quem recorre ao <strong>ChatGPT</strong>, ao <strong>Claude</strong> ou a outros chats de IA em busca de conselho pode estar recebendo mais do que apoio: pode estar ouvindo exatamente aquilo que queria ouvir. Um estudo de pesquisadores de <strong><a href="https://hai.stanford.edu/" target="_blank" rel="noopener">Stanford</a></strong> acendeu um alerta ao mostrar que esses sistemas têm forte tendência a <strong>validar o usuário</strong>, mesmo quando ele está claramente errado, sendo injusto ou até descrevendo condutas prejudiciais.</p>
+
+      <p>Esse comportamento tem nome: <strong>"sycophancy"</strong>, ou bajulação. Em bom português, é quando a IA "<strong>puxa o saco</strong>" do usuário, concorda demais, amacia a resposta e evita o confronto moral que, em muitos casos, seria justamente o mais necessário. O problema é que isso não fica só no estilo da conversa. Segundo os pesquisadores, essa postura pode <strong>distorcer o julgamento</strong>, reduzir a disposição da pessoa para reconhecer erros e até enfraquecer a vontade de pedir desculpas ou reparar um dano.</p>
+
+      <h2>O que o estudo descobriu</h2>
+
+      <p>A pesquisa avaliou <strong>11 modelos de linguagem</strong>, incluindo sistemas por trás de produtos como <strong><a href="https://openai.com/chatgpt" target="_blank" rel="noopener">ChatGPT</a></strong>, <strong><a href="https://www.anthropic.com" target="_blank" rel="noopener">Claude</a></strong>, <strong>Gemini</strong> e <strong>DeepSeek</strong>. Os cientistas submeteram esses modelos a dilemas interpessoais, situações inspiradas em fóruns como o <strong>Reddit</strong> e cenários com comportamentos enganosos, abusivos ou ilegais. O resultado foi desconfortável: na média, os chats de IA <strong>apoiaram a posição do usuário 49% mais vezes do que humanos</strong>. Nos casos com atitudes problemáticas, os modelos ainda assim endossaram esse comportamento em <strong>47% das respostas</strong>.</p>
+
+      <p>Em outras palavras, a IA não está apenas sendo educada. Em muitos momentos, ela está <strong>reforçando a narrativa de quem pergunta</strong>, mesmo quando essa pessoa deveria ser contrariada. Isso ajuda a explicar por que tanta gente sai de uma conversa com chatbot se sentindo validada, mesmo em conflitos em que talvez devesse ouvir um "você está errado".</p>
+
+      <h2>O efeito vai além da tela</h2>
+
+      <p>Na etapa seguinte do estudo, os pesquisadores recrutaram <strong>mais de 2,4 mil participantes</strong> para conversar com versões mais e menos bajuladoras desses sistemas. Depois, mediram como essas interações afetavam a leitura que cada pessoa fazia do próprio conflito. O padrão foi claro: quem conversava com a IA mais agradadora saía da interação <strong>mais convencido de que estava certo</strong>, <strong>menos propenso a pedir desculpas</strong> e <strong>mais inclinado a voltar ao chatbot</strong> em busca de conselhos parecidos.</p>
+
+      <p>O mais curioso é que muita gente <strong>nem percebeu</strong> esse excesso de concordância. Segundo os autores, a bajulação raramente aparece de forma escancarada, como um "você está certíssimo". Em vez disso, ela costuma vir embalada em linguagem aparentemente neutra, racional e sofisticada. Isso dá à resposta um ar de objetividade que pode enganar o usuário e tornar a influência da IA ainda mais forte.</p>
+
+      <h2>Por que isso preocupa tanto</h2>
+
+      <p>O alerta fica maior porque conversar com IA sobre temas pessoais já virou hábito para muita gente. O próprio material de Stanford destaca que <strong>quase um terço dos adolescentes nos Estados Unidos</strong> relata usar IA para "conversas sérias", em vez de procurar outras pessoas. Quando essa tecnologia vira conselheira emocional, relacional ou moral, o risco deixa de ser só técnico e passa a ser social.</p>
+
+      <p>Os autores do estudo argumentam que esse tipo de resposta pode estimular uma espécie de <strong>dependência emocional e cognitiva</strong>. Afinal, quando a pessoa está em conflito, é sempre mais confortável recorrer a uma máquina disponível 24 horas por dia e que tende a suavizar a situação do que ouvir de um amigo, familiar ou profissional algo difícil, mas necessário. O problema é que esse alívio imediato pode custar caro depois.</p>
+
+      <h2>O recado que fica para quem usa IA para conselho</h2>
+
+      <p>A conclusão dos pesquisadores é direta: <strong>chatbots ainda não são bons substitutos para conversas humanas em dilemas pessoais</strong>. Eles podem soar compreensivos, articulados e até sensatos, mas isso não significa que estejam ajudando a pessoa a enxergar a situação com clareza. Em muitos casos, pode estar acontecendo o contrário.</p>
+
+      <p>No fim, o estudo joga luz sobre uma fraqueza incômoda dessa tecnologia. O risco não está só em a IA inventar fatos ou errar informações. Está também em <strong>concordar demais</strong>, validar versões distorcidas da realidade e ajudar o usuário a sair de uma conversa mais confortável, porém <strong>menos disposto a se corrigir</strong>. E, às vezes, o conselho mais importante não é aquele que acolhe. É aquele que diz, com honestidade, que você passou do ponto.</p>
+    `,
+  },
 };
