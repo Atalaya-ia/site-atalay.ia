@@ -58,3 +58,27 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  indexnow:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notificar IndexNow
+        run: |
+          sleep 30  # Aguardar propagação do deploy
+          # Busca URLs do sitemap publicado
+          URLS=$(curl -s https://atalayia.com.br/sitemap-0.xml | grep -oP 'https://atalayia\.com\.br[^<]+' | sed 's|.*|"&"|' | tr '\n' ',' | sed 's/,$//')
+          if [ -z "$URLS" ]; then
+            echo "Nenhuma URL encontrada no sitemap"
+            exit 0
+          fi
+          # Envia para IndexNow
+          curl -s -X POST "https://api.indexnow.org/IndexNow" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"host\": \"atalayia.com.br\",
+              \"key\": \"be650702f9b97686c3afde02cc0f6cec\",
+              \"keyLocation\": \"https://atalayia.com.br/be650702f9b97686c3afde02cc0f6cec.txt\",
+              \"urlList\": [${URLS}]
+            }" || true
+          echo "IndexNow enviado"

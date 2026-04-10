@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+
 Sitemap: https://atalayia.com.br/sitemap-index.xml

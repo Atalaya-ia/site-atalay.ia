@@ -33,6 +33,33 @@ const prevArticle = prevSlug ? articles[prevSlug] : null;
 const articleUrl = `https://atalayia.com.br/blog/${slug}/`;
 const publishedIso = `${article.date}T00:00:00-03:00`;
 
+// Data de modificação real (quando links/traduções foram atualizados)
+const modifiedDates: Record<string, string> = {
+  'lancamento-atalay-ia': '2026-04-10',
+  'como-ia-contextual-muda-jornalismo': '2026-04-10',
+  'pipeline-dados-editoriais': '2026-04-10',
+  'voz-editorial-agentes': '2026-04-10',
+  'discover-vs-busca': '2026-04-10',
+  'manual-redacao-ia': '2026-04-10',
+  'por-que-audiencia-jornal-cai': '2026-04-10',
+  'caso-nyt-ia-redacao': '2026-04-10',
+  'como-levar-ia-para-redacao': '2026-04-10',
+  'ia-ferramenta-ou-ameaca-jornalismo': '2026-04-10',
+  'google-discover-trafico-redacoes': '2026-04-10',
+  'o-que-e-eeat': '2026-04-10',
+  'o-que-e-ymyl': '2026-04-10',
+  'google-discover-core-update-fevereiro-2026': '2026-04-10',
+  'google-spam-update-reescrita-titulos-ia': '2026-04-10',
+  'anthropic-vaza-codigo-claude-code': '2026-04-10',
+  'anthropic-conter-vazamento-claude-code': '2026-04-10',
+  'nyt-rompe-colaborador-ia-resenha': '2026-04-10',
+  'llms-txt-arquitetura-marca-fonte-ia': '2026-04-10',
+  'bimbofication-google-trends-kristi-noem': '2026-04-10',
+  'anthropic-libera-mythos-apple-ciberataques': '2026-04-10',
+};
+const modifiedDate = modifiedDates[slug!] || article.date;
+const modifiedIso = `${modifiedDate}T00:00:00-03:00`;
+
 const jsonLd = [
   {
     '@context': 'https://schema.org',
@@ -40,7 +67,7 @@ const jsonLd = [
     headline: article.title,
     description: article.description,
     datePublished: publishedIso,
-    dateModified: publishedIso,
+    dateModified: modifiedIso,
     url: articleUrl,
     mainEntityOfPage: { '@type': 'WebPage', '@id': articleUrl },
     inLanguage: 'pt-BR',
@@ -78,7 +105,7 @@ const jsonLd = [
   ogType="article"
   image={`https://atalayia.com.br/og/${slug}.png`}
   publishedTime={publishedIso}
-  modifiedTime={publishedIso}
+  modifiedTime={modifiedIso}
   author={article.author}
   jsonLd={jsonLd}
 >
