@@ -2,7 +2,6 @@
 import Base from '../../layouts/Base.astro';
 import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
-import { makeAccessibleSvg } from '../../utils/svg-a11y';
 import { articles } from '../../data/articles';
 
 // ── Static paths for SSG ──
@@ -17,9 +16,6 @@ const article = slug ? articles[slug] : undefined;
 if (!article) {
   return Astro.redirect('/blog');
 }
-
-// Inject a11y into hero SVG
-article.heroSvg = makeAccessibleSvg(article.heroSvg, article.title, article.description, slug!);
 
 function formatDate(dateStr: string) {
   const d = new Date(dateStr + 'T00:00:00');
@@ -92,7 +88,20 @@ const jsonLd = [
     <div class="post-wrap">
 
       <!-- Hero image -->
-      <div class="post-hero" role="img" aria-label={article.title} set:html={article.heroSvg} />
+      <figure class="post-hero">
+        <img
+          src={`/og/${slug}.png`}
+          alt={article.title}
+          width="1200"
+          height="600"
+          loading="eager"
+          decoding="async"
+        />
+        <figcaption>
+          <span class="post-hero-desc">{article.description}</span>
+          <span class="post-hero-credit">Ilustração: {article.author}</span>
+        </figcaption>
+      </figure>
 
       <!-- Header -->
       <header class="post-header">
@@ -194,16 +203,41 @@ const jsonLd = [
 
   /* Hero */
   .post-hero {
-    margin-bottom: 40px;
+    margin: 0 0 40px;
+    padding: 0;
     border-radius: 14px;
     overflow: hidden;
     border: 1px solid var(--border);
   }
 
-  .post-hero svg {
+  .post-hero img {
     display: block;
     width: 100%;
     height: auto;
+  }
+
+  .post-hero figcaption {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    padding: 10px 16px;
+    background: rgba(255,255,255,.02);
+    border-top: 1px solid var(--border);
+  }
+
+  .post-hero-desc {
+    font-size: .75rem;
+    color: var(--muted);
+    line-height: 1.4;
+    flex: 1;
+  }
+
+  .post-hero-credit {
+    font-size: .7rem;
+    color: var(--muted);
+    opacity: .6;
+    white-space: nowrap;
   }
 
   /* Header */
