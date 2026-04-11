@@ -28,7 +28,7 @@ jobs:
         run: npm audit --audit-level=high
         continue-on-error: true
       - run: npm run build
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: dist
 
