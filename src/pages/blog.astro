@@ -883,42 +883,102 @@ const posts = [
     description: 'Plataforma mostrou mercados de aposta ao lado de veículos jornalísticos e depois disse que tudo foi um erro.',
     date: '2026-04-13',
     category: 'Análise',
-    thumb: `<svg viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="250" fill="#0e1011"/>
+    thumb: `<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <radialGradient id="tpm1" cx="40%" cy="50%"><stop offset="0%" stop-color="rgba(200,100,100,.08)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
-        <radialGradient id="tpm2" cx="70%" cy="50%"><stop offset="0%" stop-color="rgba(192,106,66,.06)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+        <radialGradient id="tpm-bg" cx="50%" cy="40%" r="70%">
+          <stop offset="0%" stop-color="#2a0a06"/>
+          <stop offset="55%" stop-color="#160403"/>
+          <stop offset="100%" stop-color="#0a0101"/>
+        </radialGradient>
+        <linearGradient id="tpm-reel-metal" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2a1510"/>
+          <stop offset="50%" stop-color="#120604"/>
+          <stop offset="100%" stop-color="#2a1510"/>
+        </linearGradient>
+        <linearGradient id="tpm-reel-face" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#f4e8d8"/>
+          <stop offset="100%" stop-color="#d8c9b0"/>
+        </linearGradient>
+        <linearGradient id="tpm-seven" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#ff6a3a"/>
+          <stop offset="60%" stop-color="#c02a18"/>
+          <stop offset="100%" stop-color="#6b0f08"/>
+        </linearGradient>
+        <linearGradient id="tpm-bar" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#ffb85c"/>
+          <stop offset="100%" stop-color="#c06a42"/>
+        </linearGradient>
+        <filter id="tpm-glow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="1.5" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="tpm-grain" x="0" y="0" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3"/>
+          <feColorMatrix values="0 0 0 0 0.5  0 0 0 0 0.1  0 0 0 0 0.05  0 0 0 0.25 0"/>
+          <feComposite in2="SourceGraphic" operator="in"/>
+        </filter>
       </defs>
-      <rect width="400" height="250" fill="url(#tpm1)"/>
-      <rect width="400" height="250" fill="url(#tpm2)"/>
-      <!-- News card -->
-      <g transform="translate(115,120)">
-        <rect x="-55" y="-50" width="110" height="100" rx="6" stroke="rgba(255,255,255,.1)" stroke-width=".6" fill="rgba(255,255,255,.02)"/>
-        <text x="-44" y="-34" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(192,106,66,.5)">NOTÍCIA</text>
-        <rect x="-44" y="-22" width="88" height="4" rx="1" fill="rgba(255,255,255,.08)"/>
-        <rect x="-44" y="-12" width="72" height="4" rx="1" fill="rgba(255,255,255,.06)"/>
-        <rect x="-44" y="-2" width="80" height="4" rx="1" fill="rgba(255,255,255,.06)"/>
-        <text x="-44" y="16" font-family="JetBrains Mono, monospace" font-size="6" fill="rgba(255,255,255,.22)">Reuters</text>
-        <text x="-44" y="28" font-family="JetBrains Mono, monospace" font-size="6" fill="rgba(255,255,255,.22)">The Guardian</text>
+      <rect width="400" height="250" fill="#0e1011"/>
+      <rect width="400" height="250" fill="url(#tpm-bg)" opacity=".9"/>
+      <!-- "Busca" wordmark -->
+      <g transform="translate(200,42)">
+        <text font-family="DM Sans, sans-serif" font-weight="500" font-size="20" text-anchor="middle" letter-spacing=".5">
+          <tspan fill="#4285F4">B</tspan><tspan fill="#EA4335">u</tspan><tspan fill="#FBBC05">s</tspan><tspan fill="#4285F4">c</tspan><tspan fill="#34A853">a</tspan>
+        </text>
       </g>
-      <!-- X collision -->
-      <g transform="translate(200,120)">
-        <line x1="-10" y1="-30" x2="10" y2="30" stroke="rgba(200,100,100,.35)" stroke-width=".7" stroke-dasharray="3 2"/>
-        <line x1="10" y1="-30" x2="-10" y2="30" stroke="rgba(200,100,100,.35)" stroke-width=".7" stroke-dasharray="3 2"/>
+      <!-- Search bar -->
+      <g transform="translate(200,72)">
+        <rect x="-130" y="-12" width="260" height="24" rx="12" fill="#1a1412" stroke="rgba(255,178,122,.35)" stroke-width=".8"/>
+        <g transform="translate(-118,0)" stroke="rgba(255,255,255,.55)" stroke-width="1" stroke-linecap="round">
+          <line x1="-3" y1="0" x2="3" y2="0"/>
+          <line x1="0" y1="-3" x2="0" y2="3"/>
+        </g>
+        <g transform="translate(108,0)">
+          <rect x="-16" y="-8" width="32" height="16" rx="8" fill="rgba(255,106,58,.12)" stroke="rgba(255,106,58,.45)" stroke-width=".6"/>
+          <text x="0" y="2" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6" fill="#ffb27a" letter-spacing=".5">AI MODE</text>
+        </g>
       </g>
-      <!-- Bet card -->
-      <g transform="translate(285,120)">
-        <rect x="-55" y="-50" width="110" height="100" rx="6" stroke="rgba(200,100,100,.22)" stroke-width=".6" fill="rgba(200,100,100,.02)"/>
-        <text x="-44" y="-34" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(200,100,100,.55)">APOSTA</text>
-        <text x="-44" y="-18" font-family="JetBrains Mono, monospace" font-size="6" fill="rgba(255,255,255,.3)">Ormuz?</text>
-        <rect x="-44" y="-8" width="88" height="6" rx="1" stroke="rgba(200,100,100,.18)" stroke-width=".4" fill="rgba(200,100,100,.04)"/>
-        <rect x="-44" y="-8" width="58" height="6" rx="1" fill="rgba(200,100,100,.2)"/>
-        <rect x="-44" y="10" width="40" height="12" rx="2" stroke="rgba(130,153,110,.2)" stroke-width=".4" fill="rgba(130,153,110,.03)"/>
-        <text x="-40" y="18" font-family="JetBrains Mono, monospace" font-size="6" fill="rgba(130,153,110,.55)">SIM 0.65</text>
-        <rect x="4" y="10" width="40" height="12" rx="2" stroke="rgba(200,100,100,.2)" stroke-width=".4" fill="rgba(200,100,100,.03)"/>
-        <text x="8" y="18" font-family="JetBrains Mono, monospace" font-size="6" fill="rgba(200,100,100,.55)">NÃO 0.35</text>
+      <!-- Slot machine -->
+      <g transform="translate(200,160)">
+        <rect x="-130" y="-45" width="260" height="90" rx="7" fill="url(#tpm-reel-metal)" stroke="rgba(255,178,122,.18)" stroke-width=".6"/>
+        <rect x="-124" y="-39" width="248" height="6" rx="2" fill="rgba(255,106,58,.08)" stroke="rgba(255,106,58,.25)" stroke-width=".4"/>
+        <!-- Reel 1 with BAR -->
+        <g transform="translate(-78,3)">
+          <rect x="-30" y="-28" width="60" height="60" rx="4" fill="url(#tpm-reel-face)" stroke="#0a0200" stroke-width=".8"/>
+          <g transform="translate(0,-19)">
+            <rect x="-18" y="-5" width="36" height="10" rx="1.5" fill="url(#tpm-bar)" stroke="#3a1a08" stroke-width=".5"/>
+            <text x="0" y="3" text-anchor="middle" font-family="Impact, sans-serif" font-weight="700" font-size="8" fill="#1a0503" letter-spacing="2">BAR</text>
+          </g>
+          <g filter="url(#tpm-glow)">
+            <path d="M-12,0 L14,0 L14,5 L6,28 L-2,28 L5,5 L-12,5 Z" fill="url(#tpm-seven)" stroke="#3a0800" stroke-width="1" stroke-linejoin="round"/>
+          </g>
+        </g>
+        <!-- Reel 2 -->
+        <g transform="translate(0,3)">
+          <rect x="-30" y="-28" width="60" height="60" rx="4" fill="url(#tpm-reel-face)" stroke="#0a0200" stroke-width=".8"/>
+          <g filter="url(#tpm-glow)">
+            <path d="M-12,-8 L14,-8 L14,-3 L6,20 L-2,20 L5,-3 L-12,-3 Z" fill="url(#tpm-seven)" stroke="#3a0800" stroke-width="1" stroke-linejoin="round"/>
+          </g>
+        </g>
+        <!-- Reel 3 (motion blur) -->
+        <g transform="translate(78,3)">
+          <rect x="-30" y="-28" width="60" height="60" rx="4" fill="url(#tpm-reel-face)" stroke="#0a0200" stroke-width=".8"/>
+          <g filter="url(#tpm-glow)">
+            <path d="M-12,-14 L14,-14 L14,-9 L6,14 L-2,14 L5,-9 L-12,-9 Z" fill="url(#tpm-seven)" stroke="#3a0800" stroke-width="1" stroke-linejoin="round"/>
+          </g>
+          <g opacity=".7">
+            <rect x="-22" y="20" width="44" height="4" fill="#c02a18" rx="1"/>
+            <rect x="-18" y="26" width="36" height="3" fill="#ff6a3a" rx="1"/>
+          </g>
+        </g>
+        <!-- Lever -->
+        <g transform="translate(140,3)">
+          <rect x="-2" y="-22" width="4" height="44" rx="2" fill="url(#tpm-reel-metal)" stroke="rgba(255,178,122,.25)" stroke-width=".4"/>
+          <circle cx="0" cy="-26" r="6" fill="#c02a18" stroke="#3a0800" stroke-width=".7"/>
+        </g>
       </g>
-      <text x="200" y="210" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,255,255,.15)">GOOGLE NEWS · APURAÇÃO ≠ APOSTA</text>
+      <rect width="400" height="250" filter="url(#tpm-grain)" opacity=".4"/>
+      <text x="200" y="232" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,178,122,.35)" letter-spacing="1.5">BUSCA · APOSTA · MESMO BALCÃO</text>
     </svg>`,
   },
   {
