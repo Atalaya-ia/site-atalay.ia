@@ -4,8 +4,8 @@ import sitemap from '@astrojs/sitemap';
 import yaml from '@rollup/plugin-yaml';
 
 const lastModified = {
-  '/': '2026-04-10',
-  '/blog/': '2026-04-10',
+  '/': '2026-04-13',
+  '/blog/': '2026-04-13',
   '/blog/lancamento-atalay-ia/': '2026-03-22',
   '/blog/como-ia-contextual-muda-jornalismo/': '2026-03-20',
   '/blog/pipeline-dados-editoriais/': '2026-03-18',
@@ -31,7 +31,8 @@ const lastModified = {
   '/blog/chatbots-ia-bajulacao-sycophancy-stanford/': '2026-04-10',
   '/blog/ia-muda-redacoes-2025-nao-aposenta-jornalista/': '2026-04-10',
   '/blog/openai-crises-trocas-comando-pressao-lucro/': '2026-04-10',
-  '/autor/bruno-lopes/': '2026-04-10',
+  '/blog/neuralink-chips-cerebrais-fala/': '2026-04-13',
+  '/autor/bruno-lopes/': '2026-04-13',
   '/contato/': '2026-03-22',
   '/quem-somos/': '2026-03-22',
   '/privacidade/': '2026-03-22',
