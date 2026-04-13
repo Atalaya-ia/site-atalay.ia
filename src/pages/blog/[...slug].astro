@@ -58,6 +58,7 @@ const modifiedDates: Record<string, string> = {
   'anthropic-libera-mythos-apple-ciberataques': '2026-04-10',
   'openai-crises-trocas-comando-pressao-lucro': '2026-04-10',
   'neuralink-chips-cerebrais-fala': '2026-04-13',
+  'google-news-polymarket-apostas-noticia': '2026-04-13',
 };
 const modifiedDate = modifiedDates[slug!] || article.date;
 const modifiedIso = `${modifiedDate}T00:00:00-03:00`;
@@ -431,6 +432,27 @@ const jsonLd = [
     border-radius: 50%;
     background: var(--orange);
     opacity: .5;
+  }
+
+  .post-body figure {
+    margin: 36px 0;
+    padding: 0;
+  }
+
+  .post-body figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+  }
+
+  .post-body figcaption {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text-m);
+    text-align: center;
   }
 
   .post-body blockquote {

@@ -3623,4 +3623,97 @@ export const articles: Record<string, Article> = {
       <p>A pergunta, então, talvez não seja se a Neuralink "apostou errado" de forma absoluta. A pergunta mais honesta é se ela apostou primeiro no caminho mais vistoso, quando o caminho mais transformador para o paciente parecia estar em outro lugar. E hoje a resposta parece cada vez mais clara: no curto prazo, <strong>devolver a fala</strong> soa menos como ficção científica — e muito mais como o verdadeiro centro da revolução dos chips cerebrais.</p>
     `,
   },
+  'google-news-polymarket-apostas-noticia': {
+    title: 'Google News exibiu apostas da Polymarket como notícia e acendeu alerta sobre a busca',
+    description: 'Plataforma mostrou mercados de aposta ao lado de veículos jornalísticos e depois disse que tudo foi um erro.',
+    date: '2026-04-13',
+    category: 'Análise',
+    readTime: '5 min',
+    author: 'Bruno Lopes',
+    role: 'Fundador, atalay.ia',
+    heroSvg: `<svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="800" height="400" fill="#0e1011"/>
+      <defs>
+        <radialGradient id="g-pm1" cx="45%" cy="45%"><stop offset="0%" stop-color="rgba(200,100,100,.08)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+        <radialGradient id="g-pm2" cx="65%" cy="55%"><stop offset="0%" stop-color="rgba(192,106,66,.06)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+      </defs>
+      <rect width="800" height="400" fill="url(#g-pm1)"/>
+      <rect width="800" height="400" fill="url(#g-pm2)"/>
+      <!-- Left card: news -->
+      <g transform="translate(200,200)">
+        <rect x="-120" y="-90" width="240" height="180" rx="8" stroke="rgba(255,255,255,.1)" stroke-width=".7" fill="rgba(255,255,255,.02)"/>
+        <text x="-108" y="-65" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(192,106,66,.5)">NOTÍCIA</text>
+        <line x1="-108" y1="-52" x2="108" y2="-52" stroke="rgba(255,255,255,.06)" stroke-width=".4"/>
+        <rect x="-108" y="-40" width="216" height="6" rx="1" fill="rgba(255,255,255,.08)"/>
+        <rect x="-108" y="-28" width="180" height="6" rx="1" fill="rgba(255,255,255,.06)"/>
+        <rect x="-108" y="-16" width="200" height="6" rx="1" fill="rgba(255,255,255,.06)"/>
+        <rect x="-108" y="-4" width="160" height="6" rx="1" fill="rgba(255,255,255,.05)"/>
+        <text x="-108" y="20" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,255,255,.25)">Reuters · The Guardian</text>
+        <rect x="-108" y="40" width="90" height="20" rx="3" stroke="rgba(255,255,255,.08)" stroke-width=".4" fill="rgba(255,255,255,.02)"/>
+        <text x="-100" y="54" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,255,255,.3)">apuração</text>
+        <rect x="-10" y="40" width="90" height="20" rx="3" stroke="rgba(255,255,255,.08)" stroke-width=".4" fill="rgba(255,255,255,.02)"/>
+        <text x="-2" y="54" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,255,255,.3)">contexto</text>
+      </g>
+      <!-- Collision / blur line -->
+      <g transform="translate(400,200)">
+        <line x1="-20" y1="-70" x2="20" y2="70" stroke="rgba(200,100,100,.3)" stroke-width=".6" stroke-dasharray="3 2"/>
+        <line x1="20" y1="-70" x2="-20" y2="70" stroke="rgba(200,100,100,.3)" stroke-width=".6" stroke-dasharray="3 2"/>
+        <text x="0" y="-80" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(200,100,100,.55)">mistura</text>
+      </g>
+      <!-- Right card: bet market -->
+      <g transform="translate(600,200)">
+        <rect x="-120" y="-90" width="240" height="180" rx="8" stroke="rgba(200,100,100,.22)" stroke-width=".7" fill="rgba(200,100,100,.02)"/>
+        <text x="-108" y="-65" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(200,100,100,.55)">APOSTA</text>
+        <line x1="-108" y1="-52" x2="108" y2="-52" stroke="rgba(255,255,255,.06)" stroke-width=".4"/>
+        <text x="-108" y="-32" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(255,255,255,.3)">Navios em Ormuz?</text>
+        <rect x="-108" y="-20" width="216" height="12" rx="2" stroke="rgba(200,100,100,.2)" stroke-width=".4" fill="rgba(200,100,100,.04)"/>
+        <rect x="-108" y="-20" width="140" height="12" rx="2" fill="rgba(200,100,100,.15)"/>
+        <text x="98" y="-10" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(200,100,100,.6)">65%</text>
+        <text x="-108" y="10" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,255,255,.22)">Polymarket · ao vivo</text>
+        <rect x="-108" y="30" width="100" height="24" rx="4" stroke="rgba(130,153,110,.2)" stroke-width=".4" fill="rgba(130,153,110,.03)"/>
+        <text x="-100" y="46" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(130,153,110,.55)">SIM $0.65</text>
+        <rect x="8" y="30" width="100" height="24" rx="4" stroke="rgba(200,100,100,.2)" stroke-width=".4" fill="rgba(200,100,100,.03)"/>
+        <text x="16" y="46" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(200,100,100,.55)">NÃO $0.35</text>
+      </g>
+      <!-- Bottom label -->
+      <text x="400" y="370" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(255,255,255,.15)">GOOGLE NEWS · APURAÇÃO ≠ APOSTA</text>
+    </svg>`,
+    content: `
+      <p class="article-lead">O <strong>Google News</strong> entrou em uma polêmica delicada depois que passou a exibir páginas da <strong>Polymarket</strong> — uma plataforma de apostas sobre eventos do mundo real — no meio de resultados que normalmente deveriam destacar reportagens de veículos jornalísticos. Na prática, usuários começaram a ver mercados de aposta aparecendo ao lado de nomes como <strong>Reuters</strong> e <strong>The Guardian</strong>, como se tudo fizesse parte do mesmo ecossistema de informação.</p>
+
+      <p>O episódio chamou atenção porque escancarou uma confusão cada vez mais incômoda na internet: a mistura entre <strong>notícia</strong>, <strong>conteúdo automatizado</strong> e <strong>especulação travestida de sinal informativo</strong>. Quando uma plataforma como a <a href="https://polymarket.com/" target="_blank" rel="noopener">Polymarket</a> entra no Google News, ela não aparece apenas como site qualquer. Ela ganha uma camada de legitimidade que pode fazer muita gente tratar aposta como se fosse cobertura jornalística.</p>
+
+      <h2>O que aconteceu</h2>
+
+      <p>Segundo relatos publicados nos últimos dias, links da Polymarket começaram a surgir em áreas de destaque do Google News, inclusive na aba personalizada "<strong>Para você</strong>" e em buscas relacionadas a acontecimentos sensíveis do noticiário. Em um dos exemplos mais citados, pesquisas sobre o <strong>Estreito de Ormuz</strong> mostravam, junto de reportagens tradicionais, uma aposta da Polymarket sobre o número de navios que cruzariam a região.</p>
+
+      <figure>
+        <img src="/posts/polymarket-google-news/polymarket-hormuz.png" alt="Busca no Google News sobre o Estreito de Ormuz mostrando aposta da Polymarket ao lado de reportagens" loading="lazy" width="1200" height="509" />
+        <figcaption>Busca sobre o Estreito de Ormuz exibiu aposta da Polymarket entre resultados jornalísticos. Imagem: Futurism</figcaption>
+      </figure>
+
+      <p>O caso repercutiu tanto que o próprio Google precisou se manifestar. A empresa afirmou que a presença da Polymarket no Google News foi um <strong>erro</strong> e disse que o site já não aparece mais ali. A resposta ajuda a apagar o incêndio, mas não elimina a pergunta mais desconfortável: <strong>como uma plataforma de apostas conseguiu ser tratada, ainda que brevemente, como fonte de notícia?</strong></p>
+
+      <h2>Por que isso é mais grave do que parece</h2>
+
+      <p>À primeira vista, alguém pode olhar para a Polymarket e dizer que ela apenas reflete o "humor do mercado" sobre determinados eventos. O problema é que esse tipo de produto usa linguagem de atualidade, produz páginas em massa, atualiza probabilidades em tempo real e se apoia justamente na aparência de relevância para ganhar tração. Para um algoritmo, isso pode parecer conteúdo fresco e valioso. Para o usuário comum, pode soar como se fosse uma espécie de termômetro confiável da realidade.</p>
+
+      <figure>
+        <img src="/posts/polymarket-google-news/polymarket-bitcoin.png" alt="Card da Polymarket sobre preço do Bitcoin exibido dentro do Google News" loading="lazy" width="1200" height="433" />
+        <figcaption>Card de aposta sobre o preço do Bitcoin aparecendo em meio ao noticiário. Imagem: Futurism</figcaption>
+      </figure>
+
+      <p>Mas <strong>não é jornalismo</strong>. É um mercado em que pessoas colocam dinheiro em previsões sobre guerra, política, economia e outros acontecimentos. E esse universo já vem acumulando críticas pesadas, inclusive por suspeitas de apostas bem cronometradas demais em eventos geopolíticos, o que reacendeu temores sobre uso de informação privilegiada e manipulação.</p>
+
+      <p>Quando esse tipo de plataforma aparece dentro do Google News, o risco não é apenas estético. O risco é o usuário confundir <strong>aposta</strong> com <strong>apuração</strong>, <strong>probabilidade comprada no mercado</strong> com <strong>fato verificado</strong> e <strong>movimento especulativo</strong> com <strong>notícia em desenvolvimento</strong>. Esse tipo de distorção ecoa outros episódios recentes em que a própria busca tropeçou ao priorizar sinal ruim, como mostramos em <a href="/blog/ai-overviews-google-respostas-erradas-escala/">AI Overviews devolvendo respostas erradas em escala</a>.</p>
+
+      <h2>O erro do Google também expõe uma tendência maior</h2>
+
+      <p>O caso não surgiu no vácuo. Nos últimos meses, empresas de mídia e big techs vêm se aproximando cada vez mais do universo dos mercados de previsão. O próprio Google já anunciou integração de dados da <strong>Polymarket</strong> e da <strong>Kalshi</strong> ao <strong>Google Finance</strong>. Ao mesmo tempo, grupos de mídia passaram a fechar acordos para incorporar probabilidades e "odds" em produtos jornalísticos.</p>
+
+      <p>Esse movimento ajuda a explicar por que a fronteira começou a ficar tão borrada. Quando plataformas de aposta passam a ser tratadas como fontes complementares de leitura do mundo, abre-se espaço para uma distorção perigosa: a ideia de que o preço de uma aposta pode ter peso informativo parecido com o de uma reportagem produzida com apuração, contexto e responsabilidade editorial. É o mesmo tipo de pressão que já discutimos em <a href="/blog/ia-ferramenta-ou-ameaca-jornalismo/">IA como ferramenta ou ameaça ao jornalismo</a>: quando o sinal algorítmico ocupa o lugar do critério editorial, quem perde é o leitor.</p>
+
+      <p>No fim, o recuo do Google evita que a situação piore, mas o episódio deixa um alerta claro. Em um ambiente digital já saturado por automação, recomendação algorítmica e conteúdo de procedência duvidosa, <strong>misturar notícia com mercado de aposta é brincar com a credibilidade da informação</strong>. E, para uma plataforma que organiza o acesso ao noticiário no mundo inteiro, esse tipo de erro está longe de ser pequeno.</p>
+    `,
+  },
 };
