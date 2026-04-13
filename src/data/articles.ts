@@ -3631,52 +3631,167 @@ export const articles: Record<string, Article> = {
     readTime: '5 min',
     author: 'Bruno Lopes',
     role: 'Fundador, atalay.ia',
-    heroSvg: `<svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="800" height="400" fill="#0e1011"/>
+    heroSvg: `<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <radialGradient id="g-pm1" cx="45%" cy="45%"><stop offset="0%" stop-color="rgba(200,100,100,.08)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
-        <radialGradient id="g-pm2" cx="65%" cy="55%"><stop offset="0%" stop-color="rgba(192,106,66,.06)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+        <radialGradient id="pm-bg" cx="50%" cy="40%" r="65%">
+          <stop offset="0%" stop-color="#2a0a06"/>
+          <stop offset="55%" stop-color="#160403"/>
+          <stop offset="100%" stop-color="#0a0101"/>
+        </radialGradient>
+        <filter id="pm-grain" x="0" y="0" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="4"/>
+          <feColorMatrix values="0 0 0 0 0.5  0 0 0 0 0.1  0 0 0 0 0.05  0 0 0 0.3 0"/>
+          <feComposite in2="SourceGraphic" operator="in"/>
+        </filter>
+        <filter id="pm-burn" x="-5%" y="-5%" width="110%" height="110%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.008 0.015" numOctaves="3" seed="9"/>
+          <feColorMatrix values="0 0 0 0 0.6  0 0 0 0 0.15  0 0 0 0 0.08  0 0 0 .7 0"/>
+          <feComposite in="SourceGraphic" operator="in"/>
+        </filter>
+        <linearGradient id="pm-reel-metal" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2a1510"/>
+          <stop offset="45%" stop-color="#120604"/>
+          <stop offset="55%" stop-color="#120604"/>
+          <stop offset="100%" stop-color="#2a1510"/>
+        </linearGradient>
+        <linearGradient id="pm-reel-face" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#f4e8d8"/>
+          <stop offset="50%" stop-color="#f8f0dc"/>
+          <stop offset="100%" stop-color="#d8c9b0"/>
+        </linearGradient>
+        <linearGradient id="pm-seven" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#ff6a3a"/>
+          <stop offset="60%" stop-color="#c02a18"/>
+          <stop offset="100%" stop-color="#6b0f08"/>
+        </linearGradient>
+        <linearGradient id="pm-bar" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#ffb85c"/>
+          <stop offset="100%" stop-color="#c06a42"/>
+        </linearGradient>
+        <filter id="pm-glow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="2.4" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="pm-soft-glow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="4" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="pm-spin" x="-5%" y="-5%" width="110%" height="110%">
+          <feGaussianBlur stdDeviation="0 2.5"/>
+        </filter>
       </defs>
-      <rect width="800" height="400" fill="url(#g-pm1)"/>
-      <rect width="800" height="400" fill="url(#g-pm2)"/>
-      <!-- Left card: news -->
-      <g transform="translate(200,200)">
-        <rect x="-120" y="-90" width="240" height="180" rx="8" stroke="rgba(255,255,255,.1)" stroke-width=".7" fill="rgba(255,255,255,.02)"/>
-        <text x="-108" y="-65" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(192,106,66,.5)">NOTÍCIA</text>
-        <line x1="-108" y1="-52" x2="108" y2="-52" stroke="rgba(255,255,255,.06)" stroke-width=".4"/>
-        <rect x="-108" y="-40" width="216" height="6" rx="1" fill="rgba(255,255,255,.08)"/>
-        <rect x="-108" y="-28" width="180" height="6" rx="1" fill="rgba(255,255,255,.06)"/>
-        <rect x="-108" y="-16" width="200" height="6" rx="1" fill="rgba(255,255,255,.06)"/>
-        <rect x="-108" y="-4" width="160" height="6" rx="1" fill="rgba(255,255,255,.05)"/>
-        <text x="-108" y="20" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,255,255,.25)">Reuters · The Guardian</text>
-        <rect x="-108" y="40" width="90" height="20" rx="3" stroke="rgba(255,255,255,.08)" stroke-width=".4" fill="rgba(255,255,255,.02)"/>
-        <text x="-100" y="54" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,255,255,.3)">apuração</text>
-        <rect x="-10" y="40" width="90" height="20" rx="3" stroke="rgba(255,255,255,.08)" stroke-width=".4" fill="rgba(255,255,255,.02)"/>
-        <text x="-2" y="54" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,255,255,.3)">contexto</text>
+      <!-- Base -->
+      <rect width="800" height="400" fill="#0e1011"/>
+      <rect width="800" height="400" fill="url(#pm-bg)" opacity=".85"/>
+      <rect width="800" height="400" filter="url(#pm-burn)" opacity=".25"/>
+      <!-- Vignette lights behind reels -->
+      <g opacity=".4" filter="url(#pm-soft-glow)">
+        <circle cx="260" cy="260" r="60" fill="#c02a18" opacity=".25"/>
+        <circle cx="540" cy="260" r="60" fill="#c02a18" opacity=".25"/>
+        <circle cx="400" cy="260" r="60" fill="#ff6a3a" opacity=".2"/>
       </g>
-      <!-- Collision / blur line -->
-      <g transform="translate(400,200)">
-        <line x1="-20" y1="-70" x2="20" y2="70" stroke="rgba(200,100,100,.3)" stroke-width=".6" stroke-dasharray="3 2"/>
-        <line x1="20" y1="-70" x2="-20" y2="70" stroke="rgba(200,100,100,.3)" stroke-width=".6" stroke-dasharray="3 2"/>
-        <text x="0" y="-80" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(200,100,100,.55)">mistura</text>
+      <!-- Wordmark "Busca" (Google-colors, não é logo oficial) -->
+      <g transform="translate(400,95)">
+        <text font-family="DM Sans, sans-serif" font-weight="500" font-size="30" text-anchor="middle" letter-spacing=".5">
+          <tspan fill="#4285F4">B</tspan><tspan fill="#EA4335">u</tspan><tspan fill="#FBBC05">s</tspan><tspan fill="#4285F4">c</tspan><tspan fill="#34A853">a</tspan>
+        </text>
       </g>
-      <!-- Right card: bet market -->
-      <g transform="translate(600,200)">
-        <rect x="-120" y="-90" width="240" height="180" rx="8" stroke="rgba(200,100,100,.22)" stroke-width=".7" fill="rgba(200,100,100,.02)"/>
-        <text x="-108" y="-65" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(200,100,100,.55)">APOSTA</text>
-        <line x1="-108" y1="-52" x2="108" y2="-52" stroke="rgba(255,255,255,.06)" stroke-width=".4"/>
-        <text x="-108" y="-32" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(255,255,255,.3)">Navios em Ormuz?</text>
-        <rect x="-108" y="-20" width="216" height="12" rx="2" stroke="rgba(200,100,100,.2)" stroke-width=".4" fill="rgba(200,100,100,.04)"/>
-        <rect x="-108" y="-20" width="140" height="12" rx="2" fill="rgba(200,100,100,.15)"/>
-        <text x="98" y="-10" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(200,100,100,.6)">65%</text>
-        <text x="-108" y="10" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,255,255,.22)">Polymarket · ao vivo</text>
-        <rect x="-108" y="30" width="100" height="24" rx="4" stroke="rgba(130,153,110,.2)" stroke-width=".4" fill="rgba(130,153,110,.03)"/>
-        <text x="-100" y="46" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(130,153,110,.55)">SIM $0.65</text>
-        <rect x="8" y="30" width="100" height="24" rx="4" stroke="rgba(200,100,100,.2)" stroke-width=".4" fill="rgba(200,100,100,.03)"/>
-        <text x="16" y="46" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(200,100,100,.55)">NÃO $0.35</text>
+      <!-- Search bar -->
+      <g transform="translate(400,140)">
+        <rect x="-232" y="-20" width="464" height="40" rx="20" fill="none" stroke="rgba(255,106,58,.15)" stroke-width="2"/>
+        <rect x="-230" y="-18" width="460" height="36" rx="18" fill="#1a1412" stroke="rgba(255,178,122,.35)" stroke-width="1"/>
+        <g transform="translate(-210,0)" stroke="rgba(255,255,255,.55)" stroke-width="1.4" stroke-linecap="round">
+          <line x1="-5" y1="0" x2="5" y2="0"/>
+          <line x1="0" y1="-5" x2="0" y2="5"/>
+        </g>
+        <g transform="translate(110,0)" stroke="rgba(255,255,255,.5)" stroke-width="1.3" fill="none">
+          <rect x="-3" y="-7" width="6" height="10" rx="3"/>
+          <path d="M-6,1 C-6,6 6,6 6,1"/>
+          <line x1="0" y1="6" x2="0" y2="9"/>
+        </g>
+        <g transform="translate(140,0)" stroke="rgba(255,255,255,.5)" stroke-width="1.3" fill="none">
+          <circle cx="0" cy="-1" r="5"/>
+          <line x1="3.5" y1="2.5" x2="7" y2="6"/>
+        </g>
+        <g transform="translate(190,0)">
+          <rect x="-20" y="-11" width="40" height="22" rx="11" fill="rgba(255,106,58,.12)" stroke="rgba(255,106,58,.45)" stroke-width=".8"/>
+          <text x="0" y="3" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#ffb27a" letter-spacing=".5">AI MODE</text>
+          <g transform="translate(-12,0)" stroke="#ffb27a" stroke-width=".9">
+            <line x1="0" y1="-4" x2="0" y2="4"/>
+            <line x1="-4" y1="0" x2="4" y2="0"/>
+            <line x1="-3" y1="-3" x2="3" y2="3"/>
+            <line x1="-3" y1="3" x2="3" y2="-3"/>
+          </g>
+        </g>
       </g>
-      <!-- Bottom label -->
-      <text x="400" y="370" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(255,255,255,.15)">GOOGLE NEWS · APURAÇÃO ≠ APOSTA</text>
+      <!-- Wire: search → slot -->
+      <path d="M400,160 L400,200" stroke="rgba(255,106,58,.25)" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+      <!-- Slot machine -->
+      <g transform="translate(400,280)">
+        <rect x="-220" y="-70" width="440" height="140" rx="10" fill="url(#pm-reel-metal)" stroke="rgba(255,178,122,.18)" stroke-width=".8"/>
+        <rect x="-218" y="-68" width="436" height="136" rx="9" fill="none" stroke="rgba(0,0,0,.6)" stroke-width=".6"/>
+        <rect x="-210" y="-62" width="420" height="10" rx="3" fill="rgba(255,106,58,.08)" stroke="rgba(255,106,58,.25)" stroke-width=".5"/>
+        <!-- Reel 1 with BAR -->
+        <g transform="translate(-130,0)">
+          <rect x="-50" y="-45" width="100" height="100" rx="6" fill="url(#pm-reel-face)" stroke="#0a0200" stroke-width="1.2"/>
+          <g transform="translate(0,-32)">
+            <rect x="-28" y="-8" width="56" height="16" rx="2" fill="url(#pm-bar)" stroke="#3a1a08" stroke-width=".8"/>
+            <text x="0" y="4" text-anchor="middle" font-family="Impact, sans-serif" font-weight="700" font-size="12" fill="#1a0503" letter-spacing="3">BAR</text>
+          </g>
+          <g filter="url(#pm-glow)">
+            <path d="M-14,-2 L22,-2 L22,6 L10,48 L-2,48 L9,9 L-14,9 Z" fill="url(#pm-seven)" stroke="#3a0800" stroke-width="1.4" stroke-linejoin="round" transform="translate(-4,0)"/>
+          </g>
+          <line x1="-50" y1="-12" x2="50" y2="-12" stroke="rgba(0,0,0,.15)" stroke-width=".6"/>
+          <line x1="-50" y1="44" x2="50" y2="44" stroke="rgba(0,0,0,.15)" stroke-width=".6"/>
+        </g>
+        <!-- Reel 2 -->
+        <g transform="translate(0,0)">
+          <rect x="-50" y="-45" width="100" height="100" rx="6" fill="url(#pm-reel-face)" stroke="#0a0200" stroke-width="1.2"/>
+          <g filter="url(#pm-glow)">
+            <path d="M-14,-12 L22,-12 L22,-4 L10,38 L-2,38 L9,-1 L-14,-1 Z" fill="url(#pm-seven)" stroke="#3a0800" stroke-width="1.4" stroke-linejoin="round" transform="translate(-4,0)"/>
+          </g>
+          <g filter="url(#pm-spin)" opacity=".7">
+            <rect x="-36" y="36" width="72" height="6" fill="#c02a18" rx="1"/>
+            <rect x="-28" y="45" width="56" height="4" fill="#ff6a3a" rx="1"/>
+          </g>
+          <line x1="-50" y1="-12" x2="50" y2="-12" stroke="rgba(0,0,0,.15)" stroke-width=".6"/>
+          <line x1="-50" y1="44" x2="50" y2="44" stroke="rgba(0,0,0,.15)" stroke-width=".6"/>
+        </g>
+        <!-- Reel 3 (more blur) -->
+        <g transform="translate(130,0)">
+          <rect x="-50" y="-45" width="100" height="100" rx="6" fill="url(#pm-reel-face)" stroke="#0a0200" stroke-width="1.2"/>
+          <g filter="url(#pm-glow)">
+            <path d="M-14,-20 L22,-20 L22,-12 L10,30 L-2,30 L9,-9 L-14,-9 Z" fill="url(#pm-seven)" stroke="#3a0800" stroke-width="1.4" stroke-linejoin="round" transform="translate(-4,0)"/>
+          </g>
+          <g filter="url(#pm-spin)" opacity=".85">
+            <rect x="-38" y="26" width="76" height="8" fill="#c02a18" rx="1"/>
+            <rect x="-32" y="38" width="64" height="5" fill="#ff6a3a" rx="1"/>
+            <rect x="-28" y="47" width="56" height="3" fill="#ffb27a" rx="1"/>
+          </g>
+          <line x1="-50" y1="-12" x2="50" y2="-12" stroke="rgba(0,0,0,.15)" stroke-width=".6"/>
+          <line x1="-50" y1="44" x2="50" y2="44" stroke="rgba(0,0,0,.15)" stroke-width=".6"/>
+        </g>
+        <line x1="-210" y1="5" x2="210" y2="5" stroke="rgba(255,106,58,.25)" stroke-width=".8" stroke-dasharray="4 3"/>
+        <g transform="translate(235,0)">
+          <rect x="-4" y="-40" width="8" height="80" rx="3" fill="url(#pm-reel-metal)" stroke="rgba(255,178,122,.25)" stroke-width=".6"/>
+          <circle cx="0" cy="-48" r="10" fill="#c02a18" stroke="#3a0800" stroke-width="1"/>
+          <circle cx="-3" cy="-51" r="3" fill="#ff6a3a" opacity=".7"/>
+        </g>
+        <rect x="-20" y="64" width="40" height="3" rx="1" fill="#0a0200" stroke="rgba(255,178,122,.2)" stroke-width=".4"/>
+      </g>
+      <!-- Sparks -->
+      <g opacity=".6" filter="url(#pm-glow)">
+        <circle cx="180" cy="220" r="1.2" fill="#ffb27a"/>
+        <circle cx="230" cy="180" r="1" fill="#ff6a3a"/>
+        <circle cx="620" cy="200" r="1.2" fill="#ffb27a"/>
+        <circle cx="580" cy="240" r="1" fill="#ff6a3a"/>
+        <circle cx="150" cy="310" r="1" fill="#c02a18"/>
+        <circle cx="660" cy="320" r="1" fill="#c02a18"/>
+      </g>
+      <!-- Grain overlay -->
+      <rect width="800" height="400" filter="url(#pm-grain)" opacity=".5"/>
+      <!-- Caption -->
+      <text x="400" y="388" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(255,178,122,.35)" letter-spacing="2">BUSCA · APOSTA · MESMO BALCÃO</text>
     </svg>`,
     content: `
       <p class="article-lead">O <strong>Google News</strong> entrou em uma polêmica delicada depois que passou a exibir páginas da <strong>Polymarket</strong> — uma plataforma de apostas sobre eventos do mundo real — no meio de resultados que normalmente deveriam destacar reportagens de veículos jornalísticos. Na prática, usuários começaram a ver mercados de aposta aparecendo ao lado de nomes como <strong>Reuters</strong> e <strong>The Guardian</strong>, como se tudo fizesse parte do mesmo ecossistema de informação.</p>
