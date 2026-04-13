@@ -3831,4 +3831,152 @@ export const articles: Record<string, Article> = {
       <p>No fim, o recuo do Google evita que a situação piore, mas o episódio deixa um alerta claro. Em um ambiente digital já saturado por automação, recomendação algorítmica e conteúdo de procedência duvidosa, <strong>misturar notícia com mercado de aposta é brincar com a credibilidade da informação</strong>. E, para uma plataforma que organiza o acesso ao noticiário no mundo inteiro, esse tipo de erro está longe de ser pequeno.</p>
     `,
   },
+  'openai-apoia-projeto-blindar-ia-tragedias': {
+    title: 'OpenAI apoia projeto que pode blindar empresas de IA até em tragédias de grande escala',
+    description: 'Projeto em Illinois limita a responsabilização de empresas de IA em casos de danos catastróficos e reacende debate sobre segurança e impunidade.',
+    date: '2026-04-13',
+    category: 'Análise',
+    readTime: '7 min',
+    author: 'Bruno Lopes',
+    role: 'Fundador, atalay.ia',
+    heroSvg: `<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="sk-grain" x="0" y="0" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7"/>
+          <feColorMatrix values="0 0 0 0 0.4  0 0 0 0 0.05  0 0 0 0 0.05  0 0 0 0.35 0"/>
+          <feComposite in2="SourceGraphic" operator="in"/>
+        </filter>
+        <filter id="sk-burn" x="-10%" y="-10%" width="120%" height="120%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.012 0.02" numOctaves="3" seed="11"/>
+          <feColorMatrix values="0 0 0 0 0.55  0 0 0 0 0.1  0 0 0 0 0.05  0 0 0 1 0"/>
+          <feComposite in="SourceGraphic" operator="in"/>
+        </filter>
+        <radialGradient id="sk-bg-red" cx="50%" cy="50%" r="70%">
+          <stop offset="0%" stop-color="#8a1f15"/>
+          <stop offset="55%" stop-color="#4a0d08"/>
+          <stop offset="100%" stop-color="#1a0503"/>
+        </radialGradient>
+        <radialGradient id="sk-skull-glow" cx="50%" cy="45%" r="55%">
+          <stop offset="0%" stop-color="#ffb27a" stop-opacity=".9"/>
+          <stop offset="55%" stop-color="#c06a42" stop-opacity=".55"/>
+          <stop offset="100%" stop-color="#6b1a10" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="sk-eye" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#ffe9c2"/>
+          <stop offset="40%" stop-color="#ff8a3a"/>
+          <stop offset="100%" stop-color="#3a0a00" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="sk-trace" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#ff8a3a" stop-opacity="0"/>
+          <stop offset="50%" stop-color="#ffb27a" stop-opacity=".9"/>
+          <stop offset="100%" stop-color="#ff8a3a" stop-opacity="0"/>
+        </linearGradient>
+        <filter id="sk-glow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="2.2" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <rect width="800" height="400" fill="#0e1011"/>
+      <rect width="800" height="400" fill="url(#sk-bg-red)" opacity=".85"/>
+      <rect width="800" height="400" filter="url(#sk-burn)" opacity=".35"/>
+      <g stroke="rgba(255,138,58,.06)" fill="none">
+        <circle cx="400" cy="200" r="150"/>
+        <circle cx="400" cy="200" r="210"/>
+        <circle cx="400" cy="200" r="280"/>
+      </g>
+      <!-- Circuit traces -->
+      <g stroke="url(#sk-trace)" stroke-width="1.1" fill="none" filter="url(#sk-glow)" opacity=".85">
+        <path d="M330,175 L260,175 L260,140 L180,140 L180,110 L80,110"/>
+        <path d="M320,205 L230,205 L230,230 L150,230 L150,260 L60,260"/>
+        <path d="M335,160 L290,160 L290,90 L220,90 L220,50"/>
+        <path d="M325,225 L270,225 L270,300 L200,300 L200,370"/>
+        <path d="M470,175 L540,175 L540,140 L620,140 L620,110 L720,110"/>
+        <path d="M480,205 L570,205 L570,230 L650,230 L650,260 L740,260"/>
+        <path d="M465,160 L510,160 L510,90 L580,90 L580,50"/>
+        <path d="M475,225 L530,225 L530,300 L600,300 L600,370"/>
+        <path d="M380,125 L380,80 L340,80 L340,40"/>
+        <path d="M420,125 L420,80 L460,80 L460,40"/>
+        <path d="M400,280 L400,330 L360,330 L360,380"/>
+        <path d="M400,280 L400,330 L440,330 L440,380"/>
+      </g>
+      <!-- Nodes -->
+      <g filter="url(#sk-glow)" fill="#ffb27a">
+        <circle cx="80" cy="110" r="2.5"/><circle cx="80" cy="110" r="4.5" fill="#ff8a3a" opacity=".35"/>
+        <circle cx="60" cy="260" r="2.5"/><circle cx="60" cy="260" r="4.5" fill="#ff8a3a" opacity=".35"/>
+        <circle cx="220" cy="50" r="2.5"/><circle cx="220" cy="50" r="4.5" fill="#ff8a3a" opacity=".35"/>
+        <circle cx="200" cy="370" r="2.5"/><circle cx="200" cy="370" r="4.5" fill="#ff8a3a" opacity=".35"/>
+        <circle cx="720" cy="110" r="2.5"/><circle cx="720" cy="110" r="4.5" fill="#ff8a3a" opacity=".35"/>
+        <circle cx="740" cy="260" r="2.5"/><circle cx="740" cy="260" r="4.5" fill="#ff8a3a" opacity=".35"/>
+        <circle cx="580" cy="50" r="2.5"/><circle cx="580" cy="50" r="4.5" fill="#ff8a3a" opacity=".35"/>
+        <circle cx="600" cy="370" r="2.5"/><circle cx="600" cy="370" r="4.5" fill="#ff8a3a" opacity=".35"/>
+        <circle cx="340" cy="40" r="2.5"/><circle cx="340" cy="40" r="4.5" fill="#ff8a3a" opacity=".35"/>
+        <circle cx="460" cy="40" r="2.5"/><circle cx="460" cy="40" r="4.5" fill="#ff8a3a" opacity=".35"/>
+        <circle cx="360" cy="380" r="2.5"/><circle cx="360" cy="380" r="4.5" fill="#ff8a3a" opacity=".35"/>
+        <circle cx="440" cy="380" r="2.5"/><circle cx="440" cy="380" r="4.5" fill="#ff8a3a" opacity=".35"/>
+      </g>
+      <!-- Skull -->
+      <g transform="translate(400,200)" filter="url(#sk-glow)">
+        <ellipse cx="0" cy="-8" rx="110" ry="120" fill="url(#sk-skull-glow)" opacity=".6"/>
+        <path d="M-70,-60 C-75,-95 -45,-115 0,-115 C45,-115 75,-95 70,-60 C78,-40 78,-15 70,5 C62,22 45,30 40,45 C38,55 40,70 28,72 L20,72 L20,82 L10,82 L10,72 L-10,72 L-10,82 L-20,82 L-20,72 L-28,72 C-40,70 -38,55 -40,45 C-45,30 -62,22 -70,5 C-78,-15 -78,-40 -70,-60 Z"
+              fill="#1a0503" stroke="#ffb27a" stroke-width="1.4" opacity=".95"/>
+        <path d="M-60,-70 C-40,-90 -15,-95 0,-95 C20,-95 45,-85 60,-70" stroke="#ffd9a8" stroke-width=".8" fill="none" opacity=".5"/>
+        <ellipse cx="-22" cy="-25" rx="16" ry="20" fill="#0a0200"/>
+        <ellipse cx="22" cy="-25" rx="16" ry="20" fill="#0a0200"/>
+        <circle cx="-22" cy="-25" r="14" fill="url(#sk-eye)"/>
+        <circle cx="22" cy="-25" r="14" fill="url(#sk-eye)"/>
+        <circle cx="-22" cy="-25" r="4" fill="#fff3d6"/>
+        <circle cx="22" cy="-25" r="4" fill="#fff3d6"/>
+        <path d="M0,-10 L-6,15 L0,22 L6,15 Z" fill="#0a0200" stroke="#ffb27a" stroke-width=".6" opacity=".9"/>
+        <g stroke="#ffb27a" stroke-width=".7" fill="#0a0200" opacity=".95">
+          <rect x="-24" y="40" width="8" height="16"/>
+          <rect x="-14" y="40" width="8" height="18"/>
+          <rect x="-4" y="40" width="8" height="18"/>
+          <rect x="6" y="40" width="8" height="18"/>
+          <rect x="16" y="40" width="8" height="16"/>
+        </g>
+        <g stroke="#ff8a3a" stroke-width=".6" fill="none" opacity=".7">
+          <path d="M-50,-75 L-30,-75 L-30,-60"/>
+          <path d="M50,-75 L30,-75 L30,-60"/>
+          <path d="M-15,-90 L-15,-75 L0,-75 L0,-60"/>
+          <path d="M15,-90 L15,-75"/>
+        </g>
+        <circle cx="-30" cy="-60" r="1.6" fill="#ffd9a8"/>
+        <circle cx="30" cy="-60" r="1.6" fill="#ffd9a8"/>
+        <circle cx="0" cy="-60" r="1.6" fill="#ffd9a8"/>
+      </g>
+      <rect width="800" height="400" filter="url(#sk-grain)" opacity=".55"/>
+      <text x="400" y="388" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(255,178,122,.35)" letter-spacing="2">SISTEMA · RISCO · ESCALA</text>
+    </svg>`,
+    content: `
+      <p class="article-lead">A <strong>OpenAI</strong> entrou em uma nova frente de desgaste ao apoiar um projeto de lei nos Estados Unidos que pode reduzir drasticamente a responsabilidade de empresas de inteligência artificial em casos de danos extremos. Na prática, a proposta abre caminho para que desenvolvedoras de modelos avançados escapem de punições civis mesmo em cenários de tragédias de grande escala, desde que não tenham agido de forma intencional ou imprudente e tenham publicado relatórios de segurança e transparência.</p>
+
+      <p>O ponto que mais chocou críticos e especialistas foi o tamanho do dano previsto no texto. O projeto trata como "danos críticos" situações como <strong>morte ou ferimentos graves de 100 pessoas ou mais</strong>, prejuízos bilionários e até casos em que sistemas de IA sejam usados para viabilizar armas químicas, biológicas, radiológicas ou nucleares. Ou seja: não se trata de uma regra para pequenos erros de chatbot, mas de uma discussão sobre <strong>quem paga a conta quando a tecnologia participa de um desastre de enormes proporções</strong>.</p>
+
+      <h2>O que o projeto muda na prática</h2>
+
+      <p>A proposta, apresentada em <strong>Illinois</strong> como o projeto <strong>SB 3444</strong>, cria um tipo de escudo jurídico para empresas que desenvolvem os chamados <strong>modelos de fronteira</strong>, aqueles treinados com custos computacionais altíssimos e que hoje incluem os sistemas das maiores companhias do setor. Pelo texto, a empresa não seria responsabilizada por esses "danos críticos" se conseguir sustentar que não agiu com dolo ou imprudência e se tiver colocado no ar seus protocolos e relatórios obrigatórios.</p>
+
+      <p>É exatamente esse desenho que acendeu o alerta. Para os críticos, a proposta troca responsabilidade concreta por burocracia de vitrine. Em vez de exigir prova robusta de que a empresa realmente evitou riscos graves, o projeto acaba premiando quem formalizou um protocolo no papel e publicou documentos no site. Para adversários da medida, isso pode criar uma lógica perigosa: a de que basta montar uma estrutura de compliance mínima para reduzir o risco jurídico, mesmo quando a tecnologia venha a ser envolvida em consequências devastadoras.</p>
+
+      <h2>Por que a OpenAI apoia a proposta</h2>
+
+      <p>A <a href="https://openai.com/" target="_blank" rel="noopener">OpenAI</a> argumenta que medidas desse tipo ajudam a focar no que realmente importa: reduzir os riscos dos sistemas mais poderosos sem travar a inovação. A empresa também repete um discurso que vem ganhando força no Vale do Silício: o de que os Estados Unidos precisam evitar um mosaico de regras diferentes em cada estado e caminhar para um padrão mais uniforme no plano federal.</p>
+
+      <p>O problema é que esse raciocínio bate de frente com a percepção pública de que as big techs querem, ao mesmo tempo, vender IA como tecnologia transformadora e pedir proteção extra quando o assunto é responsabilização. Em outras palavras, o setor costuma pedir liberdade para crescer rápido, mas reage com desconforto quando surge a cobrança por assumir os riscos reais desse crescimento.</p>
+
+      <h2>O debate ficou mais sensível porque a pressão sobre a IA aumentou</h2>
+
+      <p>O apoio da OpenAI ao projeto chega em um momento especialmente delicado. A empresa já enfrenta críticas, investigações e ações judiciais ligadas a danos associados ao uso de seus sistemas, num cenário que já descrevemos em <a href="/blog/openai-crises-trocas-comando-pressao-lucro/">o clima pesado dentro da OpenAI entre crises, trocas no comando e pressão por lucro</a>. Esse pano de fundo deixa a discussão ainda mais incômoda, porque a defesa de um escudo legal mais amplo passa a soar, para muitos, menos como debate regulatório e mais como uma tentativa de <strong>reduzir a conta antes que ela chegue</strong>.</p>
+
+      <p>Também pesa o fato de que ainda não existe, nos Estados Unidos, uma lei federal clara definindo até onde vai a responsabilidade de quem cria modelos de IA em casos de catástrofe. Esse vazio abriu espaço para disputas estaduais e para projetos radicalmente diferentes entre si. Enquanto alguns textos tentam apertar a fiscalização e ampliar deveres das empresas, outros seguem a direção oposta e tentam limitar a responsabilização — movimento que se soma ao mesmo tipo de zona cinzenta exposta em <a href="/blog/google-news-polymarket-apostas-noticia/">quando Google News passou a exibir apostas da Polymarket como notícia</a>.</p>
+
+      <h2>O centro da discussão não é técnico. É político</h2>
+
+      <p>No fim, a polêmica expõe uma pergunta bem mais profunda do que parece. Se uma IA participa de um desastre grave, de um ataque de grandes proporções ou de um colapso com vítimas em massa, <strong>quem responde por isso?</strong> O desenvolvedor? O usuário? O deploy? Ninguém? O projeto apoiado pela OpenAI tenta empurrar essa resposta para longe das empresas, desde que elas consigam demonstrar que não agiram de maneira intencional ou temerária.</p>
+
+      <p>É aí que mora a reação mais dura dos críticos. Para eles, o texto parte de uma premissa perigosa: a de que empresas que lançam sistemas cada vez mais poderosos deveriam ganhar um colchão extra de proteção justamente no momento em que os riscos se tornam maiores. E isso pode consolidar um precedente desconfortável para o resto do país.</p>
+
+      <p>Mais do que um debate jurídico, o caso virou um teste político sobre o futuro da IA. De um lado, as gigantes de tecnologia querem regras que preservem velocidade, escala e competitividade. Do outro, cresce a pressão para que avanço tecnológico não vire sinônimo de <strong>lucro privatizado e dano social terceirizado</strong>. É essa disputa que está por trás do projeto — e ela está só começando.</p>
+    `,
+  },
 };

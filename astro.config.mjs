@@ -33,6 +33,7 @@ const lastModified = {
   '/blog/openai-crises-trocas-comando-pressao-lucro/': '2026-04-10',
   '/blog/neuralink-chips-cerebrais-fala/': '2026-04-13',
   '/blog/google-news-polymarket-apostas-noticia/': '2026-04-13',
+  '/blog/openai-apoia-projeto-blindar-ia-tragedias/': '2026-04-13',
   '/autor/bruno-lopes/': '2026-04-13',
   '/contato/': '2026-03-22',
   '/quem-somos/': '2026-03-22',
