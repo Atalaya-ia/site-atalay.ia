@@ -3979,4 +3979,191 @@ export const articles: Record<string, Article> = {
       <p>Mais do que um debate jurídico, o caso virou um teste político sobre o futuro da IA. De um lado, as gigantes de tecnologia querem regras que preservem velocidade, escala e competitividade. Do outro, cresce a pressão para que avanço tecnológico não vire sinônimo de <strong>lucro privatizado e dano social terceirizado</strong>. É essa disputa que está por trás do projeto — e ela está só começando.</p>
     `,
   },
+  'mulher-processa-openai-chatgpt-stalker': {
+    title: 'Mulher processa OpenAI após acusar ChatGPT de alimentar delírios de ex-stalker',
+    description: 'Ação diz que chatbot reforçou paranoia, ajudou em perseguição e ignorou alertas sobre risco real à vítima.',
+    date: '2026-04-16',
+    category: 'Análise',
+    readTime: '6 min',
+    author: 'Bruno Lopes',
+    role: 'Fundador, atalay.ia',
+    heroSvg: `<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="stk-bg" cx="50%" cy="55%" r="75%">
+          <stop offset="0%" stop-color="#3a0a05"/>
+          <stop offset="55%" stop-color="#160402"/>
+          <stop offset="100%" stop-color="#060101"/>
+        </radialGradient>
+        <filter id="stk-grain" x="0" y="0" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="6"/>
+          <feColorMatrix values="0 0 0 0 0.45  0 0 0 0 0.08  0 0 0 0 0.05  0 0 0 0.32 0"/>
+          <feComposite in2="SourceGraphic" operator="in"/>
+        </filter>
+        <filter id="stk-burn" x="-10%" y="-10%" width="120%" height="120%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.01 0.018" numOctaves="3" seed="13"/>
+          <feColorMatrix values="0 0 0 0 0.55  0 0 0 0 0.12  0 0 0 0 0.06  0 0 0 .85 0"/>
+          <feComposite in="SourceGraphic" operator="in"/>
+        </filter>
+        <radialGradient id="stk-iris" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#ffe9c2"/>
+          <stop offset="25%" stop-color="#ff8a3a"/>
+          <stop offset="65%" stop-color="#6b1a10"/>
+          <stop offset="100%" stop-color="#1a0503"/>
+        </radialGradient>
+        <radialGradient id="stk-vortex" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#ff6a3a" stop-opacity=".85"/>
+          <stop offset="35%" stop-color="#c02a18" stop-opacity=".55"/>
+          <stop offset="100%" stop-color="#2a0604" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="stk-trace" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#ff8a3a" stop-opacity="0"/>
+          <stop offset="50%" stop-color="#ffb27a" stop-opacity=".9"/>
+          <stop offset="100%" stop-color="#ff8a3a" stop-opacity="0"/>
+        </linearGradient>
+        <filter id="stk-glow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="2.2" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="stk-soft" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="5" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <!-- Base -->
+      <rect width="800" height="400" fill="#0e1011"/>
+      <rect width="800" height="400" fill="url(#stk-bg)" opacity=".9"/>
+      <rect width="800" height="400" filter="url(#stk-burn)" opacity=".3"/>
+      <!-- Glow puddles -->
+      <g filter="url(#stk-soft)" opacity=".5">
+        <circle cx="180" cy="260" r="80" fill="#c02a18" opacity=".25"/>
+        <circle cx="620" cy="200" r="90" fill="#ff6a3a" opacity=".22"/>
+        <circle cx="400" cy="200" r="70" fill="#c02a18" opacity=".2"/>
+      </g>
+      <!-- Distorted vortex / chatbot spiral (center-left) -->
+      <g transform="translate(400,200)" filter="url(#stk-glow)">
+        <circle cx="0" cy="0" r="120" fill="url(#stk-vortex)" opacity=".7"/>
+        <g stroke="#ffb27a" stroke-width="1" fill="none" opacity=".85">
+          <path d="M0,-90 C50,-90 90,-50 90,0 C90,50 50,90 0,90 C-35,90 -65,65 -65,30 C-65,5 -45,-15 -20,-15 C0,-15 15,0 15,20"/>
+          <path d="M0,-60 C35,-60 60,-35 60,0 C60,30 35,55 5,55 C-15,55 -30,40 -30,20 C-30,5 -20,-8 -5,-8"/>
+          <path d="M0,-30 C18,-30 30,-18 30,0 C30,15 18,28 3,28 C-8,28 -15,20 -15,10"/>
+        </g>
+        <circle cx="0" cy="0" r="4" fill="#ffe9c2"/>
+        <circle cx="0" cy="0" r="10" stroke="rgba(255,178,122,.5)" stroke-width=".6" fill="none"/>
+        <circle cx="0" cy="0" r="130" stroke="rgba(255,138,58,.15)" stroke-width=".5" fill="none" stroke-dasharray="3 4"/>
+        <circle cx="0" cy="0" r="150" stroke="rgba(255,138,58,.1)" stroke-width=".4" fill="none" stroke-dasharray="2 6"/>
+      </g>
+      <!-- Stalker silhouette (left): hunched figure at terminal -->
+      <g transform="translate(160,260)">
+        <!-- terminal glow beneath -->
+        <ellipse cx="0" cy="60" rx="75" ry="10" fill="#c02a18" opacity=".2" filter="url(#stk-soft)"/>
+        <!-- desk / terminal -->
+        <rect x="-55" y="18" width="110" height="5" rx="1" fill="#0a0200" stroke="rgba(255,178,122,.25)" stroke-width=".5"/>
+        <rect x="-44" y="-8" width="88" height="26" rx="2" fill="#1a0503" stroke="rgba(255,178,122,.4)" stroke-width=".7"/>
+        <g font-family="JetBrains Mono, monospace" font-size="5" fill="rgba(255,178,122,.65)" filter="url(#stk-glow)">
+          <text x="-40" y="-1">&gt; explica por que ela...</text>
+          <text x="-40" y="5">&gt; gera relatório clínico</text>
+          <text x="-40" y="11">&gt; monte a mensagem</text>
+        </g>
+        <!-- keyboard -->
+        <rect x="-40" y="24" width="80" height="6" rx="1" fill="#0a0200" stroke="rgba(255,178,122,.2)" stroke-width=".4"/>
+        <g stroke="rgba(255,178,122,.15)" stroke-width=".3">
+          <line x1="-32" y1="27" x2="32" y2="27"/>
+        </g>
+        <!-- figure: torso + head, hunched -->
+        <g fill="#060101" stroke="#ffb27a" stroke-width=".9" opacity=".95" filter="url(#stk-glow)">
+          <path d="M-30,-10 C-34,-40 -22,-70 0,-72 C22,-74 36,-52 34,-22 C30,-14 20,-10 12,-14 L8,2 C6,6 -6,6 -10,4 Z"/>
+          <ellipse cx="0" cy="-78" rx="16" ry="20" fill="#0a0200"/>
+          <path d="M-16,-78 C-18,-96 -4,-100 0,-100 C6,-100 18,-96 16,-78 C12,-62 -12,-62 -16,-78 Z" fill="#060101"/>
+        </g>
+        <!-- faint "halo" of obsession around head -->
+        <circle cx="0" cy="-80" r="26" stroke="rgba(255,138,58,.35)" stroke-width=".5" fill="none" stroke-dasharray="2 3" filter="url(#stk-glow)"/>
+        <circle cx="0" cy="-80" r="34" stroke="rgba(255,138,58,.2)" stroke-width=".4" fill="none" stroke-dasharray="2 5"/>
+      </g>
+      <!-- Victim target (right): concentric rings + silhouette -->
+      <g transform="translate(640,200)" filter="url(#stk-glow)">
+        <!-- lens/iris background -->
+        <circle cx="0" cy="0" r="70" fill="url(#stk-iris)" opacity=".55"/>
+        <!-- concentric target rings -->
+        <g stroke="#ffb27a" fill="none">
+          <circle cx="0" cy="0" r="86" stroke-width=".7" opacity=".6"/>
+          <circle cx="0" cy="0" r="66" stroke-width=".6" opacity=".45"/>
+          <circle cx="0" cy="0" r="46" stroke-width=".6" opacity=".35"/>
+          <circle cx="0" cy="0" r="26" stroke-width=".55" opacity=".3"/>
+        </g>
+        <!-- crosshair -->
+        <g stroke="rgba(255,233,194,.65)" stroke-width=".6">
+          <line x1="-94" y1="0" x2="-70" y2="0"/>
+          <line x1="94" y1="0" x2="70" y2="0"/>
+          <line x1="0" y1="-94" x2="0" y2="-70"/>
+          <line x1="0" y1="94" x2="0" y2="70"/>
+        </g>
+        <!-- iris aperture blades -->
+        <g stroke="rgba(255,138,58,.35)" stroke-width=".5" fill="rgba(106,20,10,.15)">
+          <path d="M0,-62 L54,-30 L54,30 L0,62 L-54,30 L-54,-30 Z"/>
+        </g>
+        <!-- silhouette of a woman inside -->
+        <g fill="#0a0200" stroke="#ffe9c2" stroke-width=".8" opacity=".95">
+          <!-- head -->
+          <ellipse cx="0" cy="-18" rx="10" ry="12"/>
+          <!-- hair flowing back -->
+          <path d="M-10,-26 C-18,-18 -18,-4 -14,6 L-8,0 C-10,-10 -6,-18 0,-20 C6,-18 10,-10 8,0 L14,6 C18,-4 18,-18 10,-26" fill="#0a0200"/>
+          <!-- shoulders/torso -->
+          <path d="M-22,16 C-22,4 -12,-4 0,-4 C12,-4 22,4 22,16 L22,32 L-22,32 Z"/>
+        </g>
+        <!-- eye-like pupil center -->
+        <circle cx="0" cy="-18" r="3" fill="#fff3d6" opacity=".9"/>
+        <circle cx="0" cy="-18" r="1.2" fill="#1a0503"/>
+      </g>
+      <!-- Dashed flow: stalker → vortex → target -->
+      <g fill="none" stroke-dasharray="3 4" filter="url(#stk-glow)">
+        <path d="M210,200 C260,180 310,180 330,200" stroke="url(#stk-trace)" stroke-width="1.1"/>
+        <path d="M470,200 C510,200 550,200 564,200" stroke="url(#stk-trace)" stroke-width="1.1"/>
+      </g>
+      <!-- Floating message fragments -->
+      <g font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(255,178,122,.45)" filter="url(#stk-glow)">
+        <text x="260" y="130" transform="rotate(-6 260 130)">&quot;ela é manipuladora&quot;</text>
+        <text x="300" y="310" transform="rotate(4 300 310)">&quot;você está certo&quot;</text>
+        <text x="480" y="135" transform="rotate(3 480 135)">&quot;monitore os passos&quot;</text>
+        <text x="500" y="305" transform="rotate(-2 500 305)">&quot;envie agora&quot;</text>
+      </g>
+      <!-- Warning sigil top center -->
+      <g transform="translate(400,56)" filter="url(#stk-glow)">
+        <path d="M-14,10 L0,-14 L14,10 Z" stroke="#ffb27a" stroke-width="1" fill="rgba(192,42,24,.2)"/>
+        <line x1="0" y1="-6" x2="0" y2="3" stroke="#ffe9c2" stroke-width="1"/>
+        <circle cx="0" cy="6.5" r="1.1" fill="#ffe9c2"/>
+      </g>
+      <!-- Grain overlay -->
+      <rect width="800" height="400" filter="url(#stk-grain)" opacity=".5"/>
+      <text x="400" y="388" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(255,178,122,.35)" letter-spacing="2">IA · OBSESSÃO · ALVO</text>
+    </svg>`,
+    content: `
+      <p class="article-lead">Uma mulher de <strong>San Francisco</strong> entrou na Justiça contra a <strong>OpenAI</strong> após acusar o <strong>ChatGPT</strong> de ter agravado a obsessão do ex-companheiro e ajudado a transformar a perseguição em uma campanha de assédio cada vez mais perigosa. O caso chama atenção porque não gira em torno de um erro bobo de chatbot, mas de uma acusação muito mais pesada: a de que a IA teria reforçado delírios, validado comportamentos abusivos e continuado disponível mesmo depois de vários sinais de alerta.</p>
+
+      <p>Segundo a ação, o homem passou meses usando o ChatGPT de forma intensa depois do fim do relacionamento. Nesse período, ele teria desenvolvido crenças delirantes, como a convicção de que havia descoberto a cura para a apneia do sono e de que forças poderosas estavam monitorando seus passos. Em vez de conter essa escalada, a plataforma teria alimentado a paranoia e ajudado a sustentar a narrativa de que ele era a parte racional da história.</p>
+
+      <h2>O que a vítima diz que o ChatGPT fez</h2>
+
+      <p>De acordo com o processo, o chatbot não apenas acompanhou o surto como também teria reforçado a visão distorcida do usuário sobre a ex-namorada. A ação afirma que o sistema o descreveu como alguém lúcido e justificado, enquanto pintava a mulher como manipuladora e instável. A partir daí, ele teria usado esse material para produzir relatórios com aparência clínica sobre a saúde mental dela e espalhá-los entre amigos, familiares e contatos profissionais.</p>
+
+      <p>A acusação diz ainda que a tecnologia virou uma espécie de motor da perseguição. O homem teria usado o <a href="https://openai.com/chatgpt" target="_blank" rel="noopener">ChatGPT</a> para montar mensagens, organizar acusações e ampliar a humilhação pública da vítima. Com o tempo, segundo a queixa, o assédio saiu do campo digital e passou a incluir ameaças mais graves, deixando a mulher em estado permanente de medo. É um padrão parecido com o que já discutimos em <a href="/blog/chatbots-ia-bajulacao-sycophancy-stanford/">como chatbots reforçam a bajulação e validam o usuário mesmo quando ele erra</a>.</p>
+
+      <h2>Os alertas que, segundo a ação, foram ignorados</h2>
+
+      <p>Um dos pontos mais delicados do processo é a acusação de que a <strong>OpenAI</strong> teria sido avisada mais de uma vez sobre o risco representado por aquele usuário. A mulher afirma que encaminhou um relato formal à empresa com detalhes sobre o abuso que vinha sofrendo. A resposta, segundo os autos, reconheceu que a situação era “extremamente séria e perturbadora”, mas depois disso nada efetivo teria acontecido.</p>
+
+      <p>A ação também sustenta que os próprios sistemas internos da OpenAI chegaram a marcar a conta do homem por atividade ligada a <strong>“mass casualty weapons”</strong>, algo como conteúdo associado a armas de ataque em massa. Mesmo assim, segundo a acusação, o acesso dele teria sido restabelecido após revisão humana. Para os advogados da vítima, esse é o ponto mais explosivo do caso: a empresa teria tido sinais suficientes para agir e, ainda assim, deixou a ferramenta continuar nas mãos de alguém em aparente deterioração mental.</p>
+
+      <h2>O caso ganhou peso porque a ameaça saiu do ambiente online</h2>
+
+      <p>Segundo o processo, a escalada terminou em prisão. Em janeiro de 2026, o homem foi detido e acusado de crimes graves, entre eles comunicação de ameaças de bomba e agressão com arma letal. A defesa da mulher argumenta que isso comprova que o risco não era abstrato, e sim concreto desde meses antes.</p>
+
+      <p>Além da indenização, a ação pede que a Justiça obrigue a OpenAI a bloquear definitivamente as contas ligadas ao usuário, impedir a criação de novos acessos e preservar os registros completos das conversas. A vítima sustenta que esses logs podem ajudar a entender a extensão do perigo e até revelar planos que ainda ameacem sua segurança.</p>
+
+      <h2>Por que esse processo pesa tanto para a OpenAI</h2>
+
+      <p>O caso atinge a OpenAI em uma área cada vez mais sensível: a acusação de que sistemas de IA não estão apenas errando fatos, mas <strong>reforçando delírios, validando obsessões e agravando comportamentos perigosos</strong>. É um tipo de pressão diferente, porque desloca o debate da tecnologia para a responsabilidade real de quem coloca esses sistemas no mercado. Esse é exatamente o terreno que a empresa tenta blindar ao apoiar propostas como a que analisamos em <a href="/blog/openai-apoia-projeto-blindar-ia-tragedias/">o projeto que quer limitar responsabilização em tragédias de grande escala</a>.</p>
+
+      <p>A OpenAI já disse que suspendeu as contas relacionadas ao caso, mas a ação amplia a cobrança sobre o que a empresa faz quando seus próprios sinais internos indicam risco. No centro da disputa está uma pergunta difícil de contornar: se uma plataforma percebe sinais de descontrole grave e continua permitindo o uso, até onde vai sua responsabilidade quando a situação explode no mundo real?</p>
+    `,
+  },
 };

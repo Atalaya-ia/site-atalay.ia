@@ -4,8 +4,8 @@ import sitemap from '@astrojs/sitemap';
 import yaml from '@rollup/plugin-yaml';
 
 const lastModified = {
-  '/': '2026-04-13',
-  '/blog/': '2026-04-13',
+  '/': '2026-04-16',
+  '/blog/': '2026-04-16',
   '/blog/lancamento-atalay-ia/': '2026-03-22',
   '/blog/como-ia-contextual-muda-jornalismo/': '2026-03-20',
   '/blog/pipeline-dados-editoriais/': '2026-03-18',
@@ -34,7 +34,8 @@ const lastModified = {
   '/blog/neuralink-chips-cerebrais-fala/': '2026-04-13',
   '/blog/google-news-polymarket-apostas-noticia/': '2026-04-13',
   '/blog/openai-apoia-projeto-blindar-ia-tragedias/': '2026-04-13',
-  '/autor/bruno-lopes/': '2026-04-13',
+  '/blog/mulher-processa-openai-chatgpt-stalker/': '2026-04-16',
+  '/autor/bruno-lopes/': '2026-04-16',
   '/contato/': '2026-03-22',
   '/quem-somos/': '2026-03-22',
   '/privacidade/': '2026-03-22',
