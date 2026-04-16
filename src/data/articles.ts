@@ -4569,6 +4569,11 @@ export const articles: Record<string, Article> = {
 
       <p>A empresa vende isso como um jeito mais natural de descobrir bebidas, especialmente para quem não sabe o nome exato do que quer. Em vez de partir do cardápio, o cliente parte da sensação: aconchego, energia, doçura, frescor, clima tropical, vibe do outfit. É o café entrando de vez na era da conversa guiada por IA.</p>
 
+      <figure>
+        <img src="/posts/starbucks-chatgpt-escolher-cafe/starbucks-chatgpt-demo.png" alt="Quatro mockups de celular mostrando conversas com a integração Starbucks no ChatGPT sugerindo bebidas por humor, outfit e craving" loading="lazy" width="1198" height="662" />
+        <figcaption>Exemplos de conversa no app beta: pedidos partem de humor, outfit e craving, e o ChatGPT devolve bebidas do cardápio da Starbucks. Imagem: Starbucks / Futurism</figcaption>
+      </figure>
+
       <h2>O que essa novidade diz sobre o momento da tecnologia</h2>
 
       <p>O ponto mais interessante talvez nem seja o produto em si, mas o que ele simboliza. A lógica por trás da novidade é a de que o usuário não quer mais escolher sozinho nem um café gelado. Quer ser conduzido. Quer que o sistema adivinhe, sugira, monte e quase decida por ele. É uma espécie de conforto algorítmico aplicado ao consumo cotidiano.</p>
