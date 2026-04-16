@@ -35,6 +35,7 @@ const lastModified = {
   '/blog/google-news-polymarket-apostas-noticia/': '2026-04-13',
   '/blog/openai-apoia-projeto-blindar-ia-tragedias/': '2026-04-13',
   '/blog/mulher-processa-openai-chatgpt-stalker/': '2026-04-16',
+  '/blog/ia-enfraquece-raciocinio-estudo/': '2026-04-16',
   '/autor/bruno-lopes/': '2026-04-16',
   '/contato/': '2026-03-22',
   '/quem-somos/': '2026-03-22',
