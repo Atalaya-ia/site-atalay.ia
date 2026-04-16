@@ -1222,6 +1222,109 @@ const posts = [
       <text x="200" y="232" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,178,122,.35)" letter-spacing="1.5">IA · MULETA · EROSÃO</text>
     </svg>`,
   },
+  {
+    slug: 'starbucks-chatgpt-escolher-cafe',
+    title: 'Starbucks põe o ChatGPT para escolher seu café e leva a IA até o balcão',
+    description: 'Rede lança app beta no ChatGPT para sugerir bebidas com base no humor, no visual e até em fotos do usuário.',
+    date: '2026-04-16',
+    category: 'Análise',
+    thumb: `<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="tsb-bg" cx="50%" cy="55%" r="75%">
+          <stop offset="0%" stop-color="#2a1608"/>
+          <stop offset="55%" stop-color="#160803"/>
+          <stop offset="100%" stop-color="#060201"/>
+        </radialGradient>
+        <linearGradient id="tsb-cup" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#f8efd5"/>
+          <stop offset="60%" stop-color="#e8d5ab"/>
+          <stop offset="100%" stop-color="#a88257"/>
+        </linearGradient>
+        <linearGradient id="tsb-sleeve" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2f6a3e"/>
+          <stop offset="100%" stop-color="#0e3a1c"/>
+        </linearGradient>
+        <linearGradient id="tsb-coffee" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#3a1e0a"/>
+          <stop offset="100%" stop-color="#1a0d04"/>
+        </linearGradient>
+        <linearGradient id="tsb-steam" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#ffe9c2" stop-opacity="0"/>
+          <stop offset="50%" stop-color="#ffb27a" stop-opacity=".85"/>
+          <stop offset="100%" stop-color="#ffe9c2" stop-opacity=".3"/>
+        </linearGradient>
+        <filter id="tsb-glow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="1.4" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="tsb-grain" x="0" y="0" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="12"/>
+          <feColorMatrix values="0 0 0 0 0.5  0 0 0 0 0.18  0 0 0 0 0.08  0 0 0 0.25 0"/>
+          <feComposite in2="SourceGraphic" operator="in"/>
+        </filter>
+      </defs>
+      <rect width="400" height="250" fill="#0e1011"/>
+      <rect width="400" height="250" fill="url(#tsb-bg)" opacity=".9"/>
+      <!-- @Starbucks badge top -->
+      <g transform="translate(200,40)" filter="url(#tsb-glow)">
+        <rect x="-70" y="-10" width="140" height="20" rx="10" fill="rgba(47,106,62,.15)" stroke="rgba(74,156,88,.5)" stroke-width=".6"/>
+        <text x="0" y="4" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#8fe0a0" letter-spacing="1.5">@STARBUCKS · BETA</text>
+      </g>
+      <!-- Center: cup with spiral steam -->
+      <g transform="translate(200,165)" filter="url(#tsb-glow)">
+        <ellipse cx="0" cy="56" rx="70" ry="5" fill="#0a0500" opacity=".8"/>
+        <path d="M-46,-30 L-38,52 C-36,57 36,57 38,52 L46,-30 Z" fill="url(#tsb-cup)" stroke="#4a2a10" stroke-width=".8"/>
+        <path d="M-42,-8 L-39,20 C-38,23 38,23 39,20 L42,-8 Z" fill="url(#tsb-sleeve)" stroke="#0e3a1c" stroke-width=".6"/>
+        <g transform="translate(0,6)">
+          <circle cx="0" cy="0" r="10" fill="#0e3a1c" stroke="#8fe0a0" stroke-width=".7"/>
+          <circle cx="0" cy="0" r="6" fill="none" stroke="#8fe0a0" stroke-width=".4"/>
+          <text x="0" y="2.5" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6" fill="#8fe0a0" letter-spacing="1">SB</text>
+        </g>
+        <ellipse cx="0" cy="-30" rx="46" ry="7" fill="url(#tsb-coffee)" stroke="#4a2a10" stroke-width=".8"/>
+        <ellipse cx="0" cy="-31" rx="40" ry="5" fill="#2a1408" opacity=".85"/>
+        <!-- crema dots -->
+        <g fill="rgba(255,233,194,.3)">
+          <circle cx="-16" cy="-31" r=".9"/>
+          <circle cx="-4" cy="-30" r=".7"/>
+          <circle cx="10" cy="-32" r=".9"/>
+        </g>
+        <!-- spiral steam -->
+        <g stroke="url(#tsb-steam)" stroke-width="1.1" fill="none">
+          <path d="M-8,-36 C-16,-50 -2,-62 8,-56 C18,-50 14,-36 4,-40"/>
+          <path d="M2,-52 C-8,-66 6,-80 18,-72 C28,-64 22,-50 12,-56"/>
+        </g>
+        <g fill="#ffe9c2">
+          <circle cx="-2" cy="-48" r="1"/>
+          <circle cx="10" cy="-66" r="1.2"/>
+        </g>
+      </g>
+      <!-- Left: mini chat bubble -->
+      <g transform="translate(60,130)" filter="url(#tsb-glow)">
+        <rect x="-34" y="-16" width="68" height="32" rx="6" fill="#140c05" stroke="rgba(255,178,122,.35)" stroke-width=".5"/>
+        <rect x="-28" y="-10" width="50" height="8" rx="4" fill="rgba(47,106,62,.2)" stroke="rgba(74,156,88,.45)" stroke-width=".3"/>
+        <text x="-25" y="-4" font-family="JetBrains Mono, monospace" font-size="5" fill="#8fe0a0">@Starbucks</text>
+        <rect x="-16" y="2" width="50" height="8" rx="4" fill="rgba(192,106,66,.15)" stroke="rgba(255,138,58,.4)" stroke-width=".3"/>
+      </g>
+      <!-- Right: selected card -->
+      <g transform="translate(340,130)" filter="url(#tsb-glow)">
+        <rect x="-38" y="-20" width="76" height="40" rx="5" fill="rgba(74,156,88,.12)" stroke="#8fe0a0" stroke-width=".8"/>
+        <circle cx="-28" cy="0" r="7" fill="rgba(255,233,194,.18)" stroke="#ffe9c2" stroke-width=".5"/>
+        <text x="-18" y="-4" font-family="DM Sans, sans-serif" font-size="8" font-weight="600" fill="#ffe9c2">Cold brew</text>
+        <text x="-18" y="6" font-family="JetBrains Mono, monospace" font-size="6" fill="#8fe0a0">match ok</text>
+        <g transform="translate(28,0)">
+          <circle cx="0" cy="0" r="5" fill="rgba(74,156,88,.2)" stroke="#8fe0a0" stroke-width=".6"/>
+          <path d="M-2,0 L-0.5,2 L3,-2" stroke="#8fe0a0" stroke-width=".8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+      </g>
+      <!-- dashed flows -->
+      <g stroke="rgba(255,178,122,.5)" stroke-width=".6" stroke-dasharray="2 3" fill="none">
+        <path d="M98,135 L150,145"/>
+        <path d="M250,145 L298,135"/>
+      </g>
+      <rect width="400" height="250" filter="url(#tsb-grain)" opacity=".45"/>
+      <text x="200" y="232" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,178,122,.35)" letter-spacing="1.5">HUMOR · IA · COPO</text>
+    </svg>`,
+  },
 ];
 
 // Inject a11y attributes into thumb SVGs

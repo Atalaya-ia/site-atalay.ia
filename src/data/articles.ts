@@ -4377,4 +4377,209 @@ export const articles: Record<string, Article> = {
       <p>No fim, o estudo joga luz sobre uma pergunta que muita gente ainda evita fazer: <strong>o que acontece com a mente humana quando pensar vira opcional?</strong> A IA pode continuar sendo uma ferramenta poderosa e útil. Mas, se for usada apenas como resposta instantânea para qualquer esforço, ela corre o risco de nos deixar mais rápidos para entregar — e mais fracos para raciocinar quando estivermos sozinhos.</p>
     `,
   },
+  'starbucks-chatgpt-escolher-cafe': {
+    title: 'Starbucks põe o ChatGPT para escolher seu café e leva a IA até o balcão',
+    description: 'Rede lança app beta no ChatGPT para sugerir bebidas com base no humor, no visual e até em fotos do usuário.',
+    date: '2026-04-16',
+    category: 'Análise',
+    readTime: '5 min',
+    author: 'Bruno Lopes',
+    role: 'Fundador, atalay.ia',
+    heroSvg: `<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="sb-bg" cx="50%" cy="55%" r="75%">
+          <stop offset="0%" stop-color="#2a1608"/>
+          <stop offset="55%" stop-color="#160803"/>
+          <stop offset="100%" stop-color="#060201"/>
+        </radialGradient>
+        <filter id="sb-grain" x="0" y="0" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="11"/>
+          <feColorMatrix values="0 0 0 0 0.5  0 0 0 0 0.18  0 0 0 0 0.08  0 0 0 0.28 0"/>
+          <feComposite in2="SourceGraphic" operator="in"/>
+        </filter>
+        <filter id="sb-burn" x="-10%" y="-10%" width="120%" height="120%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.008 0.02" numOctaves="3" seed="23"/>
+          <feColorMatrix values="0 0 0 0 0.5  0 0 0 0 0.22  0 0 0 0 0.08  0 0 0 .65 0"/>
+          <feComposite in="SourceGraphic" operator="in"/>
+        </filter>
+        <filter id="sb-glow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="2.2" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="sb-soft" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="5" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <linearGradient id="sb-cup" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#f8efd5"/>
+          <stop offset="60%" stop-color="#e8d5ab"/>
+          <stop offset="100%" stop-color="#a88257"/>
+        </linearGradient>
+        <linearGradient id="sb-sleeve" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2f6a3e"/>
+          <stop offset="50%" stop-color="#1f4e2c"/>
+          <stop offset="100%" stop-color="#0e3a1c"/>
+        </linearGradient>
+        <linearGradient id="sb-coffee" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#3a1e0a"/>
+          <stop offset="100%" stop-color="#1a0d04"/>
+        </linearGradient>
+        <linearGradient id="sb-steam" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#ffe9c2" stop-opacity="0"/>
+          <stop offset="50%" stop-color="#ffb27a" stop-opacity=".8"/>
+          <stop offset="100%" stop-color="#ffe9c2" stop-opacity=".3"/>
+        </linearGradient>
+      </defs>
+      <!-- Base -->
+      <rect width="800" height="400" fill="#0e1011"/>
+      <rect width="800" height="400" fill="url(#sb-bg)" opacity=".9"/>
+      <rect width="800" height="400" filter="url(#sb-burn)" opacity=".25"/>
+      <!-- soft glows -->
+      <g filter="url(#sb-soft)" opacity=".45">
+        <circle cx="400" cy="220" r="100" fill="#ff8a3a" opacity=".22"/>
+        <circle cx="400" cy="130" r="70" fill="#2f6a3e" opacity=".2"/>
+      </g>
+      <!-- Left: chat prompt with @Starbucks mention -->
+      <g transform="translate(160,200)" filter="url(#sb-glow)">
+        <rect x="-95" y="-70" width="190" height="140" rx="8" fill="#140c05" stroke="rgba(255,178,122,.35)" stroke-width=".8"/>
+        <!-- header -->
+        <g>
+          <line x1="-95" y1="-46" x2="95" y2="-46" stroke="rgba(255,178,122,.2)" stroke-width=".5"/>
+          <circle cx="-80" cy="-58" r="3" fill="#c02a18"/>
+          <circle cx="-70" cy="-58" r="3" fill="#ffb27a" opacity=".7"/>
+          <circle cx="-60" cy="-58" r="3" fill="#6b8a4e" opacity=".7"/>
+          <text x="10" y="-55" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(255,178,122,.6)" letter-spacing="1">chatgpt</text>
+        </g>
+        <!-- @Starbucks mention tag -->
+        <g transform="translate(0,-28)">
+          <rect x="-78" y="-10" width="78" height="18" rx="9" fill="rgba(47,106,62,.18)" stroke="rgba(74,156,88,.55)" stroke-width=".7"/>
+          <text x="-70" y="2" font-family="JetBrains Mono, monospace" font-size="8" fill="#8fe0a0">@Starbucks</text>
+          <text x="10" y="2" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(255,233,194,.8)">quero começar a manhã...</text>
+        </g>
+        <!-- reply bubble -->
+        <g transform="translate(0,2)">
+          <rect x="-60" y="-8" width="140" height="20" rx="10" fill="rgba(192,106,66,.15)" stroke="rgba(255,138,58,.45)" stroke-width=".6"/>
+          <text x="-52" y="6" font-family="JetBrains Mono, monospace" font-size="8" fill="#ffb27a">leve, com doçura média</text>
+        </g>
+        <!-- uploaded photo thumb -->
+        <g transform="translate(-60,32)">
+          <rect x="-16" y="-10" width="32" height="20" rx="3" fill="rgba(255,178,122,.1)" stroke="rgba(255,178,122,.4)" stroke-width=".5"/>
+          <g stroke="rgba(255,178,122,.6)" stroke-width=".6" fill="none">
+            <circle cx="-6" cy="-4" r="1.4"/>
+            <path d="M-12,6 L-4,0 L2,4 L12,-4 L12,6 Z" fill="rgba(255,178,122,.25)"/>
+          </g>
+        </g>
+        <text x="-20" y="36" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,233,194,.5)" letter-spacing="1">foto do outfit</text>
+        <!-- tag -->
+        <g transform="translate(0,58)">
+          <rect x="-56" y="-8" width="112" height="16" rx="8" fill="rgba(47,106,62,.15)" stroke="rgba(74,156,88,.5)" stroke-width=".5"/>
+          <text x="0" y="3" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#8fe0a0" letter-spacing="1.5">HUMOR → COPO</text>
+        </g>
+      </g>
+      <!-- Wire: chat → cup -->
+      <g stroke="rgba(255,178,122,.45)" stroke-width="1" stroke-dasharray="3 4" fill="none" filter="url(#sb-glow)">
+        <path d="M260,200 C290,200 310,200 330,200"/>
+      </g>
+      <!-- Center: Starbucks-style cup with ChatGPT spiral steam -->
+      <g transform="translate(400,230)" filter="url(#sb-glow)">
+        <!-- saucer -->
+        <ellipse cx="0" cy="60" rx="85" ry="6" fill="#0a0500" opacity=".8"/>
+        <!-- cup body -->
+        <path d="M-54,-36 L-44,56 C-42,62 42,62 44,56 L54,-36 Z" fill="url(#sb-cup)" stroke="#4a2a10" stroke-width="1"/>
+        <!-- green sleeve with starbucks-like ring -->
+        <path d="M-50,-10 L-46,24 C-44,28 44,28 46,24 L50,-10 Z" fill="url(#sb-sleeve)" stroke="#0e3a1c" stroke-width=".8"/>
+        <!-- round logo disc on sleeve (abstract, not the real mark) -->
+        <g transform="translate(0,7)">
+          <circle cx="0" cy="0" r="12" fill="#0e3a1c" stroke="#8fe0a0" stroke-width=".8"/>
+          <circle cx="0" cy="0" r="8" fill="none" stroke="#8fe0a0" stroke-width=".5"/>
+          <text x="0" y="3" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#8fe0a0" letter-spacing="1">SB</text>
+        </g>
+        <!-- rim + coffee surface -->
+        <ellipse cx="0" cy="-36" rx="54" ry="9" fill="url(#sb-coffee)" stroke="#4a2a10" stroke-width="1"/>
+        <ellipse cx="0" cy="-37" rx="48" ry="6" fill="#2a1408" opacity=".85"/>
+        <!-- crema dots -->
+        <g fill="rgba(255,233,194,.3)">
+          <circle cx="-20" cy="-37" r="1.2"/>
+          <circle cx="-6" cy="-35" r=".9"/>
+          <circle cx="14" cy="-38" r="1.1"/>
+          <circle cx="26" cy="-35" r=".8"/>
+        </g>
+        <!-- Steam: ChatGPT-like spiral rising -->
+        <g stroke="url(#sb-steam)" stroke-width="1.3" fill="none" opacity=".9">
+          <path d="M-12,-42 C-20,-58 -6,-72 6,-66 C18,-60 14,-44 2,-48"/>
+          <path d="M-4,-60 C-14,-74 2,-90 14,-82 C26,-74 20,-58 8,-64"/>
+          <path d="M4,-82 C-8,-96 10,-114 24,-104 C38,-94 30,-78 16,-84"/>
+        </g>
+        <!-- Tiny sparkles inside steam (AI) -->
+        <g fill="#ffe9c2" filter="url(#sb-glow)">
+          <circle cx="-4" cy="-54" r="1.2"/>
+          <circle cx="12" cy="-76" r="1.4"/>
+          <circle cx="22" cy="-98" r="1.1"/>
+          <path d="M16,-50 l2,-6 l2,6 l6,2 l-6,2 l-2,6 l-2,-6 l-6,-2 z" fill="#ffb27a" opacity=".85"/>
+        </g>
+      </g>
+      <!-- Wire: cup → options -->
+      <g stroke="rgba(255,178,122,.45)" stroke-width="1" stroke-dasharray="3 4" fill="none" filter="url(#sb-glow)">
+        <path d="M470,200 C500,200 520,200 540,200"/>
+      </g>
+      <!-- Right: recommended drink cards -->
+      <g transform="translate(640,200)" filter="url(#sb-glow)">
+        <!-- card 1 -->
+        <g transform="translate(0,-60)">
+          <rect x="-60" y="-18" width="120" height="36" rx="6" fill="rgba(255,178,122,.04)" stroke="rgba(255,178,122,.25)" stroke-width=".6"/>
+          <circle cx="-48" cy="0" r="8" fill="rgba(255,233,194,.1)" stroke="rgba(255,178,122,.5)" stroke-width=".5"/>
+          <text x="-36" y="-3" font-family="DM Sans, sans-serif" font-size="9" fill="rgba(255,233,194,.75)">Latte morno</text>
+          <text x="-36" y="8" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,178,122,.55)">aconchego</text>
+        </g>
+        <!-- card 2 (selected by IA) -->
+        <g transform="translate(0,0)">
+          <rect x="-60" y="-18" width="120" height="36" rx="6" fill="rgba(74,156,88,.1)" stroke="#8fe0a0" stroke-width=".9"/>
+          <circle cx="-48" cy="0" r="8" fill="rgba(255,233,194,.18)" stroke="#ffe9c2" stroke-width=".7"/>
+          <text x="-36" y="-3" font-family="DM Sans, sans-serif" font-size="9" font-weight="600" fill="#ffe9c2">Cold brew</text>
+          <text x="-36" y="8" font-family="JetBrains Mono, monospace" font-size="7" fill="#8fe0a0">match do humor</text>
+          <g transform="translate(50,0)">
+            <circle cx="0" cy="0" r="7" fill="rgba(74,156,88,.2)" stroke="#8fe0a0" stroke-width=".7"/>
+            <path d="M-3,0 L-1,3 L4,-3" stroke="#8fe0a0" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+        </g>
+        <!-- card 3 -->
+        <g transform="translate(0,60)">
+          <rect x="-60" y="-18" width="120" height="36" rx="6" fill="rgba(255,178,122,.04)" stroke="rgba(255,178,122,.25)" stroke-width=".6"/>
+          <circle cx="-48" cy="0" r="8" fill="rgba(255,233,194,.1)" stroke="rgba(255,178,122,.5)" stroke-width=".5"/>
+          <text x="-36" y="-3" font-family="DM Sans, sans-serif" font-size="9" fill="rgba(255,233,194,.75)">Frappuccino</text>
+          <text x="-36" y="8" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(255,178,122,.55)">doçura alta</text>
+        </g>
+      </g>
+      <!-- top badge -->
+      <g transform="translate(400,54)" filter="url(#sb-glow)">
+        <rect x="-90" y="-14" width="180" height="28" rx="14" fill="rgba(47,106,62,.12)" stroke="rgba(74,156,88,.5)" stroke-width=".7"/>
+        <text x="0" y="4" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#8fe0a0" letter-spacing="1.5">@STARBUCKS · BETA</text>
+      </g>
+      <rect width="800" height="400" filter="url(#sb-grain)" opacity=".45"/>
+      <text x="400" y="388" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(255,178,122,.35)" letter-spacing="2">HUMOR · IA · COPO</text>
+    </svg>`,
+    content: `
+      <p class="article-lead">A <strong>Starbucks</strong> decidiu levar a inteligência artificial para um dos atos mais banais da vida moderna: escolher o que beber. A rede lançou um app beta dentro do <strong>ChatGPT</strong> que recomenda cafés e outras bebidas com base no humor do cliente, no tipo de craving do momento e até em fotos do look, do clima ou do ambiente.</p>
+
+      <p>No papel, a novidade parece “divertida” e “personalizada”. Na prática, ela escancara uma fase curiosa da tecnologia: a de transformar até uma simples ida ao café em mais uma decisão terceirizada para algoritmo. Em vez de olhar o cardápio e escolher, o consumidor agora pode pedir para a IA traduzir sua vibe em um copo de Starbucks.</p>
+
+      <h2>Como funciona a nova aposta da Starbucks com o ChatGPT</h2>
+
+      <p>O sistema é simples. Depois de ativar a integração, o usuário pode chamar <strong>@Starbucks</strong> no <a href="https://openai.com/chatgpt" target="_blank" rel="noopener">ChatGPT</a> e escrever algo como “quero uma bebida leve para começar a manhã”, “quero algo mais doce, mas não demais” ou até pedir uma recomendação que combine com uma foto. A IA então sugere opções do cardápio, permite personalizar ingredientes e encaminha o pedido para ser finalizado no ecossistema da Starbucks.</p>
+
+      <p>A empresa vende isso como um jeito mais natural de descobrir bebidas, especialmente para quem não sabe o nome exato do que quer. Em vez de partir do cardápio, o cliente parte da sensação: aconchego, energia, doçura, frescor, clima tropical, vibe do outfit. É o café entrando de vez na era da conversa guiada por IA.</p>
+
+      <h2>O que essa novidade diz sobre o momento da tecnologia</h2>
+
+      <p>O ponto mais interessante talvez nem seja o produto em si, mas o que ele simboliza. A lógica por trás da novidade é a de que o usuário não quer mais escolher sozinho nem um café gelado. Quer ser conduzido. Quer que o sistema adivinhe, sugira, monte e quase decida por ele. É uma espécie de conforto algorítmico aplicado ao consumo cotidiano.</p>
+
+      <p>Isso ajuda a explicar por que tanta gente olha para a parceria com estranhamento. Não porque seja impossível que uma IA acerte uma bebida que combine com você, mas porque fica a sensação de que uma tarefa absolutamente simples está sendo inflada até parecer um problema tecnológico. Se alguém precisa de um chatbot para escolher entre latte, cold brew e frappuccino, talvez a questão não seja falta de IA, mas excesso de menu — ou excesso de mediação digital. Esse padrão de terceirização de microdecisões dialoga com o alerta de <a href="/blog/ia-enfraquece-raciocinio-estudo/">um novo estudo que aponta erosão cognitiva quando o chatbot vira muleta</a>.</p>
+
+      <h2>Mais do que café, a Starbucks está testando um novo jeito de vender</h2>
+
+      <p>Por trás do tom leve e divertido, existe uma estratégia mais séria. A Starbucks não está só testando recomendação de bebida; está testando um modelo em que a descoberta do produto começa fora do app tradicional e nasce dentro de um assistente conversacional. É uma versão mais concreta do varejo mediado por IA, em que a compra começa numa conversa e termina na plataforma da marca. É o mesmo tipo de migração de atenção que destacamos em <a href="/blog/ai-overviews-google-respostas-erradas-escala/">como a IA está empurrando o tráfego para respostas dentro da própria plataforma</a>.</p>
+
+      <p>No fim, a novidade pode até funcionar como curiosidade, marketing e conveniência para parte do público. Mas também serve como retrato bem claro da fase atual da IA de consumo: aquela em que empresas tentam se infiltrar em microdecisões do dia a dia e vender isso como evolução inevitável. Desta vez, o alvo não foi uma tarefa complexa. Foi só o seu café.</p>
+    `,
+  },
 };
