@@ -4587,4 +4587,194 @@ export const articles: Record<string, Article> = {
       <p>No fim, a novidade pode até funcionar como curiosidade, marketing e conveniência para parte do público. Mas também serve como retrato bem claro da fase atual da IA de consumo: aquela em que empresas tentam se infiltrar em microdecisões do dia a dia e vender isso como evolução inevitável. Desta vez, o alvo não foi uma tarefa complexa. Foi só o seu café.</p>
     `,
   },
+  'gpt-5-5-vs-claude-opus-4-7-comparativo': {
+    title: 'GPT-5.5 ou Claude Opus 4.7? A disputa ficou mais interessante do que parece',
+    description: 'Depois de olhar esse comparativo, minha impressão é simples: não existe vencedor absoluto — existe modelo melhor para tipo diferente de trabalho.',
+    date: '2026-04-25',
+    category: 'Análise',
+    readTime: '6 min',
+    author: 'Bruno Lopes',
+    role: 'Fundador, atalay.ia',
+    heroSvg: `<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="vs-bg" cx="50%" cy="55%" r="80%">
+          <stop offset="0%" stop-color="#1a1208"/>
+          <stop offset="55%" stop-color="#0e0a05"/>
+          <stop offset="100%" stop-color="#060201"/>
+        </radialGradient>
+        <linearGradient id="vs-left" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="rgba(74,156,88,.18)"/>
+          <stop offset="100%" stop-color="rgba(47,106,62,.04)"/>
+        </linearGradient>
+        <linearGradient id="vs-right" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="rgba(192,106,66,.18)"/>
+          <stop offset="100%" stop-color="rgba(192,106,66,.04)"/>
+        </linearGradient>
+        <filter id="vs-glow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="2.2" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="vs-soft" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="6" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="vs-grain" x="0" y="0" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="17"/>
+          <feColorMatrix values="0 0 0 0 0.5  0 0 0 0 0.18  0 0 0 0 0.08  0 0 0 0.25 0"/>
+          <feComposite in2="SourceGraphic" operator="in"/>
+        </filter>
+      </defs>
+      <rect width="800" height="400" fill="#0e1011"/>
+      <rect width="800" height="400" fill="url(#vs-bg)" opacity=".95"/>
+      <!-- soft glows behind each side -->
+      <g filter="url(#vs-soft)" opacity=".55">
+        <circle cx="190" cy="210" r="120" fill="#2f6a3e" opacity=".22"/>
+        <circle cx="610" cy="210" r="120" fill="#c06a42" opacity=".22"/>
+      </g>
+
+      <!-- top badge -->
+      <g transform="translate(400,52)" filter="url(#vs-glow)">
+        <rect x="-110" y="-15" width="220" height="30" rx="15" fill="rgba(255,178,122,.06)" stroke="rgba(255,178,122,.35)" stroke-width=".7"/>
+        <text x="0" y="5" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="rgba(255,233,194,.85)" letter-spacing="2">GPT-5.5 · VS · OPUS 4.7</text>
+      </g>
+
+      <!-- LEFT CARD: GPT-5.5 -->
+      <g transform="translate(190,220)" filter="url(#vs-glow)">
+        <rect x="-130" y="-110" width="260" height="220" rx="14" fill="url(#vs-left)" stroke="rgba(74,156,88,.55)" stroke-width=".9"/>
+        <!-- model header -->
+        <g transform="translate(0,-82)">
+          <circle cx="-92" cy="0" r="11" fill="rgba(47,106,62,.25)" stroke="#8fe0a0" stroke-width=".8"/>
+          <path d="M-97,-3 L-92,-6 L-87,-3 L-87,3 L-92,6 L-97,3 Z" fill="none" stroke="#8fe0a0" stroke-width=".8"/>
+          <text x="-72" y="-2" font-family="DM Sans, sans-serif" font-size="14" font-weight="700" fill="#ffe9c2">GPT-5.5</text>
+          <text x="-72" y="11" font-family="JetBrains Mono, monospace" font-size="8" fill="#8fe0a0" letter-spacing="1">OPENAI · OPERADOR</text>
+        </g>
+        <!-- divider -->
+        <line x1="-110" y1="-58" x2="110" y2="-58" stroke="rgba(74,156,88,.25)" stroke-width=".5"/>
+        <!-- benchmark chips -->
+        <g font-family="JetBrains Mono, monospace" font-size="9">
+          <g transform="translate(0,-36)">
+            <rect x="-110" y="-12" width="220" height="24" rx="5" fill="rgba(74,156,88,.08)" stroke="rgba(74,156,88,.35)" stroke-width=".5"/>
+            <text x="-100" y="4" fill="rgba(255,233,194,.7)">Terminal-Bench 2.0</text>
+            <text x="100" y="4" text-anchor="end" fill="#8fe0a0" font-weight="600">82.7%</text>
+          </g>
+          <g transform="translate(0,-6)">
+            <rect x="-110" y="-12" width="220" height="24" rx="5" fill="rgba(74,156,88,.08)" stroke="rgba(74,156,88,.35)" stroke-width=".5"/>
+            <text x="-100" y="4" fill="rgba(255,233,194,.7)">GDPval (profissional)</text>
+            <text x="100" y="4" text-anchor="end" fill="#8fe0a0" font-weight="600">84.9%</text>
+          </g>
+          <g transform="translate(0,24)">
+            <rect x="-110" y="-12" width="220" height="24" rx="5" fill="rgba(74,156,88,.08)" stroke="rgba(74,156,88,.35)" stroke-width=".5"/>
+            <text x="-100" y="4" fill="rgba(255,233,194,.7)">OfficeQA Pro</text>
+            <text x="100" y="4" text-anchor="end" fill="#8fe0a0" font-weight="600">54.1%</text>
+          </g>
+          <g transform="translate(0,54)">
+            <rect x="-110" y="-12" width="220" height="24" rx="5" fill="rgba(74,156,88,.05)" stroke="rgba(74,156,88,.25)" stroke-width=".5"/>
+            <text x="-100" y="4" fill="rgba(255,233,194,.55)">OSWorld-Verified</text>
+            <text x="100" y="4" text-anchor="end" fill="rgba(143,224,160,.85)" font-weight="600">78.7%</text>
+          </g>
+        </g>
+        <!-- footer tag -->
+        <g transform="translate(0,92)">
+          <rect x="-90" y="-9" width="180" height="18" rx="9" fill="rgba(47,106,62,.18)" stroke="rgba(74,156,88,.4)" stroke-width=".5"/>
+          <text x="0" y="4" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#8fe0a0" letter-spacing="1.5">CÓDIGO · TERMINAL · TOOLS</text>
+        </g>
+      </g>
+
+      <!-- RIGHT CARD: Claude Opus 4.7 -->
+      <g transform="translate(610,220)" filter="url(#vs-glow)">
+        <rect x="-130" y="-110" width="260" height="220" rx="14" fill="url(#vs-right)" stroke="rgba(255,138,58,.55)" stroke-width=".9"/>
+        <!-- model header -->
+        <g transform="translate(0,-82)">
+          <circle cx="-92" cy="0" r="11" fill="rgba(192,106,66,.22)" stroke="#ffb27a" stroke-width=".8"/>
+          <path d="M-97,3 L-92,-6 L-87,3 Z M-92,3 L-92,-2" stroke="#ffb27a" stroke-width=".9" fill="none"/>
+          <text x="-72" y="-2" font-family="DM Sans, sans-serif" font-size="14" font-weight="700" fill="#ffe9c2">Claude Opus 4.7</text>
+          <text x="-72" y="11" font-family="JetBrains Mono, monospace" font-size="8" fill="#ffb27a" letter-spacing="1">ANTHROPIC · ESPECIALISTA</text>
+        </g>
+        <line x1="-110" y1="-58" x2="110" y2="-58" stroke="rgba(255,138,58,.25)" stroke-width=".5"/>
+        <g font-family="JetBrains Mono, monospace" font-size="9">
+          <g transform="translate(0,-36)">
+            <rect x="-110" y="-12" width="220" height="24" rx="5" fill="rgba(192,106,66,.08)" stroke="rgba(255,138,58,.35)" stroke-width=".5"/>
+            <text x="-100" y="4" fill="rgba(255,233,194,.7)">SWE-Bench Pro</text>
+            <text x="100" y="4" text-anchor="end" fill="#ffb27a" font-weight="600">64.3%</text>
+          </g>
+          <g transform="translate(0,-6)">
+            <rect x="-110" y="-12" width="220" height="24" rx="5" fill="rgba(192,106,66,.08)" stroke="rgba(255,138,58,.35)" stroke-width=".5"/>
+            <text x="-100" y="4" fill="rgba(255,233,194,.7)">FinanceAgent</text>
+            <text x="100" y="4" text-anchor="end" fill="#ffb27a" font-weight="600">64.4%</text>
+          </g>
+          <g transform="translate(0,24)">
+            <rect x="-110" y="-12" width="220" height="24" rx="5" fill="rgba(192,106,66,.05)" stroke="rgba(255,138,58,.25)" stroke-width=".5"/>
+            <text x="-100" y="4" fill="rgba(255,233,194,.55)">GDPval (profissional)</text>
+            <text x="100" y="4" text-anchor="end" fill="rgba(255,178,122,.85)" font-weight="600">80.3%</text>
+          </g>
+          <g transform="translate(0,54)">
+            <rect x="-110" y="-12" width="220" height="24" rx="5" fill="rgba(192,106,66,.05)" stroke="rgba(255,138,58,.25)" stroke-width=".5"/>
+            <text x="-100" y="4" fill="rgba(255,233,194,.55)">OSWorld-Verified</text>
+            <text x="100" y="4" text-anchor="end" fill="rgba(255,178,122,.85)" font-weight="600">78.0%</text>
+          </g>
+        </g>
+        <g transform="translate(0,92)">
+          <rect x="-100" y="-9" width="200" height="18" rx="9" fill="rgba(192,106,66,.15)" stroke="rgba(255,138,58,.4)" stroke-width=".5"/>
+          <text x="0" y="4" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#ffb27a" letter-spacing="1.5">RACIOCÍNIO · VISÃO · MEMÓRIA</text>
+        </g>
+      </g>
+
+      <!-- center VS badge -->
+      <g transform="translate(400,220)" filter="url(#vs-glow)">
+        <circle cx="0" cy="0" r="46" fill="#0a0500" stroke="rgba(255,233,194,.5)" stroke-width="1"/>
+        <circle cx="0" cy="0" r="38" fill="none" stroke="rgba(255,178,122,.35)" stroke-width=".6" stroke-dasharray="3 3"/>
+        <text x="0" y="6" text-anchor="middle" font-family="Instrument Serif, serif" font-size="32" fill="#ffe9c2" letter-spacing="1">VS</text>
+        <!-- crossed arrows -->
+        <g stroke="rgba(255,178,122,.5)" stroke-width=".7" fill="none" stroke-dasharray="2 2">
+          <path d="M-60,-20 L-80,-30"/>
+          <path d="M60,-20 L80,-30"/>
+          <path d="M-60,20 L-80,30"/>
+          <path d="M60,20 L80,30"/>
+        </g>
+      </g>
+
+      <!-- subtle context lines -->
+      <g stroke="rgba(255,178,122,.35)" stroke-width=".7" stroke-dasharray="2 4" fill="none">
+        <path d="M60,330 C260,310 540,310 740,330"/>
+      </g>
+
+      <rect width="800" height="400" filter="url(#vs-grain)" opacity=".4"/>
+      <text x="400" y="378" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(255,178,122,.4)" letter-spacing="2.5">JOGO DE PERFIL · NÃO MAIS DE LÍDER FOLGADO</text>
+    </svg>`,
+    content: `
+      <p class="article-lead">Eu li o comparativo mais recente entre o <strong>GPT-5.5</strong> e o <strong>Claude Opus 4.7</strong> com uma sensação que, sinceramente, acho mais útil do que a torcida de benchmark: a disputa já não parece mais uma corrida com líder folgado. Ela está começando a virar um jogo de perfil.</p>
+
+      <p>De um lado, a <strong>OpenAI</strong> empurra o GPT-5.5 como seu modelo mais forte para trabalho “executável” — código, uso de ferramentas, navegação, tarefas longas e produtividade em escala. Do outro, a <strong>Anthropic</strong> posiciona o Opus 4.7 como seu modelo mais capaz para raciocínio complexo, agentes de longa duração, visão e trabalho profissional mais cuidadoso. São duas teses diferentes sobre o que significa “fronteira da IA” em 2026.</p>
+
+      <h2>Os números desenham um retrato menos óbvio do que o marketing</h2>
+
+      <p>O que mais me chamou atenção foi que os resultados publicados pela própria <a href="https://openai.com/" target="_blank" rel="noopener">OpenAI</a> desenham um retrato bem menos binário do que o marketing costuma sugerir. O GPT-5.5 aparece na frente em testes como <strong>Terminal-Bench 2.0</strong> (82,7% contra 69,4% do Claude), em <strong>GDPval</strong> para trabalho profissional (84,9% contra 80,3%), em <strong>OfficeQA Pro</strong> (54,1% contra 43,6%) e fica ligeiramente acima em <strong>OSWorld-Verified</strong> (78,7% contra 78,0%).</p>
+
+      <p>Mas o Claude Opus 4.7 ainda leva vantagem em <strong>SWE-Bench Pro</strong>, que mede resolução de issues reais de GitHub (64,3% contra 58,6%), e também em <strong>FinanceAgent</strong> (64,4% contra 60,0%). Para mim, isso reforça uma leitura simples: o GPT-5.5 parece mais forte como operador e executor; o Claude ainda parece muito competitivo em tarefas que exigem profundidade, contexto e consistência em trabalho especializado. Vale lembrar que essa divisão entre “executar” e “raciocinar” é praticamente o oposto da narrativa única que costumava acompanhar lançamentos como o de <a href="/blog/anthropic-libera-mythos-apple-ciberataques/">Mythos pela Anthropic</a>, onde uma só promessa carregava o anúncio inteiro.</p>
+
+      <ul>
+        <li><strong>Onde o GPT-5.5 lidera:</strong> Terminal-Bench 2.0, GDPval, OfficeQA Pro e — por uma margem fina — OSWorld-Verified.</li>
+        <li><strong>Onde o Claude Opus 4.7 lidera:</strong> SWE-Bench Pro (issues reais de GitHub) e FinanceAgent (trabalho financeiro com tools).</li>
+        <li><strong>O que isso sugere:</strong> ranking absoluto não basta. O que pesa hoje é em qual eixo do trabalho cada modelo é mais útil.</li>
+      </ul>
+
+      <h2>Cada empresa está jogando um jogo um pouco diferente</h2>
+
+      <p>Também achei interessante como cada lado escolheu posicionar o seu modelo. A OpenAI fala bastante em eficiência, rollout amplo no <strong>ChatGPT Plus</strong>, <strong>Pro</strong>, <strong>Business</strong> e <strong>Enterprise</strong>, além do <strong>Codex</strong>, e diz que o GPT-5.5 é mais econômico em tokens do que o 5.4, com janela de contexto de até 1 milhão de tokens na API. É um discurso de produto: mais barato, mais rápido, mais distribuído, mais tarefas resolvidas por dólar gasto.</p>
+
+      <p>Já a <a href="https://www.anthropic.com/" target="_blank" rel="noopener">Anthropic</a> destaca que o Opus 4.7 está disponível em toda a sua linha de produtos e na API, além de <strong>Amazon Bedrock</strong>, <strong>Vertex AI</strong> e <strong>Microsoft Foundry</strong>, com contexto de 1 milhão de tokens, suporte a imagens em resolução bem maior e foco forte em trabalho agentic de longa duração. É um discurso mais próximo da capacidade bruta: profundidade, consistência e o tipo de tarefa em que o modelo precisa segurar o problema na cabeça por horas — exatamente o cenário em que <a href="/blog/anthropic-vaza-codigo-claude-code/">o Claude Code virou peça central da estratégia da empresa</a>.</p>
+
+      <h2>A Anthropic parece refinar o Claude para um perfil mais “profissional”</h2>
+
+      <p>Tem outro detalhe que eu não ignoraria. A Anthropic parece estar afinando o Claude para um perfil mais maduro mesmo. A documentação do Opus 4.7 fala em tom mais direto, menos validação automática do usuário, melhor uso de memória e melhor desempenho em tarefas visuais e de conhecimento. É um movimento intencional contra um padrão que vem incomodando muita gente — o mesmo que motivou as discussões em torno da <a href="/blog/chatbots-ia-bajulacao-sycophancy-stanford/">bajulação dos chatbots medida em Stanford</a>.</p>
+
+      <p>Ao mesmo tempo, a empresa mudou a tokenização, o que pode fazer o modelo consumir até cerca de <strong>35% mais tokens</strong> do que versões anteriores, dependendo do caso. Isso importa porque, no mundo real, não basta só ser bom — precisa fechar a conta. Um modelo mais profundo, mas mais caro por consulta, encaixa diferente em produto: vale para o trabalho cuidadoso, pesa mais quando o uso é massivo. Não é coincidência que esse trade-off apareça justamente quando a OpenAI também passa por <a href="/blog/openai-crises-trocas-comando-pressao-lucro/">pressão crescente para mostrar lucro e foco</a>.</p>
+
+      <h2>Não existe vencedor absoluto — existe encaixe</h2>
+
+      <p>No fim, eu sairia desse comparativo com uma leitura bem menos binária. Se a pergunta for “qual parece melhor para trabalho mais operacional, uso de ferramentas, terminal, navegação e produtividade em escala?”, hoje o argumento do GPT-5.5 está forte. Se a pergunta for “qual parece mais interessante para raciocínio mais demorado, visão, memória e certos fluxos de conhecimento e coding mais profundos?”, o Claude Opus 4.7 continua muito vivo — e, em algumas frentes, talvez até mais interessante.</p>
+
+      <p>O que esse comparativo mostra, para mim, é que a fase do “um modelo humilha todo o resto” parece cada vez menos real. Agora começa a valer mais uma pergunta mais madura: <strong>qual modelo encaixa melhor no seu tipo de trabalho?</strong> A resposta provavelmente não é “o melhor de todos”, mas “o que faz menos sentido trocar pelo outro”. E isso, no fundo, é uma boa notícia para quem usa IA: a competição finalmente parou de ser só sobre quem tem o número maior — passou a ser sobre quem entrega o ajuste melhor.</p>
+    `,
+  },
 };
