@@ -35,6 +35,10 @@ jobs:
   test:
     needs: build
     runs-on: ubuntu-latest
+    # Teto para o job inteiro. Em 19/08/2026 este job ficou 58 minutos parado
+    # dentro do `apt-get update` e teria consumido as 6h de limite do runner em
+    # silêncio. Travou é para falhar rápido, não para esperar indefinidamente.
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -42,7 +46,13 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npx playwright install --with-deps chromium
+      # Sem `--with-deps`: essa flag roda `apt-get` no runner, e é a única parte
+      # deste passo que depende de espelho Ubuntu. Em 19/08/2026 o espelho
+      # azure.archive.ubuntu.com parou de responder, o fallback estagnou, e o
+      # deploy do site ficou travado. A imagem ubuntu-latest já traz as
+      # bibliotecas de sistema que o Chromium precisa, então basta baixar o
+      # browser do CDN da Playwright — que no incidente respondia normalmente.
+      - run: npx playwright install chromium
       - run: npm run build
       - run: npm test
       - uses: actions/upload-artifact@v4
